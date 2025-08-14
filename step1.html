@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dopis od Vesemira</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="index.html" class="back">Zpět</a>
+  <div class="container">
+    <img src="alchemista_png/letter.png" alt="Dopis" class="avatar">
+    <div class="bubble">
+      <p><b>Dopis od Vesemira:</b><br>
+      Zaklínačko Áňo, potřebujeme tvou pomoc! Alchymista zmizel a jeho práce je pro nás klíčová. Vydáš se po jeho stopách?<br><br>
+      <b>Pokračuj kliknutím níže.</b></p>
+    </div>
+    <button onclick="goStep2()">Pokračovat</button>
+  </div>
+  <script>
+    if (!localStorage.getItem('step1')) window.location.href = 'index.html';
+    function goStep2() {
+      localStorage.setItem('step2', 'true');
+      window.location.href = 'step2.html';
+    }
+  </script>
+</body>
+</html>
