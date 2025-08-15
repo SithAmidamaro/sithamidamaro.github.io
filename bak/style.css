@@ -1,0 +1,9 @@
+body { background: #222; color: #eee; font-family: 'Merriweather', serif; margin: 0; }
+.container { max-width: 500px; margin: 40px auto; background: #2d2d2d; border-radius: 16px; box-shadow: 0 4px 24px #000a; padding: 32px 24px; text-align: center; }
+.avatar { width: 180px; border-radius: 50%; margin-bottom: 16px; border: 4px solid #444; background: #111; }
+.bubble { background: #fff; color: #222; border-radius: 24px; padding: 18px 24px; margin-bottom: 24px; position: relative; display: inline-block; min-width: 220px; }
+.bubble:after { content: ""; position: absolute; bottom: -20px; left: 60px; border-width: 20px 20px 0; border-style: solid; border-color: #fff transparent transparent transparent; display: block; width: 0; }
+button { background: #4e2e0e; color: #fff; border: none; border-radius: 8px; padding: 12px 32px; font-size: 1.1em; cursor: pointer; margin: 8px; transition: background 0.2s; }
+button:disabled { background: #888; cursor: not-allowed; }
+button:hover:not(:disabled) { background: #7a4c1e; }
+.back { position: absolute; left: 24px; top: 24px; background: #333; color: #fff; border-radius: 8px; padding: 6px 16px; font-size: 0.95em; text-decoration: none; }
