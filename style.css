@@ -95,7 +95,7 @@ input[type="submit"] {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  gap: 2.5rem;
+  gap: 3.5rem;
   background: none;
   box-shadow: none;
   padding: 0;
@@ -103,32 +103,36 @@ input[type="submit"] {
 .speech-bubble-center {
   background: #222;
   color: #ffd43b;
-  border-radius: 20px;
-  padding: 2rem 2.5rem;
+  border-radius: 28px;
+  padding: 3rem 3.5rem;
   position: relative;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
-  font-size: 1.1rem;
-  max-width: 500px;
+  box-shadow: 0 6px 40px rgba(0,0,0,0.5);
+  font-size: 1.5rem;
+  max-width: 700px;
   text-align: center;
   margin: 0 auto;
+}
+.speech-bubble-center h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
 }
 .speech-bubble-center:before {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: -30px;
+  bottom: -40px;
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-top: 30px solid #222;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid #222;
 }
 .avatar-vertical {
-  width: 200px;
+  width: 260px;
   height: auto;
   border-radius: 50%;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
   background: #222;
   margin: 0 auto;
   display: block;
@@ -136,9 +140,9 @@ input[type="submit"] {
 .button-below-avatar {
   display: block;
   margin: 0 auto;
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
-  padding: 0.8rem 2.2rem;
+  margin-top: 2.2rem;
+  font-size: 1.3rem;
+  padding: 1.1rem 2.8rem;
 }
 @media (max-width: 900px) {
   .avatar {
@@ -150,6 +154,21 @@ input[type="submit"] {
   }
   .speech-bubble {
     margin: 1rem 0 1rem 1rem;
+  }
+  .speech-bubble-center {
+    max-width: 95vw;
+    padding: 2rem 1.2rem;
+    font-size: 1.1rem;
+  }
+  .speech-bubble-center h1 {
+    font-size: 1.5rem;
+  }
+  .avatar-vertical {
+    width: 150px;
+  }
+  .button-below-avatar {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
   }
 }
 @media (max-width: 700px) {
@@ -195,5 +214,22 @@ input[type="submit"] {
   .button-below-avatar {
     font-size: 1rem;
     padding: 0.7rem 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .speech-bubble-center {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+    font-size: 1rem;
+  }
+  .speech-bubble-center h1 {
+    font-size: 1.1rem;
+  }
+  .avatar-vertical {
+    width: 100px;
+  }
+  .button-below-avatar {
+    font-size: 1rem;
+    padding: 0.7rem 1.1rem;
   }
 }
