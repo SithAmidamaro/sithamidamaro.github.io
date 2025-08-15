@@ -244,13 +244,13 @@ input[type="submit"] {
 .bubble-block {
   font-size: 2.1rem;
   color: #ffd43b;
-  text-align: center;
-  line-height: 1.6;
+  text-align: left;
+  line-height: 2.1;
   margin: 1.2rem 0;
   font-family: inherit;
 }
 .bubble-block div {
-  margin: 0.5em 0;
+  margin: 1.2em 0;
   font-size: inherit;
   color: inherit;
   font-family: inherit;
