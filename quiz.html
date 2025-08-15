@@ -7,15 +7,92 @@
 <body>
     <div class="container">
         <h1>Ověření Zaklínače</h1>
-        <form action="finale.html">
-            <p>1. Jaký znak má škola vlka?</p>
-            <input type="text" name="q1"><br><br>
-            <p>2. Jaký lektvar zvyšuje noční vidění?</p>
-            <input type="text" name="q2"><br><br>
-            <p>3. Kdo byl učitelem Geralta?</p>
-            <input type="text" name="q3"><br><br>
-            <input type="submit" value="Odeslat" class="button">
+        <form id="quizForm">
+            <p>1. Kdo aktuálně vede školu Vlka?</p>
+            <label><input type="radio" name="q1" value="Vesemir"> Vesemir</label><br>
+            <label><input type="radio" name="q1" value="Geralt"> Geralt</label><br>
+            <label><input type="radio" name="q1" value="Lambert"> Lambert</label><br><br>
+
+            <p>2. Jak se jmenuje "hrad" kde sídlí škola Vlka?</p>
+            <label><input type="radio" name="q2" value="Kaer Morhen"> Kaer Morhen</label><br>
+            <label><input type="radio" name="q2" value="Novigrad"> Novigrad</label><br>
+            <label><input type="radio" name="q2" value="Oxenfurt"> Oxenfurt</label><br><br>
+
+            <p>3. Zuřivý vlk, Geralt z ___ ? Odkud, hmm?</p>
+            <label><input type="radio" name="q3" value="Rivie"> Rivie</label><br>
+            <label><input type="radio" name="q3" value="Blavikenu"> Blavikenu</label><br>
+            <label><input type="radio" name="q3" value="Skellige"> Skellige</label><br><br>
+
+            <p>4. Jaký lektvar zvyšuje noční vidění?</p>
+            <label><input type="radio" name="q4" value="Kočka"> Kočka</label><br>
+            <label><input type="radio" name="q4" value="Osel"> Osel</label><br>
+            <label><input type="radio" name="q4" value="Pavián"> Pavián</label><br><br>
+
+            <p>5. Čím prochází zaklínač aby se stal zaklínačem?</p>
+            <label><input type="radio" name="q5" value="Zkoušky trav"> Zkoušky trav</label><br>
+            <label><input type="radio" name="q5" value="Zkoušky pravdy"> Zkoušky pravdy</label><br>
+            <label><input type="radio" name="q5" value="Zkoušky zeleně"> Zkoušky zeleně</label><br><br>
+
+            <p>6. Co je to „Znak Quen“ a k čemu slouží?</p>
+            <label><input type="radio" name="q6" value="Ochranný štít"> Ochranný štít</label><br>
+            <label><input type="radio" name="q6" value="Ohnivý útok"> Ohnivý útok</label><br>
+            <label><input type="radio" name="q6" value="Léčení"> Manipulace mysli</label><br><br>
+
+            <p>7. Co loví zaklínač?</p>
+            <label><input type="radio" name="q7" value="Nestvůry"> Nestvůry</label><br>
+            <label><input type="radio" name="q7" value="Poklady"> Poklady</label><br>
+            <label><input type="radio" name="q7" value="Ženy"> Ženy</label><br><br>
+
+            <p>8. Co by zaklínač nikdy neřekl v hospodě? (všechny odpovědi správně)</p>
+            <label><input type="checkbox" name="q8" value="mléko"> „Dám si mléko, prosím.“</label><br>
+            <label><input type="checkbox" name="q8" value="nezajimaji"> „Nestvůry? Ty mě nezajímají.“</label><br>
+            <label><input type="checkbox" name="q8" value="elixir"> „Znáte recept na elixír lásky?“</label><br><br>
+
+            <p>9. Jaký je nejoblíbenější nápoj zaklínače po těžkém boji? (všechny odpovědi správně)</p>
+            <label><input type="checkbox" name="q9" value="vlastovka"> Vlaštovka (elixír)</label><br>
+            <label><input type="checkbox" name="q9" value="medovina"> Medovina</label><br>
+            <label><input type="checkbox" name="q9" value="cokoliv"> Cokoliv, co ho neotráví</label><br><br>
+
+            <p>10. Jaký je zaklínačský způsob řešení hádky? (všechny odpovědi správně)</p>
+            <label><input type="checkbox" name="q10" value="elixir"> Elixír pravdy</label><br>
+            <label><input type="checkbox" name="q10" value="souboj"> Souboj na meče</label><br>
+            <label><input type="checkbox" name="q10" value="mlceni"> Mlčení a zamračený pohled</label><br><br>
+
+            <input type="button" value="Ověřit" class="button" onclick="checkQuiz()">
+            <div id="quizResult" style="margin-top:1.5em;font-size:1.3em;"></div>
         </form>
     </div>
+    <script>
+    function checkQuiz() {
+        const answers = {
+            q1: 'Vesemir',
+            q2: 'Kaer Morhen',
+            q3: 'Rivie',
+            q4: 'Kočka',
+            q5: 'Zkoušky trav',
+            q6: 'Ochranný štít',
+            q7: 'Nestvůry'
+        };
+        let correct = 0;
+        for (let i = 1; i <= 7; i++) {
+            const val = document.querySelector('input[name="q'+i+'"]:checked');
+            if (val && val.value === answers['q'+i]) correct++;
+        }
+        // Otázky s více správnými odpověďmi
+        let q8 = document.querySelectorAll('input[name="q8"]:checked');
+        let q9 = document.querySelectorAll('input[name="q9"]:checked');
+        let q10 = document.querySelectorAll('input[name="q10"]:checked');
+        if (q8.length === 3) correct++;
+        if (q9.length === 3) correct++;
+        if (q10.length === 3) correct++;
+        let total = 10;
+        let result = document.getElementById('quizResult');
+        if (correct === total) {
+            result.innerHTML = '<span style="color:#0be70b;font-weight:bold;">Výborně! Jsi pravá zaklínačka školy Vlka!<br><a href="finale.html" class="button">Pokračovat</a></span>';
+        } else {
+            result.innerHTML = '<span style="color:#ffd43b;">Správně máš ' + correct + ' z ' + total + ' otázek.<br>Zkus to znovu!</span>';
+        }
+    }
+    </script>
 </body>
 </html>
