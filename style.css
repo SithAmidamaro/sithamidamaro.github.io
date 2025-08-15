@@ -38,3 +38,68 @@ input[type="submit"] {
     cursor: pointer;
     border-radius: 5px;
 }
+
+.flex-avatar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5vh;
+}
+
+.avatar {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  background: #222;
+}
+
+.speech-bubble {
+  background: #222;
+  color: #ffd43b;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  position: relative;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+  font-size: 1.1rem;
+  max-width: 420px;
+}
+.speech-bubble:before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 40px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 30px solid #222;
+}
+
+@media (max-width: 700px) {
+  .flex-avatar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .speech-bubble {
+    max-width: 95vw;
+    padding: 1.2rem 1rem;
+    font-size: 1rem;
+  }
+  .speech-bubble:before {
+    left: 40px;
+    top: -30px;
+    border-top: none;
+    border-bottom: 30px solid #222;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    width: 0;
+    height: 0;
+    transform: rotate(0deg);
+  }
+  .avatar {
+    width: 90px;
+  }
+}
