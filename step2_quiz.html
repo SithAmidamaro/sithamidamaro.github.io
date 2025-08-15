@@ -6,64 +6,65 @@
 </head>
 <body>
     <div class="container" style="position:relative;">
-        <div style="display:flex;justify-content:space-between;align-items:center;">
-            <a href="step1_intro.html" class="button button-back" style="margin-bottom:1em;">← Zpět</a>
-            <h1 style="text-align:center;flex:1;margin:0;">Ověření Zaklínače</h1>
-            <div class="bubble-h1 bubble-outline">Ověření Zaklínače</div>
-        </div>
+        <a href="step1_intro.html" class="button button-back" style="position:absolute;top:0;right:0;margin:1em 1em 0 0;z-index:10;">← Zpět</a>
+        <h1 class="bubble-h1" style="text-align:center;margin-bottom:1.2em;">Ověření Zaklínače</h1>
         <form id="quizForm" style="position:relative;z-index:2;">
-            <p>1. Kdo aktuálně vede školu Vlka?</p>
-            <label><input type="radio" name="q1" value="Geralt"> Geralt</label><br>
-            <label><input type="radio" name="q1" value="Lambert"> Lambert</label><br><br>
-            <label><input type="radio" name="q1" value="Vesemir"> Vesemir</label><br><br>
+            <div style="position:relative;">
+                <div style="position:absolute;left:0;bottom:0;width:120px;max-width:30vw;opacity:0.22;z-index:1;pointer-events:none;">
+                    <img id="avatar-img" src="alchemista_png/alchemista_svitek_ukol.png" alt="Alchymista" style="width:100%;height:auto;">
+                </div>
+                <div style="position:relative;z-index:2;">
+                    <p>1. Kdo aktuálně vede školu Vlka?</p>
+                    <label><input type="radio" name="q1" value="Geralt"> Geralt</label><br>
+                    <label><input type="radio" name="q1" value="Lambert"> Lambert</label><br><br>
+                    <label><input type="radio" name="q1" value="Vesemir"> Vesemir</label><br><br>
 
-            <p>2. Jak se jmenuje "hrad" kde sídlí škola Vlka?</p>
-            <label><input type="radio" name="q2" value="Novigrad"> Novigrad</label><br>
-            <label><input type="radio" name="q2" value="Kaer Morhen"> Kaer Morhen</label><br>
-            <label><input type="radio" name="q2" value="Oxenfurt"> Oxenfurt</label><br><br>
+                    <p>2. Jak se jmenuje "hrad" kde sídlí škola Vlka?</p>
+                    <label><input type="radio" name="q2" value="Novigrad"> Novigrad</label><br>
+                    <label><input type="radio" name="q2" value="Kaer Morhen"> Kaer Morhen</label><br>
+                    <label><input type="radio" name="q2" value="Oxenfurt"> Oxenfurt</label><br><br>
 
-            <p>3. Jaký lektvar zvyšuje noční vidění?</p>
-            <label><input type="radio" name="q3" value="Osel"> Osel</label><br>
-            <label><input type="radio" name="q3" value="Kočka"> Kočka</label><br>
-            <label><input type="radio" name="q3" value="Pavián"> Pavián</label><br><br>
+                    <p>3. Jaký lektvar zvyšuje noční vidění?</p>
+                    <label><input type="radio" name="q3" value="Osel"> Osel</label><br>
+                    <label><input type="radio" name="q3" value="Kočka"> Kočka</label><br>
+                    <label><input type="radio" name="q3" value="Pavián"> Pavián</label><br><br>
 
-            <p>4. Čím prochází zaklínač aby se stal zaklínačem?</p>
-            <label><input type="radio" name="q4" value="Zkoušky pravdy"> Zkoušky pravdy</label><br>
-            <label><input type="radio" name="q4" value="Zkoušky trav"> Zkoušky trav</label><br>
-            <label><input type="radio" name="q4" value="Zkoušky zeleně"> Zkoušky zeleně</label><br><br>
+                    <p>4. Čím prochází zaklínač aby se stal zaklínačem?</p>
+                    <label><input type="radio" name="q4" value="Zkoušky pravdy"> Zkoušky pravdy</label><br>
+                    <label><input type="radio" name="q4" value="Zkoušky trav"> Zkoušky trav</label><br>
+                    <label><input type="radio" name="q4" value="Zkoušky zeleně"> Zkoušky zeleně</label><br><br>
 
-            <p>5. Co je to „Znak Quen“ a k čemu slouží?</p>
-            <label><input type="radio" name="q5" value="Ohnivý útok"> Ohnivý útok</label><br>
-            <label><input type="radio" name="q5" value="Ochranný štít"> Ochranný štít</label><br>
-            <label><input type="radio" name="q5" value="Léčení"> Manipulace mysli</label><br><br>
+                    <p>5. Co je to „Znak Quen“ a k čemu slouží?</p>
+                    <label><input type="radio" name="q5" value="Ohnivý útok"> Ohnivý útok</label><br>
+                    <label><input type="radio" name="q5" value="Ochranný štít"> Ochranný štít</label><br>
+                    <label><input type="radio" name="q5" value="Léčení"> Manipulace mysli</label><br><br>
 
-            <p>6. Co loví zaklínač?</p>
-            <label><input type="radio" name="q6" value="Poklady"> Poklady</label><br>
-            <label><input type="radio" name="q6" value="Nestvůry"> Nestvůry</label><br>
-            <label><input type="radio" name="q6" value="Ženy"> Ženy</label><br><br>
+                    <p>6. Co loví zaklínač?</p>
+                    <label><input type="radio" name="q6" value="Poklady"> Poklady</label><br>
+                    <label><input type="radio" name="q6" value="Nestvůry"> Nestvůry</label><br>
+                    <label><input type="radio" name="q6" value="Ženy"> Ženy</label><br><br>
 
-            <p>7. Co by zaklínač nikdy neřekl v hospodě?</p>
-            <label><input type="radio" name="q7" value="mléko"> „Dám si mléko, prosím.“</label><br>
-            <label><input type="radio" name="q7" value="nezajimaji"> „Nestvůry? Ty mě nezajímají.“</label><br>
-            <label><input type="radio" name="q7" value="elixir"> „Znáte recept na elixír lásky?“</label><br><br>
+                    <p>7. Co by zaklínač nikdy neřekl v hospodě?</p>
+                    <label><input type="radio" name="q7" value="mléko"> „Dám si mléko, prosím.“</label><br>
+                    <label><input type="radio" name="q7" value="nezajimaji"> „Nestvůry? Ty mě nezajímají.“</label><br>
+                    <label><input type="radio" name="q7" value="elixir"> „Znáte recept na elixír lásky?“</label><br><br>
 
-            <p>8. Jaký je nejoblíbenější nápoj zaklínače po těžkém boji?</p>
-            <label><input type="radio" name="q8" value="medovina"> Medovina</label><br>
-            <label><input type="radio" name="q8" value="vlastovka"> Vlaštovka (elixír)</label><br>
-            <label><input type="radio" name="q8" value="cokoliv"> Cokoliv, co ho neotráví</label><br><br>
+                    <p>8. Jaký je nejoblíbenější nápoj zaklínače po těžkém boji?</p>
+                    <label><input type="radio" name="q8" value="medovina"> Medovina</label><br>
+                    <label><input type="radio" name="q8" value="vlastovka"> Vlaštovka (elixír)</label><br>
+                    <label><input type="radio" name="q8" value="cokoliv"> Cokoliv, co ho neotráví</label><br><br>
 
-            <p>9. Jaký je zaklínačský způsob řešení hádky?</p>
-            <label><input type="radio" name="q9" value="souboj"> Souboj na meče</label><br>
-            <label><input type="radio" name="q9" value="elixir"> Elixír pravdy</label><br>
-            <label><input type="radio" name="q9" value="mlceni"> Mlčení a zamračený pohled</label><br><br>
+                    <p>9. Jaký je zaklínačský způsob řešení hádky?</p>
+                    <label><input type="radio" name="q9" value="souboj"> Souboj na meče</label><br>
+                    <label><input type="radio" name="q9" value="elixir"> Elixír pravdy</label><br>
+                    <label><input type="radio" name="q9" value="mlceni"> Mlčení a zamračený pohled</label><br><br>
 
-            <div style="display:flex;align-items:flex-end;justify-content:space-between;">
-                <input type="button" value="Ověřit" class="button" onclick="checkQuiz()">
+                    <div style="display:flex;align-items:flex-end;justify-content:space-between;">
+                        <input type="button" value="Ověřit" class="button" onclick="checkQuiz()">
+                    </div>
+                    <div id="quizResult" style="margin-top:1.5em;font-size:1.3em;"></div>
+                </div>
             </div>
-            <div id="avatar-container-bottom" style="text-align:right;margin-top:1.5em;">
-                <img id="avatar-img" src="alchemista_png/alchemista_svitek_ukol.png" alt="Alchymista" class="avatar-huge" style="max-width:110px;width:28vw;height:auto;opacity:0.9;">
-            </div>
-            <div id="quizResult" style="margin-top:1.5em;font-size:1.3em;"></div>
         </form>
     </div>
     <script>
