@@ -179,6 +179,26 @@ input[type="submit"] {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.speech-bubble p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0.7em 0;
+  color: #ffd43b;
+  line-height: 1.5;
+}
+.bubble-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.1em;
+  color: #ffd43b;
+}
+.bubble-highlight {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fffbe6;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
 @media (max-width: 900px) {
   .avatar {
     width: 120px;
@@ -221,6 +241,15 @@ input[type="submit"] {
   }
   .avatar-huge {
     width: 260px;
+  }
+  .speech-bubble p {
+    font-size: 1.05rem;
+  }
+  .bubble-title {
+    font-size: 1.2rem;
+  }
+  .bubble-highlight {
+    font-size: 1rem;
   }
 }
 @media (max-width: 700px) {
@@ -314,5 +343,14 @@ input[type="submit"] {
   }
   .avatar-huge {
     width: 150px;
+  }
+  .speech-bubble p {
+    font-size: 0.95rem;
+  }
+  .bubble-title {
+    font-size: 1rem;
+  }
+  .bubble-highlight {
+    font-size: 0.95rem;
   }
 }
