@@ -210,7 +210,7 @@ input[type="submit"] {
   /* outline removed, only color and font remain */
 }
 .bubble-h1 {
-  font-size: 2.8rem;
+  font-size: 4.2rem;
   font-weight: 900;
   color: #ffd43b;
   margin-bottom: 1.2rem;
@@ -218,14 +218,14 @@ input[type="submit"] {
   letter-spacing: 0.01em;
 }
 .bubble-h2 {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #ffd43b;
   margin: 1.2rem 0 0.8rem 0;
   text-align: center;
 }
 .bubble-p {
-  font-size: 1.35rem;
+  font-size: 1.8rem;
   color: #ffd43b;
   margin: 0.8em 0;
   line-height: 1.6;
