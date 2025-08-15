@@ -206,6 +206,44 @@ input[type="submit"] {
   text-align: center;
   text-shadow: 0 2px 8px #ffffff;
 }
+.bubble-h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #ffd43b;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 2px 12px #000,
+    0 1px 0 #fff2;
+}
+.bubble-h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffd43b;
+  margin: 1.2rem 0 0.8rem 0;
+  text-align: center;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 2px 8px #000;
+}
+.bubble-p {
+  font-size: 1.35rem;
+  color: #ffd43b;
+  margin: 0.8em 0;
+  line-height: 1.6;
+  text-align: center;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 2px 8px #000;
+}
+.bubble-outline {
+  /* outline handled by text-shadow above */
+}
 @media (max-width: 900px) {
   .avatar {
     width: 120px;
