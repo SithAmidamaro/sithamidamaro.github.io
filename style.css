@@ -166,6 +166,10 @@ input[type="submit"] {
   font-size: 1.5rem;
   padding: 1.3rem 3.2rem;
 }
+.button.button-below-avatar.button-large {
+  font-size: 3rem;
+  padding: 2.2rem 5.6rem;
+}
 .vertical-tighter {
   padding-top: 1.2rem !important;
   gap: 2rem !important;
@@ -186,29 +190,6 @@ input[type="submit"] {
   color: #ffd43b;
   line-height: 1.5;
 }
-.bubble-title {
-  font-size: 2.1rem;
-  font-weight: 800;
-  margin-bottom: 1.1em;
-  color: #ffd43b;
-  letter-spacing: 0.01em;
-  text-shadow: 0 2px 8px #ffffff, 0 1px 0 #fff2;
-  text-align: center;
-}
-.bubble-highlight {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fffbe6;
-  background: linear-gradient(90deg, #ffd43b 0%, #fffbe6 100%);
-  background-clip: text;
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
-  text-align: center;
-  text-shadow: 0 2px 8px #ffffff;
-}
-.bubble-h1, .bubble-h2, .bubble-p {
-  /* outline removed, only color and font remain */
-}
 .bubble-h1 {
   font-size: 4.2rem;
   font-weight: 900;
@@ -218,13 +199,6 @@ input[type="submit"] {
   letter-spacing: 0.01em;
 }
 .bubble-h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #1de727;
-  margin: 1.2rem 0 0.8rem 0;
-  text-align: center;
-}
-.bubble-h3 {
   font-size: 2.8rem;
   font-weight: 700;
   color: #ffd43b;
@@ -237,9 +211,6 @@ input[type="submit"] {
   margin: 0.8em 0;
   line-height: 1.6;
   text-align: center;
-}
-.bubble-outline {
-  /* outline handled by text-stroke above */
 }
 .bubble-block {
   font-size: 1.5rem;
@@ -300,12 +271,6 @@ input[type="submit"] {
   }
   .speech-bubble p {
     font-size: 1.05rem;
-  }
-  .bubble-title {
-    font-size: 1.4rem;
-  }
-  .bubble-highlight {
-    font-size: 1.1rem;
   }
 }
 @media (max-width: 700px) {
@@ -402,11 +367,5 @@ input[type="submit"] {
   }
   .speech-bubble p {
     font-size: 0.95rem;
-  }
-  .bubble-title {
-    font-size: 1.1rem;
-  }
-  .bubble-highlight {
-    font-size: 1rem;
   }
 }
