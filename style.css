@@ -6,12 +6,17 @@ body {
     padding: 0;
 }
 .container {
-    max-width: 700px;
-    margin: 50px auto;
-    background-color: #2e2e2e;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #000;
+    background: #222;
+    border-radius: 20px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+    padding: 0;
+    margin: 5vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: none;
+    width: fit-content;
+    min-width: 0;
 }
 h1 {
     color: #d4af37;
@@ -44,18 +49,19 @@ input[type="submit"] {
   align-items: flex-start;
   justify-content: center;
   gap: 2rem;
-  margin-top: 5vh;
+  width: 100%;
 }
 .flex-avatar-right {
   flex-direction: row-reverse;
 }
 .avatar {
-  width: 180px;
+  width: 220px;
   height: auto;
   border-radius: 50%;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
   background: #222;
   transition: width 0.2s;
+  margin: 2rem 2rem 2rem 0;
 }
 .avatar-large {
   width: 220px;
@@ -69,8 +75,7 @@ input[type="submit"] {
   box-shadow: 0 4px 32px rgba(0,0,0,0.4);
   font-size: 1.1rem;
   max-width: 420px;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 2rem 0 2rem 2rem;
 }
 .speech-bubble:before {
   content: '';
@@ -87,16 +92,23 @@ input[type="submit"] {
 @media (max-width: 900px) {
   .avatar {
     width: 120px;
+    margin: 1rem 1rem 1rem 0;
   }
   .avatar-large {
     width: 150px;
   }
+  .speech-bubble {
+    margin: 1rem 0 1rem 1rem;
+  }
 }
 @media (max-width: 700px) {
-  .flex-avatar {
-    flex-direction: column-reverse;
+  .container, .flex-avatar {
+    flex-direction: column-reverse !important;
     align-items: center;
     gap: 1.2rem;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
   }
   .speech-bubble {
     max-width: 95vw;
@@ -116,6 +128,7 @@ input[type="submit"] {
   }
   .avatar {
     width: 90px;
+    margin: 0 0 1rem 0;
   }
   .avatar-large {
     width: 110px;
