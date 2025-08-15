@@ -187,17 +187,26 @@ input[type="submit"] {
   line-height: 1.5;
 }
 .bubble-title {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2.1rem;
+  font-weight: 800;
   margin-bottom: 1.1em;
   color: #ffd43b;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 8px #000, 0 1px 0 #fff2;
+  text-align: center;
 }
 .bubble-highlight {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: 1.35rem;
+  font-weight: 700;
   color: #fffbe6;
+  background: linear-gradient(90deg, #ffd43b 0%, #fffbe6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
+  text-align: center;
+  text-shadow: 0 2px 8px #000;
 }
 @media (max-width: 900px) {
   .avatar {
@@ -246,10 +255,10 @@ input[type="submit"] {
     font-size: 1.05rem;
   }
   .bubble-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .bubble-highlight {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 @media (max-width: 700px) {
@@ -348,9 +357,9 @@ input[type="submit"] {
     font-size: 0.95rem;
   }
   .bubble-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .bubble-highlight {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
