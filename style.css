@@ -192,21 +192,19 @@ input[type="submit"] {
   margin-bottom: 1.1em;
   color: #ffd43b;
   letter-spacing: 0.01em;
-  text-shadow: 0 2px 8px #000, 0 1px 0 #fff2;
+  text-shadow: 0 2px 8px #ffffff, 0 1px 0 #fff2;
   text-align: center;
 }
 .bubble-highlight {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #fffbe6;
   background: linear-gradient(90deg, #ffd43b 0%, #fffbe6 100%);
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
   text-align: center;
-  text-shadow: 0 2px 8px #000;
+  text-shadow: 0 2px 8px #ffffff;
 }
 @media (max-width: 900px) {
   .avatar {
