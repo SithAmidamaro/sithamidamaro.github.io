@@ -46,15 +46,20 @@ input[type="submit"] {
   gap: 2rem;
   margin-top: 5vh;
 }
-
+.flex-avatar-right {
+  flex-direction: row-reverse;
+}
 .avatar {
-  width: 120px;
+  width: 180px;
   height: auto;
   border-radius: 50%;
   box-shadow: 0 2px 12px rgba(0,0,0,0.3);
   background: #222;
+  transition: width 0.2s;
 }
-
+.avatar-large {
+  width: 220px;
+}
 .speech-bubble {
   background: #222;
   color: #ffd43b;
@@ -68,18 +73,25 @@ input[type="submit"] {
 .speech-bubble:before {
   content: '';
   position: absolute;
-  left: -30px;
+  right: -30px;
   top: 40px;
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 30px solid #222;
+  border-left: 30px solid #222;
 }
-
+@media (max-width: 900px) {
+  .avatar {
+    width: 120px;
+  }
+  .avatar-large {
+    width: 150px;
+  }
+}
 @media (max-width: 700px) {
   .flex-avatar {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 1.2rem;
   }
@@ -89,17 +101,21 @@ input[type="submit"] {
     font-size: 1rem;
   }
   .speech-bubble:before {
-    left: 40px;
-    top: -30px;
-    border-top: none;
-    border-bottom: 30px solid #222;
+    right: 40px;
+    top: auto;
+    bottom: -30px;
+    border-left: none;
+    border-top: 30px solid #222;
     border-right: 20px solid transparent;
-    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
     width: 0;
     height: 0;
-    transform: rotate(0deg);
+    left: auto;
   }
   .avatar {
     width: 90px;
+  }
+  .avatar-large {
+    width: 110px;
   }
 }
