@@ -166,6 +166,19 @@ input[type="submit"] {
   font-size: 1.5rem;
   padding: 1.3rem 3.2rem;
 }
+.vertical-tighter {
+  padding-top: 1.2rem !important;
+  gap: 2rem !important;
+}
+.speech-bubble-tighter {
+  margin-top: 0 !important;
+}
+.avatar-huge {
+  width: 420px;
+  max-width: 98vw;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 @media (max-width: 900px) {
   .avatar {
     width: 120px;
@@ -205,6 +218,9 @@ input[type="submit"] {
   .button-large {
     font-size: 1.1rem;
     padding: 0.8rem 1.5rem;
+  }
+  .avatar-huge {
+    width: 260px;
   }
 }
 @media (max-width: 700px) {
@@ -295,5 +311,8 @@ input[type="submit"] {
   .button-large {
     font-size: 1rem;
     padding: 0.7rem 1.1rem;
+  }
+  .avatar-huge {
+    width: 150px;
   }
 }
