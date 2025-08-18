@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitola 8 – Krystalová lampa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/helpers.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="kap7c.html">← Zpět</a>
+    </div>
+    <h1>Kapitola 8 – Krystalová lampa</h1>
+    <div class="panel">
+      <div class="dialogue">
+        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+        <div class="bubble">
+          <p><strong>Alchymista:</strong> "Ano… už to vidím jasně! Fialová Kočka a moje Lampa – dohromady ukážou víc, než by kdy ukázal denní svit. Lampa je v podkroví chaty, v truhlici."</p>
+        </div>
+      </div>
+
+      <div class="choices">
+        <button onclick="say(1)">„K čemu lampa slouží?“</button>
+        <button onclick="say(2)">„Z čeho je vyrobená?“</button>
+        <button onclick="say(3)">„Mám ji!“</button>
+      </div>
+      <div id="out" style="margin-top:10px;"></div>
+
+      <div class="bubble" style="margin-top:10px;">
+        <p><strong>Kotva:</strong> Vypij zesílenou Kočku a jdi pod schody chaty – zanechal jsem ti tam znamení (runa ochrany). Napiš jeho jméno. <em>(Správně: Algiz, příp. „Z“)</em></p>
+        <div class="input-row">
+          <input id="runa" type="text" placeholder="Jaká je to runa?">
+          <button onclick="check()">Potvrdit</button>
+        </div>
+        <p id="hint" class="feedback"></p>
+        <div id="cont"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" href="#" onclick="history.back();return false;">← Zpět</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+function say(n){
+  const o=document.getElementById('out');
+  if(n===1){
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Lampa odhaluje skryté. Se Kočkou uvidíš i stíny duchů – a ti tě povedou k pravdě."</p></div>`;
+  }else if(n===2){
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Z křišťálu z hor. Vložil jsem do něj runu ochrany, proto svítí, proto nezhasne."</p></div>`;
+  }else{
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď vypij Kočku a pod schody hledej runu. Až ji najdeš, napiš mi její jméno."</p></div>`;
+  }
+}
+function check(){
+  const raw=document.getElementById('runa').value;
+  const norm=normalizeInput(raw);
+  const hint=document.getElementById('hint');
+  const cont=document.getElementById('cont');
+  if(norm==='algiz' || norm==='z'){
+    hint.textContent='';
+    cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Ano! To je ona. Algiz – runa ochrany, štít proti zlu."</p></div>
+    <a class="continue-btn" href="kap9.html">👉 Pokračovat (Kapitola 9 – Přání štěstí)</a>`;
+  }else{
+    hint.textContent = '„Ne… vypadala jako strom se zvednutými větvemi. Symbol ochrany. Hledej v bestiáři run!“';
+    cont.innerHTML='';
+  }
+}
+</script>
+</body>
+</html>

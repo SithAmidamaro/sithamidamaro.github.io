@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitola 4 – Po kvízu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/helpers.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="kap3a.html">← Zpět</a>
+    </div>
+    <h1>Kapitola 4 – Po kvízu</h1>
+    <div class="panel">
+      <div class="dialogue">
+        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+        <div class="bubble">
+          <p><strong>Alchymista:</strong> "Cítím, že ti mohu věřit. Ale… moje mysl je rozbitá, jako střepy zrcadla. Pamatuji si, že jsem pracoval na něčem… opravdu mocném. Něčem, co mělo změnit život zaklínačům. Ale právě to dílo přitáhlo zlo. Strašlivé, zkažené zlo… Přišlo si pro mě, zničilo můj domov… a chtělo to, co jsem vytvořil. Nedostalo to. Stihl jsem to ukrýt. Ale… nevím už, kam… Prosím tě, pomoz mi. Ptej se mne. Možná, že ve tvých otázkách se rozsvítí mé vzpomínky."</p>
+        </div>
+      </div>
+
+      <div class="choices">
+        <button onclick="ask(1)">„Jaké zlo si tě našlo?“</button>
+        <button onclick="ask(2)">„Na čem jsi vlastně pracoval?“</button>
+        <button onclick="ask(3)">„Kde jsi to ukryl?“</button>
+        <button onclick="ask(4)">„Pamatuješ si, kdo jsi?“</button>
+      </div>
+
+      <div id="out" style="margin-top:10px;"></div>
+
+      <hr>
+      <div class="bubble">
+        <p><strong>Kotva:</strong> Najdi u chaty znak a opiš jej (stačí libovolný popis). Bez potvrzení se dál nepohneme.</p>
+        <div class="input-row">
+          <input type="text" id="znak" placeholder="Zadej, co jsi našla">
+          <button onclick="confirmFind()">Potvrdit nález</button>
+        </div>
+        <p id="hint" class="feedback"></p>
+        <div id="cont"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" href="#" onclick="history.back();return false;">← Zpět</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+function ask(n){
+  const o=document.getElementById('out');
+  if(n===1){
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Viděl jsem stromy, jak se pohnuly… V korunách ptáci… ale byli mrtví. Cítil jsem, že les sám na mne sestoupil. A pak… ticho. Jen stíny. Když jsi mě vyvolala, obrátila jsi na sebe pozornost té stvůry!"</p></div>`;
+  }else if(n===2){
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "To nevím. Mé ruce si pamatují pohyby, má mysl cítí tíhu… ale tvary jsou pryč. Bylo to něco, co mělo zaklínače změnit navždy. Možná posílit, možná vysvobodit… Nemohu ti to ještě říct. Nejsem si jist."</p></div>`;
+  }else if(n===3){
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím, ale cítím … že to má něco společného s chatou… Tam, kde vlci kdysi skrývali své věci před očima smrtelníků. Tam povede naše cesta… Bude tam něco, co tam nepatří, co tam někdo dal… až to najdeš, dej mi vědět."</p></div>`;
+  }else{
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Měl jsem jméno, kdysi. Znělo hrdě, neslo se mezi vlky. Ale teď? Je to jen šepot. Možná, až tvá cesta bude delší, mé jméno se mi vrátí."</p></div>`;
+  }
+}
+function confirmFind(){
+  const z = document.getElementById('znak').value.trim();
+  const hint = document.getElementById('hint');
+  const cont = document.getElementById('cont');
+  if(!z){
+    hint.textContent = '„Znak… musíš jej najít. Bez něj dál nejdeme.“';
+    cont.innerHTML = '';
+  }else{
+    hint.textContent = '';
+    cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Ano! To je ono. Cítím, jak se mé vzpomínky vrací… To poznávám. Už jsem to viděl, u sebe doma."</p></div>
+    <a class="continue-btn" href="kap5.html">👉 Pokračovat (Kapitola 5 – Bestiář)</a>`;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitola 3a – Kvíz</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/helpers.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="kap3.html">← Zpět</a>
+    </div>
+    <h1>Kapitola 3a – Zkouška znalostí</h1>
+    <div class="panel">
+      <div class="dialogue">
+        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+        <div class="bubble">
+          <p><strong>Alchymista:</strong> "Říkáš, že jsi vlk… Ale svět je plný klamů. Musíš mi dokázat, že krev Školy Vlka proudí v tvých žilách. Odpověz na mé otázky… a já poznám pravdu."</p>
+        </div>
+      </div>
+
+      <!-- Q1 -->
+      <div id="q1" class="question">
+        <p><strong>1. Kdo aktuálně vede školu Vlka?</strong></p>
+        <div class="choices">
+          <button onclick="q1('Geralt')">Geralt</button>
+          <button onclick="q1('Lambert')">Lambert</button>
+          <button onclick="q1('Vesemir')">Vesemir</button>
+        </div>
+        <p id="f1" class="feedback"></p>
+      </div>
+
+      <!-- Q2 -->
+      <div id="q2" class="question" style="display:none;">
+        <p><strong>2. Jak se jmenuje hrad, kde sídlí škola Vlka?</strong></p>
+        <div class="choices">
+          <button onclick="q2('Novigrad')">Novigrad</button>
+          <button onclick="q2('Kaer Morhen')">Kaer Morhen</button>
+          <button onclick="q2('Oxenfurt')">Oxenfurt</button>
+        </div>
+        <p id="f2" class="feedback"></p>
+      </div>
+
+      <!-- Q3 -->
+      <div id="q3" class="question" style="display:none;">
+        <p><strong>3. Jaký lektvar zvyšuje noční vidění?</strong></p>
+        <div class="choices">
+          <button onclick="q3('Osel')">Osel</button>
+          <button onclick="q3('Pavián')">Pavián</button>
+          <button onclick="q3('Kočka')">Kočka</button>
+        </div>
+        <p id="f3" class="feedback"></p>
+      </div>
+
+      <!-- Q4 -->
+      <div id="q4" class="question" style="display:none;">
+        <p><strong>4. Čím prochází zaklínač, aby se stal zaklínačem?</strong></p>
+        <div class="choices">
+          <button onclick="q4('pravdy')">Zkouška pravdy</button>
+          <button onclick="q4('trav')">Zkouška trav</button>
+          <button onclick="q4('odhodlani')">Zkouška odhodlání</button>
+        </div>
+        <p id="f4" class="feedback"></p>
+      </div>
+
+      <!-- Q5 -->
+      <div id="q5" class="question" style="display:none;">
+        <p><strong>5. Co je to „Znak Quen“ a k čemu slouží?</strong></p>
+        <div class="choices">
+          <button onclick="q5('stit')">Ochranný štít</button>
+          <button onclick="q5('ohnivy')">Ohnivý útok</button>
+          <button onclick="q5('axii')">Manipulace mysli</button>
+        </div>
+        <p id="f5" class="feedback"></p>
+      </div>
+
+      <!-- Q6 -->
+      <div id="q6" class="question" style="display:none;">
+        <p><strong>6. Co loví zaklínač?</strong></p>
+        <div class="choices">
+          <button onclick="q6('poklady')">Poklady</button>
+          <button onclick="q6('carodejky')">Čarodějky</button>
+          <button onclick="q6('nestvury')">Nestvůry</button>
+        </div>
+        <p id="f6" class="feedback"></p>
+      </div>
+
+      <!-- Q7 (vše správné) -->
+      <div id="q7" class="question" style="display:none;">
+        <p><strong>7. Co by zaklínač nikdy neřekl v hospodě? (vše správné)</strong></p>
+        <div class="choices">
+          <button onclick="q7('mleko')">„Dám si mléko, prosím.“</button>
+          <button onclick="q7('nezajmu')">„Nestvůry? Ty mě nezajímají.“</button>
+          <button onclick="q7('elixirlasky')">„Znáte recept na elixír lásky?“</button>
+        </div>
+        <p id="f7" class="feedback"></p>
+      </div>
+
+      <!-- Q8 (vše správné) -->
+      <div id="q8" class="question" style="display:none;">
+        <p><strong>8. Nejoblíbenější nápoj zaklínače po těžkém boji? (vše správné)</strong></p>
+        <div class="choices">
+          <button onclick="q8('medovina')">Medovina</button>
+          <button onclick="q8('vlastovka')">Vlaštovka (elixír)</button>
+          <button onclick="q8('cokoliv')">Cokoliv, co ho neotráví</button>
+        </div>
+        <p id="f8" class="feedback"></p>
+      </div>
+
+      <!-- Q9 (vše správné) -->
+      <div id="q9" class="question" style="display:none;">
+        <p><strong>9. Zaklínačský způsob řešení hádky? (vše správné)</strong></p>
+        <div class="choices">
+          <button onclick="q9('mece')">Souboj na meče</button>
+          <button onclick="q9('pravdy')">Elixír pravdy</button>
+          <button onclick="q9('mlceni')">Mlčení a zamračený pohled</button>
+        </div>
+        <p id="f9" class="feedback"></p>
+      </div>
+
+      <div id="finish" style="display:none; margin-top:12px;">
+        <div class="bubble">
+          <p><strong>Alchymista:</strong> "Ano… jsi pravý Zaklínač! Tedy, Zaklínačka… a ještě k tomu moc krásná! Jak se jmenuješ, mohu-li se zeptat?"</p>
+        </div>
+        <div class="input-row">
+          <input type="text" id="playerName" placeholder="Tvé jméno">
+          <button onclick="submitName()">OK</button>
+        </div>
+        <div id="nameResp"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" href="#" onclick="history.back();return false;">← Zpět</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+let score=0;
+function q1(a){
+  const f=document.getElementById('f1');
+  if(a==='Vesemir'){ score++; f.innerHTML='✅ <em>„Ano… Vesemir. Starý, moudrý. Vždy byl oporou smečky.“</em> (+1 důvěra)'; show('q2'); }
+  else if(a==='Geralt'){ f.innerHTML='❌ <em>„Geralt… vlk to je, ale nikdy nebyl mistrem. On kráčí vlastní cestou.“</em>'; }
+  else { f.innerHTML='❌ <em>„Lambert… ha! Ten by sotva zvládl vést i stádo koz, natož školu vlků!“</em>'; }
+}
+function q2(a){
+  const f=document.getElementById('f2');
+  if(a==='Kaer Morhen'){ score++; f.innerHTML='✅ <em>„Kaer Morhen… ano, stará pevnost v horách, domov vlků.“</em> (+1 důvěra)'; show('q3'); }
+  else if(a==='Novigrad'){ f.innerHTML='❌ <em>„Novigrad? Město kupců, ne vlků.“</em>'; }
+  else { f.innerHTML='❌ <em>„Oxenfurt? Tam učí knihomolové, ne zaklínači.“</em>'; }
+}
+function q3(a){
+  const f=document.getElementById('f3');
+  if(a==='Kočka'){ score++; f.innerHTML='✅ <em>„Ano… Kočka. Oči ve tmě jako v poledne.“</em> (+1 důvěra)'; show('q4'); }
+  else if(a==='Osel'){ f.innerHTML='❌ <em>„Osel? …Tvůj humor je temnější než noc sama.“</em>'; }
+  else { f.innerHTML='❌ <em>„Pavián? Cože?! …tohle jsem snad ani já nikdy nemíchal.“</em>'; }
+}
+function q4(a){
+  const f=document.getElementById('f4');
+  if(a==='trav'){ score++; f.innerHTML='✅ <em>„Ano! Zkouška trav. Bolest, krev a přežití – jen ti nejsilnější zůstali.“</em> (+1 důvěra)'; show('q5'); }
+  else if(a==='pravdy'){ f.innerHTML='❌ <em>„Pravdy? …Pravda v tomto světě nic neznamená.“</em>'; }
+  else { f.innerHTML='❌ <em>„Vážně?.“</em>'; }
+}
+function q5(a){
+  const f=document.getElementById('f5');
+  if(a==='stit'){ score++; f.innerHTML='✅ <em>„Správně! Quen chrání zaklínače před úderem, jako štít světla.“</em> (+1 důvěra)'; show('q6'); }
+  else if(a==='ohnivy'){ f.innerHTML='❌ <em>„To je Igni, ne Quen.“</em>'; }
+  else { f.innerHTML='❌ <em>„To by byl Axii, ne Quen.“</em>'; }
+}
+function q6(a){
+  const f=document.getElementById('f6');
+  if(a==='nestvury'){ score++; f.innerHTML='✅ <em>„Ano. Nestvůry, ať vypadají jakkoliv…“</em> (+1 důvěra)'; show('q7'); }
+  else if(a==='poklady'){ f.innerHTML='❌ <em>„Poklady? To je práce zlodějů.“</em>'; }
+  else { f.innerHTML='❌ <em>„Co vím, tak čarodějky spíš loví zaklínače. Hah!“</em>'; }
+}
+function q7(a){
+  const f=document.getElementById('f7');
+  score++;
+  if(a==='mleko'){ f.innerHTML='✅ <em>„Haha! ‘Dám si mléko, prosím.’“</em> (+1 důvěra)'; }
+  if(a==='nezajmu'){ f.innerHTML='✅ <em>„Haha! ‚Nestvůry? Ty mě nezajímají.‘“</em> (+1 důvěra)'; }
+  if(a==='elixirlasky'){ f.innerHTML='✅ <em>„Haha! ‚Znáte recept na elixír lásky?‘“</em> (+1 důvěra)'; }
+  show('q8');
+}
+function q8(a){
+  const f=document.getElementById('f8');
+  score++;
+  if(a==='medovina'){ f.innerHTML='✅ <em>„Sladká a silná – mnohý vlk si ji dopřál!“</em> (+1 důvěra)'; }
+  if(a==='vlastovka'){ f.innerHTML='✅ <em>„Ano, Vlaštovka. Uzdraví, posílí.“</em> (+1 důvěra)'; }
+  if(a==='cokoliv'){ f.innerHTML='✅ <em>„Ha! Pravda. Zaklínači mají žaludek z oceli, ale i ten má hranice.“</em> (+1 důvěra)'; }
+  show('q9');
+}
+function q9(a){
+  const f=document.getElementById('f9');
+  score++;
+  if(a==='mece'){ f.innerHTML='✅ <em>„Krev často řeší víc než slova.“</em> (+1 důvěra)'; }
+  if(a==='pravdy'){ f.innerHTML='✅ <em>„Zajímavé…“</em> (+1 důvěra)'; }
+  if(a==='mlceni'){ f.innerHTML='✅ <em>„Haha. Jste všichni stejní.“</em> (+1 důvěra)'; }
+  show('finish');
+}
+function submitName(){
+  const name = document.getElementById('playerName').value.trim() || 'Zaklínačko';
+  document.getElementById('nameResp').innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Rád tě poznávám, ${name}! Já jsem… já jsem…"</p><p><strong>Alchymista:</strong> "... Nevím kdo jsem… ale to nyní nevadí."</p></div>
+  <a class="continue-btn" href="kap4.html">👉 Pokračovat</a>`;
+}
+</script>
+</body>
+</html>

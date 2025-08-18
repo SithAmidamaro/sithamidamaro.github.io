@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitola 7 – Přenosná laboratoř</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="kap5.html">← Zpět</a>
+    </div>
+    <h1>Kapitola 7 – Přenosná laboratoř</h1>
+    <div class="panel">
+      <div class="dialogue">
+        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+        <div class="bubble">
+          <p><strong>Alchymista:</strong> "Hmmm… Vzpomínám si… měl jsem laboratoř. Malou, přenosnou, aby i zaklínač mohl míchat lektvary v divočině. Vím, že jsem ji nechal někde poblíž… v chatě nebo kolem ní."</p>
+        </div>
+      </div>
+
+      <div class="choices">
+        <button onclick="say(1)">„Kde by měla být?“</button>
+        <button onclick="say(2)">„K čemu sloužila?“</button>
+      </div>
+      <div id="out" style="margin-top:10px;"></div>
+
+      <div class="bubble" style="margin-top:10px;">
+        <p><strong>Alchymista:</strong> „Až ji najdeš, dej mi vědět.“</p>
+        <div class="choices">
+          <button onclick="found()">Našla jsem ji.</button>
+        </div>
+        <div id="cont"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" href="#" onclick="history.back();return false;">← Zpět</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+function say(n){
+  const o=document.getElementById('out');
+  if(n===1){
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Vzpomínám si na šuplík… a vzkaz: <em>NESAHAT</em>."</p></div>`;
+  }else{
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Byla to moje hrdost. Zaklínači měli jen meče a znamení. Já jim chtěl dát víc – možnost tvořit kdekoli. Elixíry, mutageny… snad i něco, co prolomí kletby."</p></div>`;
+  }
+}
+function found(){
+  document.getElementById('cont').innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď máš v rukou kus mé práce, kus mé duše. S její pomocí dokážeme velké věci. Dej mi čas, ozvi se, až tma pohltí lesy."</p></div>
+  <a class="continue-btn" href="kap7c.html">👉 Pokračovat (Kapitola 7c – Lektvar Kočky)</a>`;
+}
+</script>
+</body>
+</html>

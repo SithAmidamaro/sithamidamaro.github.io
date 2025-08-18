@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitola 7c – Lektvar Kočky</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/helpers.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="kap7.html">← Zpět</a>
+    </div>
+    <h1>Kapitola 7c – Lektvar Kočky</h1>
+    <div class="panel">
+      <div class="dialogue">
+        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+        <div class="bubble">
+          <p><strong>Alchymista:</strong> "Cítíš to? Jak noc houstne? Zaklínači pili Kočku, když potřebovali vidět ve tmě. Já ji kdysi změnil – přidal jsem do ní Tekutý zrak. S ním zesílí i má Lampa."</p>
+        </div>
+      </div>
+
+      <div class="choices">
+        <button onclick="say(1)">„Jak ji vyrobit?“</button>
+        <button onclick="say(2)">„Co je Tekutý zrak?“</button>
+        <button onclick="say(3)">„Jak Kočka posílí Lampu?“</button>
+      </div>
+      <div id="out" style="margin-top:10px;"></div>
+
+      <div class="bubble" style="margin-top:10px;">
+        <p><strong>Kotva:</strong> Uvař nápoj – „zesílenou Kočku“ – a napiš jeho barvu. <em>(Správně: fialová)</em></p>
+        <div class="input-row">
+          <input id="barva" type="text" placeholder="Jaká je barva?">
+          <button onclick="check()">Potvrdit</button>
+        </div>
+        <p id="hint" class="feedback"></p>
+        <div id="cont"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" href="#" onclick="history.back();return false;">← Zpět</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+function say(n){
+  const o=document.getElementById('out');
+  if(n===1){
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Normální Kočku ti popíše Lukas. Ale abys ji posílila, přidej Tekutý zrak – třeba něco chutného a barevného, co by chtělo změnit tvé oči."</p></div>`;
+  }else if(n===2){
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Říkali tomu tak… látka, která láme světlo, až se barvy třpytí jinak. Moje tajemství. V tvém nápoji to může být cokoliv zvláštního a svůdného."</p></div>`;
+  }else{
+    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Když spojíš Kočku a Lampu, zhmotní se to, co bylo skryté. Světlo lampy ukáže stopy, a Kočka ti dovolí je vnímat."</p></div>`;
+  }
+}
+function check(){
+  const raw=document.getElementById('barva').value;
+  const norm=normalizeInput(raw);
+  const hint=document.getElementById('hint');
+  const cont=document.getElementById('cont');
+  if(norm==='fialova' || norm==='purple'){
+    hint.textContent='';
+    cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Ano! Fialová Kočka. Teď zesílí i Lampu. Pamatuji si… nechal jsem ji v podkroví chaty, v truhlici. Najdi ji."</p></div>
+    <a class="continue-btn" href="kap8.html">👉 Pokračovat (Kapitola 8 – Krystalová lampa)</a>`;
+  }else{
+    hint.textContent = '„Ne… Kočka byla tmavá. S Tekutým zrakem se proměnila – černá se spojila s ohněm, až vznikla barva noci a magie… fialová.“';
+    cont.innerHTML='';
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitola 5 – Bestiář</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/helpers.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="kap4.html">← Zpět</a>
+    </div>
+    <h1>Kapitola 5 – Bestiář</h1>
+    <div class="panel">
+      <div class="dialogue">
+        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+        <div class="bubble">
+          <p><strong>Alchymista:</strong> "Ano… ten znak… byl prokletý. Už chápu. To zlo mne sledovalo dlouho. Ale já… já nevím, jak se jmenuje. Pamatuji si jen stíny. Stromy, co kráčely. Lebky, co zíraly. Les, co se hýbal, jako by byl živý. Vlčice… ty znáš bestiáře. Zkus to pojmenovat."</p>
+        </div>
+      </div>
+
+      <div class="bubble" style="margin-top:8px;">
+        <p><strong>Kotva:</strong> Zadej název monstra. (Povolené varianty: <em>Lešij</em>, <em>Leshen</em>, <em>Lesij</em>)</p>
+        <div class="input-row">
+          <input id="monster" type="text" placeholder="Napiš jméno stvůry">
+          <button onclick="check()">Potvrdit</button>
+        </div>
+        <p id="hint" class="feedback"></p>
+        <div id="cont"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" href="#" onclick="history.back();return false;">← Zpět</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+function check(){
+  const raw = document.getElementById('monster').value;
+  const norm = normalizeInput(raw);
+  const hint = document.getElementById('hint');
+  const cont = document.getElementById('cont');
+  const ok = ['lesij','leshen','leshij']; // akceptujeme běžné varianty po odstripování diakritiky
+
+  if(ok.includes(norm)){
+    hint.textContent='';
+    cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Lešij… Ano! To jméno bodá v mé mysli jako trn. Viděl jsem ho… ve snech se přibližoval. Musí být zastaven! Vlčice, tvé čepele jsou nyní jedinou nadějí. Dám ti rady – recepty, pomůcky. Ale boj je tvůj."</p></div>
+    <a class="continue-btn" href="kap7.html">👉 Pokračovat (Kapitola 7 – Přenosná laboratoř)</a>`;
+  }else{
+    // specifické nápovědy
+    const m = norm;
+    if(m.includes('upir')){
+      hint.textContent = '„Upír… ne. Tohle nebylo z krve, ale ze dřeva. V žilách mu neproudila červená, ale míza.“';
+    }else if(m.includes('vlci') || m.includes('demon') || m.includes('vlk')){
+      hint.textContent = '„Myslíš, že to byl vlk? Vypadal, že vlky ovládá – dělá si z nich oči. Ale sám vlkem nebyl.“';
+    }else if(m.includes('ent')){
+      hint.textContent = '„Strom… ano, vypadalo to jako strom. Ale nebyl laskavý strážce. Tenhle les vraždil. Les byl prokletý.“';
+    }else{
+      hint.textContent = '„Ne… Hledej bytost spjatou s lesem, s kořeny, co chodí a poroučí zvířatům…“';
+    }
+    cont.innerHTML='';
+  }
+}
+</script>
+</body>
+</html>

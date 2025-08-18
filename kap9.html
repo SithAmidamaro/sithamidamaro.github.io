@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitola 9 – Přání štěstí</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/helpers.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="kap8.html">← Zpět</a>
+    </div>
+    <h1>Kapitola 9 – Přání štěstí</h1>
+    <div class="panel">
+      <div class="dialogue">
+        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+        <div class="bubble">
+          <p><strong>Alchymista:</strong> "Teď vím, že jsme na správné cestě. Lampa, Kočka a Algiz… dohromady tě povedou dál. Duchové lesa ti ukážou stopy venku. Běž a hledej – až uspěješ, vrať se."</p>
+        </div>
+      </div>
+
+      <div class="bubble" style="margin-top:10px;">
+        <p><strong>Kotva:</strong> Potvrď, že hledání bylo úspěšné (napiš, co jsi našla).</p>
+        <div class="input-row">
+          <input id="nalezeno" type="text" placeholder="Popiš svůj nález">
+          <button onclick="check()">Potvrdit</button>
+        </div>
+        <p id="hint" class="feedback"></p>
+        <div id="cont"></div>
+      </div>
+
+      <div class="footer-nav">
+        <a class="btn" href="#" onclick="history.back();return false;">← Zpět</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+function check(){
+  const v = document.getElementById('nalezeno').value.trim();
+  const hint=document.getElementById('hint');
+  const cont=document.getElementById('cont');
+  if(!v){
+    hint.textContent='„Běž a dej vědět, co jsi našla. Já tě tu budu čekat. Vím, že budeš úspěšná!“';
+    cont.innerHTML='';
+  }else{
+    hint.textContent='';
+    cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Tak rád tě slyším…! Věděl jsem, že se vrátíš."</p></div>
+    <a class="continue-btn" href="kap12.html">👉 Pokračovat (Kapitola 12 – Runy a návnada)</a>`;
+  }
+}
+</script>
+</body>
+</html>
