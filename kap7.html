@@ -50,27 +50,8 @@ function say(n){
   }
 }
 function found(){
-  const cont = document.getElementById('cont');
-  cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď máš v rukou mojí přenosnou laboratoř. S její pomocí dokážeme velké věci. Jsou tam různé experimenty, vyzkoušej si nějaké, bude se to určitě hodit! A já mezitím zkusím něco zjistit ! Poptat se venku... <strong> Ozvi se mi, až budeš hotova s experimenty a až tma pohltí lesy. </strong>"</p></div>
-    <div class='input-row' style='margin-top:8px;'>
-      <input id='tma' type='text' placeholder='Už je tma?'>
-      <button onclick='confirmTma()'>Potvrdit</button>
-    </div>
-    <p id='hint' class='feedback'></p>
-    <div id='next'></div>`;
-}
-
-function confirmTma(){
-  const v = document.getElementById('tma').value.trim();
-  const hint = document.getElementById('hint');
-  const next = document.getElementById('next');
-  if(!v){
-    hint.textContent = '„Musíš něco napsat, aby ses mohla posunout dál.“';
-    next.innerHTML = '';
-  }else{
-    hint.textContent = '';
-    next.innerHTML = `<a class='continue-btn' href='kap7c.html'>👉 Pokračovat (Kapitola 7c – Lektvar Kočky)</a>`;
-  }
+  document.getElementById('cont').innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď máš v rukou mojí přenosnou laboratoř. S její pomocí dokážeme velké věci. Jsou tam různé experimenty, vyzkoušej si nějaké, bude se to určitě hodit! A já mezitím zkusím něco zjistit ! Poptat se venku... <strong> Ozvi se mi, až budeš hotova s experimenty a až tma pohltí lesy. </strong>"</p></div>
+  <a class="continue-btn" href="kap7c.html">👉 Pokračovat (Kapitola 7c – Lektvar Kočkyyy)</a>`;
 }
 </script>
 </body>
