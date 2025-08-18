@@ -29,9 +29,9 @@
       <div id="out" style="margin-top:10px;"></div>
 
       <div class="bubble" style="margin-top:10px;">
-        <p><strong>Kotva:</strong> Uvař nápoj – „zesílenou Kočku“ – a napiš jeho barvu. <em>(Správně: fialová)</em></p>
+        <p><strong>Kotva:</strong> Namíchej lektvar na – „zesílenou Kočku“ – a napiš jeho barvu. <em>(Správně: fialová)</em></p>
         <div class="input-row">
-          <input id="barva" type="text" placeholder="Jaká je barva?">
+          <input id="barva" type="text" placeholder="Jaká je barva lektvaru">
           <button onclick="check()">Potvrdit</button>
         </div>
         <p id="hint" class="feedback"></p>
@@ -48,11 +48,11 @@
 function say(n){
   const o=document.getElementById('out');
   if(n===1){
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Normální Kočku ti popíše Lukas. Ale abys ji posílila, přidej Tekutý zrak – třeba něco chutného a barevného, co by chtělo změnit tvé oči."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Normální Kočku ti popíše Lukas. Ale abys ji posílila, přidej Tekutý zrak – vy ho nazýváte 'Okvětní lístky fialové Myrty' "</p></div>`;
   }else if(n===2){
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Říkali tomu tak… látka, která láme světlo, až se barvy třpytí jinak. Moje tajemství. V tvém nápoji to může být cokoliv zvláštního a svůdného."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Říkali tomu tak… látka, která láme světlo, až se barvy třpytí jinak. Moje tajemství. V tvém nápoji to může být cokoliv zvláštního a svůdného."</p></div>`;
   }else{
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Když spojíš Kočku a Lampu, zhmotní se to, co bylo skryté. Světlo lampy ukáže stopy, a Kočka ti dovolí je vnímat."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Když spojíš Kočku a Lampu, zhmotní se to, co bylo skryté. Světlo lampy ukáže stopy, a Kočka ti dovolí je vnímat."</p></div>`;
   }
 }
 function check(){

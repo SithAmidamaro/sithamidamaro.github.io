@@ -32,7 +32,7 @@
 
       <hr>
       <div class="bubble">
-        <p><strong>Kotva:</strong> Najdi u chaty znak a opiš jej (stačí libovolný popis). Bez potvrzení se dál nepohneme.</p>
+        <p><strong>Kotva:</strong> Najdi u chaty něco, co tam nepatří, znamení, hrozba...! Bez toho se dál nepohneme.</p>
         <div class="input-row">
           <input type="text" id="znak" placeholder="Zadej, co jsi našla">
           <button onclick="confirmFind()">Potvrdit nález</button>
@@ -51,13 +51,13 @@
 function ask(n){
   const o=document.getElementById('out');
   if(n===1){
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Viděl jsem stromy, jak se pohnuly… V korunách ptáci… ale byli mrtví. Cítil jsem, že les sám na mne sestoupil. A pak… ticho. Jen stíny. Když jsi mě vyvolala, obrátila jsi na sebe pozornost té stvůry!"</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Viděl jsem stromy, jak se pohnuly… V korunách ptáci… ale byli mrtví. Cítil jsem, že les sám na mne sestoupil. A pak… ticho. Jen stíny. Když jsi mě vyvolala, obrátila jsi na sebe pozornost té stvůry!"</p></div>`;
   }else if(n===2){
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "To nevím. Mé ruce si pamatují pohyby, má mysl cítí tíhu… ale tvary jsou pryč. Bylo to něco, co mělo zaklínače změnit navždy. Možná posílit, možná vysvobodit… Nemohu ti to ještě říct. Nejsem si jist."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "To nevím. Mé ruce si pamatují pohyby, má mysl cítí tíhu… ale tvary jsou pryč. Bylo to něco, co mělo zaklínače změnit navždy. Možná posílit, možná vysvobodit… Nemohu ti to ještě říct. Nejsem si jist."</p></div>`;
   }else if(n===3){
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím, ale cítím … že to má něco společného s chatou… Tam, kde vlci kdysi skrývali své věci před očima smrtelníků. Tam povede naše cesta… Bude tam něco, co tam nepatří, co tam někdo dal… až to najdeš, dej mi vědět."</p></div>`;
+  o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím, ale cítím … že to má něco společného s chatou… Tam, kde vlci kdysi skrývali své věci před očima smrtelníků. <strong>Tam povede naše cesta… Bude tam něco, co tam nepatří, co tam někdo dal… až to najdeš, dej mi vědět.</strong> "</p></div>`;
   }else{
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Měl jsem jméno, kdysi. Znělo hrdě, neslo se mezi vlky. Ale teď? Je to jen šepot. Možná, až tvá cesta bude delší, mé jméno se mi vrátí."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Měl jsem jméno, kdysi. Znělo hrdě, neslo se mezi vlky. Ale teď? Je to jen šepot. Možná, až tvá cesta bude delší, mé jméno se mi vrátí."</p></div>`;
   }
 }
 function confirmFind(){

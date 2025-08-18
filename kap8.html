@@ -48,11 +48,11 @@
 function say(n){
   const o=document.getElementById('out');
   if(n===1){
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Lampa odhaluje skryté. Se Kočkou uvidíš i stíny duchů – a ti tě povedou k pravdě."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Lampa odhaluje skryté. Se Kočkou uvidíš i stíny duchů – a ti tě povedou k pravdě."</p></div>`;
   }else if(n===2){
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Z křišťálu z hor. Vložil jsem do něj runu ochrany, proto svítí, proto nezhasne."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Z křišťálu z hor. Vložil jsem do něj runu ochrany, proto svítí, proto nezhasne."</p></div>`;
   }else{
-    o.innerHTML += `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď vypij Kočku a pod schody hledej runu. Až ji najdeš, napiš mi její jméno."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď vypij Kočku a pod schody hledej runu. Až ji najdeš, napiš mi její jméno."</p></div>`;
   }
 }
 function check(){

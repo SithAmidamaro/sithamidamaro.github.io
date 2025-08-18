@@ -1,0 +1,307 @@
+Návrh více-stránkové interaktivní hry Zaklínač (statická HTML/CSS/JS aplikace)
+Struktura projektu
+Projekt bude tvořen statickými soubory HTML, CSS, JavaScript a assety (obrázky). Navrhovaná struktura adresářů a souborů může vypadat např. takto:
+/                 (kořen repozitáře pro GitHub Pages)
+├── index.html                – Úvod hry / **Kapitola 1** (první dialogové setkání)
+├── kapitola2.html            – **Kapitola 2** (pokračování příběhu, např. kvíz)
+├── kapitola3.html            – **Kapitola 3** (další část příběhu)
+├── css/
+│   └── style.css             – Společné CSS stylování pro všechny stránky
+├── js/
+│   └── script.js             – (Volitelně) společné skripty pro interakce hry
+└── img/
+    └── alchymista_mavajici.png – Obrázek avatara alchymisty (animovaný, mávající)
+Poznámky: Pro GitHub Pages stačí mít tento obsah v defaultní větvi (např. main) – hlavní stránka index.html bude automaticky načtena. Každá kapitola má vlastní HTML soubor (např. kapitola2.html, kapitola3.html, ...), který obsahuje danou scénu dialogové hry. Navigace mezi stránkami probíhá pomocí odkazů/tlačítek „Pokračovat“ nebo voleb hráče. Ve složce img je uložen obrázek alchymisty (avatar), v css/style.css budou stylopisy pro jednotný vzhled a v js/script.js mohou být společné skripty (např. funkce pro ověřování odpovědi). Pokud je skriptů minimum, lze je vkládat i přímo do HTML stránky dané kapitoly. Každou stránku je možné otevřít samostatně – neuchovává se žádný globální stav (žádné session či localStorage). To znamená, že případné informace zadané hráčem (např. jméno) se nepřenášejí na další stránku; každá kapitola je samostatná.
+Doporučené postupy pro jednoduchost a mobilní UX
+Aplikace bude používána na mobilním telefonu, proto je optimalizace pro mobilní zobrazení klíčová. Níže uvádíme osvědčené postupy pro dosažení dobré použitelnosti na malých displejích:
+    • Responzivní design a meta viewport: V hlavičce HTML každé stránky by měl být meta tag nastavující viewport pro mobilní zařízení, aby se stránka správně škálovala na šířku displeje. Příklad: <meta name="viewport" content="width=device-width, initial-scale=1.0">[1]. Tento tag zajistí, že se obsah nebude zbytečně zmenšovat nebo zvětšovat a bude vycházet ze skutečné šířky zařízení. Celkový layout stránek navrhujeme jako responzivní – použitím flexibilních jednotek (%, vh/vw) a vhodných CSS technik se stránka automaticky přizpůsobí různým velikostem obrazovek[2].
+    • Rozvržení prvků pomocí Flexbox/Grid: Pro jednoduché a responzivní uspořádání komponent (avatar + bublina s textem, nabídka odpovědí apod.) je vhodné využít moderní CSS layouty jako Flexbox nebo Grid. Například obalovací <div> pro dialog může mít styl display: flex; align-items: center; – avatar alchymisty a textová bublina se tak vedle sebe zarovnají na střed vertikálně. Při malém prostoru (úzký mobil) lze pomocí media query přepnout flex-container do sloupce (flex-direction: column), aby se avatar s textem zalomily pod sebe. Tím zajistíme, že UI bude dobře čitelná jak na výšku mobilu, tak případně na širším zařízení. Tlačítka odpovědí mohou být uspořádána pod sebou (např. display: flex; flex-direction: column; nebo jako jednoduchý blok) – zaručí to pohodlné scrollování i ovládání jednou rukou.
+    • Dostatečně velká tlačítka a čitelný text: Protože hráč bude ovládat hru dotykem, interaktivní prvky (tlačítka voleb, odkazy „Pokračovat“) by měly mít dostatečnou velikost pro pohodlné kliknutí prstem. Doporučuje se minimálně okolo 47–50 pixelů na šířku pro tlačítko[3] a dostatečné mezery mezi jednotlivými tlačítky[4], aby nedocházelo k nechtěným překlikům. Text v bublinách i na tlačítkách by měl mít čitelnou velikost fontu (alespoň ~16px)[5], aby hráč nemusel zoomovat. Celkové písmo a barvy volte s ohledem na čitelnost na slunci – např. jednoduché kontrastní schéma (světlé pozadí bubliny, tmavý text)[6].
+    • Jednoduchý a přehledný design: Na mobilu platí pravidlo “méně je více”. Rozhraní by mělo obsahovat jen prvky nezbytné pro hru: avatar, textovou bublinu s dialogem, volby hráče případně vstup pro odpověď, a navigační tlačítka. Žádné rušivé prvky (reklamy, pop-up okna) – ty by na malé obrazovce překážely a frustrovaly uživatele[7][8]. Navigace v rámci hry by měla být intuitivní: jasná tlačítka „Pokračovat“ pro přechod dál a „Zpět“ pro návrat, umístěná konzistentně (např. dole na stránce). Kratší odstavce textu a případné seznamy (u voleb) zvyšují čitelnost na první pohled[9] – dlouhé bloky textu je vhodné rozdělit do více bublin nebo kroků, aby hráč nebyl zahlcen.
+    • Rychlé načítání a jednoduchost implementace: Protože není k dispozici backend, vše běží přímo v prohlížeči zařízení. Důraz dejte na výkon – optimalizujte obrázky (avatar může být v rozumném rozlišení a komprimovaný, aby se rychle načetl i na mobilním internetu)[10]. Použijte raději méně externích souborů – např. sloučit CSS do jednoho souboru, minimalizovat JS – aby počet HTTP požadavků byl co nejnižší[11]. Díky statické povaze aplikace budou stránky velmi rychlé; vyvarujte se však zbytečných knihoven či velkých skriptů. Interakce lze řešit jednoduchým JavaScriptem nebo čistě pomocí odkazů mezi stránkami. (Pokud by skriptů bylo více, je možné je umístit do jednoho script.js a ten načítat na všech stránkách, aby se využil cache pro opakované kapitoly.) Každopádně hra nesmí ukládat stav do paměti zařízení (nepoužívat localStorage, cookies apod.), vše se řeší buď navigací na další stránku, nebo podmíněným zobrazením prvků na aktuální stránce.
+Základní HTML šablona kapitoly
+Každá kapitola bude mít podobnou HTML strukturu, aby hráč měl konzistentní zážitek. Základní kostra stránky obsahuje:
+    • Hlavičku HTML (<head>) s meta údaji a odkazy na styl a případně skript: Nastavení jazyka (lang="cs"), meta charset UTF-8 (pro češtinu), meta viewport (viz výše pro mobilní zobrazení), odkaz na společný CSS soubor style.css a případně includovaný script.js. Také je vhodné do <title> uvést název kapitoly (např. Kapitola 1 – První setkání), aby se hráči orientovali (titulkový pruh prohlížeče).
+    • Tělo stránky (<body>) rozvržené pro danou scénu:
+    • Avatar alchymisty – obrázek alchymista_mavajici.png vložený např. jako <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">. Tento <img> element bude stylován CSS tak, aby byl třeba fixně širší ~30% obrazovky (nebo např. 150px) a automaticky se zmenšoval na menších displejích (max-width: 100%; height: auto;). Můžeme jej obalit do kontejneru spolu s textovou bublinou kvůli flex layoutu:
+    • <div class="dialogue">
+  <img src="img/alchymista_mavajici.png" class="avatar" alt="Alchymista">
+  <div class="bubble">
+    <!-- sem přijde text dialogu alchymisty -->
+  </div>
+</div>
+    • Třída .dialogue bude v CSS nastylována jako flex container, .avatar nastavíme šířku/výšku, a .bubble bude mít např. odlišnou barvu pozadí, zaoblené rohy a v CSS vytvořený trojúhelníkový „ocásek“ směrem k avatarovi, aby připomínala komiksovou bublinu. (Ocásek lze řešit pseudo-prvkem ::after s border-triangle trikem, nebo jednodušejším způsobem – např. přidáním malé trojúhelníkové PNG if needed. Pro jednoduchost můžeme i vynechat ocásek a použít jen zaoblený box s textem.)
+    • Textová bublina alchymisty – uvnitř <div class="bubble"> bude HTML obsah dialogu (odstavce <p> s promluvou). Doporučuji začít tučně jménem postavy, a text dát do uvozovek pro styl přímé řeči. Např.:
+    • <p><strong>Alchymista:</strong> "Tma... chlad... hlasy stromů... Kdo mě volá? Jsem... mrtvý? Nebo jen zapomenutý?"</p>
+    • Pokud je dialog delší, lze jej rozdělit do víc odstavců, nebo nechat scrollovat v rámci bubliny (ale to spíš není třeba – raději rozdělte na více kapitol či interakcí).
+    • Volby hráče / odpovědi: Pod dialogem alchymisty následují možnosti pro hráče. Ty mohou být realizovány jako tlačítka (<button>) nebo jako odkazové <a> prvky stylované jako tlačítka. Pro naše účely je vhodný <button>, protože budeme nejspíš reagovat skriptem (např. vyhodnotit správnou odpověď nebo větvit děj). V HTML tedy např.:
+    • <div class="choices">
+  <button onclick="...">Jsem zaklínač ze školy Vlka, Áňa.</button>
+  <button onclick="...">Jsem jen poutník, který tě našel.</button>
+  <button onclick="...">To není důležité, řekni mi, kdo jsi.</button>
+</div>
+    • Tlačítkům můžeme v CSS dát jednotný styl (šířka 100% pro mobil, padding pro větší dotykovou plochu, margin-bottom mezi nimi apod.). Je dobré také zřetelně vizuálně odlišit aktivní prvky (např. barvou pozadí nebo rámečkem) pro lepší UX.
+    • „Kotvy“ a podmíněné prvky: V mnoha kapitolách je potřeba zablokovat postup, dokud hráč nezadá správnou odpověď nebo něco neprovede. Tento mechanismus (v zadání nazývaný kotva) zajistíme buď nepovolením tlačítka „Pokračovat“ dokud se podmínka nesplní, nebo nezobrazením odkazů na další kapitolu dokud není správná akce. V praxi to znamená, že například v kapitole 1 se tlačítko „Pokračovat“ objeví teprve, až hráč zvolí správnou odpověď (identifikuje se jako zaklínač školy Vlka). Do té doby zůstává hráč na stránce a nemůže pokračovat[12]. Podobně u hádanek s ručním zadáním (např. později barva elixíru či jméno runy) můžeme formulář pro pokračování mít dostupný, ale další krok se provede pouze, pokud je vstup správný – jinak alchymista vypíše nápovědu a vyzve k opětovnému pokusu. Technicky toho docílíme JavaScriptem: např. pokud odpověď nesedí, zobrazíme další větu alchymisty (hint) místo odkazu dál.
+    • Navigační tlačítka: Každá stránka by měla umožnit pokračovat do další části příběhu (pokud jsou splněny podmínky) a vrátit se zpět na předchozí stránku. Pro Pokračování použijeme buď klasický odkaz <a href="kapitola2.html">Pokračovat</a> nebo tlačítko s odkazem. Pokud má být zpočátku skryté, můžeme mu dát třeba id id="continueBtn" a CSS display: none, a zobrazit jej až po splnění úkolu (pomocí JS: document.getElementById('continueBtn').style.display='block'). Pro Návrat zpět můžeme jednoduše použít odkaz <a href="javascript:history.back()">Zpět</a> který využije historii prohlížeče, případně explicitně odkazovat na předchozí kapitolu (např. href="index.html" pro kapitolu 1). U slepých větví (špatných odpovědí) můžeme hráči nabídnout tlačítko „Zkusit znovu“ – to buď provede history.back(), nebo v rámci jedné stránky resetuje volbu a dovolí vybrat znovu[13]. (V našem návrhu níže řešíme špatné odpovědi tak, že zobrazíme zprávu a tlačítko pro nový pokus přímo.)
+    • JavaScript logika: Interaktivita (podmíněné zobrazování kotvy, ověřování správných odpovědí, větvení dialogu) bude řešena JavaScriptem na straně klienta. Proto ke konci <body> (nebo v externím script.js) přidáme skript, který:
+    • reaguje na kliknutí hráčových voleb (pomocí onclick handlerů nebo přidáním event listenerů v JS),
+    • vyhodnocuje, zda zvolená volba je správná či nikoliv,
+    • podle toho manipuluje DOM: např. vloží do stránky novou repliku alchymisty (text s nápovědou při špatné volbě), odhalí skryté tlačítko „Pokračovat“ dál, případně odkryje další otázku kvízu, atd.
+    • umožní zadat vstup (text) a tlačítkem potvrdit – pak porovná hodnotu (value) vstupu s požadovanou odpovědí. Správně zadáno -> pokračování, špatně -> zobrazení rady a čekání na správné zadání. (Příklad: v pozdější kapitole bude hráčka muset zadat název runy „Algiz“ pro pokračování, jinak ji alchymista opraví[14][15].)
+Níže uvádíme konkrétní ukázky HTML šablon pro první dvě kapitoly včetně ilustrativní JavaScriptové logiky. Tyto skeletony demonstrují výše popsané principy (dialog s avatarem, volby hráče, kotvy a podmíněné pokračování, mobilní stylování). Samotné definice CSS stylů nejsou vypsány kompletně, ale počítá se s tím, že v style.css nastavíme výše zmíněné třídy (.avatar, .bubble, .choices atd.) tak, aby výsledek byl pohledný na mobilu – např. .bubble { background: #eee; padding: 10px; border-radius: 10px; position: relative; } a .bubble::after { content: ''; position: absolute; ... } pro trojúhelník směřující k avatarovi, atd., .choices button { font-size: 1em; margin: 5px 0; padding: 10px; width: 100%; } pro velká tlačítka, atd. (Detailní CSS implementaci zde pro stručnost vynecháváme.)
+Kostra Kapitoly 1 – První vyvolání alchymisty
+Kapitola 1 představuje první setkání hráčky (Áňi) s duchem alchymisty na zřícenině mlýna. Alchymista je zmatený a testuje, zda má před sebou skutečného zaklínače z Školy Vlka. Hráčka má tři možné odpovědi – jen jedna je správná pro posun dál, ostatní vedou k slepé větvi (alchymista se stáhne a je potřeba zkusit odpovědět znovu správně). Tato stránka tedy obsahuje dialog alchymisty, nabídku tří odpovědí a kotvu, která pustí hráče dál (tlačítko „Pokračovat“) až po zvolení správné odpovědi.
+Soubor: index.html (Kapitola 1)
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitola 1 – První vyvolání</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>Kapitola 1 – Zřícenina mlýna</h1>
+  <div class="dialogue">
+    <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+    <div class="bubble">
+      <p><strong>Alchymista:</strong> "Tma... chlad... hlasy stromů... Kdo... kdo mne volá? Jsem... mrtvý? Nebo jen zapomenutý?"</p>
+    </div>
+  </div>
+
+  <div class="choices">
+    <!-- Hráčovy možnosti odpovědi -->
+    <button onclick="chooseOption(1)">Jsem zaklínač ze školy Vlka, Áňa.</button>
+    <button onclick="chooseOption(2)">Jsem jen poutník, který tě našel.</button>
+    <button onclick="chooseOption(3)">To není důležité – řekni mi, kdo jsi.</button>
+  </div>
+
+  <!-- Zde se dynamicky objeví odpověď alchymisty a pokračování -->
+  <div id="response"></div>
+
+  <script>
+    function chooseOption(choice) {
+      const responseDiv = document.getElementById('response');
+      if (choice === 1) {
+        // Správná volba – alchymista akceptuje hráčku
+        responseDiv.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Vlk... **Vlci**! Ano, to jméno znám. Byli jste mými přáteli. Ale... opravdu jsi vlk? Nebo jen liška v přestrojení?"</p></div>
+        <p><em>(Alchymista si nyní chce ověřit, že Áňa je skutečně zaklínačka – následuje kvíz.)</em></p>
+        <a href="kapitola2.html" class="continue-btn">👉 Pokračovat</a>`;
+        // Zobrazí bublinu s reakcí a odkaz "Pokračovat" do další kapitoly (kvíz).
+      } else if (choice === 2) {
+        // Špatná volba 1 – slepá větev (poutník)
+        responseDiv.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Poutník?... Ne, to nesedí. Poutníci neznají znamení vlků. Mé srdce se zavírá... odpusť."</p></div>
+        <button onclick="reset()">🔄 Zkusit znovu</button>`;
+        // Alchymista zmizel, nabídneme možnost zkusit odpovědět znovu
+      } else if (choice === 3) {
+        // Špatná volba 2 – neúplná odpověď
+        responseDiv.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Já... kdo jsem já? Jen prach a vzpomínky... Nic si nepamatuji. Pokud jsi vlk, **ukaž mi to**..."</p></div>
+        <button onclick="reset()">🔄 Zkusit znovu</button>`;
+        // Alchymista potřebuje potvrzení identity – hráč musí vybrat správnou možnost
+      }
+      // Pozn.: Po špatné volbě zůstávají původní tlačítka; hráč může ihned zkusit jinou odpověď nebo stisknout "Zkusit znovu" pro vyčištění zprávy.
+    }
+
+    function reset() {
+      // Vymaže div s odpovědí (bubble alchymisty i tlačítko) – hráčka může zkusit znovu
+      document.getElementById('response').innerHTML = "";
+    }
+  </script>
+
+</body>
+</html>
+Vysvětlení kódu: Po načtení kapitoly 1 vidí hráčka text alchymisty a tři tlačítka odpovědí. Klik na tlačítko volá funkci chooseOption(x) s parametrem odlišujícím, kterou možnost zvolila. Funkce chooseOption vyhodnotí odpověď: - Pokud choice === 1 (správně, Áňa se představila jako zaklínačka Vlka), do elementu <div id="response"> vložíme další bublinu s reakcí alchymisty (který částečně uvěřil, ale bude chtít kvízem potvrdit) a pod to rovnou odkaz Pokračovat (<a href="kapitola2.html">), který vede na kapitolu 2 (kvíz). Tím je kotva prolomena a hráčka může pokračovat dál. - Pokud hráčka zvolí možnost 2 nebo 3 (nesprávné), vložíme do #response bublinu s odůvodněním alchymisty, proč to nebyla přijatelná odpověď, a nabídneme tlačítko „Zkusit znovu“. To vyvolá funkci reset(), která jednoduše vyprázdní obsah #response (schová tak alchymistovu reakci i samotné tlačítko), čímž se stránka vrátí do výchozího stavu a hráčka může opět zvolit odpověď. (Pozn.: Alternativně by šlo řešit návrat i odkazem zpět nebo zobrazením původních tlačítek znovu, zde však tlačítka zůstávají na stránce stále, takže hráč může rovnou kliknout jinou možnost i bez resetu.)
+Tím je zajištěno, že dokud neproběhne správná interakce, nelze se dostat na další kapitolu – tlačítko „Pokračovat“ se objeví až po správné volbě[12]. Případný návrat zpět (např. na úvod před vyvoláním) by šel řešit odkazem, ale zde to nedává smysl – kapitola 1 je první.
+Mobilní zobrazení: Díky CSS (není zde vypsáno) se .dialogue s avatarem a bublinou přizpůsobí šířce mobilu (flex kontejnér se stane sloupcem pod určitou šířku, avatar bude nad textem nebo zmenšený). Tlačítka v .choices jsou bloková a dostatečně velká přes celou šířku displeje pro pohodlné ovládání prstem[3]. Text je v odstavcích, nepříliš dlouhý, dobře čitelný bez nutnosti zoomovat.
+Kostra Kapitoly 2 – Kvíz (ověření zaklínače)
+Kapitola 2 představuje kvíz, kterým si alchymista ověřuje znalosti Áňi jako zaklínačky ze školy Vlka. Mechanicky jde o sérii otázek s nabídkou odpovědí. Hráčka musí na většinu (nebo všechny) odpovědět správně, aby získala alchymistovu důvěru a příběh pokračoval dál. Podle scénáře je kvíz formou dialogu: alchymista klade otázky a hodnotí odpovědi. Každá otázka má více možností, z nichž jedna (případně i více) jsou správné. Za správné odpovědi získává hráčka „důvěru“ alchymisty (+1 bod)[16]. Pokud nasbírá dost bodů, alchymista ji přijme jako pravou zaklínačku a představí se (respektive zjistí, že si nepamatuje své jméno) – poté ji pustí do další kapitoly. V případě špatných odpovědí alchymista buď hned reaguje posměšně a hráčka může zkusit jinou možnost, nebo pokud by celkově neuspěla, dovolí opakovat kvíz (to lze řešit tak, že se hráčka nehne z této stránky, dokud nezodpoví dobře vše podstatné).
+Interakčně to navrhneme tak, že po každé odpovědi alchymista ihned okomentuje, zda je správná či ne. Špatná odpověď neukončuje kvíz – hráč může u téže otázky vybírat, dokud netrefí správnou možnost (alchymista jí průběžně dává najevo, proč to či ono není správně, často humorně). Teprve pak se odemkne další otázka. Tím je zajištěno, že nakonec hráčka zodpoví správně všechny klíčové otázky (nasbírá max. důvěru). Po poslední otázce, pokud má dost bodů, se zobrazí závěrečný dialog alchymisty, kde uzná Áňu za pravou zaklínačku a zeptá se na její jméno[16]. Hráčka zadá své jméno do inputu a alchymista jej použije v oslovení – poté následuje odkaz Pokračovat do další kapitoly.
+Soubor: kapitola2.html (Kapitola 2 – Kvíz)
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitola 2 – Kvíz znalostí</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>Kapitola 2 – Zkouška znalostí</h1>
+  <div class="dialogue">
+    <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+    <div class="bubble">
+      <p><strong>Alchymista:</strong> "Říkáš, že jsi vlk... ale svět je plný klamů. Musíš mi dokázat, že krev Školy Vlka proudí ve tvých žilách. Odpověz na mé otázky... a já poznám pravdu."</p>
+    </div>
+  </div>
+
+  <!-- Otázka 1 -->
+  <div id="q1" class="question">
+    <p><strong>1. Kdo aktuálně vede školu Vlka?</strong></p>
+    <div class="choices">
+      <button onclick="answerQ1('Geralt')">Geralt</button>
+      <button onclick="answerQ1('Lambert')">Lambert</button>
+      <button onclick="answerQ1('Vesemir')">Vesemir</button>
+    </div>
+    <p id="feedback1" class="feedback"></p>
+  </div>
+
+  <!-- Otázka 2 (skrytá dokud se neodhalí) -->
+  <div id="q2" class="question" style="display:none;">
+    <p><strong>2. Jak se jmenuje hrad, kde sídlí škola Vlka?</strong></p>
+    <div class="choices">
+      <button onclick="answerQ2('Novigrad')">Novigrad</button>
+      <button onclick="answerQ2('Kaer Morhen')">Kaer Morhen</button>
+      <button onclick="answerQ2('Oxenfurt')">Oxenfurt</button>
+    </div>
+    <p id="feedback2" class="feedback"></p>
+  </div>
+
+  <!-- Otázka 3 -->
+  <div id="q3" class="question" style="display:none;">
+    <p><strong>3. Jaký lektvar zvyšuje noční vidění?</strong></p>
+    <div class="choices">
+      <button onclick="answerQ3('Osel')">Osel</button>
+      <button onclick="answerQ3('Pavián')">Pavián</button>
+      <button onclick="answerQ3('Kočka')">Kočka</button>
+    </div>
+    <p id="feedback3" class="feedback"></p>
+  </div>
+
+  <!-- ... podobně definované bloky pro otázky 4,5,6 ... -->
+
+  <!-- Otázka 7 (kde jsou všechny možnosti správné) -->
+  <div id="q7" class="question" style="display:none;">
+    <p><strong>7. Co by zaklínač nikdy neřekl v hospodě? (všechny uvedené odpovědi jsou správné)</strong></p>
+    <div class="choices">
+      <button onclick="answerQ7('mléko')">"Dám si mléko, prosím."</button>
+      <button onclick="answerQ7('nezajimaji')">"Nestvůry? Ty mě nezajímají."</button>
+      <button onclick="answerQ7('elixir')">"Znáte recept na elixír lásky?"</button>
+    </div>
+    <p id="feedback7" class="feedback"></p>
+  </div>
+
+  <!-- ... otázka 8, 9 obdobně ... -->
+
+  <!-- Výsledek kvízu / závěr kapitoly (skrytý zpočátku) -->
+  <div id="quiz-result" style="display:none; margin-top:1em;">
+    <div class="bubble">
+      <p><strong>Alchymista:</strong> "Ano... jsi pravý zaklínač! Tedy, zaklínačka... a ještě k tomu moc krásná! Jak se jmenuješ, mohu-li se zeptat?"</p>
+    </div>
+    <p><input type="text" id="playerName" placeholder="Tvé jméno"> <button onclick="submitName()">OK</button></p>
+    <div id="nameResponse"></div>
+  </div>
+
+<script>
+  let score = 0;  // počet správných odpovědí (důvěra alchymisty)
+
+  function answerQ1(answer) {
+    const feedback = document.getElementById('feedback1');
+    if (answer === 'Vesemir') {
+      score++;  // správně, Vesemir vede školu Vlka
+      feedback.innerHTML = "✅ <em>\"Ano... Vesemir. Starý, moudrý. Vždy byl oporou smečky.\"</em> (+1 důvěra)";
+      document.getElementById('q2').style.display = 'block';  // odemknout další otázku
+    } else {
+      // špatná odpověď -> alchymistova reakce
+      if (answer === 'Geralt') {
+        feedback.innerHTML = "❌ <em>\"Geralt... vlk to je, ale nikdy **nebyl** mistrem. On kráčí vlastní cestou.\"</em>";
+      } else if (answer === 'Lambert') {
+        feedback.innerHTML = "❌ <em>\"Lambert... ha! Ten by sotva zvládl vést i stádo koz, natož školu vlků!\"</em>";
+      }
+      // Nezobrazujeme další otázku, hráč musí zkusit jinou odpověď u Q1
+    }
+  }
+
+  function answerQ2(answer) {
+    const feedback = document.getElementById('feedback2');
+    if (answer === 'Kaer Morhen') {
+      score++;
+      feedback.innerHTML = "✅ <em>\"Kaer Morhen... ano, stará pevnost v horách, domov vlků.\"</em> (+1 důvěra)";
+      document.getElementById('q3').style.display = 'block';
+    } else {
+      if (answer === 'Novigrad') {
+        feedback.innerHTML = "❌ <em>\"Novigrad? Město kupců, ne vlků.\"</em>";
+      } else if (answer === 'Oxenfurt') {
+        feedback.innerHTML = "❌ <em>\"Oxenfurt? Tam učí knihomolové, ne zaklínači.\"</em>";
+      }
+      // Q2 zůstává, čeká na správnou odpověď
+    }
+  }
+
+  function answerQ3(answer) {
+    const feedback = document.getElementById('feedback3');
+    if (answer === 'Kočka') {
+      score++;
+      feedback.innerHTML = "✅ <em>\"Ano... Kočka. Oči ve tmě jako v poledne.\"</em> (+1 důvěra)";
+      // odhalit otázku 4 (pokračování)
+      document.getElementById('q4').style.display = 'block';
+    } else {
+      if (answer === 'Osel') {
+        feedback.innerHTML = "❌ <em>\"Osel? ...Tvůj humor je temnější než noc sama.\"</em>";
+      } else if (answer === 'Pavián') {
+        feedback.innerHTML = "❌ <em>\"Pavián? Cože?! ...tohle jsem snad ani já nikdy nemíchal.\"</em>";
+      }
+    }
+  }
+
+  // ... funkce answerQ4, answerQ5, answerQ6 by měly podobnou logiku:
+  //    - při správné odpovědi zvýšit score, ukázat ✅ reakci a odemknout další otázku
+  //    - při chybné odpovědi ukázat ❌ reakci (a nepostupovat dál)
+
+  function answerQ7(choice) {
+    const feedback = document.getElementById('feedback7');
+    // Otázka 7 má všechny tři možnosti správné (více správných odpovědí).
+    score++;  // každá trefená možnost přidá bod důvěry
+    if (choice === 'mléko') {
+      feedback.innerHTML = "✅ <em>„Haha! *Mléko* – to by v hospodě žádný zaklínač neřekl.“</em> (+1 důvěra)";
+    } else if (choice === 'nezajimaji') {
+      feedback.innerHTML = "✅ <em>\"Haha! Říct, že tě *nestvůry nezajímají*? To by byla legrace!\"</em> (+1 důvěra)";
+    } else if (choice === 'elixir') {
+      feedback.innerHTML = "✅ <em>\"Haha! Ptát se na *elixír lásky*... to by se zaklínači vysmáli!\"</em> (+1 důvěra)";
+    }
+    // Po první správné volbě by šlo pokračovat dál, ale protože "vše správné",
+    // můžeme nechat hráče zkusit i ostatní možnosti pro pobavení.
+    // Z praktických důvodů však odemkneme další otázku hned po první odpovědi:
+    document.getElementById('q8').style.display = 'block';
+  }
+
+  // ... podobně answerQ8, answerQ9 (otázky 8 a 9 také mají více správných možností).
+  // Při poslední otázce (Q9) po zodpovězení odemkneme výsledek kvízu:
+
+  function answerQ9(choice) {
+    // (logika vyhodnocení správnosti Q9, všechny tři odpovědi jsou správné v tomto případě)
+    score++;
+    document.getElementById('quiz-result').style.display = 'block';  // zobrazí závěrečnou scénu
+    // Můžeme sem případně přidat podmínku na skóre, např. if(score >= 7) -> pass, else -> nějaké varování.
+    // V našem případě ale hráčka stejně musí odpovědět vše, takže score bude max.
+  }
+
+  function submitName() {
+    const name = document.getElementById('playerName').value || "Zaklínačko";
+    const nameRespDiv = document.getElementById('nameResponse');
+    nameRespDiv.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Rád tě poznávám, ${name}! Já jsem... já jsem... nevím, kdo vlastně jsem. Ale to nyní nevadí."</p></div>
+    <p><a href="kapitola3.html" class="continue-btn">👉 Pokračovat</a></p>`;
+    // Alchymista osloví hráčku jménem a nabídne pokračování do další kapitoly (Kapitola 3)
+  }
+</script>
+
+</body>
+</html>
+Vysvětlení kódu kapitoly 2: Stránka je koncipována jako postupný kvíz. V HTML je připraveno 9 bloků pro 9 otázek (zde pro úsporu plně rozepsány jen první tři a 7., ostatní by byly obdobné). Každý blok div.question obsahuje text otázky, sadu <button> odpovědí a <p id="feedbackN"> pro zobrazení alchymistovy reakce. Všechny otázky kromě první mají zpočátku display: none; (skryté v CSS), takže hráčka uvidí jen otázku 1.
+JavaScript definovaný ve skriptu na konci: - Udržuje proměnnou score (důvěra, počet správných odpovědí). - Má funkce answerQ1, answerQ2, ... answerQ9 pro zpracování odpovědí na jednotlivé otázky. Každá funkce: - Porovná answer (parametr nebo interně rozlišená zvolená hodnota) s očekávanou správnou odpovědí. - Pokud je odpověď správná: zvýší score, vloží do příslušného <p id="feedbackN"> text s kladnou reakcí alchymisty (a symbolem ✅ či jiným označením správnosti) – využíváme kurzívu a uvozovky pro stylizaci citace alchymisty. Pak odemkne další otázku nastavením .style.display = 'block' u elementu další otázky (např. po Q1 se zobrazí blok Q2). Hráčka tak plynule pokračuje na další otázku. - Pokud je odpověď špatná: vloží do feedbackN text alchymistovy reakce, která napovídá, proč je odpověď špatná (mnohdy žertovně). Další otázka se neodemkne, zůstáváme u stejné otázky – hráčka může zkusit jinou možnost. (Tlačítka zůstávají viditelná, takže může rovnou kliknout jinou odpověď; není potřeba reload stránky.) - Otázky 7, 8, 9 v příběhu mají více správných odpovědí (všechny uvedené možnosti jsou správně). Řešíme to tak, že každé kliknutí na odpověď u těchto otázek také zvýší score a zobrazí odpověď alchymisty (vtipnou reakci) s ✅, ale hned po první odpovědi stejně pokračujeme dál (odemkneme další otázku). Teoreticky by mohl hráč zkoušet i zbývající možnosti (protože jsme je neskrývali), ale to už děj neovlivní – lze to brát jako bonus k pobavení. Pro zjednodušení kódu výše jsme např. u Q7 nastavili, že ihned po prvním zodpovězení se zviditelní Q8. (Alternativně by se mohlo čekat, až hráč klikne na všechny tři – to by ale vyžadovalo komplikovanější logiku, což pro účely této prototypové hry není nutné.)
+    • Po zodpovězení poslední otázky (Q9) funkce answerQ9 zobrazí <div id="quiz-result">, což je závěrečná část kapitoly. Obsahuje bublinu, kde alchymista pronese závěrečnou pochvalu a dotaz na jméno[16]. Následuje input pro zadání jména a tlačítko OK. (Pokud by score nebylo dostatečné, zde bychom to mohli zachytit a místo pokračování nabídnout opakování kvízu – ale v našem modelu hráčka stejně musí nakonec vše zodpovědět, takže score bude vysoké. Pro jistotu by se dala přidat podmínka if(score < X) { alert("Zkus kvíz znovu"); location.reload(); } před zobrazením výsledku.)
+    • Funkce submitName() se volá po stisknutí OK u zadání jména. Vezme hodnotu z <input id="playerName"> (pokud by pole bylo prázdné, použije třeba "Zaklínačko" jako default oslovení) a vloží do <div id="nameResponse"> nový dialog alchymisty, kde použije zadané jméno. K tomu využíváme JavaScript template string (zpětné apostrofy a ${name}) pro snadnou konkatenaci do HTML. Alchymista řekne něco jako „Rád tě poznávám, Jméno! …“ a pak se objeví odkaz Pokračovat (<a href="kapitola3.html">), který vede na třetí kapitolu příběhu. Tím kvíz končí.
+Po této interakci je hráčka přesměrována na kapitolu 3 (v příběhu pokračuje dialog po kvízu, alchymista vypráví o tom, co se stalo – viz scénář). Na kap.3 stránce by opět byl avatar + bubliny, tentokrát bez voleb (nebo s volbami otázek, které Áňa může klást – dle scénáře kap.4 v dodaném dokumentu[17][18]). Tam už by nebylo třeba nic programovat kromě kotvy na konci (musí se najít fyzický předmět atd., což by bylo realizováno podobně – input a kontrola správné odpovědi).
+Mobilní UX v kapitole 2: I přes větší množství obsahu je stránka přehledná – vždy vidí hráčka jen jednu otázku najednou (ostatní jsou skryté). Po zodpovězení se automaticky posune dál (stránka může trochu scrollnout, případně to uživatelsky zvládne). Tlačítka jsou opět celoplošná, texty krátké. Bubliny s reakcemi alchymisty jsou psané menším fontem/kurzívou, aby vizuálně odlišily komentář od hlavního zadání otázky. Krátké poznámky typu "(+1 důvěra)" pomáhají naznačit herní mechaniku. Celý kvíz je na jedné stránce – to je výhodné, protože se nenačítají nové stránky mezitím a hráč neztratí pozornost; zároveň je to stále čistě statické (vše probíhá v browseru).
+
+Tímto způsobem lze vytvořit všechny kapitoly hry: každá jako samostatná HTML stránka s danou situací, dialogy a případnými interakcemi. Díky navržené struktuře a dodržení mobilních optimalizací bude hra jednoduchá na ovládání v terénu na mobilu, a současně nevyžaduje žádné serverové zázemí. Každá kapitola pečlivě využívá kotvy k zajištění, že hráč neskočí část příběhu bez splnění úkolu (např. kapitola s alchymistovou laboratoří by měla vyžadovat zadání kódu, že ji našli, než nabídne pokračování, atd.). Statická implementace s HTML/CSS/JS takto pokryje interaktivní příběh Zaklínače v chatové hře, a veškerá logika běží na pozadí prohlížeče hráčky.
+
+[1] [2] HTML Responsive Web Design
+https://www.w3schools.com/html/html_responsive.asp
+[3] [4] [7] [8] [10] [11] 7 tipů, jak na správné mobilní SEO |myTimi.cz
+https://www.mytimi.cz/optimalizace-webu-pro-mobily/
+[5] [6] [9] Jak vytvořit webové stránky vhodné pro mobilní zařízení: 8 osvědčených postupů
+https://www.ranktracker.com/cs/blog/how-to-make-a-mobile-friendly-website-8-best-practices/
+[12] [13] [14] [15] [16] [17] [18] for chatgpt.docx
+file://file-2cwkfYTpVkBYdgyUSSsJVZ
