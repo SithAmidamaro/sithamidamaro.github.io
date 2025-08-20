@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kapitola 18b – Věštění z run (2/4)</title>
+<style>
+  :root { --bg:#0f1115; --card:#171a21; --text:#e8e8f0; --muted:#9aa0aa; --accent:#8b7cf7; }
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:var(--bg);color:var(--text);}
+  .wrap{max-width:720px;margin:0 auto;padding:16px 14px 60px;}
+  .title{font-size:1.4rem;margin:10px 0 8px;font-weight:700}
+  .card{background:var(--card);border:1px solid #232733;border-radius:16px;padding:14px;margin:10px 0;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:block;width:100%;background:linear-gradient(180deg,#2a2f3a,#1f2330);border:1px solid #2f3644;color:var(--text);padding:12px 14px;border-radius:12px;margin:8px 0;font-weight:600;text-align:center}
+  .btn:hover{filter:brightness(1.07)}
+  .hint{color:var(--muted);font-size:.95rem;margin-top:6px}
+  .input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #2e3443;background:#10131a;color:var(--text);}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+  .tile{background:#11141b;border:1px solid #242a39;border-radius:14px;overflow:hidden;cursor:pointer}
+  .tile img{display:block;width:100%;height:auto}
+  .tile .cap{padding:8px 10px;font-size:.95rem;color:#cfd3de;text-align:center}
+  .footer{position:fixed;left:0;right:0;bottom:0;padding:10px;background:linear-gradient(180deg,rgba(15,17,21,.0),rgba(15,17,21,1) 36%);}
+  .bar{max-width:720px;margin:0 auto;padding:6px 14px;display:flex;gap:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="title">Kapitola 18b – Věštění z run (2/4)</div>
+  <div class="card">
+    <p>Alchymista: "Teď druhá runa – PŘEKÁŽKA. Co se tvé cestě postaví do cesty?"</p><p>Alchymista: "Ať jsou tři různé – osud rád mluví třemi hlasy."</p>
+  </div>
+  <div class="card">
+    <label for="rinput" class="hint">Zapiš název 2. runy (PŘEKÁŽKA):</label>
+    <input id="rinput" class="input" placeholder="Napiš název runy nebo klepni na obrázek…" autocomplete="off">
+    <div class="hint"></div>
+  </div>
+  <div class="card">
+    <h4>Vyber ze seznamu</h4>
+    <div class="grid"><div class="tile" onclick="selectRune('Algiz')">
+  <img src="runes/algiz.png" alt="Algiz">
+  <div class="cap">Algiz</div>
+</div>
+<div class="tile" onclick="selectRune('Ansuz')">
+  <img src="runes/ansuz.png" alt="Ansuz">
+  <div class="cap">Ansuz</div>
+</div>
+<div class="tile" onclick="selectRune('Berkana')">
+  <img src="runes/berkana.png" alt="Berkana">
+  <div class="cap">Berkana</div>
+</div>
+<div class="tile" onclick="selectRune('Dagaz')">
+  <img src="runes/dagaz.png" alt="Dagaz">
+  <div class="cap">Dagaz</div>
+</div>
+<div class="tile" onclick="selectRune('Ehwaz')">
+  <img src="runes/ehwaz.png" alt="Ehwaz">
+  <div class="cap">Ehwaz</div>
+</div>
+<div class="tile" onclick="selectRune('Fehu')">
+  <img src="runes/fehu.png" alt="Fehu">
+  <div class="cap">Fehu</div>
+</div>
+<div class="tile" onclick="selectRune('Gebo')">
+  <img src="runes/gebo.png" alt="Gebo">
+  <div class="cap">Gebo</div>
+</div>
+<div class="tile" onclick="selectRune('Hagalaz')">
+  <img src="runes/hagalaz.png" alt="Hagalaz">
+  <div class="cap">Hagalaz</div>
+</div>
+<div class="tile" onclick="selectRune('Ingwaz')">
+  <img src="runes/ingwaz.png" alt="Ingwaz">
+  <div class="cap">Ingwaz</div>
+</div>
+<div class="tile" onclick="selectRune('Isa')">
+  <img src="runes/isa.png" alt="Isa">
+  <div class="cap">Isa</div>
+</div>
+<div class="tile" onclick="selectRune('Jera')">
+  <img src="runes/jera.png" alt="Jera">
+  <div class="cap">Jera</div>
+</div>
+<div class="tile" onclick="selectRune('Kenaz')">
+  <img src="runes/kenaz.png" alt="Kenaz">
+  <div class="cap">Kenaz</div>
+</div>
+<div class="tile" onclick="selectRune('Laguz')">
+  <img src="runes/laguz.png" alt="Laguz">
+  <div class="cap">Laguz</div>
+</div>
+<div class="tile" onclick="selectRune('Mannaz')">
+  <img src="runes/mannaz.png" alt="Mannaz">
+  <div class="cap">Mannaz</div>
+</div>
+<div class="tile" onclick="selectRune('Nauthiz')">
+  <img src="runes/nauthiz.png" alt="Nauthiz">
+  <div class="cap">Nauthiz</div>
+</div>
+<div class="tile" onclick="selectRune('Othala')">
+  <img src="runes/othala.png" alt="Othala">
+  <div class="cap">Othala</div>
+</div>
+<div class="tile" onclick="selectRune('Perthro')">
+  <img src="runes/perthro.png" alt="Perthro">
+  <div class="cap">Perthro</div>
+</div>
+<div class="tile" onclick="selectRune('Raido')">
+  <img src="runes/raido.png" alt="Raido">
+  <div class="cap">Raido</div>
+</div>
+<div class="tile" onclick="selectRune('Sowilo')">
+  <img src="runes/sowilo.png" alt="Sowilo">
+  <div class="cap">Sowilo</div>
+</div>
+<div class="tile" onclick="selectRune('Thurisaz')">
+  <img src="runes/thurisaz.png" alt="Thurisaz">
+  <div class="cap">Thurisaz</div>
+</div>
+<div class="tile" onclick="selectRune('Tiwaz')">
+  <img src="runes/tiwaz.png" alt="Tiwaz">
+  <div class="cap">Tiwaz</div>
+</div>
+<div class="tile" onclick="selectRune('Uruz')">
+  <img src="runes/uruz.png" alt="Uruz">
+  <div class="cap">Uruz</div>
+</div>
+<div class="tile" onclick="selectRune('Wunjo')">
+  <img src="runes/wunjo.png" alt="Wunjo">
+  <div class="cap">Wunjo</div>
+</div>
+<div class="tile" onclick="selectRune('Eihwaz')">
+  <img src="runes/eihwaz.png" alt="Eihwaz">
+  <div class="cap">Eihwaz</div>
+</div>
+<div class="tile" onclick="selectRune('Kaunaz')">
+  <img src="runes/kaunaz.png" alt="Kaunaz">
+  <div class="cap">Kaunaz</div>
+</div></div>
+  </div>
+</div>
+<div class="footer"><div class="bar">
+  <button class="btn" onclick="onBack()">← Zpět</button>
+  <button class="btn" onclick="onNext()">Pokračovat →</button>
+</div></div>
+<script>
+
+function $(sel){return document.querySelector(sel)}
+function showHint(msg){ const h=document.querySelector('.hint'); if(h){ h.textContent = msg; } else { alert(msg);} }
+function normalizeInput(s){ if(!s) return ''; return s.toString().trim().replace(/\s+/g,' ').toLowerCase(); }
+function titleCase(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
+const RUNE_ALIASES = {
+  'algiz':['algiz','z'],
+  'ansuz':['ansuz'],
+  'berkana':['berkana'],
+  'dagaz':['dagaz'],
+  'ehwaz':['ehwaz'],
+  'fehu':['fehu'],
+  'gebo':['gebo'],
+  'hagalaz':['hagalaz'],
+  'ingwaz':['ingwaz'],
+  'isa':['isa'],
+  'jera':['jera'],
+  'kenaz':['kenaz','kaunaz','kaunan'],
+  'laguz':['laguz'],
+  'mannaz':['mannaz'],
+  'nauthiz':['nauthiz','naudiz'],
+  'othala':['othala','odal'],
+  'perthro':['perthro','pertho','peorth'],
+  'raido':['raido','raidho'],
+  'sowilo':['sowilo','sowelu','sol'],
+  'thurisaz':['thurisaz','thorn'],
+  'tiwaz':['tiwaz','tyr'],
+  'uruz':['uruz'],
+  'wunjo':['wunjo','wyn'],
+  'eihwaz':['eihwaz','ihwar'],
+  'kaunaz':['kaunaz','kenaz']
+};
+function canonRune(name){
+  const n = normalizeInput(name);
+  for(const key in RUNE_ALIASES){
+    if(RUNE_ALIASES[key].includes(n)) return key.charAt(0).toUpperCase()+key.slice(1);
+  }
+  return n ? n.charAt(0).toUpperCase()+n.slice(1) : '';
+}
+
+function selectRune(name){ document.querySelector('#rinput').value = name; document.querySelector('.hint').textContent = name + ' vybrána.'; }
+function onBack(){ history.back(); }
+function onNext(){ 
+  const raw = document.querySelector('#rinput').value;
+  if(!raw) return showHint('Zadej nebo vyber runu.');
+  const canon = canonRune(raw);
+  if(!canon) return showHint('Té runě nerozumím. Zkus název z mřížky.');
+  localStorage.setItem('r2', canon);
+  location.href = '/mnt/data/kap18c.html';
+}
+</script>
+</body></html>

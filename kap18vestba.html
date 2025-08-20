@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kapitola 18 – Věštba z run (4/4)</title>
+<style>
+  :root { --bg:#0f1115; --card:#171a21; --text:#e8e8f0; --muted:#9aa0aa; --accent:#8b7cf7; }
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:var(--bg);color:var(--text);}
+  .wrap{max-width:720px;margin:0 auto;padding:16px 14px 60px;}
+  .title{font-size:1.4rem;margin:10px 0 8px;font-weight:700}
+  .card{background:var(--card);border:1px solid #232733;border-radius:16px;padding:14px;margin:10px 0;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:block;width:100%;background:linear-gradient(180deg,#2a2f3a,#1f2330);border:1px solid #2f3644;color:var(--text);padding:12px 14px;border-radius:12px;margin:8px 0;font-weight:600;text-align:center}
+  .btn:hover{filter:brightness(1.07)}
+  .hint{color:var(--muted);font-size:.95rem;margin-top:6px}
+  .input{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #2e3443;background:#10131a;color:var(--text);}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+  .tile{background:#11141b;border:1px solid #242a39;border-radius:14px;overflow:hidden;cursor:pointer}
+  .tile img{display:block;width:100%;height:auto}
+  .tile .cap{padding:8px 10px;font-size:.95rem;color:#cfd3de;text-align:center}
+  .footer{position:fixed;left:0;right:0;bottom:0;padding:10px;background:linear-gradient(180deg,rgba(15,17,21,.0),rgba(15,17,21,1) 36%);}
+  .bar{max-width:720px;margin:0 auto;padding:6px 14px;display:flex;gap:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="title">Kapitola 18 – Věštba z run (4/4)</div>
+  <div class="card" id="out">
+    <p>Alchymista: "Dobře. Mám tři jména. Teď je spojím – ať promluví."</p>
+    <div id="runesRow" class="row" style="margin:10px 0;"></div>
+    <hr style="border:0;border-top:1px solid #2a2f3a;margin:12px 0;">
+    <p id="v1"></p>
+    <p id="v2"></p>
+    <p id="v3"></p>
+    <p class="hint" id="hint"></p>
+  </div>
+</div>
+<div class="footer"><div class="bar">
+  <button class="btn" onclick="onBack()">← Zpět</button>
+  <button class="btn" onclick="onDone()">Pokračovat →</button>
+</div></div>
+<script>
+
+function $(sel){return document.querySelector(sel)}
+function showHint(msg){ const h=document.querySelector('.hint'); if(h){ h.textContent = msg; } else { alert(msg);} }
+function normalizeInput(s){ if(!s) return ''; return s.toString().trim().replace(/\s+/g,' ').toLowerCase(); }
+function titleCase(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
+const RUNE_ALIASES = {
+  'algiz':['algiz','z'],
+  'ansuz':['ansuz'],
+  'berkana':['berkana'],
+  'dagaz':['dagaz'],
+  'ehwaz':['ehwaz'],
+  'fehu':['fehu'],
+  'gebo':['gebo'],
+  'hagalaz':['hagalaz'],
+  'ingwaz':['ingwaz'],
+  'isa':['isa'],
+  'jera':['jera'],
+  'kenaz':['kenaz','kaunaz','kaunan'],
+  'laguz':['laguz'],
+  'mannaz':['mannaz'],
+  'nauthiz':['nauthiz','naudiz'],
+  'othala':['othala','odal'],
+  'perthro':['perthro','pertho','peorth'],
+  'raido':['raido','raidho'],
+  'sowilo':['sowilo','sowelu','sol'],
+  'thurisaz':['thurisaz','thorn'],
+  'tiwaz':['tiwaz','tyr'],
+  'uruz':['uruz'],
+  'wunjo':['wunjo','wyn'],
+  'eihwaz':['eihwaz','ihwar'],
+  'kaunaz':['kaunaz','kenaz']
+};
+function canonRune(name){
+  const n = normalizeInput(name);
+  for(const key in RUNE_ALIASES){
+    if(RUNE_ALIASES[key].includes(n)) return key.charAt(0).toUpperCase()+key.slice(1);
+  }
+  return n ? n.charAt(0).toUpperCase()+n.slice(1) : '';
+}
+
+const RUNES_MAP = {"Algiz": {"role1": "Cesta začíná pod štítem ochrany.", "role2": "Ale i štít může prasknout.", "role3": "Nakonec budeš chráněna, když zůstaneš věrná svým instinktům."}, "Ansuz": {"role1": "Slovo otevře první dveře.", "role2": "Slova mohou i klamat.", "role3": "Nakonec pravda promluví jasně."}, "Berkana": {"role1": "Z temnoty se rodí nový začátek.", "role2": "Ale zrození je bolestné a nejisté.", "role3": "Nakonec vykvete, co bylo zaseto."}, "Dagaz": {"role1": "Den se láme, nastává změna.", "role2": "Ale změna vždy přináší chaos.", "role3": "Nakonec vyjde světlo nad obzorem."}, "Ehwaz": {"role1": "Cesta se dává do pohybu.", "role2": "Ale příliš rychlý běh tě může unavit.", "role3": "Nakonec tě pohyb zavede k cíli."}, "Fehu": {"role1": "Na začátku stojí zisk a hojnost.", "role2": "Ale majetek může svázat i oslepit.", "role3": "Nakonec zůstane jen to, co má hodnotu v srdci."}, "Gebo": {"role1": "Prvním krokem je dar – nabídka, pouto.", "role2": "Ale i dar může být poutem, které svazuje.", "role3": "Nakonec pouto posílí tvou cestu."}, "Hagalaz": {"role1": "Na začátku je bouře.", "role2": "Bouře rozmetá vše, co je křehké.", "role3": "Ale po bouři se rodí čistý vzduch a klid."}, "Ingwaz": {"role1": "Začátek je v klidu a očekávání.", "role2": "Ale přílišné čekání tě může oslabit.", "role3": "Nakonec semeno dozraje a praskne slupka."}, "Isa": {"role1": "Na cestu padá led, vše se zastavuje.", "role2": "Stagnace může zlomit i silné vůle.", "role3": "Ale trpělivost prolomí ledy."}, "Jera": {"role1": "Začínáš sázet, abys sklízela.", "role2": "Ale sklizeň nepřijde hned.", "role3": "Nakonec se úroda dostaví."}, "Kenaz": {"role1": "Oheň poznání rozsvítí cestu.", "role2": "Ale oheň spaluje i to, co nechceš ztratit.", "role3": "Nakonec světlo ukáže pravdu."}, "Laguz": {"role1": "Začátek je jako proud – tekoucí a měnící se.", "role2": "Ale voda může i pohltit a stáhnout ke dnu.", "role3": "Nakonec proud unese tam, kam patříš."}, "Mannaz": {"role1": "Začínáš mezi lidmi, s přáteli i nepřáteli.", "role2": "Ale člověk může být i zrádný.", "role3": "Nakonec spojenectví přinese sílu."}, "Nauthiz": {"role1": "Cesta začíná nouzí.", "role2": "Nouze tříbí, ale i ničí.", "role3": "Nakonec tě tvá potřeba dovede k síle."}, "Othala": {"role1": "Na začátku stojí kořeny a domov.", "role2": "Ale dědictví může být i břemenem.", "role3": "Nakonec domov obstojí."}, "Perthro": {"role1": "Cesta začíná tajemstvím kostek osudu.", "role2": "Ale osud je vrtkavý, ne vždy milosrdný.", "role3": "Nakonec tajemství odhalí pravdu."}, "Raido": {"role1": "Začínáš na cestě, směr je dán.", "role2": "Ale cesty se rozvětvují a mateš se.", "role3": "Nakonec najdeš svou stezku."}, "Sowilo": {"role1": "Na začátku svítí slunce vítězství.", "role2": "Ale i slunce pálí a vysušuje.", "role3": "Nakonec světlo přinese triumf."}, "Thurisaz": {"role1": "Cesta začíná mocí a syrovou silou.", "role2": "Síla se může obrátit proti tobě.", "role3": "Nakonec obstojíš, pokud sílu zkrotíš."}, "Tiwaz": {"role1": "Na počátku stojí čest a boj.", "role2": "Ale spravedlnost může bolet.", "role3": "Nakonec vítězí ten, kdo bojuje čestně."}, "Uruz": {"role1": "Začínáš plná životní síly.", "role2": "Ale síla se může změnit v divokost.", "role3": "Nakonec přežiješ díky své vitalitě."}, "Wunjo": {"role1": "Cesta začíná radostí.", "role2": "Ale radost může být prchavá.", "role3": "Nakonec se radost vrátí."}, "Eihwaz": {"role1": "Začátek je jako strom – pevný a klidný.", "role2": "Ale i strom může padnout ve vichru.", "role3": "Nakonec zakořeníš v rovnováze."}, "Kaunaz": {"role1": "Cesta začíná zkouškou bolesti.", "role2": "Bolest oslabí, pokud jí podlehneš.", "role3": "Nakonec bolest přinese poznání."}};
+
+function onBack(){ history.back(); }
+function onDone(){ location.href = 'kap16.html'; }
+
+function load(){
+  const r1 = localStorage.getItem('r1');
+  const r2 = localStorage.getItem('r2');
+  const r3 = localStorage.getItem('r3');
+  if(!r1||!r2||!r3){ document.getElementById('hint').textContent='Chybí výběr run. Vrať se a zvol tři různé.'; return; }
+  if(r1===r2 || r1===r3 || r2===r3){ document.getElementById('hint').textContent='Runy musí být tři různé.'; return; }
+  const c1 = canonRune(r1), c2 = canonRune(r2), c3 = canonRune(r3);
+  const A = RUNES_MAP[c1], B = RUNES_MAP[c2], C = RUNES_MAP[c3];
+  if(!A||!B||!C){ document.getElementById('hint').textContent='Některé jméno runy neznám. Zkuste vybrat z mřížky.'; return; }
+  const rr = document.getElementById('runesRow');
+  rr.innerHTML = [c1,c2,c3].map(n => 
+    `<div class="tile" style="width:30%"><img src="runes/${n.toLowerCase()}.png"><div class="cap">${n}</div></div>`
+  ).join('');
+  document.getElementById('v1').textContent = A.role1;
+  document.getElementById('v2').textContent = B.role2;
+  document.getElementById('v3').textContent = C.role3;
+  const final = A.role1 + " " + B.role2 + " " + C.role3;
+  localStorage.setItem('divination', final);
+}
+document.addEventListener('DOMContentLoaded', load);
+</script>
+</body></html>

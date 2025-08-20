@@ -17,7 +17,7 @@
       <div class="dialogue">
         <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
         <div class="bubble">
-          <p><strong>Alchymista:</strong> "Cítíš to? Jak noc houstne? Zaklínači pili Kočku, když potřebovali vidět ve tmě. Já ji kdysi změnil – přidal jsem do ní Tekutý zrak. S ním zesílí i má Lampa."</p>
+          <p><strong>Alchymista:</strong> "Cítíš to? Jak noc houstne...? Ale neboj se! Dnes ti nic nehrozí a co víc, sehnal jsem přátele! Pomůžou nám... mají dost toho prokletého Lešiho, chtějí ho také pryč. Maličkatí duchové lesa. Ukažou ti cestu, kde tkví síla Lešiho. Ale aby si je viděla, musíme si pomoct zesílit Elixit Kočky! A pak můj vynález ale to až potom..."</p>
         </div>
       </div>
 
@@ -48,7 +48,7 @@
 function say(n){
   const o=document.getElementById('out');
   if(n===1){
-    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Normální Kočku ti popíše Lukas. Ale abys ji posílila, přidej Tekutý zrak – vy ho nazýváte 'Okvětní lístky fialové Myrty' "</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Lektvar "Kočka" ti popíše Lukas nebo si jí najdi ve svém "Deníku ALchemie"... Ale abys ji posílila..., <strong>přidej Tekutý zrak – vy ho nazýváte 'Okvětní lístky fialové Myrty'</strong> "</p></div>`;
   }else if(n===2){
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Říkali tomu tak… látka, která láme světlo, až se barvy třpytí jinak. Moje tajemství. V tvém nápoji to může být cokoliv zvláštního a svůdného."</p></div>`;
   }else{
