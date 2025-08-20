@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 14 – Příprava na lov Lešije</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap13a.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 14 – Příprava na lov Lešije</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Dobré ráno, Áňo! Dnes je den příprav. V bestiáři najdeš, co na Lešije platí. Petarda a elixír by nebyly k zahození! A procvič luk – terče, postoj, dech. Lukas ví, je to mistr boje.“</p></div>
+</div>
+<div class="choices">
+  <button onclick="out('Začni nablízko: 5 šípů na velký terč, pak ustup a série. Nejde o sílu – ale rytmus a klidný dech.')">„Jak přesně trénovat s lukem?“</button>
+  <button onclick="out('Podle bestiáře – a kdybych tipoval: petardy a elixíry.')">„Jaké věci na Lešije platí?“</button>
+  <button onclick="out('Výborně! Až budeš mít petardu, napiš mi kterou.')">„Jdu připravit věci a trénovat.“</button>
+</div>
+<div id="out14"></div>
+<div class="bubble" style="margin-top:10px;">
+  <p><strong>Kotva:</strong> Napiš název připravené petardy.</p>
+  <div class="input-row">
+    <input id="petarda" type="text" placeholder="Dwimeritová petarda">
+    <button onclick="ok14()">Potvrdit</button>
+  </div>
+  <p id="hint14" class="feedback"></p>
+  <div id="cont14"></div>
+</div>
+<script>
+function out(t){ document.getElementById('out14').innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`; }
+function ok14(){
+  const v = normalizeInput(document.getElementById('petarda').value);
+  if(!v){document.getElementById('hint14').textContent='„To nebude ono…“'; document.getElementById('cont14').innerHTML=''; return;}
+  if(v==='dwimeritova petarda'){ document.getElementById('hint14').textContent=''; document.getElementById('cont14').innerHTML = `<a class='continue-btn' href='kap15b.html'>👉 Pokračovat (Kapitola 15b)</a>`; }
+  else { document.getElementById('hint14').textContent='„To nebude ono…“'; document.getElementById('cont14').innerHTML=''; }
+}
+</script>
+</div>
+</div>
+</body></html>

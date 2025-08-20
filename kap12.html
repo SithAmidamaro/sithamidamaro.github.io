@@ -1,31 +1,48 @@
 <!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kapitola 12 – Runy a návnada</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="nav">
-      <a href="kap9.html">← Zpět</a>
-    </div>
-    <h1>Kapitola 12 – Runy a návnada</h1>
-    <div class="panel">
-      <div class="dialogue">
-        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-        <div class="bubble">
-          <p><strong>Alchymista:</strong> "Tady budeme pokračovat dál… (místo pro další text a úkoly tvé hry)."</p>
-          <p class="small">Tuto kapitolu můžeš libovolně dopsat/rozšířit – kostra je připravená.</p>
-        </div>
-      </div>
-
-      <div class="footer-nav">
-        <a class="btn" href="index.html">🏠 Zpět na začátek</a>
-        <a class="btn" href="#" onclick="history.back();return false;">← Zpět</a>
-      </div>
-    </div>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 12 – Totem</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap9.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 12 – Totem</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Áňo… cítím z toho předmětu zlou magii, moc zlou! Je v něm část jeho moci. Když to zničíme, bude zranitelný – a pak ho vylákáme! Ale tohle není můj obor.“</p><p><strong>Alchymista:</strong> „Já dělám experimenty, měním vodu ve víno a připravuji lektvary. S tím ti poradí Lukas – tady jsem teď bezmocný…“</p></div>
+</div>
+<div class="choices">
+  <button onclick="say(1)">„Nemůžeš si vzpomenout vůbec nic?“</button>
+  <button onclick="say(2)">„Proč nemůžeš mluvit s Lukasem?“</button>
+  <button onclick="say(3)">„Co mám udělat teď?“</button>
+</div>
+<div id="out12"></div>
+<hr>
+<div class="bubble">
+  <p><strong>Kotva:</strong> Potvrď zničení (stačí stručně).</p>
+  <div class="input-row">
+    <input id="a12" type="text" placeholder="Potvrzuji / Hotovo / Mám návrh / Ano…">
+    <button onclick="ok12()">Potvrdit</button>
   </div>
-</body>
-</html>
+  <p id="hint12" class="feedback"></p>
+  <div id="cont12"></div>
+</div>
+<script>
+function say(n){
+  const o=document.getElementById('out12');
+  if(n===1){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Vzpomínky přicházejí jako útržky… ohniště před chatou, výsměch, Vlaštovka – a uzdravená rána.“</p></div>`;}
+  else if(n===2){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Protože tys mě přivolala; kruh se navázal na tebe.“</p></div>`;}
+  else{o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Zjistěte s Lukasem, jak zničit prokletý předmět…“</p></div>`;}
+}
+function ok12(){
+  const v = (document.getElementById('a12').value||'').trim().toLowerCase();
+  const ok = ['potvrzuji','hotovo','mám návrh','mam navrh','ano'];
+  if(!v){document.getElementById('hint12').textContent='„Stačí krátké potvrzení.“'; document.getElementById('cont12').innerHTML=''; return;}
+  if(ok.includes(v)){ document.getElementById('hint12').textContent=''; document.getElementById('cont12').innerHTML = `<a class='continue-btn' href='kap13.html'>👉 Pokračovat (Kapitola 13)</a>`; }
+  else { document.getElementById('hint12').textContent='„Stačí krátké potvrzení.“'; document.getElementById('cont12').innerHTML=''; }
+}
+</script>
+</div>
+</div>
+</body></html>

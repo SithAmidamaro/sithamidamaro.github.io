@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 23 – Když měsíc drží dech</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap22a.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 23 – Když měsíc drží dech</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Cítím… úlevu. Vzpomínky se vrací po kouscích. Až měsíc vystoupí nejvýš a noc na okamžik ztichne, otevře se další brána.“</p></div>
+</div>
+<div class="bubble">
+  <p><strong>Kotva (časová):</strong> Pokračovat bude možné až 2025-09-14T23:50:00 podle <em>místního</em> času tvého zařízení.</p>
+  <p id="timer" class="small"></p>
+  <div id="cont23"></div>
+</div>
+<script>
+const target = new Date('2025-09-14T23:50:00'); // LOCAL time (no Z)
+function pad(n){return n<10?'0'+n:n;}
+function tick(){
+  const ms = target - new Date();
+  const t = document.getElementById('timer'); const c=document.getElementById('cont23');
+  if(ms<=0){ t.textContent='„Je čas. Jdeme dál.“'; c.innerHTML=`<a class='continue-btn' href='kap24.html'>👉 Pokračovat (Kapitola 24)</a>`; clearInterval(iv); }
+  else{
+    const s=Math.floor(ms/1000),h=Math.floor(s/3600),m=Math.floor((s%3600)/60),ss=s%60;
+    t.textContent=`Odemkne se za: ${(h>0?(h+'h '):'')}${String(m).padStart(2,'0')}:${String(ss).padStart(2,'0')}`;
+  }
+}
+const iv=setInterval(tick,1000); tick();
+</script>
+</div>
+</div>
+</body></html>

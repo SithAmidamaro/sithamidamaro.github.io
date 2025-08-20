@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 13 – Odpočinek</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap12.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 13 – Odpočinek</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Víš, Áňo… po dlouhé době necítím jen mlhu a strach. Tvoje přítomnost mi připomíná, že jsem kdysi byl člověk – vrací se kousky vzpomínek. Můžu ti o sobě něco povědět? Bez úkolů… jen tak?“</p></div>
+</div>
+<div class="choices">
+  <button onclick="say13(1)">„Pověz mi o něčem hezkém, co sis vybavil.“</button>
+  <button onclick="say13(2)">„A co zaklínači – měli tě rádi?“</button>
+  <button onclick="say13(3)">„Máš nějaký sen, který sis nesplnil?“</button>
+  <button onclick="say13(4)">„Jak se teď cítíš?“</button>
+</div>
+<div id="out13"></div>
+<hr>
+<div class="bubble">
+  <p><strong>Kotva:</strong> Pro dnešek stačí – potvrď, že končíte a jdete spát.</p>
+  <button class="btn" onclick="document.getElementById('cont13').innerHTML = `<a class='continue-btn' href='kap13a.html'>👉 Dobrou noc (kap13a)</a>`">Dobrou noc</button>
+  <div id="cont13"></div>
+</div>
+<script>
+function say13(n){
+  const o=document.getElementById('out13');
+  if(n===1){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Zahrádka za mlýnem… ranní rosa, bylinky rostly líp než v laboratoři.“</p></div>`}
+  else if(n===2){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Byli tvrdí a málomluvní. Jednou Geralt vypil nový lektvar, podíval se na mě a řekl ‚Dobrý.‘ – od něj to byla poklona.“</p></div>`}
+  else if(n===3){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Chtěl jsem ukázat své dílo čarodějkám – ne z pýchy, z čisté zvědavosti.“</p></div>`}
+  else{o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Unaveně, ale radostně. Nejsem v té mlze sám. Děkuju, že tu jsi.“</p></div>`}
+}
+</script>
+</div>
+</div>
+</body></html>

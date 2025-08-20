@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 22 – Temná esence</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap21a.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 22 – Temná esence</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „To, co držíš, je srdce lešije – mocné a nebezpečné. Nemělo by zůstat mezi živými. Co s ním uděláš?“</p></div>
+</div>
+<div class="choices">
+  <button onclick="pick(true)">„Spálím ji.“</button>
+  <button onclick="pick(false)">„Schovám si ji.“</button>
+</div>
+<div id="out22"></div><div id="cont22"></div>
+<script>
+function pick(ok){
+  if(ok){
+    document.getElementById('out22').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Správně. Oheň pohltí temnotu, než pohltí tebe. Připrav se na očistný rituál.“</p></div>`;
+    document.getElementById('cont22').innerHTML = `<a class='continue-btn' href='kap22a.html'>👉 Pokračovat (Kapitola 22a)</a>`;
+  }else{
+    document.getElementById('out22').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „To nedělej. Ta síla tě zlomí. Očisti ji ohněm.“</p></div>`;
+    document.getElementById('cont22').innerHTML='';
+  }
+}
+</script>
+</div>
+</div>
+</body></html>

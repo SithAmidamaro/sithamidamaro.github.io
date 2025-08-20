@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 16 – Skryté runy</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap15b.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 16 – Skryté runy</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Možná dokážu pomoci i já – skrze sílu run. Kdysi jsem jedny ukryl. Vzor v krajině bývá starší než cesty lidí.“</p></div>
+</div>
+<div class="choices">
+  <button onclick="out('Nehledej u cest, ale ve tvarech: kruh stromů, linie kamenů, křižovatka potoků.')">„Co přesně mám na mapě hledat?“</button>
+  <button onclick="out('Budou souviset s ochranou, voláním a poutem. Když ty významy spojí jedno místo, jsme blízko.')">„Jak poznám správné runy?“</button>
+  <button onclick="out('Dobře. Napiš Lukasovi přesně, co na mapě vidíš.')">„Zkusím to popsat Lukasovi.“</button>
+</div>
+<div id="out16"></div>
+<div class="bubble" style="margin-top:10px;">
+  <p><strong>Kotva:</strong> Napiš, co ti Lukas odpověděl (stačí stručně).</p>
+  <div class="input-row">
+    <input id="mapa" type="text" placeholder="Jaké místo určil?">
+    <button onclick="ok16()">Potvrdit</button>
+  </div>
+  <p id="hint16" class="feedback"></p>
+  <div id="cont16"></div>
+</div>
+<script>
+function out(t){ document.getElementById('out16').innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`; }
+function ok16(){
+  const v=(document.getElementById('mapa').value||'').trim();
+  if(!v){document.getElementById('hint16').textContent='„Neví?“'; document.getElementById('cont16').innerHTML=''; return;}
+  document.getElementById('hint16').textContent=''; document.getElementById('cont16').innerHTML = `<a class='continue-btn' href='kap17.html'>👉 Pokračovat (Kapitola 17)</a>`;
+}
+</script>
+</div>
+</div>
+</body></html>

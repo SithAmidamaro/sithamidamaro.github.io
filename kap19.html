@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 19 – Čas Lešije</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap18vestba.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 19 – Čas Lešije</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Věštba je dokonána. Lešij je oslabený – to je naše šance. Musíme ho vylákat.“</p></div>
+</div>
+<div class="choices">
+  <button onclick="go(true)">„Návnada je připravena.“</button>
+  <button onclick="go(false)">„Ještě není připravena.“</button>
+</div>
+<div id="out19"></div>
+<div id="cont19"></div>
+<script>
+function go(ok){
+  if(ok){
+    document.getElementById('out19').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Výborně! Pojďme dál.“</p></div>`;
+    document.getElementById('cont19').innerHTML = `<a class='continue-btn' href='kap20.html'>👉 Pokračovat (Kapitola 20)</a>`;
+  }else{
+    document.getElementById('out19').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Návnada je klíčová – vrať se do bestiáře a připrav ji.“</p></div>`;
+    document.getElementById('cont19').innerHTML = ``;
+  }
+}
+</script>
+</div>
+</div>
+</body></html>

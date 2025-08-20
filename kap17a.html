@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 17a – Ještě něco v sáčku?</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap17.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 17a – Ještě něco v sáčku?</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Dobrá, máme úplnou sadu. Bylo tam ještě něco navíc?“</p></div>
+</div>
+<div class="choices">
+  <button onclick="pick(1)">„…bylo tam ještě něco navíc.“</button>
+  <button onclick="pick(2)">„Nechci o tom mluvit.“</button>
+</div>
+<div id="out17a"></div>
+<div id="cont17a"></div>
+<script>
+function pick(n){
+  if(n===1){
+    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Hm… ano. Malá lahvička s rudými kamínky – můj první pokus o krystal. Bude se hodit.“</p></div>`;
+  }else{
+    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Jak chceš. Důležité je, že runy máme.“</p></div>`;
+  }
+  document.getElementById('cont17a').innerHTML = `<a class='continue-btn' href='kap18a.html'>👉 Pokračovat (Kapitola 18a)</a>`;
+}
+</script>
+</div>
+</div>
+</body></html>

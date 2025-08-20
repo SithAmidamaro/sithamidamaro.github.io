@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 22a – Očistný oheň</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap22.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 22a – Očistný oheň</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Ufff… takže esence je pryč. To je úleva. Zajímalo by mě – jakou barvu měl plamen?“</p></div>
+</div>
+<div class="bubble">
+  <div class="input-row">
+    <input id="barva" type="text" placeholder="Napiš barvu (cokoliv)…">
+    <button onclick="ok22a()">Potvrdit</button>
+  </div>
+  <p id="hint22a" class="feedback"></p>
+  <div id="cont22a"></div>
+</div>
+<script>
+function ok22a(){
+  const v=(document.getElementById('barva').value||'').trim();
+  if(!v){document.getElementById('hint22a').textContent='„Žádný?“'; document.getElementById('cont22a').innerHTML=''; return;}
+  document.getElementById('hint22a').textContent=''; document.getElementById('cont22a').innerHTML = `<a class='continue-btn' href='kap23.html'>👉 Pokračovat (Kapitola 23)</a>`;
+}
+</script>
+</div>
+</div>
+</body></html>

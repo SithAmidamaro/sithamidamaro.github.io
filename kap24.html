@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 24 – Odkrytí tajemství</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap23.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 24 – Odkrytí tajemství</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Ano… už si vzpomínám. To, co jsem vyrobil, mnozí nazývají Kámen mudrců. Příliš mocný – proto jsem ho ukryl. Klíč ke dveřím ve sklepě jsem označil runou Fehu.“</p><p><strong>Alchymista:</strong> „Klíč najdeš, dveře budou zářit za svitu měsíce. A kdyby ne – použij mou lampu.“</p></div>
+</div>
+<div class="choices">
+  <button onclick="go(true)">„Našla jsem Kámen mudrců.“</button>
+  <button onclick="go(false)">„Ještě hledám.“</button>
+</div>
+<div id="out24"></div><div id="cont24"></div>
+<script>
+function go(ok){
+  if(ok){
+    document.getElementById('out24').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Ach! Tak tedy přece. Teď je tvá volba.“</p></div>`;
+    document.getElementById('cont24').innerHTML = `<a class='continue-btn' href='kap25.html'>👉 Pokračovat (Kapitola 25)</a>`;
+  }else{
+    document.getElementById('out24').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Hledej pečlivě… runa Fehu tě povede.“</p></div>`;
+    document.getElementById('cont24').innerHTML='';
+  }
+}
+</script>
+</div>
+</div>
+</body></html>

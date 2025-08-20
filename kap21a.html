@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 21a – Esence Lešije</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap21.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 21a – Esence Lešije</h1>
+  <div class="panel"><div class="dialogue">
+  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „… tvá ruka byla pevná, srdce odvážné. Získala jsi jeho temné srdce?“</p></div>
+</div>
+<div class="choices">
+  <button onclick="go(true)">„Ano, mám jeho srdce.“</button>
+  <button onclick="go(false)">„Ne, nic takového nemám.“</button>
+</div>
+<div id="out21a"></div><div id="cont21a"></div>
+<script>
+function go(ok){
+  if(ok){
+    document.getElementById('out21a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Naslouchej – to, co neseš, je nebezpečné. Odkážu tě na Lukase; ví, co s tím.“</p></div>`;
+    document.getElementById('cont21a').innerHTML = `<a class='continue-btn' href='kap22.html'>👉 Pokračovat (Kapitola 22)</a>`;
+  }else{
+    document.getElementById('out21a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Budeš se pro něj muset vrátit, jinak se Lešij obnoví.“</p></div>`;
+    document.getElementById('cont21a').innerHTML='';
+  }
+}
+</script>
+</div>
+</div>
+</body></html>
