@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapitola 18 – Věštění z run (výběr 1–3/4)</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/helpers.js"></script>
+</head><body>
+<div class="container">
+  <div class="nav"><a class="btn" href="kap17a.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <h1>Kapitola 18 – Věštění z run (výběr 1–3/4)</h1>
+  <div class="panel">
+    <div class="dialogue">
+      <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+      <div class="bubble"><p><strong>Alchymista:</strong> <span id="prompt">„Vyber 1. runu – <em>ZAČÁTEK</em>. Ať jsou tři různé – osud rád mluví třemi hlasy.“</span></p></div>
+    </div>
+
+    <div class="bubble" id="selector">
+      <label class="small" id="labelRole">Vyber 1. runu (ZAČÁTEK):</label>
+      <div id="grid" class="rune-grid"></div>
+      <p id="hint" class="feedback"></p>
+      <hr>
+      <p class="small"><strong>Vybrané runy:</strong> <span id="summary">— • — • —</span></p>
+    </div>
+  </div>
+</div>
+<script>
+const ROLES = ['ZAČÁTEK','PŘEKÁŽKA','VÝSLEDEK'];
+let step = 1; // 1..3
+let runes = [];
+let sel = { 1: null, 2: null, 3: null };
+
+function loadFromStorage(){
+  sel[1] = localStorage.getItem('r1');
+  sel[2] = localStorage.getItem('r2');
+  sel[3] = localStorage.getItem('r3');
+  // nastav aktuální krok na první nevybranou runu
+  step = sel[1] ? (sel[2] ? (sel[3] ? 3 : 3) : 2) : 1;
+}
+function saveToStorage(){
+  if(sel[1]) localStorage.setItem('r1', sel[1]);
+  if(sel[2]) localStorage.setItem('r2', sel[2]);
+  if(sel[3]) localStorage.setItem('r3', sel[3]);
+}
+function updateSummary(){
+  const s1 = sel[1] || '—';
+  const s2 = sel[2] || '—';
+  const s3 = sel[3] || '—';
+  document.getElementById('summary').textContent = s1 + ' • ' + s2 + ' • ' + s3;
+}
+function setPrompts(){
+  document.getElementById('labelRole').textContent = `Vyber ${step}. runu (${ROLES[step-1]}):`;
+  document.getElementById('prompt').innerHTML = `„Vyber ${step}. runu – <em>${ROLES[step-1]}</em>. Ať jsou tři různé – osud rád mluví třemi hlasy.“`;
+}
+function disabledSet(){
+  const s = new Set();
+  if(sel[1]) s.add(sel[1].toLowerCase());
+  if(sel[2]) s.add(sel[2].toLowerCase());
+  if(step===1){ s.delete(sel[1]?.toLowerCase()); }
+  if(step===2){ s.delete(sel[2]?.toLowerCase()); }
+  if(step===3){ s.delete(sel[3]?.toLowerCase()); }
+  return s;
+}
+function renderGrid(){
+  const g = document.getElementById('grid');
+  const dis = disabledSet();
+  g.innerHTML = runes.map(r=>{
+    const isDisabled = dis.has((r.name||'').toLowerCase());
+    const isSelected = (sel[step] && sel[step].toLowerCase() === (r.name||'').toLowerCase());
+    const classes = 'btn rune-card' + (isSelected ? ' selected' : '');
+    const attrDis = isDisabled ? 'disabled' : '';
+    return `<button class='${classes}' ${attrDis} onclick='pickRune("${r.name}")'>
+      <img src='runes/${r.id}.png' alt='${r.name}'>
+      <span class='caption'>${r.name}</span>
+    </button>`;
+  }).join('');
+}
+function pickRune(name){
+  sel[step] = name;
+  saveToStorage();
+  updateSummary();
+  if(step < 3){
+    step++;
+    setPrompts();
+    renderGrid();
+    document.getElementById('hint').textContent = '';
+  }else{
+    // máme všechny tři, hurá na věštbu
+    window.location.href = 'kap18vestba.html';
+  }
+}
+async function init(){
+  loadFromStorage();
+  try{
+    runes = await fetch('data/runes.json', {cache:'no-store'}).then(r=>r.json());
+  }catch(e){
+    document.getElementById('hint').textContent = 'Nepodařilo se načíst seznam run.';
+    return;
+  }
+  setPrompts();
+  updateSummary();
+  renderGrid();
+}
+window.addEventListener('DOMContentLoaded', init);
+</script>
+</body></html>

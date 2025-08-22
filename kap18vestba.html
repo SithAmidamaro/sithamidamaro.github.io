@@ -7,7 +7,7 @@
 <script defer src="js/runes.js"></script>
 </head><body>
 <div class="container">
-  <div class="nav"><a class="btn" href="kap18c.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
+  <div class="nav"><button class="btn" onclick="restartRunes()">↺ Věštit znovu</button></div>
   <h1>Kapitola 18 – Věštba z run (4/4)</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
@@ -21,6 +21,14 @@
 <script>
 function setRunesRow(r1, r2, r3){
   document.getElementById('runesRow').textContent = r1+' • '+r2+' • '+r3;
+}
+function restartRunes(){
+  try{
+    localStorage.removeItem('r1');
+    localStorage.removeItem('r2');
+    localStorage.removeItem('r3');
+  }catch(e){}
+  window.location.href = 'kap18.html';
 }
 async function load(){
   const r1 = localStorage.getItem('r1')||'—';
