@@ -10,22 +10,51 @@
   <h1>Kapitola 22 – Temná esence</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „To, co držíš, je srdce lešije – mocné a nebezpečné. Nemělo by zůstat mezi živými. Co s ním uděláš?“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Jeho temná esence. Mocná... a velmi nebezpečná. Mezi živými by neměla zůstat. Co s ním uděláš?“</p></div>
 </div>
 <div class="choices">
   <button onclick="pick(true)">„Spálím ji.“</button>
   <button onclick="pick(false)">„Schovám si ji.“</button>
 </div>
 <div id="out22"></div><div id="cont22"></div>
+<!-- Kotva pro potvrzení spálení esence -->
+<div class="bubble" id="anchor22" style="margin-top:10px; display:none;">
+  <p><strong>Kotva:</strong> Až tu temnou esenci spálíš v ohni, dej mi vědět.</p>
+  <div class="input-row">
+    <input id="burn" type="text" placeholder="Spáleno">
+    <button onclick="ok22()">Potvrdit</button>
+  </div>
+  <p id="hint22" class="feedback"></p>
+</div>
 <script>
 function pick(ok){
   if(ok){
-    document.getElementById('out22').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Správně. Oheň pohltí temnotu, než pohltí tebe. Připrav se na očistný rituál.“</p></div>`;
-    document.getElementById('cont22').innerHTML = `<a class='continue-btn' href='kap22a.html'>👉 Pokračovat (Kapitola 22a)</a>`;
+    document.getElementById('out22').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Správná volba. Plamen pohltí temnotu dřív, než by stačila pohltit tebe. Připravíme se na očistný rituál.“</p></div>`;
+    // Zobraz kotvu k potvrzení
+    show('anchor22');
+    document.getElementById('cont22').innerHTML = '';
   }else{
     document.getElementById('out22').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „To nedělej. Ta síla tě zlomí. Očisti ji ohněm.“</p></div>`;
     document.getElementById('cont22').innerHTML='';
+    // Skryj případně kotvu
+    hide('anchor22');
   }
+}
+function ok22(){
+  const raw = document.getElementById('burn').value || '';
+  const v = normalizeInput(raw);
+  if(!v){
+    document.getElementById('hint22').textContent = 'Alchymista: „Stačí napsat ‚Spáleno‘.“';
+    document.getElementById('cont22').innerHTML='';
+    return;
+  }
+  // Přijmi jakoukoli neprázdnou odpověď, u jiné než „spáleno“ zobraz nápovědu
+  if(v !== 'spaleno'){
+    document.getElementById('hint22').textContent = 'Alchymista: „Stačí napsat ‚Spáleno‘.“';
+  }else{
+    document.getElementById('hint22').textContent = '';
+  }
+  document.getElementById('cont22').innerHTML = `<a class='continue-btn' href='kap22a.html'>👉 Pokračovat (Kapitola 22a)</a>`;
 }
 </script>
 </div>

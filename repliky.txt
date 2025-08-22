@@ -628,15 +628,15 @@ Volby (tlačítka):
 
 „Lešij je poražen.“
 
-„Ještě bojujeme.“
+„Ještě ne.“
 
 
 Odezvy na volby:
 
-„Lešij je poražen.“ → Alchymista: „Ach, jak rád to slyším!!!“ (Jeho hlas se třese radostí a úlevou.)
+„Lešij je poražen.“ → Alchymista: „Ach, jak rád to slyším!!!“
 (Příběh pokračuje na Kapitolu 21a – Temné srdce.)
 
-„Ještě bojujeme.“ → Alchymista: „Vy to zvládnete!!“ (Zní naprosto přesvědčeně a čeká na dobré zprávy.)
+„Ještě ne.“ → Alchymista: „Vy to zvládnete!!“ 
 
 
 
@@ -646,7 +646,7 @@ Kapitola 21a – Temné srdce
 
 Úvodní replika
 21a.1. Alchymista: „...Tvoje ruka byla pevná, tvé srdce odvážné.“
-21a.2. Alchymista: „Uf, cítím, jak se mi vracejí vzpomínky... ale něco je ještě drží. Získala jsi jeho temné srdce?“ (ptá se napjatě)
+21a.2. Alchymista: „Uf, cítím, jak se mi vracejí vzpomínky... ale něco je ještě drží. Získala jsi jeho temné srdce?“ 
 
 Volby (tlačítka):
 

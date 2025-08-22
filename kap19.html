@@ -10,7 +10,7 @@
   <h1>Kapitola 19 – Čas Lešije</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Věštba je dokonána. Lešij je oslabený – to je naše šance. Musíme ho vylákat.“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Věštba je dokonána. Hvězdy i runy promluvily... a já cítím, že nadešel čas. Lešij je oslabený – tohle je naše šance. Musíme ho vylákat, dřív než znovu zesílí.K tomu ale budete s Lukasem potřebovat návnadu. Poraď se s Lukasem – on zná recepty a ví, jak ji připravit. Určitě vám napoví i váš bestiář.“</p></div>
 </div>
 <div class="choices">
   <button onclick="go(true)">„Návnada je připravena.“</button>
@@ -21,10 +21,10 @@
 <script>
 function go(ok){
   if(ok){
-    document.getElementById('out19').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Výborně! Pojďme dál.“</p></div>`;
+    document.getElementById('out19').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Výborně! To je znamení, že se naše cesta chýlí ke konci. Pokračujme dál.“</p></div>`;
     document.getElementById('cont19').innerHTML = `<a class='continue-btn' href='kap20.html'>👉 Pokračovat (Kapitola 20)</a>`;
   }else{
-    document.getElementById('out19').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Návnada je klíčová – vrať se do bestiáře a připrav ji.“</p></div>`;
+    document.getElementById('out19').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Rozumím. Návnada je zásadní – jinak Lešije nikdy nevylákáme ze stínů.“</p></div>`;
     document.getElementById('cont19').innerHTML = ``;
   }
 }

@@ -10,20 +10,20 @@
   <h1>Kapitola 21 – Po lovu</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Řekni – jak dopadl lov?“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Řekni mi, Áňo – jak dopadl lov?“</p></div>
 </div>
 <div class="choices">
   <button onclick="go(true)">„Lešij je poražen.“</button>
-  <button onclick="go(false)">„Ještě bojujeme.“</button>
+  <button onclick="go(false)">„Ještě ne.“</button>
 </div>
 <div id="out21"></div><div id="cont21"></div>
 <script>
 function go(ok){
   if(ok){
-    document.getElementById('out21').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Tak rád tě slyším!“</p></div>`;
-    document.getElementById('cont21').innerHTML = `<a class='continue-btn' href='kap21a.html'>👉 Pokračovat (Kapitola 21a)</a>`;
+    document.getElementById('out21').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Uhh, jak rád tě slyším!!!“</p></div>`;
+    document.getElementById('cont21').innerHTML = `<a class='continue-btn' href='kap21a.html'>👉 Pokračovat (Kapitola 21a – Temné srdce)</a>`;
   }else{
-    document.getElementById('out21').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Zvládnete to!“</p></div>`;
+    document.getElementById('out21').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Vy to zvládnete!!“</p></div>`;
     document.getElementById('cont21').innerHTML='';
   }
 }
