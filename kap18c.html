@@ -13,26 +13,35 @@
   <div class="bubble"><p><strong>Alchymista:</strong> „Vyber 3. runu – <em>VÝSLEDEK</em>. Ať jsou tři různé – osud rád mluví třemi hlasy.“</p></div>
 </div>
 <div class="bubble">
-  <label class="small">Zapiš název 3. runy (VÝSLEDEK):</label>
-  <div class="input-row">
-    <input id="rin" type="text" placeholder="např. Algiz">
-    <button onclick="saveRune()">Potvrdit</button>
-  </div>
+  <label class="small">Vyber 3. runu (VÝSLEDEK):</label>
+  <div id="grid" class="rune-grid"></div>
   <p id="hint" class="feedback"></p>
 </div>
 <div id="cont"></div>
 <script>
-function saveRune(){
-  const v = (document.getElementById('rin').value||'').trim();
-  if(!v){ document.getElementById('hint').textContent='„Napiš jméno runy.“'; return; }
-  const name = v.toLowerCase();
-  const r1=(localStorage.getItem('r1')||'').toLowerCase();
-  const r2=(localStorage.getItem('r2')||'').toLowerCase();
-  if(3>1 && (name===r1 || name===r2)){ document.getElementById('hint').textContent='„Runy musí být tři různé.“'; return; }
-  localStorage.setItem('r3', v);
+async function renderGrid(){
+  const runes = await fetch('data/runes.json').then(r=>r.json());
+  const r1 = (localStorage.getItem('r1')||'').toLowerCase();
+  const r2 = (localStorage.getItem('r2')||'').toLowerCase();
+  const g = document.getElementById('grid');
+  g.innerHTML = runes.map(r=>{
+    const dis = (r.name.toLowerCase()===r1 || r.name.toLowerCase()===r2) ? 'disabled' : '';
+    return `<button class='btn rune-card' ${dis} data-id='${r.id}' onclick='pickRune("${r.id}", "${r.name}")'>
+      <img src='runes/${r.id}.png' alt='${r.name}'>
+      <span class='caption'>${r.name}</span>
+    </button>`;
+  }).join('');
+}
+function pickRune(id, name){
+  const r1 = (localStorage.getItem('r1')||'').toLowerCase();
+  const r2 = (localStorage.getItem('r2')||'').toLowerCase();
+  const n = name.toLowerCase();
+  if(n===r1 || n===r2){ document.getElementById('hint').textContent='„Runy musí být tři různé.“'; return; }
+  localStorage.setItem('r3', name);
   document.getElementById('hint').textContent='';
   document.getElementById('cont').innerHTML = `<a class='continue-btn' href='kap18vestba.html'>👉 Pokračovat</a>`;
 }
+window.addEventListener('DOMContentLoaded', renderGrid);
 </script>
 </div>
 </div>
