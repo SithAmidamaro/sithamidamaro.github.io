@@ -4,6 +4,7 @@
 <title>Kapitola 18 – Věštba z run (4/4)</title>
 <link rel="stylesheet" href="css/style.css">
 <script defer src="js/helpers.js"></script>
+<script defer src="js/runes.js"></script>
 </head><body>
 <div class="container">
   <div class="nav"><a class="btn" href="kap18c.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
@@ -18,20 +19,28 @@
 </div>
 <div id="cont"></div>
 <script>
-const MAP = {"Algiz": ["Cesta začíná pod štítem ochrany.", "Ale i štít může prasknout.", "Nakonec budeš chráněna, když zůstaneš věrná svým instinktům."], "Ansuz": ["Slovo otevře první dveře.", "Slova mohou i klamat.", "Nakonec pravda promluví jasně."], "Berkana": ["Z temnoty se rodí nový začátek.", "Ale zrození je bolestné a nejisté.", "Nakonec vykvete, co bylo zaseto."], "Dagaz": ["Den se láme, nastává změna.", "Ale změna přináší chaos.", "Nakonec vyjde světlo nad obzorem."], "Fehu": ["Na začátku stojí zisk a hojnost.", "Majetek může svázat i oslepit.", "Nakonec zůstane to, co má hodnotu v srdci."]};
-function line(r, i){
-  if(MAP[r]) return MAP[r][i];
-  const g=[["Začátek šeptá o kroku vpřed.","První krok bývá nejistý.","Nakonec cesta ví, kam vede."]];
-  return g[0][i];
+function setRunesRow(r1, r2, r3){
+  document.getElementById('runesRow').textContent = r1+' • '+r2+' • '+r3;
 }
-function load(){
+async function load(){
   const r1 = localStorage.getItem('r1')||'—';
   const r2 = localStorage.getItem('r2')||'—';
   const r3 = localStorage.getItem('r3')||'—';
-  document.getElementById('runesRow').textContent = r1+' • '+r2+' • '+r3;
-  document.getElementById('v1').textContent = line(r1,0);
-  document.getElementById('v2').textContent = line(r2,1);
-  document.getElementById('v3').textContent = line(r3,2);
+  setRunesRow(r1, r2, r3);
+  try{
+    await Runes.loadRunes();
+    const { lines } = Runes.generateForecast(r1, r2, r3);
+    document.getElementById('v1').textContent = lines.start;
+    document.getElementById('v2').textContent = lines.obstacle;
+    document.getElementById('v3').textContent = lines.result;
+  }catch(e){
+    // Fallback na původní logiku pokud by json/script nebyl dostupný
+    const MAP = {"Algiz": ["Cesta začíná pod štítem ochrany.", "Ale i štít může prasknout.", "Nakonec budeš chráněna, když zůstaneš věrná svým instinktům."], "Ansuz": ["Slovo otevře první dveře.", "Slova mohou i klamat.", "Nakonec pravda promluví jasně."], "Berkana": ["Z temnoty se rodí nový začátek.", "Ale zrození je bolestné a nejisté.", "Nakonec vykvete, co bylo zaseto."], "Dagaz": ["Den se láme, nastává změna.", "Ale změna přináší chaos.", "Nakonec vyjde světlo nad obzorem."], "Fehu": ["Na začátku stojí zisk a hojnost.", "Majetek může svázat i oslepit.", "Nakonec zůstane to, co má hodnotu v srdci."]};
+    function line(r, i){ if(MAP[r]) return MAP[r][i]; const g=[["Začátek šeptá o kroku vpřed.","První krok bývá nejistý.","Nakonec cesta ví, kam vede."]]; return g[0][i]; }
+    document.getElementById('v1').textContent = line(r1,0);
+    document.getElementById('v2').textContent = line(r2,1);
+    document.getElementById('v3').textContent = line(r3,2);
+  }
   document.getElementById('cont').innerHTML = `<a class='continue-btn' href='kap19.html'>👉 Pokračovat (Kapitola 19)</a>`;
 }
 window.addEventListener('DOMContentLoaded', load);

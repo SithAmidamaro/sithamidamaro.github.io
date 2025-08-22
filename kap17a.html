@@ -10,20 +10,20 @@
   <h1>Kapitola 17a – Ještě něco v sáčku?</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Dobrá, máme úplnou sadu. Bylo tam ještě něco navíc?“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Dobrá, máme kompletní sadu run... jdeme na to!“</p></div>
 </div>
 <div class="choices">
-  <button onclick="pick(1)">„…bylo tam ještě něco navíc.“</button>
-  <button onclick="pick(2)">„Nechci o tom mluvit.“</button>
+  <button onclick="pick(1)">„'…bylo tam ještě něco navíc.'“</button>
+  <button onclick="pick(2)">„(Pokračovat)“</button>
 </div>
 <div id="out17a"></div>
 <div id="cont17a"></div>
 <script>
 function pick(n){
   if(n===1){
-    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Hm… ano. Malá lahvička s rudými kamínky – můj první pokus o krystal. Bude se hodit.“</p></div>`;
+    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Hmmm... ano... už si vzpomínám – ještě jsem tam něco přidal. Malou lahvičku s drobnými rudými kamínky... ty kamínky! Byl to můj první pokus o krystalizaci diamantu, a nevyšel. Při té práci jsem se řízl a kapka mé krve z nich udělala něco jako malé rubíny. Kámínky, ve kterých navěky zůstala kapka mé krve. Haha!“</p></div>`;
   }else{
-    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Jak chceš. Důležité je, že runy máme.“</p></div>`;
+    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Dobře, dobře, jde se na to!“</p></div>`;
   }
   document.getElementById('cont17a').innerHTML = `<a class='continue-btn' href='kap18a.html'>👉 Pokračovat (Kapitola 18a)</a>`;
 }
