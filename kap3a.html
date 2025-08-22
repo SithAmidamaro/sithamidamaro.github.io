@@ -12,12 +12,12 @@
     <div class="nav">
       <a href="kap3.html">← Zpět</a>
     </div>
-    <h1>Kapitola 3a – Zkouška znalostí</h1>
+    <h1>Kapitola 3a – Opravdu si Zaklínačka?</h1>
     <div class="panel">
       <div class="dialogue">
         <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
         <div class="bubble">
-          <p><strong>Alchymista:</strong> "Říkáš, že jsi vlk… Ale svět je plný klamů. Musíš mi dokázat, že krev Školy Vlka proudí v tvých žilách. Odpověz na mé otázky… a já poznám pravdu."</p>
+          <p><strong>Alchymista:</strong> "Říkáš, že jsi ze Školy Vlka… Ale svět je plný klamů. Musíš mi dokázat, že krev Zaklínače proudí v tvých žilách. Odpověz na mé otázky… něco se mi vybavuje... a já poznám pravdu."</p>
         </div>
       </div>
 
@@ -56,7 +56,7 @@
 
       <!-- Q4 -->
       <div id="q4" class="question" style="display:none;">
-        <p><strong>4. Čím prochází zaklínač, aby se stal zaklínačem?</strong></p>
+        <p><strong>4. Čím prochází člověk, aby se stal zaklínačem?</strong></p>
         <div class="choices">
           <button onclick="q4('pravdy')">Zkouška pravdy</button>
           <button onclick="q4('trav')">Zkouška trav</button>
@@ -122,7 +122,7 @@
 
       <div id="finish" style="display:none; margin-top:12px;">
         <div class="bubble">
-          <p><strong>Alchymista:</strong> "Ano… jsi pravý Zaklínač! Tedy, Zaklínačka… a ještě k tomu moc krásná! Jak se jmenuješ, mohu-li se zeptat?"</p>
+          <p><strong>Alchymista:</strong> "Ano… vidím, že jsi pravá zaklínačka! – a ještě k tomu půvabná! Jakpak ti říkají, smím-li se ptát?"</p>
         </div>
         <div class="input-row">
           <input type="text" id="playerName" placeholder="Tvé jméno">
@@ -141,7 +141,7 @@
 let score=0;
 function q1(a){
   const f=document.getElementById('f1');
-  if(a==='Vesemir'){ score++; f.innerHTML='✅ <em>„Ano… Vesemir. Starý, moudrý. Vždy byl oporou smečky.“</em> (+1 důvěra)'; show('q2'); }
+  if(a==='Vesemir'){ score++; f.innerHTML='✅ <em>„Ano… Vesemir. Starý, moudrý. Zajímalo by mě jak se má...“</em> (+1 důvěra)'; show('q2'); }
   else if(a==='Geralt'){ f.innerHTML='❌ <em>„Geralt… vlk to je, ale nikdy nebyl mistrem. On kráčí vlastní cestou.“</em>'; }
   else { f.innerHTML='❌ <em>„Lambert… ha! Ten by sotva zvládl vést i stádo koz, natož školu vlků!“</em>'; }
 }
@@ -153,7 +153,7 @@ function q2(a){
 }
 function q3(a){
   const f=document.getElementById('f3');
-  if(a==='Kočka'){ score++; f.innerHTML='✅ <em>„Ano… Kočka. Oči ve tmě jako v poledne.“</em> (+1 důvěra)'; show('q4'); }
+  if(a==='Kočka'){ score++; f.innerHTML='✅ <em>„Ano… Kočka. Oči ve tmě jako v právem poledne.“</em> (+1 důvěra)'; show('q4'); }
   else if(a==='Osel'){ f.innerHTML='❌ <em>„Osel? …Tvůj humor je temnější než noc sama.“</em>'; }
   else { f.innerHTML='❌ <em>„Pavián? Cože?! …tohle jsem snad ani já nikdy nemíchal.“</em>'; }
 }
@@ -186,8 +186,8 @@ function q7(a){
 function q8(a){
   const f=document.getElementById('f8');
   score++;
-  if(a==='medovina'){ f.innerHTML='✅ <em>„Sladká a silná – mnohý vlk si ji dopřál!“</em> (+1 důvěra)'; }
-  if(a==='vlastovka'){ f.innerHTML='✅ <em>„Ano, Vlaštovka. Uzdraví, posílí.“</em> (+1 důvěra)'; }
+  if(a==='medovina'){ f.innerHTML='✅ <em>„Sladká a silná – kdo by si jí nedopřál!“</em> (+1 důvěra)'; }
+  if(a==='vlastovka'){ f.innerHTML='✅ <em>„Ano, Vlaštovka. Uzdraví, posílí. Můj vynález!“</em> (+1 důvěra)'; }
   if(a==='cokoliv'){ f.innerHTML='✅ <em>„Ha! Pravda. Zaklínači mají žaludek z oceli, ale i ten má hranice.“</em> (+1 důvěra)'; }
   show('q9');
 }
@@ -201,8 +201,16 @@ function q9(a){
 }
 function submitName(){
   const name = document.getElementById('playerName').value.trim() || 'Zaklínačko';
-  document.getElementById('nameResp').innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Rád tě poznávám, ${name}! Já jsem… já jsem…"</p><p><strong>Alchymista:</strong> "... Nevím kdo jsem… ale to nyní nevadí."</p></div>
-  <a class="continue-btn" href="kap4.html">👉 Pokračovat</a>`;
+  localStorage.setItem('playerName', name);
+  document.getElementById('nameResp').innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Rád tě poznávám, ${name}! Já jsem… já jsem…"</p><p><strong>Alchymista:</strong> "... na své jméno si nevzpomínám. Zvláštní, že? Ale to teď není důležité."</p></div>
+    <div class='bubble' style='margin-top:10px;'><p><strong>Alchymista:</strong> "A jak se jmenuje tvůj společník na této cestě?"</p></div>
+    <div class='input-row'><input type='text' id='companionName' placeholder='Jméno společníka'><button onclick='submitCompanion()'>OK</button></div>
+    <div id='companionResp'></div>`;
+}
+function submitCompanion(){
+  const name2 = document.getElementById('companionName').value.trim() || 'tvůj společník';
+  localStorage.setItem('companionName', name2);
+  document.getElementById('companionResp').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> "${name2}, tak ho za mě prosím pozdrav!"</p></div><a class='continue-btn' href='kap4.html'>👉 Pokračovat</a>`;
 }
 </script>
 </body>

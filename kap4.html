@@ -12,12 +12,13 @@
     <div class="nav">
       <a href="kap3a.html">← Zpět</a>
     </div>
-    <h1>Kapitola 4 – Po kvízu</h1>
+    <h1>Kapitola 4 – Důvěra</h1>
     <div class="panel">
       <div class="dialogue">
         <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
         <div class="bubble">
-          <p><strong>Alchymista:</strong> "Cítím, že ti mohu věřit. Ale… moje mysl je rozbitá, jako střepy zrcadla. Pamatuji si, že jsem pracoval na něčem… opravdu mocném. Něčem, co mělo změnit život zaklínačům. Ale právě to dílo přitáhlo zlo. Strašlivé, zkažené zlo… Přišlo si pro mě, zničilo můj domov… a chtělo to, co jsem vytvořil. Nedostalo to. Stihl jsem to ukrýt. Ale… nevím už, kam… Prosím tě, pomoz mi. Ptej se mne. Možná, že ve tvých otázkách se rozsvítí mé vzpomínky."</p>
+          <p><strong>Alchymista:</strong> "Cítím, že ti mohu věřit. Jenže má mysl je roztříštěná jako střepy zrcadla… Pamatuji si jen úlomky. Vím, že kdysi jsem pracoval na něčem nesmírně mocném – na díle, které mělo změnit život nejen zaklínačům. Jenže právě ten výtvor přilákal strašlivé zlo. Přišlo si pro mě, zničilo můj domov… Chtělo získat to, co jsem stvořil. Nedostalo to. Schoval jsem svůj výtvor, ale už nevím kam. Prosím, pomoz mi to zjistit. Ptej se mě na cokoliv – třeba se ve tvých otázkách zableskne světýlko mých vzpomínek."</p>
+        
         </div>
       </div>
 
@@ -53,11 +54,11 @@ function ask(n){
   if(n===1){
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Viděl jsem stromy, jak se pohnuly… V korunách ptáci… ale byli mrtví. Cítil jsem, že les sám na mne sestoupil. A pak… ticho. Jen stíny. Když jsi mě vyvolala, obrátila jsi na sebe pozornost té stvůry!"</p></div>`;
   }else if(n===2){
-    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "To nevím. Mé ruce si pamatují pohyby, má mysl cítí tíhu… ale tvary jsou pryč. Bylo to něco, co mělo zaklínače změnit navždy. Možná posílit, možná vysvobodit… Nemohu ti to ještě říct. Nejsem si jist."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "To nevím. Mé ruce si pamatují pohyby, má mysl cítí tíhu… ale tvary jsou pryč. Nejsem si jist."</p></div>`;
   }else if(n===3){
-  o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím, ale cítím … že to má něco společného s chatou… Tam, kde vlci kdysi skrývali své věci před očima smrtelníků. <strong>Tam povede naše cesta… Bude tam něco, co tam nepatří, co tam někdo dal… až to najdeš, dej mi vědět.</strong> "</p></div>`;
+  o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím, ale cítím … že to má něco společného s chatou v lese… Tam, kde se Zaklínači kdysi skrývali před očima smrtelníků. <strong>Tam povede naše cesta… Bude tam něco, co tam nepatří, co nám řekne víc… až to najdeš, dej mi vědět.</strong> "</p></div>`;
   }else{
-    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Měl jsem jméno, kdysi. Znělo hrdě, neslo se mezi vlky. Ale teď? Je to jen šepot. Možná, až tvá cesta bude delší, mé jméno se mi vrátí."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Měl jsem jméno... Jak znělo? Možná, se mi mé jméno ještě vrátí."</p></div>`;
   }
 }
 function confirmFind(){
@@ -65,7 +66,7 @@ function confirmFind(){
   const hint = document.getElementById('hint');
   const cont = document.getElementById('cont');
   if(!z){
-    hint.textContent = '„Znak… musíš jej najít. Bez něj dál nejdeme.“';
+    hint.textContent = '„ Hledej něco co tam nepatří, z čeho cítíš zlo… “';
     cont.innerHTML = '';
   }else{
     hint.textContent = '';

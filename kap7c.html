@@ -17,14 +17,14 @@
       <div class="dialogue">
         <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
         <div class="bubble">
-          <p><strong>Alchymista:</strong> "Cítíš to? Jak noc houstne...? Ale neboj se! Dnes ti nic nehrozí a co víc, sehnal jsem přátele! Pomůžou nám... mají dost toho prokletého Lešiho, chtějí ho také pryč. Maličkatí duchové lesa. Ukažou ti cestu, kde tkví síla Lešiho. Ale aby si je viděla, musíme si pomoct zesílit Elixit Kočky! A pak můj vynález ale to až potom..."</p>
+          <p><strong>Alchymista:</strong> "Noc houstne nad hvozdem… Ale neboj se! Dnes v noci ti nic nehrozí. Naopak – sehnal jsem přátele. Malé 'duchy lesa', kteří mají Lešije také plné zuby. Ukážou ti, kde čerpá svou sílu. Abys je ale uviděla, budeme muset trošku vylepšit elixír Kočka – dodat mu pár kapek mého tajného 'Tekutého zraku'. Ale o tom až za chvilku…"</p>
         </div>
       </div>
 
       <div class="choices">
-        <button onclick="say(1)">„Jak ji vyrobit?“</button>
-        <button onclick="say(2)">„Co je Tekutý zrak?“</button>
-        <button onclick="say(3)">„Jak Kočka posílí Lampu?“</button>
+        <button onclick="say(1)">„Jak vyrobit 'Zesílenou kočku'?“</button>
+        <button onclick="say(2)">„Co je 'Tekutý zrak?'“</button>
+        <button onclick="say(3)">„Jak 'Zesílená kočka' posílí Lampu?“</button>
       </div>
       <div id="out" style="margin-top:10px;"></div>
 
@@ -48,11 +48,11 @@
 function say(n){
   const o=document.getElementById('out');
   if(n===1){
-    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Lektvar "Kočka" ti popíše Lukas nebo si jí najdi ve svém "Deníku ALchemie"... Ale abys ji posílila..., <strong>přidej Tekutý zrak – vy ho nazýváte 'Okvětní lístky fialové Myrty'</strong> "</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Lektvar "Kočka" to popíše Lukas nebo si jí najdi ve svém "Deníku Alchemie"... Ale abys ji posílila..., <strong>přidej Tekutý zrak – vy ho nazýváte 'Okvětní lístky fialové Myrty'</strong> "</p></div>`;
   }else if(n===2){
-    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Říkali tomu tak… látka, která láme světlo, až se barvy třpytí jinak. Moje tajemství. V tvém nápoji to může být cokoliv zvláštního a svůdného."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Látka, která láme světlo, až se barvy třpytí jinak. Moje vylepšení. "</p></div>`;
   }else{
-    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Když spojíš Kočku a Lampu, zhmotní se to, co bylo skryté. Světlo lampy ukáže stopy, a Kočka ti dovolí je vnímat."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Když spojíš 'Zesílenou kočku' a mojí 'lampu', zhmotní se to, co bylo skryté. Světlo lampy ukáže stopy, a Kočka ti dovolí je vnímat."</p></div>`;
   }
 }
 function check(){
@@ -62,10 +62,10 @@ function check(){
   const cont=document.getElementById('cont');
   if(norm==='fialova' || norm==='purple'){
     hint.textContent='';
-    cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Ano! Fialová Kočka. Teď zesílí i Lampu. Pamatuji si… nechal jsem ji v podkroví chaty, v truhlici. Najdi ji."</p></div>
+    cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Ano! 'Zesílená Kočka'. A teď 'lampu'. Pamatuji si… nechal jsem ji v podkroví chaty, v truhlici. Zkus se tam podívat."</p></div>
     <a class="continue-btn" href="kap8.html">👉 Pokračovat (Kapitola 8 – Krystalová lampa)</a>`;
   }else{
-    hint.textContent = '„Ne… Kočka byla tmavá. S Tekutým zrakem se proměnila – černá se spojila s ohněm, až vznikla barva noci a magie… fialová.“';
+    hint.textContent = '„Ne… Kočka byla tmavá. S Tekutým zrakem se ale proměnila – černá se spojila s myrtou, až vznikla barva noci a magie… fialová.“';
     cont.innerHTML='';
   }
 }

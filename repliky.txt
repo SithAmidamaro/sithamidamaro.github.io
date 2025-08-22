@@ -1,0 +1,810 @@
+Kapitola 3 – Zřícenina Pytlíkovského mlýna
+
+Úvodní replika
+3.1. Alchymista: „Tma... chlad... šeptání stromů... Kdo... kdo mě volá? Jsem... mrtvý? Nebo jen zapomenutý?“
+
+Volby (tlačítka):
+
+„Jsem zaklínač ze Školy Vlka, Áňa.“
+
+„Jsem jen poutník, který tě našel.“
+
+„To není důležité, řekni mi, kdo jsi.“
+
+
+Odezvy na volby:
+
+Pokud zvoleno „Jsem zaklínač ze Školy Vlka, Áňa.“ → Alchymista: „Vlk... vlci! Ano, to jméno znám. Vlci bývali mými přáteli. Ale... jsi doopravdy vlčice? Nebo jen liška v přestrojení?“ (Alchymista si tě očividně chce ověřit.)
+
+Pokud zvoleno „Jsem jen poutník, který tě našel.“ → Alchymista: „Poutník? ...Ne, to mi nesedí. Poutníci neznají znamení vlků. Mé srdce se uzavírá... odpusť.“ (Alchymista ti evidentně nevěří a stahuje se zpět do ticha.)
+
+Pokud zvoleno „To není důležité, řekni mi, kdo jsi.“ → Alchymista: „Já... kdo vlastně jsem? Jsem jen prach a ozvěna vzpomínek. Nic si nepamatuji. Jestli jsi vlk, dokaž mi to...“ (Alchymista potřebuje důkaz, jinak s tebou nebude dál mluvit.)
+
+
+
+---
+
+Kapitola 3a – Zkouška znalostí
+
+Úvodní replika
+3a.1. Alchymista: „Říkáš, že jsi vlk... ale svět je plný klamů. Dokaž mi, že ve tvých žilách proudí krev Školy Vlka. Odpověz na mé otázky... a já poznám pravdu.“
+
+Otázka: „Kdo aktuálně vede Školu Vlka?“
+Možnosti: Vesemir / Geralt / Lambert
+Zpětná vazba:
+
+Při odpovědi „Vesemir“ → Alchymista: „Ano... Vesemir. Starý a moudrý, vždy byl oporou smečky.“
+
+Při odpovědi „Geralt“ → Alchymista: „Geralt... je sice vlk, ale nikdy nebyl mistrem. Vždy kráčel vlastní cestou.“
+
+Při odpovědi „Lambert“ → Alchymista: „Lambert... haha! Ten by sotva dokázal vést stádo koz, natož Školu Vlka!“
+
+
+Otázka: „Jak se jmenuje hrad, kde sídlí Škola Vlka?“
+Možnosti: Kaer Morhen / Novigrad / Oxenfurt
+Zpětná vazba:
+
+Při odpovědi „Kaer Morhen“ → Alchymista: „Kaer Morhen... ano, stará pevnost v horách. Domov vlků.“
+
+Při odpovědi „Novigrad“ → Alchymista: „Novigrad? Město kupců, ne vlků.“
+
+Při odpovědi „Oxenfurt“ → Alchymista: „Oxenfurt? Tam učí knihomolové, ne zaklínači.“
+
+
+Otázka: „Jaký lektvar zvyšuje noční vidění zaklínačů?“
+Možnosti: Kočka / Osel / Pavián
+Zpětná vazba:
+
+Při odpovědi „Kočka“ → Alchymista: „Ano... Kočka. Oči pak ve tmě vidí jako v poledne.“
+
+Při odpovědi „Osel“ → Alchymista: „Osel? ...Tvůj humor je temnější než noc sama.“
+
+Při odpovědi „Pavián“ → Alchymista: „Pavián? Cože?! ...Tohle jsem snad ještě nikdy nemíchal ani já.“
+
+
+Otázka: „Čím prochází zaklínač, aby se stal zaklínačem?“
+Možnosti: Zkouška trav / Zkouška pravdy / Zkouška odhodlání
+Zpětná vazba:
+
+Při odpovědi „Zkouška trav“ → Alchymista: „Ano! Zkouška trav. Bolest, krev... a přežijí jen ti nejsilnější.“
+
+Při odpovědi „Zkouška pravdy“ → Alchymista: „Pravdy? ...Pravda v tomhle světě vůbec nic neznamená.“
+
+Při odpovědi „Zkouška odhodlání“ → Alchymista: „Vážně? Tak to není.“
+
+
+Otázka: „Co je to znak Quen a k čemu slouží?“
+Možnosti: Ochranný štít / Ohnivý útok / Manipulace mysli
+Zpětná vazba:
+
+Při odpovědi „Ochranný štít“ → Alchymista: „Správně! Quen chrání zaklínače před údery – je to jako štít ze světla.“
+
+Při odpovědi „Ohnivý útok“ → Alchymista: „To je Igni, ne Quen.“
+
+Při odpovědi „Manipulace mysli“ → Alchymista: „To by byl Axii, ne Quen.“
+
+
+Otázka: „Co loví zaklínač?“
+Možnosti: Nestvůry / Poklady / Čarodějky
+Zpětná vazba:
+
+Při odpovědi „Nestvůry“ → Alchymista: „Ano. Nestvůry – ať vypadají jakkoli...“
+
+Při odpovědi „Poklady“ → Alchymista: „Poklady? Tohle přenech zlodějům.“
+
+Při odpovědi „Čarodějky“ → Alchymista: „Čarodějky? Pokud vím, ty spíš loví zaklínače. Haha!“
+
+
+Otázka (všechny možnosti správné): „Co by zaklínač nikdy neřekl v hospodě?“
+Možnosti:
+
+„Dám si mléko, prosím.“
+
+„Nestvůry? Ty mě nezajímají.“
+
+„Znáte recept na elixír lásky?“
+Zpětná vazba: (každá zvolená možnost přidá +1 důvěra)
+
+Alchymista: „Haha! Dám si mléko, prosím.“
+
+Alchymista: „Haha! Nestvůry? Ty mě nezajímají.“
+
+Alchymista: „Haha! Znáte recept na elixír lásky?“
+
+
+Otázka (všechny možnosti správné): „Nejoblíbenější nápoj zaklínače po těžkém boji?“
+Možnosti: Medovina / Vlaštovka (elixír) / Cokoliv, co ho neotráví
+Zpětná vazba: (každá zvolená možnost přidá +1 důvěra)
+
+Alchymista: „Sladká a silná – nejeden vlk si ji po boji rád dopřeje!“
+
+Alchymista: „Ano, Vlaštovka. Uzdraví i posílí.“
+
+Alchymista: „Ha! Pravda. Zaklínači mají žaludky z oceli, ale i ty mají své meze.“
+
+
+Otázka (všechny možnosti správné): „Zaklínačský způsob řešení hádky?“
+Možnosti: Souboj na meče / Elixír pravdy / Mlčení a zamračený pohled
+Zpětná vazba: (každá zvolená možnost přidá +1 důvěra)
+
+Alchymista: „Prolitá krev často vyřeší víc než slova.“
+
+Alchymista: „Zajímavé...“
+
+Alchymista: „Haha. Všichni jste stejní.“
+
+
+Závěrečná část kvízu:
+3a.2. Alchymista: „Ano... jsi pravý zaklínač – vlastně zaklínačka – a ještě k tomu krásná! Jakpak se jmenuješ, smím-li se zeptat?“
+
+(Hráčka zadá své jméno)
+
+Po zadání jména:
+3a.3. Alchymista: „Rád tě poznávám, [jméno hráčky]! Já jsem... já... vlastně ani nevím, kdo jsem. Ale to teď není důležité.“
+
+
+---
+
+Kapitola 4 – Po kvízu
+
+Úvodní replika
+4.1. Alchymista: „Cítím, že ti mohu věřit. Ale... má mysl je roztříštěná jako střepy zrcadla. Pamatuji si, že jsem pracoval na něčem nesmírně mocném. Na něčem, co mělo navždy změnit život zaklínačů. Jenže právě to dílo přitáhlo zlo. Strašlivé, zkažené zlo... Přišlo si pro mě, zničilo můj domov... a chtělo to, co jsem stvořil. Nedostalo to – ještě jsem stihl svůj výtvor ukrýt. Ale už nevím kam. Prosím, pomoz mi. Ptej se mě – možná v tvých otázkách znovu najdu své vzpomínky.“
+
+Volby (tlačítka):
+
+„Jaké zlo si tě našlo?“
+
+„Na čem jsi vlastně pracoval?“
+
+„Kde jsi to ukryl?“
+
+„Pamatuješ si, kdo jsi?“
+
+
+Odezvy na volby:
+
+„Jaké zlo si tě našlo?“ → Alchymista: „Viděl jsem, jak se pohnuly stromy... v jejich korunách seděli mrtví ptáci. Cítil jsem, že se mě dotkl sám les. A pak... ticho. Jen stíny. Jakmile jsi mě vyvolala, upoutala jsi na sebe pozornost té stvůry!“
+
+„Na čem jsi vlastně pracoval?“ → Alchymista: „To nevím. Ruce si pamatují pohyby, mysl cítí tíhu... ale jasnou představu už nemám. Bylo to něco, co mělo zaklínače navždy proměnit – snad posílit, možná vysvobodit... Ještě ti nemohu říct víc. Sám si tím nejsem jistý.“
+
+„Kde jsi to ukryl?“ → Alchymista: „Nevím přesně, ale cítím, že to souvisí s jednou chatou. Tam, kde vlci kdysi skrývali své věci před zraky smrtelníků. Právě tam povede naše cesta. Najdeme tam něco, co tam nepatří – něco, co tam někdo zanechal... až to objevíš, dej mi prosím vědět.“
+
+„Pamatuješ si, kdo jsi?“ → Alchymista: „Kdysi dávno jsem měl jméno. Znělo hrdě a vlci ho znali. Teď... zůstalo z něj jen šepot. Možná až tvá cesta postoupí dál, mé jméno se mi vrátí.“
+
+
+Instrukce: „Zkus se poohlédnout u chaty po něčem, co tam nepatří – po nějakém podivném znamení nebo hrozbě. Bez toho se dál asi nedostaneme.“
+
+Nápověda (při prázdném vstupu): Alchymista: „Ještě musíme najít to znamení... bez něj se dál nepohneme.“
+
+Po potvrzení nálezu (hráčka napíše, co našla u chaty):
+4.2. Alchymista: „Ano, to je ono! Cítím, jak se mi vracejí vzpomínky... Poznávám to. Viděl jsem to u sebe doma.“
+
+
+---
+
+Kapitola 5 – Bestiář
+
+Úvodní replika
+5.1. Alchymista: „Ano... už chápu. Ten znak, cos našla, byl prokletý. To zlo mě sledovalo dlouho – ale já nevím, jak se jmenuje. Pamatuji si jen stíny: stromy, které kráčely; lebky civějící z větví; les, který se hýbal, jako by byl živý. Vlčice... ty bestiáře znáš. Zkus tu stvůru pojmenovat.“
+
+Instrukce: „Zadej název monstra.“ (Hráčka má napsat jméno nestvůry; správná odpověď: „Lešij“ / „Leshen“ / „Lesij“.)
+
+Správná odpověď („Lešij“):
+5.2. Alchymista: „Lešij... ano! To jméno mě bodá v mysli jako trn. Viděl jsem ho – plížil se ke mně ve snech. Musíme ho zastavit! Vlčice, tvé čepele jsou teď jedinou nadějí. Dám ti rady, recepty, pomůcky... ale boj bude na tobě.“
+
+Neúspěšné pokusy – nápovědy:
+
+Pokud text obsahuje „upír“ → Alchymista: „Upír? Ne. Tohle stvoření nebylo z krve, ale ze dřeva. V žilách mu místo krve proudila míza.“
+
+Pokud text obsahuje „vlk“ / „vlci“ / „démon“ → Alchymista: „Myslíš vlka? Ten tvor sice vlky ovládal – dělal si z nich vlastní oči. Ale sám vlkem nebyl.“
+
+Pokud text obsahuje „ent“ → Alchymista: „Strom... ano, vypadalo to jako chodící strom. Jenže to nebyl laskavý strážce lesa – tenhle les vraždil. Byl prokletý.“
+
+Jiná odpověď → Alchymista: „Ne... hledej bytost spjatou s lesem, s kořeny, které chodí a ovládají zvířata...“
+
+
+(Poznámka: Kapitoly 6 a 6a nejsou v materiálu. Příběh pokračuje kapitolou 7.)
+
+
+---
+
+Kapitola 7 – Přenosná laboratoř
+
+Úvodní replika
+7.1. Alchymista: „Hmmm... už si vzpomínám – míval jsem malou přenosnou laboratoř, abych mohl míchat lektvary i v divočině. Vím, že jsem ji nechal někde... v té chatě.“
+
+Volby (tlačítka):
+
+„Kde by měla být?“
+
+„K čemu sloužila?“
+
+
+Odezvy na volby:
+
+„Kde by měla být?“ → Alchymista: „To si nejsem jistý... vybavuje se mi jeden šuplík – a na něm velký nápis NEŠAHAT.“ (Alchymista se při té vzpomínce pousměje.)
+
+„K čemu sloužila?“ → Alchymista: „Byla to moje chlouba. Zaklínači měli jen meče a Znamení – já jim chtěl dát víc. Chtěl jsem, aby mohli tvořit kdekoli: elixíry, mutageny... snad i něco, co dokáže prolomit kletby.“
+
+
+(Po vyčerpání voleb pokračuje Alchymista ve své replice.)
+7.2. Alchymista: „Až tu laboratoř najdeš, dej mi prosím vědět.“
+
+Hráčka stiskne tlačítko „Našla jsem ji.“
+
+Po stisknutí „Našla jsem ji.“ → Alchymista: „Výborně! Teď máš v rukou mou přenosnou laboratoř. S její pomocí dokážeme velké věci. Najdeš v ní několik mých experimentů – vyzkoušej si je, určitě se budou hodit! Já mezitím zkusím něco vypátrat... poptat se venku... ozvi se mi, až dokončíš experimenty a až tma pohltí lesy.“
+
+
+Placeholder vstupu: „Už je tma?“ (hráčka má něco napsat, aby pokračovala)
+Nápověda (při prázdném vstupu): „Napiš cokoli, ať můžeme pokračovat.“
+
+
+---
+
+Kapitola 7c – Lektvar Kočky
+
+Úvodní replika
+7c.1. Alchymista: „Cítíš to, jak noc houstne...? Ale neboj – dnes ti nic nehrozí. A co víc, sehnal jsem přátele! Pomohou nám... mají toho prokletého Lešije plné zuby a chtějí ho vyhnat. Jsou to maličcí duchové lesa. Ukážou ti cestu k místu, odkud Lešij čerpá sílu. Ale abys je viděla, musíme zesílit lektvar Kočky! A pak použít můj vynález – to až potom...“
+
+Volby (tlačítka):
+
+„Jak ji vyrobit?“
+
+„Co je Tekutý zrak?“
+
+„Jak Kočka posílí lampu?“
+
+
+Odezvy na volby:
+
+„Jak ji vyrobit?“ → Alchymista: „Lektvar Kočka najdeš popsaný u Lukase nebo ve svém Deníku alchymie... Ale abys ji posílila, přidej Tekutý zrak – vy tomu říkáte okvětní lístky fialové myrty.“
+
+„Co je Tekutý zrak?“ → Alchymista: „Říkali tomu tak... je to látka, která láme světlo, až se barvy promění. Je to moje tajemství. V tom nápoji to může být cokoli zvláštního a tajuplného.“
+
+„Jak Kočka posílí lampu?“ → Alchymista: „Když spojíš Kočku s lampou, zhmotní se to, co bylo skryté. Světlo lampy ukáže stopy a Kočka ti dovolí je vnímat.“
+
+
+Instrukce: „Až připravíš posílenou Kočku, napiš mi, jakou barvu ten lektvar má.“ (Správná odpověď: „fialová“)
+
+Správná odpověď („fialová“):
+7c.2. Alchymista: „Ano, fialová Kočka! Její síla teď přejde i do lampy. Vzpomínám si... lampu jsem nechal na půdě chaty, v jedné truhlici. Najdi ji tam, prosím.“
+
+Špatná odpověď – nápověda:
+Alchymista: „Není to ono... Kočka bývala tmavá, ale s Tekutým zrakem se promění – čerň se smísí se světlem a vznikne barva noci a magie... fialová.“
+
+
+---
+
+Kapitola 8 – Krystalová lampa
+
+Úvodní replika
+8.1. Alchymista: „Ano... teď už vidím jasně! Fialová Kočka a má lampa – spolu ukáží víc, než by odhalilo denní světlo. Lampa je v podkroví chaty, v jedné truhlici.“
+
+Volby (tlačítka):
+
+„K čemu lampa slouží?“
+
+„Z čeho je vyrobená?“
+
+„Mám ji!“
+
+
+Odezvy na volby:
+
+„K čemu lampa slouží?“ → Alchymista: „Lampa odhalí to, co je očím skryté. S lektvarem Kočka uvidíš dokonce i stíny duchů – a ti tě povedou k pravdě.“
+
+„Z čeho je vyrobená?“ → Alchymista: „Je vyřezaná z horského křišťálu. Vryl jsem do něj runu ochrany, proto svítí a nikdy nezhasne.“
+
+„Mám ji!“ → Alchymista: „Výborně! Teď vypij lektvar Kočky a podívej se pod schody chaty. Zanechal jsem ti tam znamení – runu ochrany. Až ji najdeš, napiš mi její jméno.“
+
+
+Instrukce: „Vypij posílenou Kočku a pod schody chaty najdi znamení (runa ochrany). Napiš jeho jméno.“ (Správná odpověď: „Algiz“ nebo „Z“)
+
+Správná odpověď („Algiz“/„Z“):
+8.2. Alchymista: „Ano! To je ona – Algiz. Runa ochrany, štít proti zlu.“
+
+Špatná odpověď – nápověda:
+Alchymista: „Ne... ta runa vypadala jako strom se zvednutými větvemi. Symbol ochrany. Podívej se do bestiáře na runy!“
+
+
+---
+
+Kapitola 9 – Přání štěstí
+
+Úvodní replika
+9.1. Alchymista: „Teď už vím, že jdeme správným směrem. Lampa, Kočka a Algiz... společně tě povedou dál. Duchové lesa ti venku ukážou stopy. Vydej se je hledat – jakmile uspěješ, vrať se za mnou.“
+
+Instrukce: „Potvrď, že hledání bylo úspěšné (napiš, co jsi našla).“
+
+Placeholder vstupu: „Popiš svůj nález“
+
+Nápověda (při prázdném vstupu): Alchymista: „Vydej se na průzkum a pak mi dej vědět, co jsi našla. Budu tu na tebe čekat. Věřím, že budeš úspěšná!“
+
+Po vyplnění libovolného textu (hráčka se vrátí):
+9.2. Alchymista: „Ach, jsem tak rád, že tě slyším! Věděl jsem, že se vrátíš.“
+
+(Poznámka: Kapitoly 10 a 11 nejsou v materiálu. Příběh pokračuje kapitolou 12.)
+
+
+---
+
+Kapitola 12 – Totem
+
+Úvodní replika
+12.1. Alchymista: „Áňo... z toho předmětu cítím velmi zlou magii! Je v něm část Lešijovy moci. Když ten předmět zničíme, Lešij zeslábne a půjde ho vylákat. Ale tohle není můj obor...“
+12.2. Alchymista: „Já dělám experimenty, měním vodu ve víno, míchám lektvary... ale s tímhle ti musí poradit Lukas. Tady jsem teď bezmocný.“
+
+Volby (tlačítka):
+
+„Nemůžeš si vzpomenout vůbec nic?“
+
+„Proč nemůžeš mluvit s Lukasem?“
+
+„Co mám udělat teď?“
+
+
+Odezvy na volby:
+
+„Nemůžeš si vzpomenout vůbec nic?“ → Alchymista: „Vzpomínky se vynořují jako útržky snu... právě jednu vidím: zaklínač s bílými vlasy – Geralt! Pije můj čerstvě uvařený lektvar a jeho zranění se okamžitě hojí. Poplácá mě po rameni a říká: ‚Možná nejsi vlk... ale jsi jeden z nás, mrňousi!‘ Ten lektvar jsme nazvali Vlaštovka. Haha.“ (Alchymista se při té vzpomínce pobaveně usměje.)
+
+„Proč nemůžeš mluvit s Lukasem?“ → Alchymista: „Protože jsi to byla ty, kdo mě přivolal. Transmutační kruh se navázal na tebe – má síla proudí skrze tebe. Nemohu se ukázat nikomu jinému.“
+
+„Co mám udělat teď?“ → Alchymista: „Poraď se s Lukasem, jak zničit ten prokletý předmět... a jakmile to provedete, dej mi vědět. Bude to klíčové.“
+
+
+(Tato volba posouvá děj dál.)
+
+Instrukce: „Potvrď, že předmět byl zničen (napiš Ano).“ (Povolené odpovědi: „Potvrzuji“, „Hotovo“, „Mám to“, „Ano“)
+
+Nápověda (při jiné odpovědi): Alchymista: „Stačí krátce potvrdit, vlčice.“
+
+Po potvrzení zničení předmětu („Ano“): (Příběh pokračuje na Kapitolu 13 – Odpočinek.)
+
+
+---
+
+Kapitola 13 – Odpočinek
+
+Úvodní replika
+13.1. Alchymista: „Víš, Áňo... po tak dlouhé době necítím už jen mlhu a strach.“
+13.2. Alchymista: „Tvoje přítomnost mi připomíná, že jsem kdysi býval člověkem – část mých vzpomínek se vrací.“
+13.3. Alchymista: „Můžu ti o sobě něco povědět? Žádný úkol... jen tak, pokud bys chtěla.“
+
+Volby (tlačítka):
+
+„Pověz mi o něčem hezkém, co sis vybavil.“
+
+„A co zaklínači – měli tě rádi?“
+
+„Máš nějaký sen, který sis nesplnil?“
+
+„Jak se teď cítíš?“
+
+
+Odezvy na volby:
+
+„Pověz mi o něčem hezkém, co sis vybavil.“ → Alchymista: „Vzpomínky se skládají z útržků snu... vidím místo, kde mi bylo dobře. Za domem jsem měl zahrádku obehnanou nízkou kamennou zídkou. Ranní rosa se na bylinkách třpytila jako stříbro... tam jsem byl opravdu šťastný.“ (Hlas Alchymisty při té vzpomínce zjihne.)
+
+„A co zaklínači – měli tě rádi?“ → Alchymista: „Byli tvrdí a málomluvní... když jsem jejich smečce poprvé přinesl směs proti baziliščímu jedu, jen mlčky přikývli na znamení díků. Žádná velká slova – ale pro mě to moc znamenalo.“
+
+„Máš nějaký sen, který sis nesplnil?“ → Alchymista: „Chtěl jsem ukázat své dílo i čarodějkám, aby viděly, čeho může dosáhnout obyčejný alchymista... Toužil jsem po uznání i mezi mágy. Jenže tenhle sen jsem už nestihl naplnit.“ (V jeho hlase zazní tichá lítost.)
+
+„Jak se teď cítíš?“ → Alchymista: „Cítím se unavený, ale zároveň šťastný – už v té mlze nejsem sám. Děkuju ti, že tu se mnou jsi a za vše, co pro mě děláš. Moc si toho vážím!“
+
+
+(Tato poslední odpověď ukončí rozhovor pro dnešek.)
+
+Kotva – závěr dne
+Alchymista: „Pro dnešek toho bylo dost. Ty i Lukas si musíte odpočinout – a já také... uvidíme se ráno. Dobrou noc!“
+
+(Příběh pokračuje další den, viz kapitola 13a.)
+
+
+---
+
+Kapitola 13a – zzzzzZzzZZZZZZ...
+
+Úvodní replika
+13a.1. Alchymista: „...zzzZZZzzz...“ (Alchymista usnul hlubokým spánkem.)
+
+Instrukce: „Zadej, kolikrát ráno zakokrhal kohout...“ (Správná odpověď: „12“ nebo „dvanáctkrát“)
+
+Nápověda (při špatné odpovědi): Alchymista: „...zzzZZZzzz...“ (Spí dál – budeš to muset zkusit znovu.)
+
+Po zadání správné odpovědi: (Příběh pokračuje na Kapitolu 14 – Příprava na lov Lešije.)
+
+
+---
+
+Kapitola 14 – Příprava na lov Lešije
+
+Úvodní replika
+14.1. Alchymista: „Dobré ráno, Áňo! Kolikrát že dnes zakokrhal kohout? Dvanáctkrát? Haha... vypadá to, že jsem spal déle, než jsem měl.“
+14.2. Alchymista: „Dnes je den příprav. V bestiáři najdeš, co na Lešije platí. Petarda a pořádný elixír se nám budou hodit!“
+14.3. Alchymista: „Také bys měla procvičit střelbu z luku – zaměř se na terče, postoj, dech i rychlost střelby. Lukas tomu rozumí, vždyť je to mistr boje.“
+
+Volby (tlačítka):
+
+„Jak přesně trénovat s lukem?“
+
+„Jaké věci na Lešije platí?“
+
+„Jdu připravit věci a trénovat.“
+
+
+Odezvy na volby:
+
+„Jak přesně trénovat s lukem?“ → Alchymista: „Zkus nejdřív střílet zblízka – dej pět šípů do velkého terče. Pak o pár kroků ustup a střílej rychle jeden za druhým. Nejde o sílu, ale o rytmus a klidný dech.“
+
+„Jaké věci na Lešije platí?“ → Alchymista: „To přesně nevím, ale váš chytrý bestiář to určitě ví. Mohu jen tipovat – speciální petardy a vhodné elixíry se určitě budou hodit!“ (Alchymista se usměje a ponechává výběr na tobě.)
+
+„Jdu připravit věci a trénovat.“ → Alchymista: „Skvěle! Až budeš připravená, napiš mi název petardy, kterou jsi nachystala.“
+
+
+Instrukce: „Napiš název petardy, kterou jsi připravila.“ (Správná odpověď: „Dwimeritová petarda“)
+
+Špatná odpověď – nápověda:
+Alchymista: „Myslím, že to není ono... zkus název upřesnit, nebo vyber jinou petardu.“
+
+Správná odpověď („Dwimeritová petarda“): (Příběh pokračuje na Kapitolu 15b – Elixír.)
+
+
+---
+
+Kapitola 15b – Elixír
+
+Úvodní replika
+15b.1. Alchymista: „Výborně, petardu už máš. Teď ještě elixír – ten bude stejně důležitý. Který použiješ?“
+
+Instrukce: „Napiš název elixíru, který zvolíš.“ (Správná odpověď: „Černá krev“)
+
+Špatná odpověď – nápověda:
+Alchymista: „Obávám se, že to stačit nebude... zkus jiný elixír, který by mohl zabrat na lesního běsa.“
+
+Správná odpověď („Černá krev“): (Příběh pokračuje na Kapitolu 16 – Skryté runy.)
+
+
+---
+
+Kapitola 16 – Skryté runy
+
+Úvodní replika
+16.1. Alchymista: „Vlčice... něco mě napadlo. Možná dokážu taky pomoct – skrze sílu run!“
+16.2. Alchymista: „Ale musíme najít ty správné... kdysi jsem schoval sadu tajných run. Zkusím ti promítnout místo, ale sám si nejsem jistý, kde to je...“
+16.3. Alchymista: „Podívej se pozorně. Vzory v krajině bývají starší než cesty lidí.“ (Před tebou se zjeví magická mapa s nejasnými symboly.)
+
+Volby (tlačítka):
+
+„Co přesně mám na mapě hledat?“
+
+„Jak poznám správné runy?“
+
+„Zkusím to popsat Lukasovi.“
+
+
+Odezvy na volby:
+
+„Co přesně mám na mapě hledat?“ → Alchymista: „Nehledej lidské cesty, ale prastaré tvary: kruh stromů, řadu kamenů, křižovatku potoků. Tam runy přetrvávají nejdéle.“
+
+„Jak poznám správné runy?“ → Alchymista: „Poznáš je podle významu – budou spojené s ochranou, voláním a poutem. Jakmile uvidíš místo, které ty tři významy spojuje, budeme blízko cíle.“
+
+„Zkusím to popsat Lukasovi.“ → Alchymista: „Dobře. Jemu možná bude něco povědomé. Popiš mu co nejpřesněji, co na té mapě vidíš.“
+
+
+Instrukce: „Popiš Lukasovi místo z mapy a zjisti, jestli ví, kde se nachází.“
+
+Placeholder vstupu: „Ví, kde to je?“
+
+Nápověda (při prázdném vstupu): Alchymista: „Lukas pořád netuší...? Zkus to popsat ještě lépe.“
+
+Po libovolném textu (hráčka předá popis Lukášovi): (Příběh pokračuje na Kapitolu 17 – Očarované runy.)
+
+
+---
+
+Kapitola 17 – Očarované runy
+
+Úvodní replika
+17.1. Alchymista: „Báječné, že máš takového druha po boku – Lukas je dobrý vlk! A teda, je pěkně statný!“ (Alchymista se pobaveně rozesměje.)
+17.2. Alchymista: „Neznám ho, ale začíná se mi líbit... vypadá to, že jste sehraná dvojka.“
+17.3. Alchymista: „Až ty runy objevíte a posbíráte, řekni mi, kolik kamenů jste našli. Pokud bude sada kompletní, můžeme pokračovat dál.“
+
+Volby (tlačítka):
+
+„Jak ses vlastně dostal k těmto runám?“ (volitelné, pro doplnění příběhu)
+
+(Hráčka poté zadá nalezený počet runových kamenů.)
+
+
+Odezva (volitelně):
+
+„Jak ses vlastně dostal k těmto runám?“ → Alchymista: „To je na dlouhé povídání... kdysi jsem je vyrobil vlastnoručně. Nejsou to obyčejné kameny – do každé runy jsem vtiskl sílu měsíčního svitu. Kameny, do nichž jsem je vyryl, pocházejí z dalekých hor, dotýkajících se nebe. Věřil jsem, že jimi posílím transmutační kruhy a dodám jim chybějící magii. Jenže nefungovalo to tak, jak jsem si představoval – ty runy působily jinak. Pro mě tenkrát neměly využití, ale teď nám konečně mohou posloužit...“ (Alchymista se viditelně zaraduje, že jeho dávné dílo konečně k něčemu je.)
+
+
+Instrukce: „Kolik runových kamenů jsi našla v sáčku?“
+
+Placeholder vstupu: „Počet kamenů“
+
+Špatná odpověď – nápověda:
+Alchymista: „Kdepak, to nesouhlasí. Bylo jich jiné množství. Nepřepočítáš to ještě jednou?“
+
+Správná odpověď („25“): (Příběh pokračuje na Kapitolu 17a – Ještě něco v sáčku?)
+
+
+---
+
+Kapitola 17a – Ještě něco v sáčku?
+
+Úvodní replika
+17a.1. Alchymista: „Dobrá, máme kompletní sadu run... jdeme na to!“ (Alchymista je nadšený, až mu radostí přeskakuje hlas.)
+
+Volby (tlačítka):
+
+„...bylo tam ještě něco navíc.“
+
+„...“ (mlčet a nic neříkat)
+
+
+Odezvy na volby:
+
+„...bylo tam ještě něco navíc.“ → Alchymista: „Hmmm... ano... už si vzpomínám – ještě jsem tam něco přidal. Malou lahvičku s drobnými rudými kamínky... ty kamínky! Byl to můj první pokus o krystalizaci diamantu, a nevyšel. Při té práci jsem se řízl a kapka mé krve z nich udělala něco jako rubín. Kámen, ve kterém navěky zůstala kapka mé krve. Haha!“ (Rozesměje se, protože ho ten dávný nezdar teď pobavil.)
+
+„...“ → Alchymista: (Alchymista mlčí – zřejmě jsi mu o žádném dalším nálezu neřekla.)
+
+
+Instrukce: „Vyber svou volbu a potvrď, zda byla v sáčku ještě nějaká další věc.“
+
+(Příběh pokračuje po rozhodnutí hráčky na Kapitolu 19 – Čas Lešije.)
+
+(Poznámka: Kapitola 18 obsahovala interní věštbu a nemá dialogy. Příběh pokračuje kapitolou 19.)
+
+
+---
+
+Kapitola 19 – Čas Lešije
+
+Úvodní replika
+19.1. Alchymista: „Věštba je dokonána. Hvězdy i runy promluvily... a já cítím, že nadešel čas.“
+19.2. Alchymista: „Lešij je oslabený – tohle je naše šance. Musíme ho vylákat, dřív než znovu zesílí.“
+19.3. Alchymista: „K tomu ale budete s Lukasem potřebovat návnadu. Poraď se s Lukasem – on zná recepty a ví, jak ji připravit. Určitě vám napoví i váš bestiář.“
+
+Volby (tlačítka):
+
+„Návnada je připravena.“
+
+„Ještě není připravena.“
+
+
+Odezvy na volby:
+
+„Návnada je připravena.“ → Alchymista: „Výborně! To je znamení, že se naše cesta chýlí ke konci. Pokračujme dál.“
+
+„Ještě není připravena.“ → Alchymista: „Rozumím. Nevadí, vlčice. Návnada je zásadní – vrať se do bestiáře a připrav ji, jinak Lešije nikdy nevylákáme ze stínů.“ (Hráčka musí nejprve připravit návnadu.)
+
+
+
+---
+
+Kapitola 20 – Lov Lešije
+
+Úvodní replika
+20.1. Alchymista: „Les se chvěje... slyšíš to ticho? To je on. Lešij už ví, že jdeme proti němu.“
+20.2. Alchymista: „Zbývá poslední krok – potvrdit, že jsi připravena. Jakmile to uděláš, už nebude cesty zpět.“
+
+Volby (tlačítka):
+
+„Co když selžu?“
+
+„Můžeš mi ještě něco poradit?“
+
+„Jsem připravena.“
+
+
+Odezvy na volby:
+
+„Co když selžu?“ → Alchymista: „Neselžeš. Nejdeš přece sama... máš vedle sebe Lukase. On moc dobře ví, jak lovit nestvůry. Věř mu.“ (Říká to klidně a přesvědčivě.)
+
+„Můžeš mi ještě něco poradit?“ → Alchymista: „Měj na paměti, že jeho černé srdce je jeho slabina, ale nesmíš se k němu přiblížit. Přilákej ho vším, co sis přichystala – a pak už jen luk a šípy! Zvládneš to.“
+
+„Jsem připravena.“ → Alchymista: „Výborně... přeji ti tedy dobrý lov, má statečná a krásná zaklínačko Áňo! Ať tě vede tvá odvaha. Drž se u Lukase – je to zkušený zaklínač a bude vědět, jak na něj!“
+
+
+Instrukce: „Potvrď, že jsi připravena ke střetu s Lešijem.“ (Povolené odpovědi: „Jdu do toho“, „Jsem připravena“, „Hotovo“, „Ano“)
+
+Nápověda (při jiné odpovědi): Alchymista: „Nespěchej... máš čas. Až budeš opravdu připravená, stačí jediné slovo.“
+
+Po potvrzení („Jsem připravena“): (Příběh pokračuje na Kapitolu 21 – Po lovu.)
+
+
+---
+
+Kapitola 21 – Po lovu
+
+Úvodní replika
+21.1. Alchymista: „Řekni mi, vlčice – jak dopadl lov?“
+21.2. Alchymista: „Stačí jediné slůvko a postaráme se o zbytek.“
+
+Volby (tlačítka):
+
+„Lešij je poražen.“
+
+„Ještě bojujeme.“
+
+
+Odezvy na volby:
+
+„Lešij je poražen.“ → Alchymista: „Ach, jak rád to slyším!!!“ (Jeho hlas se třese radostí a úlevou.)
+(Příběh pokračuje na Kapitolu 21a – Temné srdce.)
+
+„Ještě bojujeme.“ → Alchymista: „Vy to zvládnete!!“ (Zní naprosto přesvědčeně a čeká na dobré zprávy.)
+
+
+
+---
+
+Kapitola 21a – Temné srdce
+
+Úvodní replika
+21a.1. Alchymista: „...Tvoje ruka byla pevná, tvé srdce odvážné.“
+21a.2. Alchymista: „Uf, cítím, jak se mi vracejí vzpomínky... ale něco je ještě drží. Získala jsi jeho temné srdce?“ (ptá se napjatě)
+
+Volby (tlačítka):
+
+„Ano, mám jeho srdce.“
+
+„Ne, nic takového nemám.“
+
+
+Odezvy na volby:
+
+„Ano, mám jeho srdce.“ → Alchymista: „Tak dobře poslouchej... to, co neseš, je nebezpečné. Je to jako jed – může dát sílu, ale také zabíjí. Obrať se na Lukase – ten bude vědět, co s tím udělat.“
+(Příběh pokračuje na Kapitolu 22 – Temná esence.)
+
+„Ne, nic takového nemám.“ → Alchymista: „Budeš se pro něj muset vrátit, vlčice. Jinak se Lešij zregeneruje a dál bude rozsévat temnotu a zlo!“ (Hráčka musí získat Lešijovo srdce, jinak příběh nepokročí.)
+
+
+
+---
+
+Kapitola 22 – Temná esence
+
+Úvodní replika
+22.1. Alchymista: „Áňo... zvládli jste to. Jsem na tebe hrdý. Ale to, co držíš v rukou, není obyčejný prach.“
+22.2. Alchymista: „Je to srdce Lešije – jeho temná esence. Mocná... a velmi nebezpečná. Mezi živými by neměla zůstat.“
+22.3. Alchymista: „Řekni mi – co s ní uděláš? Jak naložíš s takovou mocí?“ (Vyzní to jako poslední zkouška tvého charakteru.)
+
+Volby (tlačítka):
+
+„Spálím ji.“
+
+„Schovám si ji.“
+
+
+Odezvy na volby:
+
+„Spálím ji.“ → Alchymista: „Správná volba. Plamen pohltí temnotu dřív, než by stačila pohltit tebe. Připravíme se na očistný rituál.“
+(Příběh pokračuje na Kapitolu 22a – Očistný oheň.)
+
+„Schovám si ji.“ → Alchymista: „Nedělej to! Ta síla by tě zlomila. Prosím, rozmysli si to... jediná správná cesta je očistit tu esenci ohněm a vrátit lesu rovnováhu.“ (Alchymista tě naléhavě pobízí ke zničení temné esence.)
+
+
+Instrukce: „Až tu temnou esenci spálíš v ohni, dej mi vědět třeba slovem ‚Spáleno‘.“
+
+Nápověda (při jiné odpovědi): Alchymista: „Stačí napsat ‚Spáleno‘.“
+
+Po potvrzení („Spáleno“): (Příběh pokračuje na Kapitolu 22a – Očistný oheň.)
+
+
+---
+
+Kapitola 22a – Očistný oheň
+
+Úvodní replika
+22a.1. Alchymista: „Ufff... esence je pryč. To se mi ulevilo. Dokázali jsme to... ne, tys to dokázala!!“ (V jeho hlase je slyšet nesmírná vděčnost.)
+22a.2. Alchymista: „Jsem zvědavý, vlčice – jakou barvu měl plamen, když jsi tu esenci hodila do ohně?“
+
+Instrukce: „Jakou barvu měl plamen?“ (Hráčka může napsat libovolnou barvu či popis.)
+
+Nápověda (při prázdném vstupu): Alchymista: „Cože, žádný plamen?? Ne, určitě tam nějaký byl – zkus to popsat ještě jednou.“
+
+Po zadání libovolného textu: (Příběh pokračuje na Kapitolu 23 – Když měsíc drží dech.)
+
+
+---
+
+Kapitola 23 – Když měsíc drží dech
+
+Úvodní replika
+23.1. Alchymista: „Cítím úlevu... jako by mi z ramen spadla těžká mlha.“
+23.2. Alchymista: „Vzpomínky se mi vracejí po kouskách, vlčice. Potřebuji je seřadit. Až měsíc vystoupí nejvýš a noc na okamžik ztichne, otevře se další brána.“
+23.3. Alchymista: „Do té chvíle se mě můžeš ptát. Slova někdy lámou pečetě, které mlčení neprolomí.“
+
+Volby (tlačítka): (tyto otázky jsou volitelné, dokud nenastane půlnoc)
+
+„Pověz mi o místě, kde ses cítil doma.“
+
+„Jak tě přijali zaklínači?“
+
+„Čeho ses bál nejvíc?“
+
+„Vzpomeneš si na své jméno?“
+
+
+Odezvy na volby:
+
+„Pověz mi o místě, kde ses cítil doma.“ → Alchymista: „Za domem... malá zahrádka obehnaná kameny. Ranní rosa se na bylinkách leskla jako stříbro. Byl to můj malý ráj.“ (Na chvíli se zasní, jako by tu zahrádku viděl přímo před sebou.)
+
+„Jak tě přijali zaklínači?“ → Alchymista: „Nepotřebovali žádné velké projevy. Když jsem jim poprvé přinesl protijed na baziliščí uštknutí, jen mlčky přikývli. I v tom mlčení bylo cítit přijetí.“
+
+„Čeho ses bál nejvíc?“ → Alchymista: „Že mé dílo pohltí ty, pro které bylo stvořeno. Strach je dobrý sluha, ale zlý pán... a občas dokáže zhatit i ty nejlepší úmysly.“
+
+„Vzpomeneš si na své jméno?“ → Alchymista: „Moje jméno je jako ozvěna ve staré síni. Už ho skoro slyším... ale ještě ne. Ještě nepřišel ten správný okamžik.“
+
+
+Instrukce: „Pokračovat bude možné, až zesílí měsíc a noc se přiblíží půlnoci.“ (Hráčka musí skutečně počkat do půlnoci.)
+
+Nápověda (pokud akce dosud nelze pokračovat): Alchymista: „Ještě ne... vydrž chvilku. Nech měsíc nadechnout a vrať se, až se noc ztiší.“
+
+Po uplynutí času (nastane půlnoc): (Příběh pokračuje na Kapitolu 24 – Odkrytí tajemství.)
+
+
+---
+
+Kapitola 24 – Odkrytí tajemství
+
+Úvodní replika
+24.1. Alchymista: „Ano... už si vzpomínám. Celou tu dobu to stálo přímo přede mnou.“
+24.2. Alchymista: „To, co jsem stvořil... lidé tomu říkali různě: Lapis Philosophorum. Kámen věků. Kámen mudrců. Všechna ta jména znějí jako báje – a přesto jsem ten kámen vlastníma rukama vytvořil.“
+24.3. Alchymista: „Byl to můj vrcholný úspěch, ale zároveň má zhouba. Ten kámen je nesmírně mocný, a tak jsem ho včas skryl... schoval jsem ho těm nejmocnějším přímo pod nosem, aby ho hlídali, aniž by o tom věděli.“
+24.4. Alchymista: „Klíč k němu jsem ukryl ve sklepě – za bariérami, které jsem teď odstranil.“
+24.5. Alchymista: „Ten klíč určitě najdeš. Poznáš ho podle runy Fehu – runy proměny. A dveře? Ty by teď měly zářit ve svitu měsíce. Kdyby snad ne... použij mou lampu. Ta ti ukáže cestu.“
+24.6. Alchymista: „Má krásná Áňo... zabijáku nestvůr... děkuji ti. Bez tebe bych dál bloudil mlhou zapomnění. Teď už je to jen ve tvých rukou.“
+24.7. Alchymista: „Až ho najdeš, dej mi prosím vědět – a pak se rozloučíme... už mě tu nic víc nedrží.“
+
+Volby (tlačítka):
+
+„Našla jsem Kámen mudrců.“
+
+„Ještě hledám.“
+
+
+Odezvy na volby:
+
+„Našla jsem Kámen mudrců.“ → Alchymista: „Ach! Tak přece jen... tvé kroky tě dovedly k pravdě. Kámen je teď tvůj – a s ním i rozhodnutí, co s ním uděláš.“ (Příběh pokračuje na Kapitolu 25 – Rozhodnutí u prahu.)
+
+„Ještě hledám.“ → Alchymista: „Hledej pečlivě... runa Fehu ti ukáže cestu. Nic nepřehlédni – kdyby bylo potřeba, pohlédni na svět skrze světlo lampy.“ (Hráčka by měla kámen nalézt, než bude pokračovat.)
+
+
+Instrukce: „Potvrď, zda jsi nalezla Kámen mudrců.“
+
+Nápověda (pokud váháš s potvrzením): Alchymista: „Věřím, že ho najdeš. Až ho budeš držet ve svých rukou, prostě řekni: Našla jsem Kámen mudrců.“
+
+
+---
+
+Kapitola 25 – Rozhodnutí u prahu
+
+Úvodní replika
+25.1. Alchymista: „Áňo... cítím, že mé pouto k tomuto světu slábne. Tajemství jsme odhalili a tvá cesta je otevřená.“
+25.2. Alchymista: „Než odejdu, chci ti prozradit ještě jednu věc. Jmenuji se Muradin Bronzovous.“
+25.3. Alchymista: „To jméno jsem neslyšel hodně dlouho... ale teď už vím, kým jsem býval. Jsem moc rád, že jsem tě poznal – víc, než dokážu slovy vyjádřit.“
+25.4. Alchymista: „Teď je volba na tobě, vlčice.“ (Náhle před tebou nestojí jen alchymista, ale přítel. Jeho duch čeká na tvé rozhodnutí.)
+
+Volby (tlačítka):
+
+„Děkuji ti za vše, rozlučme se.“
+
+„A co kdybys tu mohl zůstat? S námi? Chtěl bys?“
+
+
+Odezvy na volby:
+
+„Děkuji ti za vše, rozlučme se.“ → Muradin: „Nuže sbohem... nechť tě světlo provází a stíny se ti klaní. Vždy budu nablízku – v šepotu listí i v žáru ohně.“
+(Muradinův hlas se pomalu vytrácí. Propouštíš jeho duši ze světa živých a cítíš, že odešel pokojně.)
+(KONEC příběhu – Muradin nalezl klid.)
+
+„A co kdybys tu mohl zůstat? S námi? Chtěl bys?“ → Muradin: „...Zůstat? V novém těle, po tvém boku? Ano! Pokud to jen trochu jde, přijímám – celým svým srdcem!“
+(Muradinův hlas doslova ožívá nadšením. Jeho duch plane radostí při pomyšlení, že by mohl dál kráčet s vámi ve světě živých.)
+
+
+(Příběh pokračuje na Kapitolu 26 – Rituál Přenosu, pokud se hráčka rozhodla Muradina udržet ve světě živých.)

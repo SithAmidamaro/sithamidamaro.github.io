@@ -10,7 +10,8 @@
   <h1>Kapitola 13 – Odpočinek</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Víš, Áňo… po dlouhé době necítím jen mlhu a strach. Tvoje přítomnost mi připomíná, že jsem kdysi byl člověk – vrací se kousky vzpomínek. Můžu ti o sobě něco povědět? Bez úkolů… jen tak?“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Víš, Áňo… po velmi dlouhé době necítím jen mlhu a strach. Díky tobě na mě dýchla naděje a vzpomínky se pomalu vracejí.“</p></div>
+    <div class="bubble"><p><strong>Alchymista:</strong> „Tvoje přítomnost mi připomíná, že jsem kdysi býval člověk z masa a kostí. Že jsem měl přátele… možná i rodinu. Kousky toho, kým jsem byl, se skládají zpět dohromady. Můžu ti o sobě něco povědět? Jen tak, bez úkolů a monster…?“</p></div>
 </div>
 <div class="choices">
   <button onclick="say13(1)">„Pověz mi o něčem hezkém, co sis vybavil.“</button>
@@ -21,17 +22,17 @@
 <div id="out13"></div>
 <hr>
 <div class="bubble">
-  <p><strong>Kotva:</strong> Pro dnešek stačí – potvrď, že končíte a jdete spát.</p>
+  <p><strong>Kotva:</strong> Pro dnešek toho bylo dost. Ty i Lukas si musíte odpočinout – a já také... uvidíme se ráno. Dobrou noc!</p>
   <button class="btn" onclick="document.getElementById('cont13').innerHTML = `<a class='continue-btn' href='kap13a.html'>👉 Dobrou noc (kap13a)</a>`">Dobrou noc</button>
   <div id="cont13"></div>
 </div>
 <script>
 function say13(n){
   const o=document.getElementById('out13');
-  if(n===1){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Zahrádka za mlýnem… ranní rosa, bylinky rostly líp než v laboratoři.“</p></div>`}
+  if(n===1){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Třeba vidím ohněm ozářenou pracovnu a v ní sám sebe, jak do noci bádám nad lektvary. Byl jsem nejšťastnější, když se mi poprvé podařilo proměnit obyčejnou bylinu v silný lék. Ten pocit tvoření… to byla má vášeň.“</p></div>`}
   else if(n===2){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Byli tvrdí a málomluvní. Jednou Geralt vypil nový lektvar, podíval se na mě a řekl ‚Dobrý.‘ – od něj to byla poklona.“</p></div>`}
-  else if(n===3){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Chtěl jsem ukázat své dílo čarodějkám – ne z pýchy, z čisté zvědavosti.“</p></div>`}
-  else{o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Unaveně, ale radostně. Nejsem v té mlze sám. Děkuju, že tu jsi.“</p></div>`}
+  else if(n===3){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Měl jsem i sny, které jsem už nestihl naplnit… Toužil jsem ukázat svoje dílo čarodějkám na Ban Ard. Chtěl jsem, aby i ti nejmoudřejší v našem světě uznali, co jsem dokázal – že alchymie dokáže zázraky. Ale… osud to zařídil jinak.“</p></div>`}
+  else{o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Ptáš se, jak se teď cítím? Popravdě… unaveně. Tahle noc byla dlouhá i pro ducha, haha… Ale zároveň cítím radost: už nejsem v té studené mlze úplně sám. Děkuju ti, že tu se mnou jsi, Áňo... i Lukas. Děkuji Vám za všechno, co pro mě děláte. Opravdu si toho vážím – víc, než dokážu slovy vyjádřit.“</p></div>`}
 }
 </script>
 </div>

@@ -16,14 +16,14 @@
       <div class="dialogue">
         <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
         <div class="bubble">
-          <p><strong>Alchymista:</strong> "Tma… chlad… hlasy stromů… Kdo… kdo mne volá? Jsem… mrtvý? Nebo jen zapomenutý?"</p>
+          <p><strong>Alchymista:</strong> "Tma... chlad... šeptání stromů... Kdo... kdo mě volá? Jsem... mrtvý? Nebo jen zapomenutý?"</p>
         </div>
       </div>
 
       <div class="choices">
-        <button onclick="choose(1)">„Jsem zaklínač ze školy Vlka, Áňa.“</button>
+        <button onclick="choose(1)">„Jsem zaklínačka, ze Školy Vlka.“</button>
         <button onclick="choose(2)">„Jsem jen poutník, který tě našel.“</button>
-        <button onclick="choose(3)">„To není důležité, řekni mi, kdo jsi.“</button>
+        <button onclick="choose(3)">„To není důležité, řekni mi, kdo jsi ty.“</button>
       </div>
 
       <div id="resp" style="margin-top:10px;"></div>
@@ -37,14 +37,14 @@
 function choose(n){
   const r = document.getElementById('resp');
   if(n===1){
-    r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Vlk… Vlci! Ano, to jméno znám. Byli jste mými přáteli. Ale… opravdu jsi vlk? Nebo jen liška v přestrojení?"</p></div>
+    r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Vlk… Škola Vlka! Ano, to jméno znám. Byli jste mými přáteli, myslím? Ale… opravdu jsi vlk? Nebo jen liška v přestrojení?"</p></div>
     <p class="small">(Alchymista si tě chce ověřit – následuje kvíz.)</p>
     <a class="continue-btn" href="kap3a.html">👉 Pokračovat na kvíz</a>`;
   }else if(n===2){
-    r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Poutník? …Ne, to nesedí. Poutníci neznají znamení vlků. Mé srdce se zavírá… odpusť."</p></div>
+    r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Poutník? …Ne, to nesedí. Poutník by mě nedokázal vyvolat? Kdo jsi?!"</p></div>
     <button class="btn" onclick="r.innerHTML=''">🔄 Zkusit znovu</button>`;
   }else{
-    r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Já… kdo jsem já? Jen prach a vzpomínky. Nic si nepamatuji. Pokud jsi vlk, ukaž mi to…"</p></div>
+    r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Já… kdo jsem já? Jen prach a vzpomínky. Pamatuji si málo. Ale otázka je, kdo jsi ty…?"</p></div>
     <button class="btn" onclick="r.innerHTML=''">🔄 Zkusit znovu</button>`;
   }
 }

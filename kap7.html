@@ -16,7 +16,7 @@
       <div class="dialogue">
         <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
         <div class="bubble">
-          <p><strong>Alchymista:</strong> "Hmmm… Vzpomínám si… měl jsem laboratoř. Malou, přenosnou, abych mohl míchat lektvary v divočině. Vím, že jsem ji nechal někde… v chatě."</p>
+          <p><strong>Alchymista:</strong> "Vzpomínám si… míval jsem přenosnou laboratoř – malou krabičku na lektvary, abych mohl míchat elixíry a dělat experimenty i v divočině. Nechal jsem ji… v téhle chatě! Zkus jí najít, určitě tam někde bude."</p>
         </div>
       </div>
 
@@ -44,14 +44,14 @@
 function say(n){
   const o=document.getElementById('out');
   if(n===1){
-    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím jistě... Vzpomínám si na šuplík… a jak píšu vzkaz: <em>NEŠAHAT</em>."</p></div>`;
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím jistě... Vzpomínám si na šuplík… a jak píšu vzkaz: <em>NEŠAHAT LAMBERTE</em>."</p></div>`;
   }else{
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Byla to moje hrdost. Zaklínači měli jen meče a znamení. Já jim chtěl dát víc – možnost tvořit kdekoli. Elixíry, mutageny… snad i něco, co prolomí kletby."</p></div>`;
   }
 }
 function found(){
   const cont = document.getElementById('cont');
-  cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď máš v rukou mojí přenosnou laboratoř. S její pomocí dokážeme velké věci. Jsou tam různé experimenty, vyzkoušej si nějaké, bude se to určitě hodit! A já mezitím zkusím něco zjistit ! Poptat se venku... <strong> Ozvi se mi, až budeš hotova s experimenty a až tma pohltí lesy. </strong>"</p></div>
+  cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď máš v rukou mou přenosnou laboratoř – společně zvládneme velké věci. Najdeš tam různé mé experimenty; klidně některé vyzkoušej, určitě se budou hodit. Já mezitím zjistím, co se dá… poptám se mezi stíny lesa. <strong> Ozvi se mi, až budeš hotova s experimenty a až tma pohltí lesy. </strong>"</p></div>
     <div class='input-row' style='margin-top:8px;'>
       <input id='tma' type='text' placeholder='Už je tma?'>
       <button onclick='confirmTma()'>Potvrdit</button>

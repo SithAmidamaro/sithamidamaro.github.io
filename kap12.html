@@ -10,7 +10,7 @@
   <h1>Kapitola 12 – Totem</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Áňo… cítím z toho předmětu zlou magii, moc zlou! Je v něm část jeho moci. Když to zničíme, bude zranitelný – a pak ho vylákáme! Ale tohle není můj obor.“</p><p><strong>Alchymista:</strong> „Já dělám experimenty, měním vodu ve víno a připravuji lektvary. S tím ti poradí Lukas – tady jsem teď bezmocný…“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Cítím z toho předmětu zlou, prokletou magii… Je v něm kousek Lešijovy síly. Když ho zničíme, Lešij zeslábne a budeme ho moci vylákat z úkrytu!“ „Ale tohle není můj obor… Já umím míchat lektvary a měnit pevné látky na tekuté. Jak ten prokletý předmět zničit, na to se raději zeptej Lukase – v tomhle jsem teď bohužel bezmocný.“</p></div>
 </div>
 <div class="choices">
   <button onclick="say(1)">„Nemůžeš si vzpomenout vůbec nic?“</button>
@@ -31,9 +31,9 @@
 <script>
 function say(n){
   const o=document.getElementById('out12');
-  if(n===1){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Vzpomínky přicházejí jako útržky… ohniště před chatou, výsměch, Vlaštovka – a uzdravená rána.“</p></div>`;}
-  else if(n===2){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Protože tys mě přivolala; kruh se navázal na tebe.“</p></div>`;}
-  else{o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Zjistěte s Lukasem, jak zničit prokletý předmět…“</p></div>`;}
+  if(n===1){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Vzpomínky se vynořují jako útržky snu... právě jednu vidím: zaklínač – Vesemir! Pije můj čerstvě uvařený lektvar a jeho zranění se okamžitě hojí. Poplácá mě po rameni a říká: ‚Možná nejsi Zaklínač... ale jsi jeden z nás, mrňousi!‘ Ten lektvar jsme nazvali Vlaštovka. Haha.“</p></div>`;}
+  else if(n===2){o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Protože jsi to byla ty, kdo mě přivolal. Transmutační kruh se navázal na tebe – má síla proudí skrze tebe. Nemohu se ukázat nikomu jinému.“</p></div>`;}
+  else{o.innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „Poraď se s Lukasem, jak zničit ten prokletý předmět... a jakmile to provedete, dej mi vědět. Bude to klíčové.“</p></div>`;}
 }
 function ok12(){
   const v = (document.getElementById('a12').value||'').trim().toLowerCase();
