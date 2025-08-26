@@ -1,27 +1,607 @@
 [
-  {"id":"algiz","name":"Algiz","aliases":["elhaz"],"meanings":{"start":["Začínáš pod ochranou."],"obstacle":["Ochrana může praskat, když se jí držíš křečovitě."],"result":["Zůstaneš v bezpečí, když budeš věrná svým instinktům."]}},
-  {"id":"ansuz","name":"Ansuz","meanings":{"start":["Slovo otevře první dveře."],"obstacle":["Slova mohou i klamat."],"result":["Pravda nakonec promluví jasně."]}},
-  {"id":"berkana","name":"Berkana","meanings":{"start":["Rodí se nový začátek."],"obstacle":["Zrození bývá bolestné a křehké."],"result":["Vykvete, co bylo zaseto."]}},
-  {"id":"dagaz","name":"Dagaz","meanings":{"start":["Den se láme, přichází změna."],"obstacle":["Změna přináší chaos."],"result":["Světlo vyjde nad obzor."]}},
-  {"id":"ehwaz","name":"Ehwaz","meanings":{"start":["Spojenectví urychlí začátek."],"obstacle":["Nestačí jet rychle, je třeba jet spolu."],"result":["Cíl dobydeš v sedle důvěry."]}},
-  {"id":"eihwaz","name":"Eihwaz","meanings":{"start":["Kořeny jsou pevné."],"obstacle":["Cesta se vine skrz houštinu."],"result":["Vytrvalost projde i tmou."]}},
-  {"id":"fehu","name":"Fehu","meanings":{"start":["Na počátku je zisk a zdroje."],"obstacle":["Majetek může svazovat."],"result":["Zůstane to, co má cenu v srdci."]}},
-  {"id":"gebo","name":"Gebo","meanings":{"start":["Dar otevírá cestu."],"obstacle":["Dar zavazuje."],"result":["Vyrovnaná výměna přinese radost."]}},
-  {"id":"hagalaz","name":"Hagalaz","meanings":{"start":["Bouře přichází bez varování."],"obstacle":["Kroupy bijí do plánů."],"result":["Po bouři se vzduch pročistí."]}},
-  {"id":"ingwaz","name":"Ingwaz","meanings":{"start":["Semeno je v zemi."],"obstacle":["Růst potřebuje čas."],"result":["Úroda dozraje ne později, ale včas."]}},
-  {"id":"isa","name":"Isa","meanings":{"start":["Led zastavil pohyb."],"obstacle":["Ztuhlost zdržuje."],"result":["Trpělivost led nepřepere, ale obejde."]}},
-  {"id":"jera","name":"Jera","meanings":{"start":["Začíná cyklus práce a sklizně."],"obstacle":["Sklizeň nelze uspěchat."],"result":["Co zaseješ, to sklidíš."]}},
-  {"id":"kenaz","name":"Kenaz","meanings":{"start":["Rozsvěcí se pochodeň poznání."],"obstacle":["Plamen potřebuje kyslík a péči."],"result":["Oheň posvítí na další krok."]}},
-  {"id":"laguz","name":"Laguz","meanings":{"start":["Proud tě vede vpřed."],"obstacle":["Hloubka je nestálá."],"result":["Když popluješ s proudem, dopluješ dál."]}},
-  {"id":"mannaz","name":"Mannaz","meanings":{"start":["Člověk je srdcem děje."],"obstacle":["Pýcha i pochybnost svazují."],"result":["Poznej sebe a cesta se narovná."]}},
-  {"id":"nauthiz","name":"Nauthiz","meanings":{"start":["Nouze učí řemeslu."],"obstacle":["Potřeba svírá."],"result":["Co je nutné, se stane."]}},
-  {"id":"othala","name":"Othala","meanings":{"start":["Kořeny a domov dávají směr."],"obstacle":["Dědictví může zavazovat."],"result":["Najdeš, co je opravdu tvé."]}},
-  {"id":"perthro","name":"Perthro","meanings":{"start":["Kostky se třesou."],"obstacle":["Náhoda je vrtkavá."],"result":["Padne to, co má padnout."]}},
-  {"id":"raido","name":"Raido","meanings":{"start":["Cesta se dává do pohybu."],"obstacle":["Objížďky prověří trpělivost."],"result":["Dorazíš, když budeš držet směr."]}},
-  {"id":"sowilo","name":"Sowilo","meanings":{"start":["Slunce dodá sílu."],"obstacle":["I slunce někdy zakryjí mraky."],"result":["Světlo zvítězí nad stínem."]}},
-  {"id":"thurisaz","name":"Thurisaz","meanings":{"start":["Před branou stojí strážce."],"obstacle":["Trn bodá, když spěcháš."],"result":["Síla se poddá moudrosti."]}},
-  {"id":"tiwaz","name":"Tiwaz","meanings":{"start":["Zvedá se prapor odhodlání."],"obstacle":["Pořádek si vyžádá oběť."],"result":["Spravedlnost zvítězí."]}},
-  {"id":"uruz","name":"Uruz","meanings":{"start":["Síla rohatého zvířete probouzí tělo."],"obstacle":["Nezkrocená síla tě může převrátit."],"result":["Když sílu zkrotíš, unese tě dál."]}},
-  {"id":"wunjo","name":"Wunjo","meanings":{"start":["Radost dělá začátky lehčí."],"obstacle":["Radost je křehká, pečuj o ni."],"result":["Nakonec se srdce usměje."]}},
-  {"id":"wyrd","name":"Wyrd","aliases":["prázdná","prazdna","blank"],"meanings":{"start":["Začátek je zahalen mlhou."],"obstacle":["Nečekaný zlom ruší plány."],"result":["Osud se zjeví až na poslední chvíli."]}}
+  {
+    "id": "fehu",
+    "name": "Fehu",
+    "aliases": [],
+    "meanings": {
+      "start": [
+        "Začátek se třpytil příslibem hojnosti.",
+        "U zrodu stála možnost bohatství.",
+        "První krok vedl za světlem zisku."
+      ],
+      "obstacle": [
+        "Lesk zlata láká; střízlivost je štít.",
+        "Hojnost je dobrý sluha, zlý pán – uzdy je dobré držet pevně.",
+        "Cena a hodnota nejsou totéž."
+      ],
+      "result": [
+        "Zasloužená odměna dozraje.",
+        "Zůstane to, co má skutečnou hodnotu.",
+        "Hojnost přijde, kde se pečuje."
+      ]
+    }
+  },
+  {
+    "id": "uruz",
+    "name": "Uruz",
+    "aliases": [],
+    "meanings": {
+      "start": [
+        "Z hlubin povstala syrová síla.",
+        "Začátek nesl dech divoké energie.",
+        "První krok byl veden vůlí a odolností."
+      ],
+      "obstacle": [
+        "Síla bez směru bloudí; je třeba koryto.",
+        "Energie narazí na vlastní hranice.",
+        "Nezkrocená moc může zlámat to, co nese."
+      ],
+      "result": [
+        "Síla se ukotví ve formě.",
+        "Z vytrvalosti vzejde pevnost.",
+        "Zrodí se zdraví a odolnost."
+      ]
+    }
+  },
+  {
+    "id": "thurisaz",
+    "name": "Thurisaz",
+    "aliases": [
+      "Thuris",
+      "Thorn"
+    ],
+    "meanings": {
+      "start": [
+        "Trn připomněl bdělost na prahu.",
+        "Začátek ostřil smysly.",
+        "Před branou číhá síla, která zkouší."
+      ],
+      "obstacle": [
+        "Nebezpečí žádá rozvahu.",
+        "Útok se snadno vymkne; štít patří dopředu.",
+        "Ostrosti stačí málo, aby ranila."
+      ],
+      "result": [
+        "Zkouška odhalí, co je nutné bránit.",
+        "Ostří se tupí, když najde mír.",
+        "Po střetu přijde průchod."
+      ]
+    }
+  },
+  {
+    "id": "ansuz",
+    "name": "Ansuz",
+    "aliases": [],
+    "meanings": {
+      "start": [
+        "Na počátku promluvilo znamení.",
+        "Slovo přineslo dech a směr.",
+        "Zpráva přitekla z nečekané strany."
+      ],
+      "obstacle": [
+        "Šum překrývá zprávu; je třeba naslouchat.",
+        "Výklad se láme na tichu.",
+        "Ne každé poselství je čisté."
+      ],
+      "result": [
+        "Vyslovené přinese jasnost.",
+        "Rada dorazí v pravý čas.",
+        "Pochopení se stane mostem."
+      ]
+    }
+  },
+  {
+    "id": "raido",
+    "name": "Raido",
+    "aliases": [
+      "Raidho",
+      "Rad"
+    ],
+    "meanings": {
+      "start": [
+        "Začal pochod – cesta ukázala první milník.",
+        "Kolo se pohnulo kupředu.",
+        "Na startu zaznělo volání dálky."
+      ],
+      "obstacle": [
+        "Cesta se zužuje; tempo je třeba přizpůsobit.",
+        "Bloudění prověří vytrvalost.",
+        "Křižovatka žádá rozhodnutí."
+      ],
+      "result": [
+        "Cesta dovede k cíli.",
+        "Kruh se uzavře správným směrem.",
+        "Dobrodružství promění poutníka."
+      ]
+    }
+  },
+  {
+    "id": "kenaz",
+    "name": "Kenaz",
+    "aliases": [
+      "Kaunaz",
+      "Kaunan",
+      "Cen"
+    ],
+    "meanings": {
+      "start": [
+        "Z temnot vyjiskřil žár poznání.",
+        "Pochodeň odhalila tvary příběhu.",
+        "Jiskra změnila noc v mapu."
+      ],
+      "obstacle": [
+        "Plamen kolísá – je třeba chránit světlo.",
+        "Světlomet může oslnit; stačí přivřít víčka.",
+        "Žár pálí to, co je křehké."
+      ],
+      "result": [
+        "Světlo odhalí pravdu.",
+        "Učení přinese jasno.",
+        "Žár poznání spálí mlhu pochyb."
+      ]
+    }
+  },
+  {
+    "id": "gebo",
+    "name": "Gebo",
+    "aliases": [
+      "Gifu"
+    ],
+    "meanings": {
+      "start": [
+        "Dar otevřel cestu.",
+        "Výměna vytvořila rovnováhu.",
+        "První gesto bylo vzájemné."
+      ],
+      "obstacle": [
+        "Účet má být vyrovnaný.",
+        "Bez rovnováhy dar tíží.",
+        "Přijetí i dávání patří k sobě."
+      ],
+      "result": [
+        "Sdílení přinese hojnost.",
+        "Spojenectví uzraje v radost.",
+        "Správná výměna upevní pouto."
+      ]
+    }
+  },
+  {
+    "id": "wunjo",
+    "name": "Wunjo",
+    "aliases": [
+      "Wynn"
+    ],
+    "meanings": {
+      "start": [
+        "Na úsvitu se zableskla radost.",
+        "Začátek měl chuť vítězství.",
+        "V srdci startu zněla harmonie."
+      ],
+      "obstacle": [
+        "Přesycení potlačí slast.",
+        "Rozkoš bez míry ztrácí jiskru.",
+        "Radost potřebuje kořeny, ne jen lesk."
+      ],
+      "result": [
+        "Radost dozraje a rozsvítí den.",
+        "Úleva a soulad se usadí.",
+        "Úsměv zůstane i po práci."
+      ]
+    }
+  },
+  {
+    "id": "hagalaz",
+    "name": "Hagalaz",
+    "aliases": [
+      "Hagal"
+    ],
+    "meanings": {
+      "start": [
+        "Do začátku vpadla náhlá bouře.",
+        "Křehkost se střetla s kroupami.",
+        "Před plánem se objevila trhlina."
+      ],
+      "obstacle": [
+        "Bouře zkouší konstrukci.",
+        "Neočekávané rozbije staré tvary.",
+        "Je třeba krýt to, co je cenné."
+      ],
+      "result": [
+        "Po krupobití přijde čistý vzduch.",
+        "Rozpad dá místo novému tvaru.",
+        "Bouře pročistí obzor."
+      ]
+    }
+  },
+  {
+    "id": "nauthiz",
+    "name": "Nauthiz",
+    "aliases": [
+      "Nyd"
+    ],
+    "meanings": {
+      "start": [
+        "Nouze vyznačila první krok.",
+        "Počátek byl sevřen nedostatkem.",
+        "Tíseň zformovala záměr."
+      ],
+      "obstacle": [
+        "Omezení žádá vynalézavost.",
+        "Touha naráží na potřebu; měřítko je klíč.",
+        "Trpělivost je provaz přes propast."
+      ],
+      "result": [
+        "Z tlaku vzejde kázeň.",
+        "Po zkoušce zůstane síla.",
+        "Co chybělo, ukáže směr."
+      ]
+    }
+  },
+  {
+    "id": "isa",
+    "name": "Isa",
+    "aliases": [
+      "Is"
+    ],
+    "meanings": {
+      "start": [
+        "Led zastavil pohyb – a zachoval tvar.",
+        "Začátek byl tichý a nehybný.",
+        "Mráz zakonzervoval situaci."
+      ],
+      "obstacle": [
+        "Ztuhnutí vyžaduje čas.",
+        "Přílišná fixace láme; křehkost je varování.",
+        "Pohyb je zadržen, ale tepe pod povrchem."
+      ],
+      "result": [
+        "Led povolí, když nadejde čas.",
+        "Z nehybnosti vzejde čistota.",
+        "Rozmrznutí uvolní cestu."
+      ]
+    }
+  },
+  {
+    "id": "jera",
+    "name": "Jera",
+    "aliases": [
+      "Ger"
+    ],
+    "meanings": {
+      "start": [
+        "Semeno roku bylo zaseto.",
+        "Koloběh se dal do pohybu.",
+        "Začátek měří čas na kruhu."
+      ],
+      "obstacle": [
+        "Sklizeň nelze uspěchat.",
+        "Trpělivost je součást řádu.",
+        "Sezóna může zdržet práce i radosti."
+      ],
+      "result": [
+        "Zrno uzraje ve sklizeň.",
+        "Čas přinese spravedlivou odměnu.",
+        "Kruh roku se vyplatí."
+      ]
+    }
+  },
+  {
+    "id": "eihwaz",
+    "name": "Eihwaz",
+    "aliases": [
+      "Eiwaz",
+      "Ior"
+    ],
+    "meanings": {
+      "start": [
+        "Tis tiše držel linii.",
+        "Na úvodu zazněla odolnost.",
+        "Kořeny se zachytily hluboko."
+      ],
+      "obstacle": [
+        "Zkouška vyžaduje výdrž.",
+        "Cesta se lomí přes stín, nikoli mimo něj.",
+        "Je třeba projít skrz, ne obejít."
+      ],
+      "result": [
+        "Za tmavou kůrou čeká obrat.",
+        "Z konců se rodí začátky.",
+        "Odolnost vyústí v proměnu."
+      ]
+    }
+  },
+  {
+    "id": "perthro",
+    "name": "Perthro",
+    "aliases": [
+      "Peorth"
+    ],
+    "meanings": {
+      "start": [
+        "Neznámé hodilo kostkou.",
+        "Na začátku šepotá tajemství.",
+        "Osud převalil pohár na bok."
+      ],
+      "obstacle": [
+        "Náhoda si bere slovo.",
+        "Skrytá komora zatím mlčí.",
+        "Výsledky nejsou plně v rukou."
+      ],
+      "result": [
+        "Závoj poodstoupí právě tolik, kolik stačí.",
+        "Tajemství vyjde na světlo v pravou chvíli.",
+        "Štěstěna ukáže kartu."
+      ]
+    }
+  },
+  {
+    "id": "algiz",
+    "name": "Algiz",
+    "aliases": [
+      "Elhaz"
+    ],
+    "meanings": {
+      "start": [
+        "Nad krajinou se zvedl štít.",
+        "Byla vztyčena ochrana.",
+        "Strážný znak varoval před hrozbou."
+      ],
+      "obstacle": [
+        "Je třeba bdít – bezpečí není samozřejmé.",
+        "Ochrana funguje, dokud je respektována.",
+        "Hranice je dobré držet čisté."
+      ],
+      "result": [
+        "Bouře se tříští o hráz.",
+        "Ochrana přetrvá a dá klid.",
+        "Pod ochranou se daří růstu."
+      ]
+    }
+  },
+  {
+    "id": "sowilo",
+    "name": "Sowilo",
+    "aliases": [
+      "Sowulo",
+      "Sol"
+    ],
+    "meanings": {
+      "start": [
+        "Slunce vyrazilo vpřed.",
+        "Na začátku se rozzářil směr.",
+        "Jas rozptyluje pochyby."
+      ],
+      "obstacle": [
+        "Oslnění může zkreslit zrak.",
+        "Žár vyčerpává – míra je léčba.",
+        "Pýcha by spálila křehké klíčky."
+      ],
+      "result": [
+        "Slunce rozptýlí stíny.",
+        "Úspěch dozraje do jasného vítězství.",
+        "Světlo dopadá přesně tam, kde je třeba."
+      ]
+    }
+  },
+  {
+    "id": "tiwaz",
+    "name": "Tiwaz",
+    "aliases": [
+      "Tyr"
+    ],
+    "meanings": {
+      "start": [
+        "Krok se zarovnal s principem.",
+        "Začátek se opřel o čest.",
+        "Směr určilo právo."
+      ],
+      "obstacle": [
+        "Zkouška prověří vytrvalost.",
+        "Spravedlnost nebývá pohodlná.",
+        "Hrot je pevný, ale nepoddajný."
+      ],
+      "result": [
+        "Vítězství patří pevné vůli.",
+        "Oběť pro vyšší dobro přinese výsledek.",
+        "Po boji zůstane čest."
+      ]
+    }
+  },
+  {
+    "id": "berkana",
+    "name": "Berkana",
+    "aliases": [
+      "Berkano",
+      "Beorc"
+    ],
+    "meanings": {
+      "start": [
+        "Rostoucí proutek rozřízl půdu.",
+        "Začátek dýchá novostí.",
+        "Zárodek se chvěje životem."
+      ],
+      "obstacle": [
+        "Křehký klíček potřebuje čas.",
+        "Růst žádá péči, ne spěch.",
+        "Bouře může lámat, ale i čistit."
+      ],
+      "result": [
+        "Nový život se rozvine.",
+        "Z proutku bude strom.",
+        "Zrání přinese klid i útěchu."
+      ]
+    }
+  },
+  {
+    "id": "ehwaz",
+    "name": "Ehwaz",
+    "aliases": [
+      "Eoh"
+    ],
+    "meanings": {
+      "start": [
+        "Dvojice se sehrála v pohybu.",
+        "Začátek se nese na spolupráci.",
+        "Kůň a jezdec našli rytmus."
+      ],
+      "obstacle": [
+        "Nesoulad zpomalí cestu.",
+        "Důvěra je most, který se staví činy.",
+        "Je třeba sladit krok."
+      ],
+      "result": [
+        "Partnerství zrychlí pochod.",
+        "Společný tah unese větší břemeno.",
+        "Souhra přinese pokrok."
+      ]
+    }
+  },
+  {
+    "id": "mannaz",
+    "name": "Mannaz",
+    "aliases": [
+      "Man"
+    ],
+    "meanings": {
+      "start": [
+        "V zrcadle se objevilo já.",
+        "Začátek volá po sebereflexi.",
+        "Lidská míra určila postup."
+      ],
+      "obstacle": [
+        "Sebeklam zavádí do slepých uliček.",
+        "Pýcha odpojuje od druhých.",
+        "Je třeba rozpoznat hranice i potřeby."
+      ],
+      "result": [
+        "Porozumění sobě otevře cestu k lidem.",
+        "Zralost přinese klid.",
+        "Moudrost spojí vnitřek s vnějškem."
+      ]
+    }
+  },
+  {
+    "id": "laguz",
+    "name": "Laguz",
+    "aliases": [
+      "Lagu",
+      "Laukaz"
+    ],
+    "meanings": {
+      "start": [
+        "Proud pohnul příběhem.",
+        "Začátek byl tekutý a vnímavý.",
+        "Hloubka dala tušit intuici."
+      ],
+      "obstacle": [
+        "Vody mohou strhnout, když chybí břeh.",
+        "Nejasno je třeba proplout, ne zastavit.",
+        "Pod hladinou se skrývá víc, než je vidět."
+      ],
+      "result": [
+        "Proud dovede k ústí.",
+        "Intuice dovede k jemnému rozhodnutí.",
+        "Cit vybere správnou zátoku."
+      ]
+    }
+  },
+  {
+    "id": "inguz",
+    "name": "Inguz",
+    "aliases": [
+      "Ing",
+      "Yngvi"
+    ],
+    "meanings": {
+      "start": [
+        "Semeno čekalo na čas.",
+        "Začátek byl tichý, ale plný.",
+        "Zárodek byl připraven vyrazit."
+      ],
+      "obstacle": [
+        "Zrání nelze popohnat.",
+        "Přesycenost zastaví tok; je třeba prostor.",
+        "Sklíčenost je jen krátký stín před výhonkem."
+      ],
+      "result": [
+        "Z nakupené síly vzejde průlom.",
+        "Zrodí se něco celistvého.",
+        "Kapitola se uzavře naplněním."
+      ]
+    }
+  },
+  {
+    "id": "othala",
+    "name": "Othala",
+    "aliases": [
+      "Odal"
+    ],
+    "meanings": {
+      "start": [
+        "Kořeny se přihlásily o slovo.",
+        "Začátek stojí na dědictví.",
+        "Domov určil obrysy cesty."
+      ],
+      "obstacle": [
+        "Staré zvyky mohou svazovat.",
+        "Majetek váže i chrání.",
+        "Je třeba rozlišit tradici a strach."
+      ],
+      "result": [
+        "Dědictví se promění v pevnou půdu.",
+        "Domov nabídne zázemí i rámec.",
+        "Poklad předků dá smysl dnešku."
+      ]
+    }
+  },
+  {
+    "id": "dagaz",
+    "name": "Dagaz",
+    "aliases": [
+      "Daeg"
+    ],
+    "meanings": {
+      "start": [
+        "Noc se láme v den.",
+        "Úsvit prosvětlil dřívější tmu.",
+        "První paprsek ukázal novou perspektivu."
+      ],
+      "obstacle": [
+        "Krize žádá klid před obratem.",
+        "Těsně před ránem je největší tma.",
+        "Před skokem je třeba nadechnout se."
+      ],
+      "result": [
+        "Rozbřesk přinese zlom.",
+        "Porozumění se vyjasní jako den.",
+        "Obrat otevře dveře."
+      ]
+    }
+  },
+  {
+    "id": "wyrd",
+    "name": "Wyrd (prázdná runa)",
+    "aliases": [
+      "Odinova runa",
+      "Prázdná",
+      "Osud"
+    ],
+    "meanings": {
+      "start": [
+        "V začátku se pohnulo nevyřčené.",
+        "Ticho drželo prostor pro zrod.",
+        "Neurčené tkalo nitky v pozadí."
+      ],
+      "obstacle": [
+        "Neznámé vstoupí do děje.",
+        "Část příběhu zůstává mimo dohled.",
+        "Přijde zásah, který nelze plánovat."
+      ],
+      "result": [
+        "Výsledek halí tajemství – osud si část příběhu nechává pro sebe.",
+        "Závěr ponechá prázdné místo k vyplnění.",
+        "Osud ponechá závěru kousek ticha."
+      ]
+    }
+  }
 ]
