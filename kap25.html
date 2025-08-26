@@ -10,11 +10,50 @@
   <h1>Kapitola 25 – Rozhodnutí u prahu</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Áňo… cítím, jak mé pouto slábne. Tajemství jsme odhalili – než odejdu, řeknu ti své jméno: <em>Muradin</em>. Jsem rád, že jsem tě poznal.“</p><p><strong>Alchymista:</strong> „Rozhodni – rozloučíme se, nebo mě pozveš zůstat a zkusíme rituál přenosu?“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Áňo… cítím, jak mé pouto k tomuto světu slábne. Tajemství jsme odhalili, a má cesta je nyní volná.“</p><p><strong>Alchymista:</strong> „Než odejdu, chci ti říct ještě jednu věc. Mé jméno je <strong> Muradin Bronzovous</strong>.“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Dlouho jsem to jméno neslyšel… ale teď už vím, kým jsem byl. A jsem rád, že jsem tě poznal – víc, než dovedou slova vyjádřit.“</p></div>
 </div>
 <div class="choices">
-  <a class="btn" href="kap_end.html">„Děkuji ti za vše. Rozlučme se.“</a>
-  <a class="btn" href="kap26.html">„Muradine, zůstaň… provedeme rituál.“</a>
+  <button class="btn" onclick="choose25(1)">„Děkuji ti za vše, Muradine.“</button>
+  <button class="btn" onclick="choose25(2)">„Počkej! A co kdybys tu mohl zůstat? S námi? Chtěl bys?“</button>
+  <div id="resp25" style="margin-top:10px;"></div>
+</div>
+<script>
+function choose25(n){
+  const r = document.getElementById('resp25');
+  if(n===1){
+    r.innerHTML = `<div class='bubble'><p><strong>Muradin:</strong> "Pak teda sbohem… Ať tě světlo vede a stíny se ti klaní. Budu blízko – v šepotu listí a žáru ohně."</p></div>
+      <div class='input-row' style='margin-top:8px;'>
+        <input id='potvrzeni1' type='text' placeholder='Potvrď rozhodnutí'>
+        <button onclick='confirm25(1)'>Potvrdit</button>
+      </div>
+      <p id='hint25' class='feedback'></p>
+      <div id='next25'></div>`;
+  }else{
+    r.innerHTML = `<div class='bubble'><p><strong>Muradin:</strong> "…Zůstat? V novém těle, po tvém boku? Ano! Pokud je to možné, přijímám – celým srdcem!"</p></div>
+      <div class='input-row' style='margin-top:8px;'>
+        <input id='potvrzeni2' type='text' placeholder='Potvrď rozhodnutí'>
+        <button onclick='confirm25(2)'>Potvrdit</button>
+      </div>
+      <p id='hint25' class='feedback'></p>
+      <div id='next25'></div>`;
+  }
+}
+function confirm25(n){
+  const v = document.getElementById(n===1?'potvrzeni1':'potvrzeni2').value.trim();
+  const hint = document.getElementById('hint25');
+  const next = document.getElementById('next25');
+  if(!v){
+    hint.textContent = '„Musíš rozhodnutí potvrdit.“';
+    next.innerHTML = '';
+  }else{
+    hint.textContent = '';
+    next.innerHTML = n===1
+      ? `<a class='continue-btn' href='kap_end.html'>👉 Pokračovat (Konec příběhu)</a>`
+      : `<a class='continue-btn' href='kap26.html'>👉 Pokračovat (Rituál přenesení)</a>`;
+  }
+}
+</script>
 </div>
 </div>
 </div>
