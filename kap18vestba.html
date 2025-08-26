@@ -14,11 +14,18 @@
   <div class="bubble"><p><strong>Alchymista:</strong> „Dobře. Mám tři jména. Teď je spojím – ať promluví.“</p></div>
 </div>
 <div class="bubble">
+  <p id="qline" class="small"></p>
   <p><strong>Vybrané runy:</strong> <span id="runesRow"></span></p><hr>
   <p id="v1"></p><p id="v2"></p><p id="v3"></p>
 </div>
 <div id="cont"></div>
 <script>
+const QMAP = {
+  'default': '',
+  'today':  'Otázka: Co dnes potřebuji vědět?',
+  'fight':  'Otázka: Jak dopadne boj?',
+  'future': 'Otázka: Co přinese budoucnost?'
+};
 function setRunesRow(r1, r2, r3){
   document.getElementById('runesRow').textContent = r1+' • '+r2+' • '+r3;
 }
@@ -34,6 +41,9 @@ async function load(){
   const r1 = localStorage.getItem('r1')||'—';
   const r2 = localStorage.getItem('r2')||'—';
   const r3 = localStorage.getItem('r3')||'—';
+  const qt = (localStorage.getItem('rq')||'default');
+  const qline = QMAP[qt]||'';
+  document.getElementById('qline').textContent = qline;
   setRunesRow(r1, r2, r3);
   try{
     await Runes.loadRunes();
@@ -42,7 +52,6 @@ async function load(){
     document.getElementById('v2').textContent = lines.obstacle;
     document.getElementById('v3').textContent = lines.result;
   }catch(e){
-    // Fallback na původní logiku pokud by json/script nebyl dostupný
     const MAP = {"Algiz": ["Cesta začíná pod štítem ochrany.", "Ale i štít může prasknout.", "Nakonec budeš chráněna, když zůstaneš věrná svým instinktům."], "Ansuz": ["Slovo otevře první dveře.", "Slova mohou i klamat.", "Nakonec pravda promluví jasně."], "Berkana": ["Z temnoty se rodí nový začátek.", "Ale zrození je bolestné a nejisté.", "Nakonec vykvete, co bylo zaseto."], "Dagaz": ["Den se láme, nastává změna.", "Ale změna přináší chaos.", "Nakonec vyjde světlo nad obzorem."], "Fehu": ["Na začátku stojí zisk a hojnost.", "Majetek může svázat i oslepit.", "Nakonec zůstane to, co má hodnotu v srdci."]};
     function line(r, i){ if(MAP[r]) return MAP[r][i]; const g=[["Začátek šeptá o kroku vpřed.","První krok bývá nejistý.","Nakonec cesta ví, kam vede."]]; return g[0][i]; }
     document.getElementById('v1').textContent = line(r1,0);

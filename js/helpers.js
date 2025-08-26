@@ -1,7 +1,7 @@
-
-// Common small helpers (not heavily used; most pages use inline handlers)
+// Common helpers
 function normalizeInput(str){
-  return str.normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase().trim();
+  try{ return str.normalize('NFD').replace(/\p{Diacritic}/gu,'').toLowerCase().trim(); }
+  catch(e){ return String(str||'').toLowerCase().trim(); }
 }
 function show(id){ const el=document.getElementById(id); if(el) el.style.display='block'; }
 function hide(id){ const el=document.getElementById(id); if(el) el.style.display='none'; }
