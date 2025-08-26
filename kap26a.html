@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rituál – Přenos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .ritual-gif { max-width: 100%; height: auto; margin: 2rem auto; display: block; }
+    .ritual-text { text-align: center; font-size: 1.2em; margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <div class="container" style="text-align:center;">
+    <h1>Rituál přenosu</h1>
+    <img src="img/ritual.gif" alt="Rituál" class="ritual-gif">
+    <audio id="ritual-audio" src="audio/magic.mp3" autoplay loop></audio>
+    <p class="ritual-text">Rituál probíhá... vyčkej na dokončení.<br><span style="font-size:1.5em; color:#3af;">⚡</span></p>
+  </div>
+  <script>
+    setTimeout(function(){
+      window.location.href = 'kap27.html';
+    }, 20000); // 20 sekund
+  </script>
+</body>
+</html>
