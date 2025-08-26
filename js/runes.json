@@ -6,18 +6,15 @@
     "meanings": {
       "start": [
         "Začátek se třpytil příslibem hojnosti.",
-        "U zrodu stála možnost bohatství.",
-        "První krok vedl za světlem zisku."
+        "Na počátku jsi držela klíč k majetku i možnostem."
       ],
       "obstacle": [
-        "Lesk zlata láká; střízlivost je štít.",
-        "Hojnost je dobrý sluha, zlý pán – uzdy je dobré držet pevně.",
-        "Cena a hodnota nejsou totéž."
+        "Teď tě láká lesk zlata, ale pozor na klamný třpyt.",
+        "Hojnost je dobrý sluha, zlý pán – drž uzdy pevně."
       ],
       "result": [
-        "Zasloužená odměna dozraje.",
-        "Zůstane to, co má skutečnou hodnotu.",
-        "Hojnost přijde, kde se pečuje."
+        "Nakonec tě čeká zasloužená odměna za vynaložené úsilí.",
+        "Závěrem zůstane to, co má skutečnou hodnotu – ne jen cena."
       ]
     }
   },
@@ -27,19 +24,16 @@
     "aliases": [],
     "meanings": {
       "start": [
-        "Z hlubin povstala syrová síla.",
-        "Začátek nesl dech divoké energie.",
-        "První krok byl veden vůlí a odolností."
+        "V počátku dřímala divoká síla, která tě hnala vpřed.",
+        "Začínala jsi z pozice čisté síly a vůle."
       ],
       "obstacle": [
-        "Síla bez směru bloudí; je třeba koryto.",
-        "Energie narazí na vlastní hranice.",
-        "Nezkrocená moc může zlámat to, co nese."
+        "Nyní musíš zkrotit zubra ve svém nitru.",
+        "Síla bez směru tříští – dej jí cíl."
       ],
       "result": [
-        "Síla se ukotví ve formě.",
-        "Z vytrvalosti vzejde pevnost.",
-        "Zrodí se zdraví a odolnost."
+        "Nakonec získáš sílu překonat každou překážku.",
+        "Závěrem bude síla tvým spojencem, ne pánem."
       ]
     }
   },
@@ -52,19 +46,16 @@
     ],
     "meanings": {
       "start": [
-        "Trn připomněl bdělost na prahu.",
-        "Začátek ostřil smysly.",
-        "Před branou číhá síla, která zkouší."
+        "Minulost přinesla bouři, jež otřásla základy tvého světa.",
+        "Začátek poznamenal trn – probudil pozornost."
       ],
       "obstacle": [
-        "Nebezpečí žádá rozvahu.",
-        "Útok se snadno vymkne; štít patří dopředu.",
-        "Ostrosti stačí málo, aby ranila."
+        "Teď čelíš ostrému trnu, který zraňuje, ale také probouzí.",
+        "Zraňující podnět tě nutí jednat – proměň bolest v sílu."
       ],
       "result": [
-        "Zkouška odhalí, co je nutné bránit.",
-        "Ostří se tupí, když najde mír.",
-        "Po střetu přijde průchod."
+        "Nakonec se z chaosu zrodí nová jasnost.",
+        "Bouře odejde a zůstane očištěná mysl."
       ]
     }
   },
@@ -74,19 +65,16 @@
     "aliases": [],
     "meanings": {
       "start": [
-        "Na počátku promluvilo znamení.",
-        "Slovo přineslo dech a směr.",
-        "Zpráva přitekla z nečekané strany."
+        "Na počátku k tobě promlouval hlas staré moudrosti.",
+        "První krok vedla slova, znamení a rady."
       ],
       "obstacle": [
-        "Šum překrývá zprávu; je třeba naslouchat.",
-        "Výklad se láme na tichu.",
-        "Ne každé poselství je čisté."
+        "V přítomnosti naslouchej, neboť se skrývá poselství ve větru.",
+        "Hledej smysl mezi řádky – znamení jsou poblíž."
       ],
       "result": [
-        "Vyslovené přinese jasnost.",
-        "Rada dorazí v pravý čas.",
-        "Pochopení se stane mostem."
+        "Nakonec se zjeví odpověď v podobě jasného poselství.",
+        "Závěrem pochopíš, co bylo řečeno i neřečeno."
       ]
     }
   },
@@ -99,19 +87,16 @@
     ],
     "meanings": {
       "start": [
-        "Začal pochod – cesta ukázala první milník.",
-        "Kolo se pohnulo kupředu.",
-        "Na startu zaznělo volání dálky."
+        "Tvá cesta započala prvním odvážným krokem do neznáma.",
+        "Na startu tě volala cesta – dali jste se do pohybu."
       ],
       "obstacle": [
-        "Cesta se zužuje; tempo je třeba přizpůsobit.",
-        "Bloudění prověří vytrvalost.",
-        "Křižovatka žádá rozhodnutí."
+        "Nyní stojíš na rozcestí a cesta volá po rozhodnutí.",
+        "Seřiď rytmus – tempo je stejně důležité jako směr."
       ],
       "result": [
-        "Cesta dovede k cíli.",
-        "Kruh se uzavře správným směrem.",
-        "Dobrodružství promění poutníka."
+        "Nakonec tě cesta dovede k novému obzoru.",
+        "Do cíle dorazíš, pokud udržíš směr a řád."
       ]
     }
   },
@@ -125,19 +110,16 @@
     ],
     "meanings": {
       "start": [
-        "Z temnot vyjiskřil žár poznání.",
-        "Pochodeň odhalila tvary příběhu.",
-        "Jiskra změnila noc v mapu."
+        "Na začátku se z temnot vynořila jiskra poznání.",
+        "První světlo pochodně ukázalo, kde začít."
       ],
       "obstacle": [
-        "Plamen kolísá – je třeba chránit světlo.",
-        "Světlomet může oslnit; stačí přivřít víčka.",
-        "Žár pálí to, co je křehké."
+        "Plamen poznání kolísá – musíš jej chránit před zhasnutím.",
+        "Přilož polínko zvědavosti – ať plamen nevyhasne."
       ],
       "result": [
-        "Světlo odhalí pravdu.",
-        "Učení přinese jasno.",
-        "Žár poznání spálí mlhu pochyb."
+        "Nakonec světlo pochodně odhalí skrytou pravdu.",
+        "Závěrem se rozjasní – co bylo skryto, se ukáže."
       ]
     }
   },
@@ -149,19 +131,16 @@
     ],
     "meanings": {
       "start": [
-        "Dar otevřel cestu.",
-        "Výměna vytvořila rovnováhu.",
-        "První gesto bylo vzájemné."
+        "Na počátku bylo dáno požehnání – dar, který vše umožnil.",
+        "Začátek stál na výměně – něco jsi dala, něco přijala."
       ],
       "obstacle": [
-        "Účet má být vyrovnaný.",
-        "Bez rovnováhy dar tíží.",
-        "Přijetí i dávání patří k sobě."
+        "Teď je třeba sdílet a přijmout pomocnou ruku.",
+        "Rovnováha darů drží vztahy i plány pohromadě."
       ],
       "result": [
-        "Sdílení přinese hojnost.",
-        "Spojenectví uzraje v radost.",
-        "Správná výměna upevní pouto."
+        "Nakonec sklidíš ovoce štědrosti – přátelství a hojnost porostou.",
+        "Závěrem se dary vrátí – v jiné, bohatší podobě."
       ]
     }
   },
@@ -173,19 +152,16 @@
     ],
     "meanings": {
       "start": [
-        "Na úsvitu se zableskla radost.",
-        "Začátek měl chuť vítězství.",
-        "V srdci startu zněla harmonie."
+        "Začátek byl požehnán radostí a přátelstvím.",
+        "Úvod nesl lehkost a sladkou shodu."
       ],
       "obstacle": [
-        "Přesycení potlačí slast.",
-        "Rozkoš bez míry ztrácí jiskru.",
-        "Radost potřebuje kořeny, ne jen lesk."
+        "I když vane chlad, vzpomeň na jiskry radosti, které tě hřejí.",
+        "Pěstuj radost – je to kotva i kompas."
       ],
       "result": [
-        "Radost dozraje a rozsvítí den.",
-        "Úleva a soulad se usadí.",
-        "Úsměv zůstane i po práci."
+        "Nakonec přijde čas radosti – dočkáš se vítězného zpěvu.",
+        "Závěrem zavládne soulad a úsměv."
       ]
     }
   },
@@ -197,19 +173,16 @@
     ],
     "meanings": {
       "start": [
-        "Do začátku vpadla náhlá bouře.",
-        "Křehkost se střetla s kroupami.",
-        "Před plánem se objevila trhlina."
+        "Osud udeřil jako bouře a smetl vše, co bylo dříve jisté.",
+        "Zprvu padaly kroupy – staré formy praskaly."
       ],
       "obstacle": [
-        "Bouře zkouší konstrukci.",
-        "Neočekávané rozbije staré tvary.",
-        "Je třeba krýt to, co je cenné."
+        "Právě teď se ocitáš uprostřed bouře – nezoufej, má svůj účel.",
+        "Nech bouři udělat práci – čistí cestu."
       ],
       "result": [
-        "Po krupobití přijde čistý vzduch.",
-        "Rozpad dá místo novému tvaru.",
-        "Bouře pročistí obzor."
+        "Nakonec bouře odezní a z trosek vyraší nový život.",
+        "Po krupobití vzklíčí semena, která přežila."
       ]
     }
   },
@@ -221,19 +194,16 @@
     ],
     "meanings": {
       "start": [
-        "Nouze vyznačila první krok.",
-        "Počátek byl sevřen nedostatkem.",
-        "Tíseň zformovala záměr."
+        "Tvá minulost byla poznamenána těžkou zkouškou nouze.",
+        "Začátky provázela potřeba a sevření."
       ],
       "obstacle": [
-        "Omezení žádá vynalézavost.",
-        "Touha naráží na potřebu; měřítko je klíč.",
-        "Trpělivost je provaz přes propast."
+        "Dnešní překážkou je stín nedostatku – vyžaduje trpělivost a vynalézavost.",
+        "Omez, co tě brzdí – a objev, co stačí."
       ],
       "result": [
-        "Z tlaku vzejde kázeň.",
-        "Po zkoušce zůstane síla.",
-        "Co chybělo, ukáže směr."
+        "Nakonec nouze přejde – zocelen vyjdeš silnější než dřív.",
+        "Závěrem získáš střídmost proměněnou v svobodu."
       ]
     }
   },
@@ -245,19 +215,16 @@
     ],
     "meanings": {
       "start": [
-        "Led zastavil pohyb – a zachoval tvar.",
-        "Začátek byl tichý a nehybný.",
-        "Mráz zakonzervoval situaci."
+        "V minulosti vládlo období ledu a nehybnosti.",
+        "Začalo to tichem ledu – čas se zastavil."
       ],
       "obstacle": [
-        "Ztuhnutí vyžaduje čas.",
-        "Přílišná fixace láme; křehkost je varování.",
-        "Pohyb je zadržen, ale tepe pod povrchem."
+        "Nyní vše stojí pod ledovým příkrovem – trpělivost je tvou zbraní.",
+        "Pohni se pomalu – křehký led neprorážej bez rozmyslu."
       ],
       "result": [
-        "Led povolí, když nadejde čas.",
-        "Z nehybnosti vzejde čistota.",
-        "Rozmrznutí uvolní cestu."
+        "Nakonec led roztaje a uvolní cestu dalšímu vývoji.",
+        "Závěrem se dá pohyb znovu do chodu – jakmile tání začne."
       ]
     }
   },
@@ -269,19 +236,16 @@
     ],
     "meanings": {
       "start": [
-        "Semeno roku bylo zaseto.",
-        "Koloběh se dal do pohybu.",
-        "Začátek měří čas na kruhu."
+        "Na začátku bylo zaseto semínko – minulost připravila půdu pro žně.",
+        "Úvod byl prací na poli – bez slávy, s vytrvalostí."
       ],
       "obstacle": [
-        "Sklizeň nelze uspěchat.",
-        "Trpělivost je součást řádu.",
-        "Sezóna může zdržet práce i radosti."
+        "Právě dozrává úroda tvé píle – chce to ještě chvíli vyčkat.",
+        "Nespěchej se žněmi – termín určí roční doba, ne nervy."
       ],
       "result": [
-        "Zrno uzraje ve sklizeň.",
-        "Čas přinese spravedlivou odměnu.",
-        "Kruh roku se vyplatí."
+        "Nakonec se dočkáš bohaté sklizně za svou vytrvalost.",
+        "Závěrem sklidíš to, co jsi dlouho pěstovala."
       ]
     }
   },
@@ -294,19 +258,16 @@
     ],
     "meanings": {
       "start": [
-        "Tis tiše držel linii.",
-        "Na úvodu zazněla odolnost.",
-        "Kořeny se zachytily hluboko."
+        "Tvé kořeny prošly tmou i světlem – neseš poučení o životě i smrti.",
+        "Začátek tě zakotvil – hluboký kořen tíhne dolů i vzhůru."
       ],
       "obstacle": [
-        "Zkouška vyžaduje výdrž.",
-        "Cesta se lomí přes stín, nikoli mimo něj.",
-        "Je třeba projít skrz, ne obejít."
+        "Před tebou stojí zdánlivě neprostupná překážka – jako bys narážela do kmene tisu.",
+        "Zůstaň pružná – tis ohýbá, ne láme."
       ],
       "result": [
-        "Za tmavou kůrou čeká obrat.",
-        "Z konců se rodí začátky.",
-        "Odolnost vyústí v proměnu."
+        "Nakonec překonáš tuto noc duše a najdeš nový začátek.",
+        "Závěrem objevíš průchod skrz to, co vypadalo jako zeď."
       ]
     }
   },
@@ -318,19 +279,16 @@
     ],
     "meanings": {
       "start": [
-        "Neznámé hodilo kostkou.",
-        "Na začátku šepotá tajemství.",
-        "Osud převalil pohár na bok."
+        "Za oponou osudu se skrývalo tajemství, které tě vedlo.",
+        "Úvod šeptal kostkami – náhoda se tvářila jako plán."
       ],
       "obstacle": [
-        "Náhoda si bere slovo.",
-        "Skrytá komora zatím mlčí.",
-        "Výsledky nejsou plně v rukou."
+        "Nyní osud vrhá kostky – přijmi nejistotu a důvěřuj skrytému chodu událostí.",
+        "Nechej padnout – tajemství se odkrývá postupně."
       ],
       "result": [
-        "Závoj poodstoupí právě tolik, kolik stačí.",
-        "Tajemství vyjde na světlo v pravou chvíli.",
-        "Štěstěna ukáže kartu."
+        "Nakonec se tajemství odhalí a pochopíš skrytou hru osudu.",
+        "Závěrem pochopíš smysl náhody – nebyla náhodná."
       ]
     }
   },
@@ -342,19 +300,16 @@
     ],
     "meanings": {
       "start": [
-        "Nad krajinou se zvedl štít.",
-        "Byla vztyčena ochrana.",
-        "Strážný znak varoval před hrozbou."
+        "V minulosti nad tebou bděla neviditelná ochranná ruka.",
+        "Začalas pod ochranou – někdo stál mezi tebou a bouří."
       ],
       "obstacle": [
-        "Je třeba bdít – bezpečí není samozřejmé.",
-        "Ochrana funguje, dokud je respektována.",
-        "Hranice je dobré držet čisté."
+        "Teď pozvedni štít svého ducha – nebezpečí se blíží, ale jsi pod ochranou.",
+        "Stůj vzpřímeně – hranice chrání, když je držíš."
       ],
       "result": [
-        "Bouře se tříští o hráz.",
-        "Ochrana přetrvá a dá klid.",
-        "Pod ochranou se daří růstu."
+        "Nakonec zvítězíš nad hrozbou – tvá ochranná síla odolá všem bouřím.",
+        "Závěrem se ukáže, že bdělost je nejlepší štít."
       ]
     }
   },
@@ -367,19 +322,16 @@
     ],
     "meanings": {
       "start": [
-        "Slunce vyrazilo vpřed.",
-        "Na začátku se rozzářil směr.",
-        "Jas rozptyluje pochyby."
+        "V počátku zazářil paprsek slunce, který tě vedl z temnot.",
+        "První záblesk jasně ukázal směr."
       ],
       "obstacle": [
-        "Oslnění může zkreslit zrak.",
-        "Žár vyčerpává – míra je léčba.",
-        "Pýcha by spálila křehké klíčky."
+        "Nyní v sobě neseš jas slunce – využij svou vnitřní sílu k vítězství.",
+        "Zůstaň ve světle – stín pak ztrácí moc."
       ],
       "result": [
-        "Slunce rozptýlí stíny.",
-        "Úspěch dozraje do jasného vítězství.",
-        "Světlo dopadá přesně tam, kde je třeba."
+        "Nakonec tě ozáří slunce úspěchu – temnota ustoupí.",
+        "Závěrem zasvítí úspěch – světlo dopadne přesně tam, kam má."
       ]
     }
   },
@@ -391,19 +343,16 @@
     ],
     "meanings": {
       "start": [
-        "Krok se zarovnal s principem.",
-        "Začátek se opřel o čest.",
-        "Směr určilo právo."
+        "Minulost tě postavila před zkoušku cti – obětovala jsi část sebe pro vyšší dobro.",
+        "Začátek byl přísahou – vytyčil jsi si čestný směr."
       ],
       "obstacle": [
-        "Zkouška prověří vytrvalost.",
-        "Spravedlnost nebývá pohodlná.",
-        "Hrot je pevný, ale nepoddajný."
+        "Teď je čas bojovat férový boj – s odvahou a vírou v spravedlnost.",
+        "Dodrž kurz – i proti protivětru."
       ],
       "result": [
-        "Vítězství patří pevné vůli.",
-        "Oběť pro vyšší dobro přinese výsledek.",
-        "Po boji zůstane čest."
+        "Nakonec zvítězíš, protože oddanost pravdě se vyplatí.",
+        "Závěrem získá navrch to, co je správné, ne jen snadné."
       ]
     }
   },
@@ -416,19 +365,16 @@
     ],
     "meanings": {
       "start": [
-        "Rostoucí proutek rozřízl půdu.",
-        "Začátek dýchá novostí.",
-        "Zárodek se chvěje životem."
+        "Z minulosti klíčí nový život – staré skončilo a z jeho popela vzešlo něco čistého.",
+        "Začalo to klíčkem – malým, ale živým."
       ],
       "obstacle": [
-        "Křehký klíček potřebuje čas.",
-        "Růst žádá péči, ne spěch.",
-        "Bouře může lámat, ale i čistit."
+        "Teď je třeba pečovat o křehký výhonek naděje.",
+        "Nehnoj spěchem – růst má vlastní rytmus."
       ],
       "result": [
-        "Nový život se rozvine.",
-        "Z proutku bude strom.",
-        "Zrání přinese klid i útěchu."
+        "Nakonec vykvete bříza nového počátku – dojdeš obnovy a růstu.",
+        "Závěrem rozkvetou větve – trpělivost přinese zeleň."
       ]
     }
   },
@@ -440,19 +386,16 @@
     ],
     "meanings": {
       "start": [
-        "Dvojice se sehrála v pohybu.",
-        "Začátek se nese na spolupráci.",
-        "Kůň a jezdec našli rytmus."
+        "Tvůj příběh začal, když se spřežení dalo dohromady – spojenectví tě posunulo vpřed.",
+        "Na startu jste sedlali stejného koně – důvěru."
       ],
       "obstacle": [
-        "Nesoulad zpomalí cestu.",
-        "Důvěra je most, který se staví činy.",
-        "Je třeba sladit krok."
+        "Nyní musíš táhnout společně – bez důvěry se vůz dál nepohne.",
+        "Seřiďte krok – jeden kůň netáhne vůz rovně."
       ],
       "result": [
-        "Partnerství zrychlí pochod.",
-        "Společný tah unese větší břemeno.",
-        "Souhra přinese pokrok."
+        "Nakonec dojedeš k cíli po boku věrného druha.",
+        "Závěrem dorazíte společně – partnerství obstojí."
       ]
     }
   },
@@ -464,19 +407,16 @@
     ],
     "meanings": {
       "start": [
-        "V zrcadle se objevilo já.",
-        "Začátek volá po sebereflexi.",
-        "Lidská míra určila postup."
+        "V minulosti jsi pohlédla do zrcadla své duše a poznala sama sebe.",
+        "Začátek vedlo sebepoznání – a obraz druhých."
       ],
       "obstacle": [
-        "Sebeklam zavádí do slepých uliček.",
-        "Pýcha odpojuje od druhých.",
-        "Je třeba rozpoznat hranice i potřeby."
+        "Nyní je největší překážkou to, co nosíš v sobě – poznej obavy i dary.",
+        "Buď k sobě upřímná – a laskavá zároveň."
       ],
       "result": [
-        "Porozumění sobě otevře cestu k lidem.",
-        "Zralost přinese klid.",
-        "Moudrost spojí vnitřek s vnějškem."
+        "Nakonec porozumíš sobě i druhým – najdeš své místo mezi lidmi.",
+        "Závěrem se spojíš s lidmi, kteří tě vidí tak, jak opravdu jsi."
       ]
     }
   },
@@ -489,19 +429,16 @@
     ],
     "meanings": {
       "start": [
-        "Proud pohnul příběhem.",
-        "Začátek byl tekutý a vnímavý.",
-        "Hloubka dala tušit intuici."
+        "Z hlubiny minulosti vyvěrá proud intuice, který tě vedl.",
+        "Začátek byl tekutý – plynul jsi s proudem."
       ],
       "obstacle": [
-        "Vody mohou strhnout, když chybí břeh.",
-        "Nejasno je třeba proplout, ne zastavit.",
-        "Pod hladinou se skrývá víc, než je vidět."
+        "Teď se ponoř do svého nitra – odpověď plyne pod hladinou.",
+        "Nesnaž se vodu chytit do dlaní – nech ji nést."
       ],
       "result": [
-        "Proud dovede k ústí.",
-        "Intuice dovede k jemnému rozhodnutí.",
-        "Cit vybere správnou zátoku."
+        "Nakonec tě proud událostí unese k očistné proměně.",
+        "Závěrem vypluješ na klidnější hladinu – jiná, očištěná."
       ]
     }
   },
@@ -514,19 +451,16 @@
     ],
     "meanings": {
       "start": [
-        "Semeno čekalo na čas.",
-        "Začátek byl tichý, ale plný.",
-        "Zárodek byl připraven vyrazit."
+        "V minulosti uzrálo semínko – starý cyklus se uzavřel a nový mohl započít.",
+        "Začátek zrodila zralost – čas byl akorát."
       ],
       "obstacle": [
-        "Zrání nelze popohnat.",
-        "Přesycenost zastaví tok; je třeba prostor.",
-        "Sklíčenost je jen krátký stín před výhonkem."
+        "Nyní v tobě dřímá síla semene – prolom skořápku, ať může život dál.",
+        "Uvolni prostor – co je zralé, chce ven."
       ],
       "result": [
-        "Z nakupené síly vzejde průlom.",
-        "Zrodí se něco celistvého.",
-        "Kapitola se uzavře naplněním."
+        "Nakonec z tvého úsilí vzejde bohatá úroda – nový život zapustí kořeny.",
+        "Závěrem se energie uvolní do růstu a plodů."
       ]
     }
   },
@@ -538,19 +472,16 @@
     ],
     "meanings": {
       "start": [
-        "Kořeny se přihlásily o slovo.",
-        "Začátek stojí na dědictví.",
-        "Domov určil obrysy cesty."
+        "Kořeny rodu a dědictví formovaly počátek tvé cesty.",
+        "Na startu ses opřela o domov a tradici."
       ],
       "obstacle": [
-        "Staré zvyky mohou svazovat.",
-        "Majetek váže i chrání.",
-        "Je třeba rozlišit tradici a strach."
+        "Chraň svůj domov a hodnoty – rozliš, co si neseš a co už pustit.",
+        "Vyber, co zdědit a co zanechat – lehčí kroky půjdou dál."
       ],
       "result": [
-        "Dědictví se promění v pevnou půdu.",
-        "Domov nabídne zázemí i rámec.",
-        "Poklad předků dá smysl dnešku."
+        "Nakonec najdeš návrat k domovu – k tomu, co je tvé a trvalé.",
+        "Závěrem spočineš tam, kde se cítíš správně doma."
       ]
     }
   },
@@ -562,19 +493,16 @@
     ],
     "meanings": {
       "start": [
-        "Noc se láme v den.",
-        "Úsvit prosvětlil dřívější tmu.",
-        "První paprsek ukázal novou perspektivu."
+        "Den se láme – východ světla proměnil začátek cesty.",
+        "Začátek přinesl obrat – noc přešla v den."
       ],
       "obstacle": [
-        "Krize žádá klid před obratem.",
-        "Těsně před ránem je největší tma.",
-        "Před skokem je třeba nadechnout se."
+        "Změna přináší neklid, ale i možnost obratu.",
+        "Nech přijít zlom – po něm vše zapadne jinak."
       ],
       "result": [
-        "Rozbřesk přinese zlom.",
-        "Porozumění se vyjasní jako den.",
-        "Obrat otevře dveře."
+        "Nakonec přijde zlom – úsvit, který přinese jasnost a naději.",
+        "Závěrem se rozední – a s denním světlem přijde porozumění."
       ]
     }
   },
@@ -588,19 +516,16 @@
     ],
     "meanings": {
       "start": [
-        "V začátku se pohnulo nevyřčené.",
-        "Ticho drželo prostor pro zrod.",
-        "Neurčené tkalo nitky v pozadí."
+        "V začátku bylo nevyřčené – ticho, v němž se rodí příběh.",
+        "Na úvodu se nic nehýbalo, a přece se rodilo všechno."
       ],
       "obstacle": [
-        "Neznámé vstoupí do děje.",
-        "Část příběhu zůstává mimo dohled.",
-        "Přijde zásah, který nelze plánovat."
+        "Neznámé zasahuje do děje – přiznej, že vše nelze ovládnout.",
+        "Ponech místo náhodě – je také součástí řádu."
       ],
       "result": [
-        "Výsledek halí tajemství – osud si část příběhu nechává pro sebe.",
-        "Závěr ponechá prázdné místo k vyplnění.",
-        "Osud ponechá závěru kousek ticha."
+        "Konec zůstává částečně skryt – neznámé ještě promluví.",
+        "Závěrem zůstane prázdné místo – můžeš ho vyplnit později."
       ]
     }
   }

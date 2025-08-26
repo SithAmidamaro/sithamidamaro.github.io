@@ -3,48 +3,40 @@
   const TEMPL = {
     default: {
       start:   ["{m}", "Na úsvitu: {m}", "První krok: {m}", "Začátek napovídá: {m}"],
-      obstacle:["Teď se ukazuje: {m}", "Překážka: {m}", "Pozor: {m}", "V srdci dne: {m}"],
-      result:  ["Nakonec {m}", "Závěr: {m}", "A výsledek? {m}", "Až se kruh uzavře, {m}"]
+      obstacle:["Ale {m}", "Cestou zjistíš: {m}", "Překážka: {m}", "Pozor: {m}"],
+      result:  ["Nakonec {m}", "Závěr: {m}", "A výsledek? {m}", "Nakonec se ukáže, že {m}"]
     },
-    today: {
+    today: { // „Co dnes potřebuji vědět?“
       start:   ["{m}", "Dnešní ráno: {m}", "Na začátku dne: {m}", "Dnes platí: {m}"],
-      obstacle:["Dnes prověří: {m}", "Během dne: {m}", "Pozor: {m}", "Dnešní stín: {m}"],
-      result:  ["Do večera {m}", "Dnešek přinese: {m}", "Výsledek dne: {m}", "Dnes se ukáže: {m}"]
+      obstacle:["Dnes tě čeká výzva: {m}", "Během dne: {m}", "Dej si pozor: {m}", "Dnešní stín: {m}"],
+      result:  ["Do večera {m}", "Nakonec dnešek přinese, že {m}", "Výsledek dne: {m}", "Dnes se ukáže: {m}"]
     },
-    fight: {
+    fight: { // „Jak dopadne boj?“
       start:   ["{m}", "Na úsvitu boje: {m}", "Bitva započne: {m}", "První střet: {m}"],
-      obstacle:["Uprostřed boje: {m}", "Nepřítel klade odpor: {m}", "Zkouška síly: {m}", "Vřava odhalí: {m}"],
+      obstacle:["Nepřítel klade odpor: {m}", "Uprostřed boje: {m}", "Zkouška síly: {m}", "Vřava odhalí: {m}"],
       result:  ["Vítězství: {m}", "Výsledek bitvy: {m}", "Nakonec boj ukáže, že {m}", "Korouhev spadne tam, kde {m}"]
     },
-    future: {
+    future: { // „Co přinese budoucnost?“
       start:   ["{m}", "Z počátku: {m}", "Na počátku cesty: {m}", "První znamení říká: {m}"],
-      obstacle:["Osud praví: {m}", "Na cestě osudu: {m}", "Je předpovězeno: {m}", "Mezitím prověří: {m}"],
-      result:  ["Budoucnost přinese: {m}", "Nakonec se zjeví, že {m}", "Až se kruh uzavře, {m}", "Osud nakonec odhalí, že {m}"]
+      obstacle:["Osud praví: {m}", "Na cestě osudu: {m}", "Je předpovězeno: {m}", "Mezitím tě prověří: {m}"],
+      result:  ["Osud nakonec odhalí, že {m}", "Budoucnost přinese: {m}", "Nakonec se zjeví, že {m}", "Až se kruh uzavře, {m}"]
     }
   };
 
   // Rozšířené synergie – jemné override vyprávění
   const RULES = [
     { when: { start: 'algiz', obstacle: 'hagalaz' }, override: { obstacle: 'Bouře prověří pevnost štítu.' } },
-    { when: { obstacle: 'isa', result: 'sowilo' }, override: { result: 'Slunce roztaví i nejtužší led.' } },
+    { when: { result: 'sowilo', obstacle: 'isa' }, override: { result: 'Slunce roztaví i nejtužší led.' } },
     { when: { start: 'fehu', result: 'wunjo' }, override: { result: 'Radost má větší cenu než zlato.' } },
-    { when: { start: 'nauthiz', result: 'gebo' }, override: { result: 'Dar v nouzi má nevyčíslitelnou cenu.' } },
-    { when: { start: 'thurisaz', result: 'tiwaz' }, override: { result: 'Bez boje není vítězství.' } },
-    { when: { start: 'raido', obstacle: 'ehwaz' }, override: { obstacle: 'Společná cesta překoná i dlouhé míle.' } },
-    { when: { start: 'ansuz', obstacle: 'perthro' }, override: { obstacle: 'Osud promlouvá skrytými znameními.' } },
-    { when: { start: 'berkana', obstacle: 'hagalaz' }, override: { obstacle: 'Bouře pročistí cestu k novému životu.' } },
-    { when: { start: 'othala', result: 'fehu' }, override: { result: 'Poklad předků převyšuje pomíjivé zlato.' } },
-    { when: { start: 'mannaz', obstacle: 'laguz' }, override: { obstacle: 'Jen kdo zná sám sebe, propluje proudy života.' } },
-    { when: { start: 'inguz', result: 'berkana' }, override: { result: 'Ze semínka vyroste posvátný strom života.' } },
-    { when: { obstacle: 'eihwaz', result: 'dagaz' }, override: { result: 'Po nejtemnější noci přichází úsvit.' } },
-    { when: { start: 'gebo', result: 'wunjo' }, override: { result: 'Sdílená radost je největší dar.' } },
-    { when: { start: 'kenaz', obstacle: 'laguz' }, override: { obstacle: 'Žár poznání se setkává s chladivým proudem intuice.' } },
-    { when: { start: 'gebo', result: 'tiwaz' }, override: { result: 'Pravé spojenectví vyžaduje oběť.' } },
+    { when: { start: 'berkana', obstacle: 'isa' }, override: { obstacle: 'Růst si žádá trpělivost – led neuspěcháš.' } },
+    { when: { start: 'raido', obstacle: 'nauthiz' }, override: { obstacle: 'Cesta se zužuje – odlehči náklad a pokračuj.' } },
+    { when: { start: 'hagalaz', result: 'dagaz' }, override: { result: 'Bouře se zlomí ve svítání.' } },
+    { when: { start: 'mannaz', obstacle: 'perthro' }, override: { obstacle: 'Ne vše ovládneš – přijmi, že část příběhu je skrytá.' } },
     { when: { start: 'algiz', obstacle: 'thurisaz' }, override: { obstacle: 'Útok se tříští o zvednutý štít.' } },
-    { when: { start: 'jera', result: 'othala' }, override: { result: 'Sklizeň se vrátí domů, k pevnému zázemí.' } },
-    { when: { start: 'laguz', result: 'sowilo' }, override: { result: 'Proud vynese ke slunci.' } },
+    { when: { start: 'jera', result: 'othala' }, override: { result: 'Domů se vrátíš se sklizní své práce.' } },
     { when: { obstacle: 'eihwaz', result: 'inguz' }, override: { result: 'Za tmavým kmenem tisu čeká zrod nového života.' } },
-    { when: { start: 'tiwaz', obstacle: 'thurisaz' }, override: { obstacle: 'Čest zkrotí i hrot trnu.' } }
+    { when: { start: 'laguz', result: 'sowilo' }, override: { result: 'Proud tě vynese ke slunci.' } },
+    { when: { start: 'tiwaz', obstacle: 'thurisaz' }, override: { obstacle: 'Čest zkrotí i hrot trnu.' } },
   ];
 
   let _runes = null; // cache
@@ -120,15 +112,7 @@
   function applyOverrides(runs, lines){
     // Speciál: Wyrd přidá nádech neurčitosti do výsledku
     if(runs.some(r => (r.id||'').toLowerCase() === 'wyrd')){
-      const q = getQType();
-      const suffixByQ = {
-        default: 'Výsledek halí tajemství – osud si část příběhu nechává pro sebe.',
-        future:  'Výsledek halí tajemství – osud si část příběhu nechává pro sebe.',
-        today:   'Dnešek neprozradí vše – osud si ponechá kousek ticha.',
-        fight:   'I v bitevní vřavě cosi mlčí – osud neukázal poslední tah.'
-      };
-      const add = suffixByQ[q] || suffixByQ.default;
-      lines.result = (lines.result ? (lines.result + ' ') : '') + add;
+      lines.result = (lines.result ? (lines.result + ' ') : '') + 'Osud si část příběhu nechává pro sebe.';
     }
     // Synergie
     for(const rule of RULES){

@@ -4,12 +4,6 @@
 <title>Kapitola 18 – Věštění z run (výběr 1–3/4)</title>
 <link rel="stylesheet" href="css/style.css">
 <script defer src="js/helpers.js"></script>
-<script defer src="js/runes.js"></script>
-<style>
-  .q-grid{ display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0; }
-  .q-btn{ cursor:pointer; }
-  .q-btn.selected{ outline:2px solid var(--accent, #444); }
-</style>
 </head><body>
 <div class="container">
   <div class="nav"><a class="btn" href="kap17a.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
@@ -17,19 +11,11 @@
   <div class="panel">
     <div class="dialogue">
       <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-      <div class="bubble">
-        <p><strong>Alchymista:</strong> <span id="prompt">„Vyber 1. runu – <em>MINULOST</em>. Ať jsou tři různé – osud rád mluví třemi hlasy.“</span></p>
-      </div>
-    </div>
-
-    <div class="bubble">
-      <label class="small"><strong>Nejprve otázka:</strong></label>
-      <div id="qgrid" class="q-grid"></div>
-      <p class="small" id="qhint"></p>
+      <div class="bubble"><p><strong>Alchymista:</strong> <span id="prompt">„Vyber 1. runu – <em>ZAČÁTEK</em>. Ať jsou tři různé – osud rád mluví třemi hlasy.“</span></p></div>
     </div>
 
     <div class="bubble" id="selector">
-      <label class="small" id="labelRole">Vyber 1. runu (MINULOST):</label>
+      <label class="small" id="labelRole">Vyber 1. runu (ZAČÁTEK):</label>
       <div id="grid" class="rune-grid"></div>
       <p id="hint" class="feedback"></p>
       <hr>
@@ -38,30 +24,22 @@
   </div>
 </div>
 <script>
-const ROLES = ['MINULOST','PŘÍTOMNOST','BUDOUCNOST'];
-const QUESTIONS = [
-  { id:'default', label:'Bez konkrétní otázky' },
-  { id:'today',   label:'Co dnes potřebuji vědět?' },
-  { id:'fight',   label:'Jak dopadne boj?' },
-  { id:'future',  label:'Co přinese budoucnost?' }
-];
+const ROLES = ['ZAČÁTEK','PŘEKÁŽKA','VÝSLEDEK'];
 let step = 1; // 1..3
 let runes = [];
 let sel = { 1: null, 2: null, 3: null };
-let qsel = 'default';
 
 function loadFromStorage(){
   sel[1] = localStorage.getItem('r1');
   sel[2] = localStorage.getItem('r2');
   sel[3] = localStorage.getItem('r3');
-  qsel   = localStorage.getItem('rq') || 'default';
-  if(!sel[1]) step=1; else if(!sel[2]) step=2; else if(!sel[3]) step=3; else step=3;
+  // nastav aktuální krok na první nevybranou runu
+  step = sel[1] ? (sel[2] ? (sel[3] ? 3 : 3) : 2) : 1;
 }
 function saveToStorage(){
   if(sel[1]) localStorage.setItem('r1', sel[1]);
   if(sel[2]) localStorage.setItem('r2', sel[2]);
   if(sel[3]) localStorage.setItem('r3', sel[3]);
-  if(qsel)   localStorage.setItem('rq', qsel);
 }
 function updateSummary(){
   const s1 = sel[1] || '—';
@@ -96,19 +74,6 @@ function renderGrid(){
     </button>`;
   }).join('');
 }
-function renderQuestions(){
-  const g = document.getElementById('qgrid');
-  g.innerHTML = QUESTIONS.map(q=>{
-    const classes = 'btn q-btn' + (qsel === q.id ? ' selected' : '');
-    return `<button class='${classes}' onclick='setQuestion("${q.id}")'>${q.label}</button>`;
-  }).join('');
-  document.getElementById('qhint').textContent = QUESTIONS.find(q=>q.id===qsel)?.label || '';
-}
-function setQuestion(id){
-  qsel = id;
-  saveToStorage();
-  renderQuestions();
-}
 function pickRune(name){
   sel[step] = name;
   saveToStorage();
@@ -119,12 +84,12 @@ function pickRune(name){
     renderGrid();
     document.getElementById('hint').textContent = '';
   }else{
+    // máme všechny tři, hurá na věštbu
     window.location.href = 'kap18vestba.html';
   }
 }
 async function init(){
   loadFromStorage();
-  renderQuestions();
   try{
     runes = await fetch('data/runes.json', {cache:'no-store'}).then(r=>r.json());
   }catch(e){
