@@ -19,7 +19,7 @@
 </div>
 <div id="out14"></div>
 <div class="bubble" style="margin-top:10px;">
-  <p><strong>Kotva:</strong> Napiš název připravené petardy.</p>
+  <p><strong>Úkol:</strong> Napiš název připravené petardy.</p>
   <div class="input-row">
     <input id="petarda" type="text" placeholder="Dwimeritová petarda">
     <button onclick="ok14()">Potvrdit</button>
@@ -28,7 +28,7 @@
   <div id="cont14"></div>
 </div>
 <script>
-function out(t){ document.getElementById('out14').innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`; }
+function out(t){ document.getElementById('out14').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`; }
 function ok14(){
   const v = normalizeInput(document.getElementById('petarda').value);
   if(!v){document.getElementById('hint14').textContent='„To nebude ono…“'; document.getElementById('cont14').innerHTML=''; return;}

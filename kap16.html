@@ -14,12 +14,12 @@
 </div>
 <div class="choices">
   <button onclick="out('Truhličku a v ní bude sáček!')">„Co přesně mám na místě hledat?“</button>
-  <button onclick="out('Pamatuji si strom, stromy? Zakopal jsem to do země a místo označil runou -Gebo-  ')">„Jak poznám správné místo?“</button>
+  <button onclick="out('Pamatuji si strom, stromy? Zakopal jsem to do země a místo označil runou <strong>-Gebo-</strong>  ')">„Jak poznám správné místo?“</button>
   <button onclick="out('Dobře. Jemu možná bude něco povědomé. Popiš mu co nejpřesněji, co na té mapě vidíš.')">„Nevěděl by Lukas?“</button>
 </div>
 <div id="out16"></div>
 <div class="bubble" style="margin-top:10px;">
-  <p><strong>Kotva:</strong> Ví Lukas, kde se to místo nachází?</p>
+  <p><strong>Úkol:</strong> Ví Lukas, kde se to místo nachází?</p>
   <div class="input-row">
     <input id="mapa" type="text" placeholder="Jaké místo určil?">
     <button onclick="ok16()">Potvrdit</button>
@@ -28,7 +28,7 @@
   <div id="cont16"></div>
 </div>
 <script>
-function out(t){ document.getElementById('out16').innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`; }
+function out(t){ document.getElementById('out16').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`; }
 function ok16(){
   const v=(document.getElementById('mapa').value||'').trim();
   if(!v){document.getElementById('hint16').textContent='„Neví?“'; document.getElementById('cont16').innerHTML=''; return;}

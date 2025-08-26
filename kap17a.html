@@ -10,10 +10,15 @@
   <h1>Kapitola 17a – Ještě něco v sáčku?</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Dobrá, máme kompletní sadu run... jdeme na to!“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Dobrá, máme kompletní sadu run... ale prvně pár slov jak to funguje!“</p></div>
+    <div class="bubble"><p><strong>1. Příprava:</strong> „Sada run obsahuje 24 runových kamenů s runovými symboly a jeden prázdný kámen (Wyrd). Jednotlivé runy nesou energii a význam, které se interpretují při výkladu. Runa Wyrd je symbol osudu a prázdnoty, který poukazuje na nepoznané a skrytý potenciál, čímž si vybírá své osudové změny a vyžaduje odvahu. “</p></div>
+    <div class="bubble"><p><strong>2. Kladení otázky:</strong> „Je důležité položit jasnou a specifickou otázku, například 'Co dnes potřebuji vědět?' nebo 'Jak dopadne boj?' “</p></div>
+    <div class="bubble"><p><strong>3. Výběr run:</strong> „Runa se vyber po jedno z pytlíku a zadej mi jí! Až budou všechny<strong> tři</strong>, provedu jejich výklad.  “</p></div>
+    <div class="bubble"><p><strong>4. Výklad:</strong> „<strong>První runa: Minulost</strong>, kořeny situace a důvod, proč se člověk nachází v dané situaci.<strong> Druhá runa:Přítomnost</strong> , odhaluje skryté souvislosti a zásadní fakta. <strong>Třetí runa: Budoucnost </strong>, ukazuje, jak se věci vyvinou a co se stane.   “</p></div>
+  </div>
 </div>
 <div class="choices">
-  <button onclick="pick(1)">„'…bylo tam ještě něco navíc.'“</button>
+  <button onclick="pick(1)">„'… v pytlíku bylo ještě něco navíc.'“</button>
   <button onclick="pick(2)">„(Pokračovat)“</button>
 </div>
 <div id="out17a"></div>
@@ -21,7 +26,7 @@
 <script>
 function pick(n){
   if(n===1){
-    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Hmmm... ano... už si vzpomínám – ještě jsem tam něco přidal. Malou lahvičku s drobnými rudými kamínky... ty kamínky! Byl to můj první pokus o krystalizaci diamantu, a nevyšel. Při té práci jsem se řízl a kapka mé krve z nich udělala něco jako malé rubíny. Kámínky, ve kterých navěky zůstala kapka mé krve. Haha!“</p></div>`;
+    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Hmmm... ano... už si vzpomínám – ještě jsem tam něco přidal. Malou lahvičku s drobnými rudými kamínky... ty kamínky! Byl to můj první pokus o krystalizaci diamantu, a nevyšel. Při té práci jsem se řízl a kapka mé krve z nich udělala něco jako malé rubíny. Kámínky, ve kterých navěky <strong>  zůstala kapka mé krve. </strong>  Haha! <strong> (+1 důvěra) </strong>“</p></div>`;
   }else{
     document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Dobře, dobře, jde se na to!“</p></div>`;
   }
@@ -31,3 +36,16 @@ function pick(n){
 </div>
 </div>
 </body></html>
+
+1. Příprava:
+Existuje několik způsobů, jak s runami pracovat. Můžete si vybrat z kamene nebo dřeva, případně použít ručně vyrobené kartičky. Sady run obsahují 24 runových kamenů s runovými symboly a jeden prázdný kámen. 
+2. Kladení otázky:
+Je důležité položit jasnou a specifickou otázku, například „Co dnes potřebuji vědět?“ nebo „Na co si mám dát pozor?“. 
+3. Výběr run:
+Runa se vybírá buď intuitivně, nebo házením z pytlíku. 
+4. Výklad:
+Jedna runa: Vhodná pro rychlé, denní vedení a okamžitou odpověď na konkrétní otázku. 
+Tři runy: Používají se pro složitější situace a představují: 
+První runa: Minulost, kořeny situace a důvod, proč se člověk nachází v dané situaci. 
+Druhá runa: Přítomnost, odhaluje skryté souvislosti a zásadní fakta. 
+Třetí runa: Budoucnost, ukazuje, jak se věci vyvinou a co se stane. 

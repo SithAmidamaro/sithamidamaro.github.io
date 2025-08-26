@@ -14,17 +14,25 @@
 </div>
 <div class="bubble">
   <div class="input-row">
-    <input id="barva" type="text" placeholder="Napiš barvu (cokoliv)…">
-    <button onclick="ok22a()">Potvrdit</button>
+    <button onclick="ok22a('Zelený')">Zelený</button>
+    <button onclick="ok22a('Rudě červená')">Rudě červená</button>
+    <button onclick="ok22a('Modrý')">Modrý</button>
+    <button onclick="ok22a('Fialový')">Fialový</button>
   </div>
   <p id="hint22a" class="feedback"></p>
   <div id="cont22a"></div>
 </div>
 <script>
-function ok22a(){
-  const v=(document.getElementById('barva').value||'').trim();
-  if(!v){document.getElementById('hint22a').textContent='„Žádný?“'; document.getElementById('cont22a').innerHTML=''; return;}
-  document.getElementById('hint22a').textContent=''; document.getElementById('cont22a').innerHTML = `<a class='continue-btn' href='kap23.html'>👉 Pokračovat (Kapitola 23)</a>`;
+function ok22a(val){
+  const hint = document.getElementById('hint22a');
+  const cont = document.getElementById('cont22a');
+  if(val === 'Zelený' || val === 'Fialový'){
+    hint.textContent = '';
+    cont.innerHTML = `<a class='continue-btn' href='kap23.html'>👉 Pokračovat (Kapitola 23)</a>`;
+  }else{
+    hint.textContent = '„Tento plamen nebyl správný. Zkus jinou barvu.“';
+    cont.innerHTML = '';
+  }
 }
 </script>
 </div>

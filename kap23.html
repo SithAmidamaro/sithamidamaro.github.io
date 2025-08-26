@@ -13,12 +13,36 @@
   <div class="bubble"><p><strong>Alchymista:</strong> „Cítím… úlevu. Vzpomínky se vrací po kouscích. Až měsíc vystoupí nejvýš a noc na okamžik ztichne, otevře se další brána.“</p></div>
 </div>
 <div class="bubble">
+  <p><strong>Komunikační možnosti:</strong></p>
+  <div class="choices">
+    <button onclick="show23(1)">„Pověz mi o místě, kde ses cítil doma.“</button>
+    <button onclick="show23(2)">„Čeho ses bál nejvíc?“</button>
+    <button onclick="show23(3)">„Vzpomeneš si na své jméno?“</button>
+    <button onclick="show23(4)">„Co bude teď?“</button>
+  </div>
+  <div id="resp23" style="margin-top:10px;"></div>
+</div>
+</div>
+<div class="bubble">
   <p><strong>Kotva (časová):</strong> Pokračovat bude možné až 2025-09-14T23:50:00 podle <em>místního</em> času tvého zařízení.</p>
   <p id="timer" class="small"></p>
   <div id="cont23"></div>
 </div>
 <script>
-const target = new Date('2025-09-14T23:50:00'); // LOCAL time (no Z)
+function show23(n){
+  const r = document.getElementById('resp23');
+  if(n===1){
+    r.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> "Těch míst bylo více, středa na Kear Morhen... zde na chatě mimo a samozřejmě můj Mlýn… To jsou místa, kde jsem se vždycky cítil jako doma."</p></div>`;
+  }else if(n===2){
+    r.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> "Že moje dílo spolkne ty, pro které bylo stvořeno. Strach je dobrý sluha, ale zlý pán.<br>Naučil jsem se s ním mluvit jako s přítelem, jinak by mě sežral ve spánku."</p></div>`;
+  }else if(n===3){
+    r.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> "Je jako ozvěna ve staré síni. Už ho téměř slyším… ale ještě ne.<br>Až měsíc sevře noc, možná se vrátí celé. A pak ti ho rád povím."</p></div>`;
+  }else{
+    r.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> "Nejsem si ještě jist, vzpomínky se vracejí - a cítím, že až bude měsíc nejvýše, budeme vědět víc... vidím klíč a místnost, ale nevím kde to je... musíme počkat až se mi navrátí!"</p></div>`;
+  }
+}
+//správný-čas const target = new Date('2025-09-14T23:50:00'); // LOCAL time (no Z)
+const target = new Date('2025-08-26T14:50:00'); // LOCAL time (no Z)
 function pad(n){return n<10?'0'+n:n;}
 function tick(){
   const ms = target - new Date();
