@@ -29,7 +29,7 @@
       <div id="out" style="margin-top:10px;"></div>
 
       <div class="bubble" style="margin-top:10px;">
-        <p><strong>Úkol:</strong> Namíchej lektvar na – „zesílenou Kočku“ – a napiš jeho barvu. <em>(Správně: fialová)</em></p>
+        <p><strong>Úkol:</strong> Namíchej lektvar na – „zesílenou Kočku“ – a napiš mi jeho barvu.</p>
         <div class="input-row">
           <input id="barva" type="text" placeholder="Jaká je barva lektvaru">
           <button onclick="check()">Potvrdit</button>
@@ -63,7 +63,7 @@ function check(){
     cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Ano! 'Zesílená Kočka'. A teď 'lampu'. Pamatuji si… nechal jsem ji v podkroví chaty, v truhlici. Zkus se tam podívat."</p></div>
     <a class="continue-btn" href="kap8.html">👉 Pokračovat (Kapitola 8 – Krystalová lampa)</a>`;
   }else{
-    hint.textContent = '„Ne… Kočka byla tmavá. S Tekutým zrakem se ale proměnila – černá se spojila s myrtou, až vznikla barva noci a magie… fialová.“';
+    hint.textContent = '„Ne… Kočka byla tmavá. S Tekutým zrakem se ale proměnila – černá se spojila s myrtou, až vznikla barva noci a magie.“';
     cont.innerHTML='';
   }
 }

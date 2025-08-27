@@ -17,12 +17,12 @@
       <div class="dialogue">
         <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
         <div class="bubble">
-          <p><strong>Alchymista:</strong> "Ano… už to vidím jasně! 'Zesílená Kočka' a moje 'Fialová lampa' – dohromady ukážou víc, než by kdy ukázal denní svit. Lampa je v podkroví chaty, v truhlici."</p>
+          <p><strong>Alchymista:</strong> "Ano… už to vidím jasně! 'Zesílená Kočka' a moje 'lampa' – dohromady ukážou víc, než by kdy ukázal denní svit. Lampa je v podkroví chaty, v truhlici."</p>
         </div>
       </div>
 
       <div class="choices">
-        <button onclick="say(1)">„K čemu 'Fialová lampa' slouží?“</button>
+        <button onclick="say(1)">„K čemu 'lampa' slouží?“</button>
         <button onclick="say(2)">„Z čeho je vyrobená?“</button>
         <button onclick="say(3)">„Mám ji!“</button>
       </div>
@@ -63,7 +63,7 @@ function check(){
     cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně, Algiz! Ano, to je ona – runa ochrany, štít proti zlu. Věděl jsem, že jsi na správné stopě."</p></div>
     <a class="continue-btn" href="kap9.html">👉 Pokračovat (Kapitola 9 – Přání štěstí)</a>`;
   }else{
-    hint.textContent = '„Ne… vypadala jako strom se zvednutými větvemi. Symbol ochrany. Hledej v bestiáři run!“';
+    hint.textContent = '„Ne… vypadala jako strom se zvednutými větvemi - Z -. Symbol ochrany. Hledej v bestiáři run!“';
     cont.innerHTML='';
   }
 }

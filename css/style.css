@@ -1,3 +1,10 @@
+/* Zvýraznění vybrané volby v .choices */
+.choices button.selected {
+  outline: 2.5px solid #7c3aed;
+  background: linear-gradient(90deg, #e9d8fd 0%, #c4b5fd 100%);
+  color: #3b0764;
+  box-shadow: 0 0 0 3px rgba(124,58,237,.18) inset;
+}
 :root{
   --bg: #0f1e22;
   --panel: #13323b;
