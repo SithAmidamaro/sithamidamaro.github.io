@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html lang="cs"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kapitola 27 – Epilog</title>
+<title>Epilog – Blahopřání</title>
 <link rel="stylesheet" href="css/style.css">
 <script defer src="js/helpers.js"></script>
+<style>
+  /* Epilog – jemně slavnostní úpravy pouze pro tuto stránku */
+  h1.epilogue-title{ font-size:1.4rem; letter-spacing:.6px; margin-bottom:14px; background: linear-gradient(90deg, var(--accent2), #79d7ff); -webkit-background-clip:text; background-clip:text; color:transparent; text-shadow: 0 0 20px rgba(184,137,246,.25); }
+  .letter{ text-align:center; font-size:1.08rem; line-height:1.7; }
+  .letter strong{ color:#0b2534; }
+  .signature{ margin-top:10px; opacity:.9 }
+  #sparkles{ pointer-events:none; position:fixed; inset:0; overflow:hidden; z-index:1; }
+  .sparkle{ position:absolute; top:-24px; font-size:18px; filter: drop-shadow(0 2px 6px rgba(0,0,0,.35)); animation: fall 3.6s ease-in forwards; }
+  @keyframes fall{ from{ transform: translateY(-10vh) rotate(0deg); opacity:.95 } to{ transform: translateY(110vh) rotate(180deg); opacity:0 } }
+</style>
 </head><body>
+<div id="sparkles"></div>
 <div class="container">
   <div class="nav"><a class="btn" href="kap26.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
-  <h1>Kapitola 27 – Epilog</h1>
-  <div class="panel"><div class="dialogue">
-  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Děkuji, Áňo. Ne každý den se vrací někdo, kdo byl jen šepot. Pokud jednou uslyšíš v noci měkké ťapkání a tichý smích – to budu já, jen v jiném kabátě.“</p><p><strong>Alchymista:</strong> „A ty, Lukasi – usmívej se. Tvá žačka obstála.“</p></div>
+  <h1 class="epilogue-title">Epilog – Blahopřání</h1>
+  <div class="panel">
+    <div class="bubble letter" id="letter"></div>
+    <div class="bubble" style="text-align:center; margin-top:12px;">
+      <a class="continue-btn magic-btn" id="homeBtn" href="index.html">🏠 Zpět na začátek</a>
+    </div>
+  </div>
 </div>
-<div class="footer-nav"><a class="btn" href="index.html">🏠 Zpět na začátek</a></div>
-</div>
-</div>
+<audio id="magicAudio" src="audio/magic.mp3" preload="auto"></audio>
+<script>
+(function(){
+  const player = (localStorage.getItem('playerName')||'Áňo').trim() || 'Áňo';
+  const comp = (localStorage.getItem('companionName')||'Lukasi').trim() || 'Lukasi';
+  const letter = `
+    <div>
+      <p><strong>Milá ${player},</strong></p>
+      <p>Dnes je výjimečný den – tvé <strong>32. narozeniny</strong>.</p>
+      <p>Tahle cesta zaklínačky, plná kouzel, tajemství a dobrodružství, nebyla jen hrou… byla oslavou tebe samotné.</p>
+      <p>Jsi statečná, vtipná, krásná a neuvěřitelně inspirující. Dokážeš překonat všechny překážky – ať už jsou to příšery v příběhu, nebo výzvy v každodenním životě.</p>
+      <p>Děkuji ti, že jsi. Že dokážeš rozdávat radost, světlo a lásku. Jsi výjimečná – a nikdy na to nezapomínej.</p>
+      <p>Ať tě provází <em>síla vlků, moudrost lesů</em> a <em>světlo hvězd</em> na všech tvých cestách.</p>
+      <p><strong>Krásné narozeniny, Zabijáku ${player}! 🖤🐺✨</strong></p>
+      <p class="signature"><em>Tvůj věrný společník a obdivovatel – ${comp}</em></p>
+    </div>`;
+  document.getElementById('letter').innerHTML = letter;
+
+  // Jemné „konfety“ ze znaků
+  const sparkleSet = ['✨','🔮','⭐','💠','🟣'];
+  const wrap = document.getElementById('sparkles');
+  let created = 0; const max = 36; const t = setInterval(()=>{
+    if(created>=max){ clearInterval(t); return; }
+    const s = document.createElement('span');
+    s.className = 'sparkle';
+    s.textContent = sparkleSet[Math.floor(Math.random()*sparkleSet.length)];
+    s.style.left = Math.random()*100 + 'vw';
+    s.style.animationDelay = (Math.random()*1.2).toFixed(2)+'s';
+    s.style.opacity = (0.75+Math.random()*0.25).toFixed(2);
+    s.style.fontSize = (16+Math.random()*12)+'px';
+    wrap.appendChild(s);
+    setTimeout(()=>{ s.remove(); }, 4200);
+    created++;
+  }, 120);
+
+  // Zvuk na klik (pokud dovolí prohlížeč)
+  const btn = document.getElementById('homeBtn');
+  const audio = document.getElementById('magicAudio');
+  btn.addEventListener('click', ()=>{ try{ audio && audio.play && audio.play().catch(()=>{}); }catch(e){} });
+})();
+</script>
 </body></html>
