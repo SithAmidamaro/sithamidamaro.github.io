@@ -114,3 +114,47 @@ input[type="text"]{
  .avatar{ width:100px; }
  body{ padding:12px; }
 }
+
+/* Kapitola 26 a další: "magické" pokračovací tlačítko (modro‑fialové) */
+.continue-btn.magic-btn{
+  position: relative;
+  display: inline-block;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(200,210,255,.35);
+  background: linear-gradient(135deg, #2a2db3 0%, #6a11cb 45%, #2575fc 100%);
+  background-size: 200% 200%;
+  color: #ffffff !important;
+  text-shadow: 0 0 6px rgba(0,0,0,.35);
+  box-shadow: 0 0 12px rgba(106,17,203,.45), 0 0 26px rgba(37,117,252,.35);
+  animation: magicGradient 7s ease infinite;
+}
+.continue-btn.magic-btn:hover{ transform: translateY(-1px); box-shadow: 0 6px 18px rgba(37,117,252,.45), 0 0 30px rgba(106,17,203,.55); }
+.continue-btn.magic-btn:active{ transform: translateY(0); }
+.continue-btn.magic-btn::before{
+  content: '';
+  position: absolute; inset: -6px;
+  border-radius: inherit;
+  background:
+    radial-gradient(60% 40% at 20% 0%, rgba(255,255,255,.30), transparent 60%),
+    radial-gradient(50% 60% at 80% 120%, rgba(255,255,255,.16), transparent 60%);
+  filter: blur(8px);
+  z-index: -1;
+  animation: magicAura 3.2s ease-in-out infinite alternate;
+}
+.continue-btn.magic-btn::after{
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.45) 15%, transparent 30%);
+  transform: translateX(-120%);
+  animation: magicShine 3.1s ease-in-out infinite;
+}
+@keyframes magicGradient{ 0%{ background-position: 0% 50% } 50%{ background-position: 100% 50% } 100%{ background-position: 0% 50% } }
+@keyframes magicAura{ 0%{ opacity:.45 } 100%{ opacity:.9 } }
+@keyframes magicShine{ 0%,60%{ transform: translateX(-120%) } 72%{ transform: translateX(120%) } 100%{ transform: translateX(120%) } }
+
+/* Uživatelům s omezením animací ztišit efekty */
+@media (prefers-reduced-motion: reduce){
+  .continue-btn.magic-btn{ animation: none; background-position: 50% 50%; }
+  .continue-btn.magic-btn::before, .continue-btn.magic-btn::after{ animation: none; }
+}
