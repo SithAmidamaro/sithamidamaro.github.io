@@ -48,10 +48,18 @@ h1{
   padding:16px;
 }
 .dialogue{
-  display:flex; gap:12px; align-items:flex-start;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex-direction: row-reverse;
 }
 .avatar{
-  width:120px; height:auto; flex:0 0 auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,.5));
+  width: 120px;
+  height: auto;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.5));
+  margin-left: 16px;
+  margin-right: 0;
 }
 .bubble{
   position:relative;
