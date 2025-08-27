@@ -23,17 +23,17 @@
       </div>
 
       <div class="choices">
-        <button onclick="ask(1)">„Jaké zlo si tě našlo?“</button>
-        <button onclick="ask(2)">„Na čem jsi vlastně pracoval?“</button>
-        <button onclick="ask(4)">„Pamatuješ si, kdo jsi?“</button>
-        <button onclick="ask(3)">„Kde jsi to ukryl?“</button>
+  <button onclick="ask(1)">„Jaké zlo si tě našlo?“</button>
+  <button onclick="ask(2)">„Na čem jsi vlastně pracoval?“</button>
+  <button onclick="ask(3)">„Pamatuješ si, kdo jsi?“</button>
+  <button onclick="ask(4)">„Kde jsi to ukryl?“</button>
       </div>
 
       <div id="out" style="margin-top:10px;"></div>
 
       <hr>
       <div id="task-bubble" class="bubble" style="display:none;">
-        <p><strong>Úkol:</strong> Najdi u chaty něco, co tam nepatří, znamení, hrozba...! Bez toho se dál nepohneme.</p>
+        <p><strong>Úkol:</strong> Najdi u chaty něco, co tam nepatří - znamení nebo něco zlého ! .</p>
         <div class="input-row">
           <input type="text" id="znak" placeholder="Zadej, co jsi našla">
           <button onclick="confirmFind()">Potvrdit nález</button>
@@ -62,11 +62,11 @@ function ask(n){
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "To nevím. Mé ruce si pamatují pohyby, má mysl cítí tíhu… ale tvary jsou pryč. Nejsem si jist."</p></div>`;
     taskBubble.style.display = 'none';
   }else if(n===3){
-    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím, ale cítím … že to má něco společného s chatou v lese… Tam, kde se Zaklínači kdysi skrývali před očima smrtelníků. <strong>Tam povede naše cesta… Bude tam něco, co tam nepatří, co nám řekne víc… až to najdeš, dej mi vědět.</strong> "</p></div>`;
-    taskBubble.style.display = '';
-  }else{
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Měl jsem jméno... Jak znělo? Možná, se mi mé jméno ještě vrátí."</p></div>`;
     taskBubble.style.display = 'none';
+  }else if(n===4){
+    o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím, ale cítím … že to má něco společného s chatou v lese… Tam, kde se Zaklínači kdysi skrývali před očima smrtelníků. <strong>Tam povede naše cesta… Bude tam něco, co tam nepatří, co nám řekne víc… až to najdeš, dej mi vědět.</strong> "</p></div>`;
+    taskBubble.style.display = '';
   }
 }
 function confirmFind(){
