@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="cs"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kapitola 26 – Rituál přenosu</title>
+<title>Kapitola 26 – Rituál Přenosu</title>
 <link rel="stylesheet" href="css/style.css">
 <script defer src="js/helpers.js"></script>
 </head><body>
 <div class="container">
   <div class="nav"><a class="btn" href="kap25.html">← Zpět</a><a class="btn" href="index.html">🏠 Domů</a></div>
-  <h1>Kapitola 26 – Rituál přenosu</h1>
+  <h1>Kapitola 26 – Rituál Přenosu</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Áňo… děkuji. Svěřím duši do tvých rukou. Ať Kámen mudrců spojí, co bylo rozděleno.“</p></div>
+  <div class="bubble">
+    <p><strong>Muradin:</strong> „Áňo… vážím si toho víc, než dokážu říct. Jestli je tahle cesta možná, jsem připraven.“</p>
+    <p><strong>Muradin:</strong> „Svoji duši svěřím do vašich rukou. Věřím vám celým svým srdcem.“</p>
+    <p><strong>Muradin:</strong> „Ať Kámen mudrců spojí, co bylo rozděleno: DUŠI a TĚLO.“</p>
+  </div>
 </div>
 <div class="bubble">
-  <p><strong>Kotva:</strong> Až bude kruh připravený, potvrď zahájení rituálu.</p>
-  <div class="input-row">
-    <input id="rit" type="text" placeholder="Začínám rituál">
-    <button onclick="ok26()">Potvrdit</button>
-  </div>
-  <p id="hint26" class="feedback"></p>
-  <div id="cont26"></div>
+  <a class="continue-btn magic-btn" href="kap26a.html">Zahájit přenos: KÁMEN MUDRCŮ : DUŠE – TĚLO</a>
 </div>
-<script>
-function ok26(){
-  const v=(document.getElementById('rit').value||'').trim();
-  if(!v){document.getElementById('hint26').textContent='„Až budeš připravena, řekni jediné slovo.“'; document.getElementById('cont26').innerHTML=''; return;}
-  document.getElementById('hint26').textContent=''; document.getElementById('cont26').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Svět se přelévá jako roztavené sklo… a pak ticho.“</p></div><a class='continue-btn' href='kap26a.html'>👉 Pokračovat na rituál</a>`;
-}
-</script>
 </div>
 </div>
 </body></html>

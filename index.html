@@ -5,30 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zaklínačský víkend – Duch Alchymisty</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Lokální styly pro úvodní rituál */
+    .container { text-align: center; }
+    .ritual-text { text-align: center; font-size: 1.1em; margin: 1rem 0 1.5rem; }
+    .summon-circle {
+      width: 260px; height: 260px; border-radius: 50%;
+      margin: 1rem auto; position: relative; cursor: pointer;
+      background: radial-gradient(closest-side, rgba(90,40,180,0.25), rgba(20,10,40,0.6)),
+                  conic-gradient(from 0deg, rgba(130, 80, 255, 0.5), rgba(40, 200, 255, 0.5), rgba(130, 80, 255, 0.5));
+      border: 3px solid rgba(120, 90, 255, 0.7);
+      box-shadow: 0 0 20px 6px rgba(120, 90, 255, 0.45), inset 0 0 18px rgba(40, 200, 255, 0.35);
+      transition: transform 120ms ease, box-shadow 200ms ease;
+    }
+    .summon-circle:hover { transform: scale(1.02); box-shadow: 0 0 28px 10px rgba(120, 90, 255, 0.6), inset 0 0 22px rgba(40, 200, 255, 0.45); }
+    .summon-circle:active { transform: scale(0.99); }
+    .summon-circle::before {
+      content: "✧"; color: #9cf; font-size: 2.25rem; line-height: 1;
+      position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      text-shadow: 0 0 10px rgba(60,220,255,0.9), 0 0 22px rgba(140,100,255,0.8);
+    }
+    .ritual-gif { max-width: 100%; height: auto; margin: 1.25rem auto 0; display: none; }
+    .hint { font-size: .95em; opacity: .85; }
+    @media (prefers-reduced-motion: reduce) {
+      .summon-circle, .summon-circle:hover { transition: none; }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <div class="nav">
-      <a href="#" onclick="history.back();return false;">← Zpět</a>
-    </div>
+    <h1>✨🌌 Transmutační kruh vyvolání 🌌✨</h1>
+    <p class="ritual-text"><span style="font-size:1.5em; color:#3af;">✨⚡</span>Pro zahájení rituálu klikněte na transmutační kruh..<br><span style="font-size:1.5em; color:#3af;">⚡✨</span></p>
 
-    <h1>Zaklínačský víkend – Duch Alchymisty</h1>
-    <div class="panel">
-      <div class="dialogue">
-        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-        <div class="bubble">
-          <p><strong>Alchymista:</strong> "Tma... chlad... hlasy stromů... Kdo mne volá? Jsem... mrtvý? Nebo jen zapomenutý?"</p>
-          <p class="small">Vítej, zaklínačko. Jsi připravena vkročit do příběhu? Budeš mluvit se mnou – duchem alchymisty – a společně projdeme zkouškami, které na tebe čekají u chaty.</p>
-        </div>
-      </div>
+    <!-- Klikací transmutační kruh (spustí gif + zvuk + přesměrování) -->
+    <div id="summonTrigger" class="summon-circle" role="button" tabindex="0" aria-label="Spustit vyvolání"></div>
 
-      <div class="choices">
-        <a class="continue-btn" href="kap3.html">Začít (Kapitola 3 – první vyvolání)</a>
-      </div>
-      <div class="footer-nav">
-        <a class="btn home-btn" href="index.html">🏠 Domů</a>
-      </div>
-    </div>
+    <!-- Gif rituálu, zobrazen až po kliknutí -->
+    <img id="ritualGif" src="img/ritual.gif" alt="Rituál vyvolání" class="ritual-gif">
+
+    <!-- Zvuk se spustí až po kliknutí (kvůli blokaci autoplay) -->
+    <audio id="ritualAudio" src="audio/magic.mp3" loop></audio>
   </div>
+
+  <script>
+    (function(){
+      var started = false;
+      var trigger = document.getElementById('summonTrigger');
+      var gif = document.getElementById('ritualGif');
+      var audio = document.getElementById('ritualAudio');
+
+      function startRitual(){
+        if (started) return; started = true;
+        // skryj kruh a ukaž gif
+        trigger.style.display = 'none';
+        gif.style.display = 'block';
+        // pokus o přehrání zvuku po uživatelském interaktivním vstupu
+        try { var p = audio.play(); if (p && typeof p.catch === 'function') { p.catch(function(){ /* ignorovat chybu autoplay */ }); } } catch(e) {}
+        // přesměrování po ~12s
+        setTimeout(function(){ window.location.href = 'kap3.html'; }, 12000);
+      }
+
+      trigger.addEventListener('click', startRitual);
+      trigger.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startRitual(); }
+      });
+    })();
+  </script>
 </body>
 </html>
