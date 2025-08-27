@@ -52,6 +52,11 @@ function say(n){
 }
 function found(){
   const cont = document.getElementById('cont');
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b) => {
+    if (b.textContent.includes('Našla jsem ji')) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď máš v rukou mou přenosnou laboratoř – společně zvládneme velké věci. Najdeš tam různé mé experimenty; klidně některé vyzkoušej, určitě se budou hodit. Já mezitím zjistím, co se dá… poptám se mezi stíny lesa. <strong> Ozvi se mi, až budeš hotova s experimenty a až tma pohltí lesy. </strong>"</p></div>
     <div class='input-row' style='margin-top:8px;'>
       <input id='tma' type='text' placeholder='Už je tma?'>
@@ -65,18 +70,12 @@ function confirmTma(){
   const v = document.getElementById('tma').value.trim();
   const hint = document.getElementById('hint');
   const next = document.getElementById('next');
-  const btns = document.querySelectorAll('.bubble .choices button');
-  btns.forEach((b)=>{
-    if(b.textContent.includes('Našla jsem ji')) b.classList.add('selected');
-    else b.classList.remove('selected');
-  });
   if(!v){
     hint.textContent = '„Musíš něco napsat, aby ses mohla posunout dál.“';
     next.innerHTML = '';
   }else{
     hint.textContent = '';
-    next.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď máš v rukou mou přenosnou laboratoř – společně zvládneme velké věci. Najdeš tam různé mé experimenty; klidně některé vyzkoušej, určitě se budou hodit. Já mezitím zjistím, co se dá… poptám se mezi stíny lesa. <strong> Ozvi se mi, až budeš hotova s experimenty a až tma pohltí lesy. </strong>"</p></div>
-<a class='continue-btn' href='kap7c.html'>👉 Pokračovat (Kapitola 7c – Lektvar Kočky)</a>`;
+    next.innerHTML = `<a class='continue-btn' href='kap7c.html'>👉 Pokračovat (Kapitola 7c – Lektvar Kočky)</a>`;
   }
 }
 </script>
