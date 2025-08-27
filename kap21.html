@@ -19,6 +19,11 @@
 <div id="out21"></div><div id="cont21"></div>
 <script>
 function go(ok){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if((ok && i===0) || (!ok && i===1)) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   if(ok){
     document.getElementById('out21').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Uhh, jak rád tě slyším!!!“</p></div>`;
     document.getElementById('cont21').innerHTML = `<a class='continue-btn' href='kap21a.html'>👉 Pokračovat (Kapitola 21a – Temné srdce)</a>`;

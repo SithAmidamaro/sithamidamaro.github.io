@@ -40,6 +40,11 @@
 
 <script>
 function say(n){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===n-1) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const o=document.getElementById('out');
   if(n===1){
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Nevím jistě... Vzpomínám si na šuplík… a jak píšu vzkaz: <strong><em>NEŠAHAT LAMBERTE</em></strong>."</p></div>`;
@@ -60,15 +65,13 @@ function found(){
 
 function confirmTma(){
   const v = document.getElementById('tma').value.trim();
-  const hint = document.getElementById('hint');
-  const next = document.getElementById('next');
-  if(!v){
-    hint.textContent = '„Musíš něco napsat, aby ses mohla posunout dál.“';
-    next.innerHTML = '';
-  }else{
-    hint.textContent = '';
-    next.innerHTML = `<a class='continue-btn' href='kap7c.html'>👉 Pokračovat (Kapitola 7c – Lektvar Kočky)</a>`;
-  }
+  const btns = document.querySelectorAll('.bubble .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent.includes('Našla jsem ji')) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
+  const cont = document.getElementById('cont');
+  cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď máš v rukou mou přenosnou laboratoř – společně zvládneme velké věci. Najdeš tam různé mé experimenty; klidně některé vyzkoušej, určitě se budou hodit. Já mezitím zjistím, co se dá… poptám se mezi stíny lesa. <strong> Ozvi se mi, až budeš hotova s experimenty a až tma pohltí lesy. </strong>"</p></div>`;
 }
 </script>
 </body>

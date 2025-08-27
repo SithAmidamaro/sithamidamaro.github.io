@@ -23,6 +23,11 @@
 <div id="out24"></div><div id="cont24"></div>
 <script>
 function go(ok){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if((ok && i===0) || (!ok && i===1)) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   if(ok){
     document.getElementById('out24').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Ach! Tak tedy přece. Teď je tvá volba.“</p></div>`;
     document.getElementById('cont24').innerHTML = `<a class='continue-btn' href='kap25.html'>👉 Pokračovat (Kapitola 25)</a>`;

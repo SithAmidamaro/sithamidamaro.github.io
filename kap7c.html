@@ -44,6 +44,11 @@
 
 <script>
 function say(n){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===n-1) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const o=document.getElementById('out');
   if(n===1){
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Lektvar "Kočka" to popíše Lukas nebo si jí najdi ve svém "Deníku Alchemie"... Ale abys ji posílila..., <strong>přidej Tekutý zrak – vy ho nazýváte 'Okvětní lístky fialové Myrty'</strong> "</p></div>`;

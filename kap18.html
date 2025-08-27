@@ -113,6 +113,11 @@ function pickRune(name){
   sel[step] = name;
   saveToStorage();
   updateSummary();
+    const btns = document.querySelectorAll('.rune-card');
+    btns.forEach(b=>{
+      if(b.querySelector('.caption').textContent===name) b.classList.add('selected');
+      else b.classList.remove('selected');
+    });
   if(step < 3){
     step++;
     setPrompts();

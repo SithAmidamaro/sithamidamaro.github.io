@@ -19,6 +19,11 @@
 <div id="out21a"></div><div id="cont21a"></div>
 <script>
 function go(ok){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if((ok && i===0) || (!ok && i===1)) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   if(ok){
     document.getElementById('out21a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Naslouchej – to, co neseš, je nebezpečné. Je to jako jed – může dát sílu, ale také zabíjí. Obrať se na Lukase – ten bude vědět, co s tím udělat.“</p></div>`;
     document.getElementById('cont21a').innerHTML = `<a class='continue-btn' href='kap22.html'>👉 Pokračovat (Kapitola 22)</a>`;
@@ -27,7 +32,3 @@ function go(ok){
     document.getElementById('cont21a').innerHTML='';
   }
 }
-</script>
-</div>
-</div>
-</body></html>

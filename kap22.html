@@ -28,6 +28,11 @@
 </div>
 <script>
 function pick(ok){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if((ok && i===0) || (!ok && i===1)) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   if(ok){
     document.getElementById('out22').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Správná volba. Plamen pohltí temnotu dřív, než by stačila pohltit tebe. Připravíme se na očistný rituál.“</p></div>`;
     // Zobraz kotvu k potvrzení

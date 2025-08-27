@@ -31,6 +31,11 @@
 <script>
 function show23(n){
   const r = document.getElementById('resp23');
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===n-1) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   if(n===1){
     r.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> "Těch míst bylo více, tředa na Kear Morhen... zde na chatě mimo a samozřejmě můj Mlýn… To jsou místa, kde jsem se vždycky cítil jako doma."</p></div>`;
   }else if(n===2){

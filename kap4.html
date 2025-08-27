@@ -48,6 +48,11 @@
 
 <script>
 function ask(n){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===n-1) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const o=document.getElementById('out');
   const taskBubble = document.getElementById('task-bubble');
   if(n===1){

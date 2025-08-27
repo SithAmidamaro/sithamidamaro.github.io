@@ -31,7 +31,7 @@
 function out(t){
   const btns = document.querySelectorAll('.choices button');
   btns.forEach((b,i)=>{
-    if(b.textContent.includes(t.split(':')[0].replace(/\s*\(.*/,''))) b.classList.add('selected');
+    if(i===Array.from(btns).findIndex(btn=>btn.textContent===event.target.textContent)) b.classList.add('selected');
     else b.classList.remove('selected');
   });
   document.getElementById('out14').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`;

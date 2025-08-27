@@ -30,13 +30,12 @@
 </div>
 <script>
 function say(n){
-  const o=document.getElementById('out12');
-  // zvýraznění vybrané volby
   const btns = document.querySelectorAll('.choices button');
   btns.forEach((b,i)=>{
     if(i===n-1) b.classList.add('selected');
     else b.classList.remove('selected');
   });
+  const o=document.getElementById('out12');
   if(n===1){
     o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Vzpomínky se vynořují jako útržky snu... právě jednu vidím: zaklínač – Vesemir! Pije můj čerstvě uvařený lektvar a jeho zranění se okamžitě hojí. Poplácá mě po rameni a říká: ‚Možná nejsi Zaklínač... ale jsi jeden z nás, mrňousi!‘ Ten lektvar jsme nazvali Vlaštovka. Haha.“</p></div>`;
   }

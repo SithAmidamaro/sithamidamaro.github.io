@@ -20,6 +20,11 @@
 </div>
 <script>
 function choose25(n){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===n-1) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const r = document.getElementById('resp25');
   if(n===1){
     r.innerHTML = `<div class='bubble'><p><strong>Muradin:</strong> "Pak teda sbohem… Ať tě světlo vede a stíny se ti klaní. Budu blízko – v šepotu listí a žáru ohně."</p></div>

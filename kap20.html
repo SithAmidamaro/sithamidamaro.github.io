@@ -29,6 +29,11 @@
 </div>
 <script>
 function out(t){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(b.textContent===event.target.textContent) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   document.getElementById('out20').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`;
 }
 function ok20(){

@@ -33,15 +33,20 @@
 
 <script>
 function choose(n){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===n-1) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const r = document.getElementById('resp');
   if(n===1){
     r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Vlk… Škola Vlka! Ano, to jméno znám. Byli jste mými přáteli, myslím? Ale… opravdu jsi vlk? Nebo jen liška v přestrojení?"</p></div>
     <p class="small">(Alchymista si tě chce ověřit – následuje kvíz.)</p>
     <a class="continue-btn" href="kap3a.html">👉 Pokračovat na zkoušku důvěry</a>`;
   }else if(n===2){
-  r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Poutník? …Ne, to nesedí. Poutník by mě nedokázal vyvolat? Kdo jsi?!"</p></div>`;
+    r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Poutník? …Ne, to nesedí. Poutník by mě nedokázal vyvolat? Kdo jsi?!"</p></div>`;
   }else{
-  r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Já… kdo jsem já? Jen prach a vzpomínky. Pamatuji si málo. Ale otázka je, kdo jsi ty…?"</p></div>`;
+    r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Já… kdo jsem já? Jen prach a vzpomínky. Pamatuji si málo. Ale otázka je, kdo jsi ty…?"</p></div>`;
   }
 }
 </script>

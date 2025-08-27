@@ -138,42 +138,77 @@
 <script>
 let score=0;
 function q1(a){
+  const btns = document.querySelectorAll('#q1 .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent === a) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const f=document.getElementById('f1');
   if(a==='Vesemir'){ score++; f.innerHTML='✅ <em>„Ano… Vesemir. Starý, moudrý. Zajímalo by mě jak se má...“</em> (+1 důvěra)'; show('q2'); }
   else if(a==='Geralt'){ f.innerHTML='❌ <em>„Geralt… vlk to je, ale nikdy nebyl mistrem. On kráčí vlastní cestou.“</em>'; }
   else { f.innerHTML='❌ <em>„Lambert… ha! Ten by sotva zvládl vést i stádo koz, natož zaklínačskou školu!“</em>'; }
 }
 function q2(a){
+  const btns = document.querySelectorAll('#q2 .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent === a) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const f=document.getElementById('f2');
   if(a==='Kaer Morhen'){ score++; f.innerHTML='✅ <em>„Kaer Morhen… ano, stará pevnost v horách.“</em> (+1 důvěra)'; show('q3'); }
   else if(a==='Novigrad'){ f.innerHTML='❌ <em>„Novigrad? Město kupců, né zaklínačů.“</em>'; }
   else { f.innerHTML='❌ <em>„Oxenfurt? Tam učí knihomolové, ne zaklínači.“</em>'; }
 }
 function q3(a){
+  const btns = document.querySelectorAll('#q3 .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent === a) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const f=document.getElementById('f3');
   if(a==='Kočka'){ score++; f.innerHTML='✅ <em>„Ano… Kočka. Oči ve tmě jako v právem poledne.“</em> (+1 důvěra)'; show('q4'); }
   else if(a==='Osel'){ f.innerHTML='❌ <em>„Osel? …Tvůj humor je temnější než noc sama.“</em>'; }
   else { f.innerHTML='❌ <em>„Pavián? Cože?! …tohle jsem snad ani já nikdy nemíchal.“</em>'; }
 }
 function q4(a){
+  const btns = document.querySelectorAll('#q4 .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent === a) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const f=document.getElementById('f4');
   if(a==='trav'){ score++; f.innerHTML='✅ <em>„Ano! Zkouška trav. Bolest, krev a přežití – jen ti nejsilnější zůstali.“</em> (+1 důvěra)'; show('q5'); }
   else if(a==='pravdy'){ f.innerHTML='❌ <em>„Pravdy? …Pravda v tomto světě nic neznamená.“</em>'; }
   else { f.innerHTML='❌ <em>„Vážně?“</em>'; }
 }
 function q5(a){
+  const btns = document.querySelectorAll('#q5 .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent === a) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const f=document.getElementById('f5');
   if(a==='stit'){ score++; f.innerHTML='✅ <em>„Správně! Quen chrání zaklínače před úderem, jako štít světla.“</em> (+1 důvěra)'; show('q6'); }
   else if(a==='ohnivy'){ f.innerHTML='❌ <em>„To je Igni, ne Quen.“</em>'; }
   else { f.innerHTML='❌ <em>„To by byl Axii, ne Quen.“</em>'; }
 }
 function q6(a){
+  const btns = document.querySelectorAll('#q6 .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent === a) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const f=document.getElementById('f6');
   if(a==='nestvury'){ score++; f.innerHTML='✅ <em>„Ano. Nestvůry, ať vypadají jakkoliv…“</em> (+1 důvěra)'; show('q7'); }
   else if(a==='poklady'){ f.innerHTML='❌ <em>„Poklady? To je práce zlodějů.“</em>'; }
   else { f.innerHTML='❌ <em>„Co vím, tak čarodějky spíš loví zaklínače. Hah!“</em>'; }
 }
 function q7(a){
+  const btns = document.querySelectorAll('#q7 .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent === a) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const f=document.getElementById('f7');
   score++;
   if(a==='mleko'){ f.innerHTML='✅ <em>„Haha! ‘Dám si mléko, prosím.’“</em> (+1 důvěra)'; }
@@ -182,6 +217,11 @@ function q7(a){
   show('q8');
 }
 function q8(a){
+  const btns = document.querySelectorAll('#q8 .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent === a) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const f=document.getElementById('f8');
   score++;
   if(a==='medovina'){ f.innerHTML='✅ <em>„Sladká a silná – kdo by si jí nedopřál!“</em> (+1 důvěra)'; }
@@ -190,6 +230,11 @@ function q8(a){
   show('q9');
 }
 function q9(a){
+  const btns = document.querySelectorAll('#q9 .choices button');
+  btns.forEach((b)=>{
+    if(b.textContent === a) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   const f=document.getElementById('f9');
   score++;
   if(a==='mece'){ f.innerHTML='✅ <em>„Krev často řeší víc než slova.“</em> (+1 důvěra)'; }

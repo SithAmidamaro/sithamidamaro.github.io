@@ -20,12 +20,17 @@
 <div id="cont19"></div>
 <script>
 function go(ok){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if((ok && i===0) || (!ok && i===1)) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   if(ok){
     document.getElementById('out19').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Výborně! To je znamení, že se naše cesta chýlí ke konci. Pokračujme dál.“</p></div>`;
     document.getElementById('cont19').innerHTML = `<a class='continue-btn' href='kap20.html'>👉 Pokračovat (Kapitola 20)</a>`;
   }else{
-    document.getElementById('out19').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Rozumím. Návnada je zásadní – jinak Lešije nikdy nevylákáme ze stínů.“</p></div>`;
-    document.getElementById('cont19').innerHTML = ``;
+    document.getElementById('out19').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Ještě není připravena. Zkus to znovu.“</p></div>`;
+    document.getElementById('cont19').innerHTML = '';
   }
 }
 </script>

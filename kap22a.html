@@ -26,6 +26,11 @@
 function ok22a(val){
   const hint = document.getElementById('hint22a');
   const cont = document.getElementById('cont22a');
+  const btns = document.querySelectorAll('.input-row button');
+  btns.forEach((b)=>{
+    if(b.textContent === val) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   if(val === 'Zelený' || val === 'Fialový'){
     hint.textContent = '';
     cont.innerHTML = `<a class='continue-btn' href='kap23.html'>👉 Pokračovat (Kapitola 23)</a>`;
