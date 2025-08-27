@@ -35,13 +35,15 @@
 <body>
   <div class="container">
     <h1>✨🌌 Transmutační kruh vyvolání 🌌✨</h1>
-    <p class="ritual-text"><span style="font-size:1.5em; color:#3af;">✨⚡</span>Pro zahájení rituálu klikněte na transmutační kruh..<br><span style="font-size:1.5em; color:#3af;">⚡✨</span></p>
+    <p class="ritual-text"><span style="font-size:1.5em; color:#3af;">✨⚡</span>Pro zahájení rituálu klikni na transmutační kruh<br><span style="font-size:1.5em; color:#3af;">⚡✨</span></p>
 
     <!-- Klikací transmutační kruh (spustí gif + zvuk + přesměrování) -->
     <div id="summonTrigger" class="summon-circle" role="button" tabindex="0" aria-label="Spustit vyvolání"></div>
 
-    <!-- Gif rituálu, zobrazen až po kliknutí -->
-    <img id="ritualGif" src="img/ritual.gif" alt="Rituál vyvolání" class="ritual-gif">
+    <!-- Gif rituálu, zobrazen jako pozadí až po kliknutí -->
+    <div id="ritualBg" style="display:none; position:fixed; left:0;top:0;width:100vw;height:100vh;z-index:0;pointer-events:none;">
+      <img src="img/ritual.gif" alt="Rituál vyvolání" style="width:100vw;height:100vh;object-fit:cover;opacity:0.35;">
+    </div>
 
     <!-- Zvuk se spustí až po kliknutí (kvůli blokaci autoplay) -->
     <audio id="ritualAudio" src="audio/magic.mp3" loop></audio>
@@ -51,14 +53,14 @@
     (function(){
       var started = false;
       var trigger = document.getElementById('summonTrigger');
-      var gif = document.getElementById('ritualGif');
+  var bg = document.getElementById('ritualBg');
       var audio = document.getElementById('ritualAudio');
 
       function startRitual(){
         if (started) return; started = true;
-        // skryj kruh a ukaž gif
+        // skryj kruh a zobraz gif jako pozadí
         trigger.style.display = 'none';
-        gif.style.display = 'block';
+        bg.style.display = 'block';
         // pokus o přehrání zvuku po uživatelském interaktivním vstupu
         try { var p = audio.play(); if (p && typeof p.catch === 'function') { p.catch(function(){ /* ignorovat chybu autoplay */ }); } } catch(e) {}
         // přesměrování po ~12s
