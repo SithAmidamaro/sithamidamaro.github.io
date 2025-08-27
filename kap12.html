@@ -31,9 +31,21 @@
 <script>
 function say(n){
   const o=document.getElementById('out12');
-  if(n===1){o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Vzpomínky se vynořují jako útržky snu... právě jednu vidím: zaklínač – Vesemir! Pije můj čerstvě uvařený lektvar a jeho zranění se okamžitě hojí. Poplácá mě po rameni a říká: ‚Možná nejsi Zaklínač... ale jsi jeden z nás, mrňousi!‘ Ten lektvar jsme nazvali Vlaštovka. Haha.“</p></div>`;}
-  else if(n===2){o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Protože jsi to byla ty, kdo mě přivolal. Transmutační kruh se navázal na tebe – má síla proudí skrze tebe. Nemohu se ukázat nikomu jinému.“</p></div>`;}
-  else{o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Poraď se s Lukasem, jak zničit ten prokletý předmět... a jakmile to provedete, dej mi vědět. Bude to klíčové.“</p></div>`;}
+  // zvýraznění vybrané volby
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===n-1) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
+  if(n===1){
+    o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Vzpomínky se vynořují jako útržky snu... právě jednu vidím: zaklínač – Vesemir! Pije můj čerstvě uvařený lektvar a jeho zranění se okamžitě hojí. Poplácá mě po rameni a říká: ‚Možná nejsi Zaklínač... ale jsi jeden z nás, mrňousi!‘ Ten lektvar jsme nazvali Vlaštovka. Haha.“</p></div>`;
+  }
+  else if(n===2){
+    o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Protože jsi to byla ty, kdo mě přivolal. Transmutační kruh se navázal na tebe – má síla proudí skrze tebe. Nemohu se ukázat nikomu jinému.“</p></div>`;
+  }
+  else{
+    o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Poraď se s Lukasem, jak zničit ten prokletý předmět... a jakmile to provedete, dej mi vědět. Bude to klíčové.“</p></div>`;
+  }
 }
 function ok12(){
   const v = (document.getElementById('a12').value||'').trim();

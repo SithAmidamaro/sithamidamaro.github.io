@@ -25,13 +25,20 @@
 <div id="cont17a"></div>
 <script>
 function pick(n){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===n-1) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   if(n===1){
     document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Hmmm... ano... už si vzpomínám – ještě jsem tam něco přidal. Malou lahvičku s drobnými rudými kamínky... ty kamínky! Byl to můj první pokus o krystalizaci diamantu, a nevyšel. Při té práci jsem se řízl a kapka mé krve z nich udělala něco jako malé rubíny. Kámínky, ve kterých navěky <strong>  zůstala kapka mé krve. </strong>  Haha! <strong> (+1 důvěra) </strong>“</p></div>`;
   }else{
-    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Dobře, dobře, jde se na to!“</p></div>`;
+    document.getElementById('out17a').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Dobře, pokračujeme dál.“</p></div>`;
   }
   document.getElementById('cont17a').innerHTML = `<a class='continue-btn' href='kap18.html'>👉 Pokračovat (Kapitola 18)</a>`;
 }
+  document.getElementById('cont17a').innerHTML = `<a class='continue-btn' href='kap18.html'>👉 Pokračovat (Kapitola 18)</a>`;
+
 </script>
 </div>
 </div>

@@ -23,6 +23,7 @@
 <script>
 function ok15b(){
   const v = normalizeInput(document.getElementById('elixir').value);
+  // Pokud by byly volby jako tlačítka, zde by se zvýrazňovaly
   if(!v){document.getElementById('hint15b').textContent='„To nebude stačit…“'; document.getElementById('cont15b').innerHTML=''; return;}
   if(v==='cerna krev'){ document.getElementById('hint15b').textContent=''; document.getElementById('cont15b').innerHTML = `<a class='continue-btn' href='kap16.html'>👉 Pokračovat (Kapitola 16)</a>`; }
   else { document.getElementById('hint15b').textContent='„To nebude stačit…“'; document.getElementById('cont15b').innerHTML=''; }

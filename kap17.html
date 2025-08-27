@@ -26,7 +26,14 @@
   <div id="cont17"></div>
 </div>
 <script>
-function out(){ document.getElementById('out17').innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „To je na dlouhé povídání... kdysi jsem je vyrobil vlastnoručně. Nejsou to obyčejné kameny – do každé runy jsem vtiskl sílu měsíčního svitu. Kameny, do nichž jsem je vyryl, pocházejí z dalekých hor, dotýkajících se nebe. Věřil jsem, že jimi posílím transmutační kruhy a dodám jim efektivitu. Jenže nefungovalo to tak, jak jsem si představoval –nefungovalo to. Pro mě tenkrát neměly využití, ale teď nám konečně mohou posloužit...“</p></div>`; }
+function out(){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===0) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
+  document.getElementById('out17').innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „To je na dlouhé povídání... kdysi jsem je vyrobil vlastnoručně. Nejsou to obyčejné kameny – do každé runy jsem vtiskl sílu měsíčního svitu. Kameny, do nichž jsem je vyryl, pocházejí z dalekých hor, dotýkajících se nebe. Věřil jsem, že jimi posílím transmutační kruhy a dodám jim efektivitu. Jenže nefungovalo to tak, jak jsem si představoval –nefungovalo to. Pro mě tenkrát neměly využití, ale teď nám konečně mohou posloužit...“</p></div>`;
+}
 function ok17(){
   const v=(document.getElementById('runes').value||'').trim();
   if(v==='25'){ document.getElementById('hint17').textContent=''; document.getElementById('cont17').innerHTML = `<a class='continue-btn' href='kap17a.html'>👉 Pokračovat (Kapitola 17a)</a>`; }

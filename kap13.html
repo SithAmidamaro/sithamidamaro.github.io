@@ -29,6 +29,11 @@
 <script>
 function say13(n){
   const o=document.getElementById('out13');
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(i===n-1) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
   if(n===1){o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Třeba vidím ohněm ozářenou pracovnu a v ní sám sebe, jak do noci bádám nad lektvary. Byl jsem nejšťastnější, když se mi poprvé podařilo proměnit obyčejnou bylinu v silný lék. Ten pocit tvoření… to byla má vášeň.“</p></div>`}
   else if(n===2){o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Byli tvrdí a málomluvní. Jednou, zaklínač jménem 'Geralt' zkusil mojí výbušnou petardu. Hodil jí na kopu suti a ta se s velkým výbuchem vypařila. Podíval se na mě a řekl ‚Dobrý.‘ – od něj to byla poklona!“</p></div>`}
   else if(n===3){o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Měl jsem i sny, které jsem už nestihl naplnit… Toužil jsem ukázat svoje dílo čarodějkám na Ban Ard. Chtěl jsem, aby i ti nejmoudřejší v našem světě uznali, co jsem dokázal – že alchymie dokáže zázraky. Ale… osud to zařídil jinak.“</p></div>`}

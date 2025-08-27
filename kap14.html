@@ -28,7 +28,14 @@
   <div id="cont14"></div>
 </div>
 <script>
-function out(t){ document.getElementById('out14').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`; }
+function out(t){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(b.textContent.includes(t.split(':')[0].replace(/\s*\(.*/,''))) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
+  document.getElementById('out14').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`;
+}
 function ok14(){
   const v = normalizeInput(document.getElementById('petarda').value);
   if(!v){document.getElementById('hint14').textContent='„To nebude ono…“'; document.getElementById('cont14').innerHTML=''; return;}

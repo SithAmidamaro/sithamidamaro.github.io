@@ -28,7 +28,14 @@
   <div id="cont16"></div>
 </div>
 <script>
-function out(t){ document.getElementById('out16').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`; }
+function out(t){
+  const btns = document.querySelectorAll('.choices button');
+  btns.forEach((b,i)=>{
+    if(b.textContent.includes(t.split(':')[0].replace(/\s*\(.*/,''))) b.classList.add('selected');
+    else b.classList.remove('selected');
+  });
+  document.getElementById('out16').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`;
+}
 function ok16(){
   const v=(document.getElementById('mapa').value||'').trim();
   if(!v){document.getElementById('hint16').textContent='„Neví?“'; document.getElementById('cont16').innerHTML=''; return;}
