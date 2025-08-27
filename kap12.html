@@ -36,11 +36,14 @@ function say(n){
   else{o.innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Poraď se s Lukasem, jak zničit ten prokletý předmět... a jakmile to provedete, dej mi vědět. Bude to klíčové.“</p></div>`;}
 }
 function ok12(){
-  const v = (document.getElementById('a12').value||'').trim().toLowerCase();
-  const ok = ['potvrzuji','hotovo','mám návrh','mam navrh','ano'];
-  if(!v){document.getElementById('hint12').textContent='„Stačí krátké potvrzení.“'; document.getElementById('cont12').innerHTML=''; return;}
-  if(ok.includes(v)){ document.getElementById('hint12').textContent=''; document.getElementById('cont12').innerHTML = `<a class='continue-btn' href='kap13.html'>👉 Pokračovat (Kapitola 13)</a>`; }
-  else { document.getElementById('hint12').textContent='„Stačí krátké potvrzení.“'; document.getElementById('cont12').innerHTML=''; }
+  const v = (document.getElementById('a12').value||'').trim();
+  if(!v){
+    document.getElementById('hint12').textContent='„Stačí krátké potvrzení.“';
+    document.getElementById('cont12').innerHTML='';
+    return;
+  }
+  document.getElementById('hint12').textContent='';
+  document.getElementById('cont12').innerHTML = `<a class='continue-btn' href='kap13.html'>👉 Pokračovat (Kapitola 13)</a>`;
 }
 </script>
 </div>
