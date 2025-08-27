@@ -30,13 +30,13 @@
 <script>
 (function(){
   const player = (localStorage.getItem('playerName')||'Áňo').trim() || 'Áňo';
-  const comp = (localStorage.getItem('companionName')||'Lukasi').trim() || 'Lukasi';
+  const comp = (localStorage.getItem('companionName')||'Lukas').trim() || 'Lukas';
   const letter = `
     <div>
       <p><strong>Milá ${player},</strong></p>
       <p>Dnes je výjimečný den – tvé <strong>32. narozeniny</strong>.</p>
       <p>Tahle cesta zaklínačky, plná kouzel, tajemství a dobrodružství, nebyla jen hrou… byla oslavou tebe samotné.</p>
-      <p>Jsi statečná, vtipná, krásná a neuvěřitelně inspirující. Dokážeš překonat všechny překážky – ať už jsou to příšery v příběhu, nebo výzvy v každodenním životě.</p>
+      <p>Jsi statečná, vtipná, krásná a neuvěřitelně inspirující.</p>
       <p>Děkuji ti, že jsi. Že dokážeš rozdávat radost, světlo a lásku. Jsi výjimečná – a nikdy na to nezapomínej.</p>
       <p>Ať tě provází <em>síla vlků, moudrost lesů</em> a <em>světlo hvězd</em> na všech tvých cestách.</p>
       <p><strong>Krásné narozeniny, Zabijáku ${player}! 🖤🐺✨</strong></p>
@@ -44,22 +44,31 @@
     </div>`;
   document.getElementById('letter').innerHTML = letter;
 
-  // Jemné „konfety“ ze znaků
-  const sparkleSet = ['✨','🔮','⭐','💠','🟣'];
+  // Jemné „konfety“ ze znaků – pád nepřetržitě
+  const sparkleSet = ['✨','💜','⭐','💠','🎇'];
   const wrap = document.getElementById('sparkles');
-  let created = 0; const max = 36; const t = setInterval(()=>{
-    if(created>=max){ clearInterval(t); return; }
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let delayBase = prefersReduced ? 600 : 160; // základní frekvence
+
+  function spawnSparkle(){
     const s = document.createElement('span');
     s.className = 'sparkle';
     s.textContent = sparkleSet[Math.floor(Math.random()*sparkleSet.length)];
     s.style.left = Math.random()*100 + 'vw';
-    s.style.animationDelay = (Math.random()*1.2).toFixed(2)+'s';
+    s.style.animationDelay = (Math.random()*1.1).toFixed(2)+'s';
     s.style.opacity = (0.75+Math.random()*0.25).toFixed(2);
     s.style.fontSize = (16+Math.random()*12)+'px';
     wrap.appendChild(s);
-    setTimeout(()=>{ s.remove(); }, 4200);
-    created++;
-  }, 120);
+    setTimeout(()=>{ s.remove(); }, 4600);
+  }
+  function loop(){
+    spawnSparkle();
+    setTimeout(loop, delayBase + Math.random()*240);
+  }
+  loop();
+  document.addEventListener('visibilitychange', ()=>{
+    delayBase = document.hidden ? 700 : (prefersReduced ? 600 : 160);
+  });
 
   // Zvuk na klik (pokud dovolí prohlížeč)
   const btn = document.getElementById('homeBtn');
