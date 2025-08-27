@@ -89,7 +89,7 @@
 
       <!-- Q7 (vše správné) -->
       <div id="q7" class="question" style="display:none;">
-        <p><strong>7. Co by zaklínač nikdy neřekl v hospodě? (vše správné)</strong></p>
+        <p><strong>7. Co by si nikdy neřekla v hospodě?</strong></p>
         <div class="choices">
           <button onclick="q7('mleko')">„Dám si mléko, prosím.“</button>
           <button onclick="q7('nezajmu')">„Nestvůry? Ty mě nezajímají.“</button>
@@ -100,7 +100,7 @@
 
       <!-- Q8 (vše správné) -->
       <div id="q8" class="question" style="display:none;">
-        <p><strong>8. Nejoblíbenější nápoj zaklínače po těžkém boji? (vše správné)</strong></p>
+        <p><strong>8. Tvůj nejoblíbenější nápoj po těžkém boji? </strong></p>
         <div class="choices">
           <button onclick="q8('medovina')">Medovina</button>
           <button onclick="q8('vlastovka')">Vlaštovka (elixír)</button>
@@ -111,7 +111,7 @@
 
       <!-- Q9 (vše správné) -->
       <div id="q9" class="question" style="display:none;">
-        <p><strong>9. Zaklínačský způsob řešení hádky? (vše správné)</strong></p>
+        <p><strong>9. Zaklínačský způsob řešení hádky? </strong></p>
         <div class="choices">
           <button onclick="q9('mece')">Souboj na meče</button>
           <button onclick="q9('pravdy')">Elixír pravdy</button>
@@ -143,12 +143,12 @@ function q1(a){
   const f=document.getElementById('f1');
   if(a==='Vesemir'){ score++; f.innerHTML='✅ <em>„Ano… Vesemir. Starý, moudrý. Zajímalo by mě jak se má...“</em> (+1 důvěra)'; show('q2'); }
   else if(a==='Geralt'){ f.innerHTML='❌ <em>„Geralt… vlk to je, ale nikdy nebyl mistrem. On kráčí vlastní cestou.“</em>'; }
-  else { f.innerHTML='❌ <em>„Lambert… ha! Ten by sotva zvládl vést i stádo koz, natož školu vlků!“</em>'; }
+  else { f.innerHTML='❌ <em>„Lambert… ha! Ten by sotva zvládl vést i stádo koz, natož zaklínačskou školu!“</em>'; }
 }
 function q2(a){
   const f=document.getElementById('f2');
-  if(a==='Kaer Morhen'){ score++; f.innerHTML='✅ <em>„Kaer Morhen… ano, stará pevnost v horách, domov vlků.“</em> (+1 důvěra)'; show('q3'); }
-  else if(a==='Novigrad'){ f.innerHTML='❌ <em>„Novigrad? Město kupců, ne vlků.“</em>'; }
+  if(a==='Kaer Morhen'){ score++; f.innerHTML='✅ <em>„Kaer Morhen… ano, stará pevnost v horách.“</em> (+1 důvěra)'; show('q3'); }
+  else if(a==='Novigrad'){ f.innerHTML='❌ <em>„Novigrad? Město kupců, né zaklínačů.“</em>'; }
   else { f.innerHTML='❌ <em>„Oxenfurt? Tam učí knihomolové, ne zaklínači.“</em>'; }
 }
 function q3(a){
@@ -161,7 +161,7 @@ function q4(a){
   const f=document.getElementById('f4');
   if(a==='trav'){ score++; f.innerHTML='✅ <em>„Ano! Zkouška trav. Bolest, krev a přežití – jen ti nejsilnější zůstali.“</em> (+1 důvěra)'; show('q5'); }
   else if(a==='pravdy'){ f.innerHTML='❌ <em>„Pravdy? …Pravda v tomto světě nic neznamená.“</em>'; }
-  else { f.innerHTML='❌ <em>„Vážně?.“</em>'; }
+  else { f.innerHTML='❌ <em>„Vážně?“</em>'; }
 }
 function q5(a){
   const f=document.getElementById('f5');

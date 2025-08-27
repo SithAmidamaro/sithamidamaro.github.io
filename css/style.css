@@ -87,7 +87,7 @@ button:hover, .btn:hover, .continue-btn:hover{
 button:disabled, .is-disabled{
   opacity:.6; cursor:not-allowed; filter:grayscale(.3);
 }
-.feedback{ margin:.4rem 0 .2rem; font-style:italic; color:#c5f2ff; }
+.feedback{ margin:.4rem 0 .2rem; font-style:italic; color:#b20000; }
 hr{ border:0; height:1px; background: linear-gradient(90deg, transparent, #255767, transparent); margin:16px 0; }
 .input-row{ display:flex; gap:8px; margin-top:8px; }
 input[type="text"]{

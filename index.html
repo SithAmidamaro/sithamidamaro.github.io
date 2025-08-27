@@ -63,8 +63,8 @@
         bg.style.display = 'block';
         // pokus o přehrání zvuku po uživatelském interaktivním vstupu
         try { var p = audio.play(); if (p && typeof p.catch === 'function') { p.catch(function(){ /* ignorovat chybu autoplay */ }); } } catch(e) {}
-        // přesměrování po ~12s
-        setTimeout(function(){ window.location.href = 'kap3.html'; }, 12000);
+        // přesměrování po ~6s
+        setTimeout(function(){ window.location.href = 'kap3.html'; }, 6000);
       }
 
       trigger.addEventListener('click', startRitual);
