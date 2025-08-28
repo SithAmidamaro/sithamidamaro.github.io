@@ -9,7 +9,7 @@
   <div class="nav"><a class="btn" href="kap25.html">← Zpět</a></div>
   <h1>Kapitola 26 – Rituál Přenosu</h1>
   <div class="panel"><div class="dialogue">
-  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <img src="img/alchemista_stastny.png" alt="Alchymista" class="avatar">
   <div class="bubble">
     <p><strong>Muradin:</strong> „Áňo… vážím si toho víc, než dokážu říct. Jestli je tahle cesta možná, jsem připraven.“</p>
     <p><strong>Muradin:</strong> „Svoji duši svěřím do vašich rukou. Věřím vám celým svým srdcem.“</p>
@@ -17,8 +17,26 @@
   </div>
 </div>
 <div class="bubble">
-  <a class="continue-btn magic-btn" href="kap26a.html">Zahájit přenos: KÁMEN MUDRCŮ : DUŠE – TĚLO</a>
+  <p><strong>Kotva:</strong> Je vše k rituálu připraveno, můžeme začít?</p>
+  <div class="input-row">
+    <input id="anchor" type="text" placeholder="Potvrď přípravu rituálu">
+    <button onclick="ok26()">Potvrdit</button>
+  </div>
+  <p id="hint26" class="feedback"></p>
+  <div id="cont26"></div>
 </div>
 </div>
 </div>
+<script>
+function ok26(){
+  const v = (document.getElementById('anchor').value||'').trim();
+  if(!v){
+    document.getElementById('hint26').textContent = '„Potvrď, že je vše připraveno k rituálu.“';
+    document.getElementById('cont26').innerHTML = '';
+    return;
+  }
+  document.getElementById('hint26').textContent = '';
+  document.getElementById('cont26').innerHTML = `<a class='continue-btn magic-btn' href='kap26a.html'>Zahájit přenos: KÁMEN MUDRCŮ : DUŠE – TĚLO</a>`;
+}
+</script>
 </body></html>

@@ -9,9 +9,9 @@
   <div class="nav"><a class="btn" href="kap24.html">← Zpět</a></div>
   <h1>Kapitola 25 – Rozhodnutí u prahu</h1>
   <div class="panel"><div class="dialogue">
-  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Áňo… cítím, jak mé pouto k tomuto světu slábne. Tajemství jsme odhalili, a má cesta je nyní volná.“</p><p> „Než odejdu, chci ti říct ještě jednu věc. Mé jméno je <strong> Muradin Bronzovous</strong>.“</p></div>
-  <div class="bubble"><p><strong>Alchymista:</strong> „Dlouho jsem to jméno neslyšel… ale teď už vím, kým jsem byl. A jsem rád, že jsem tě poznal – víc, než dovedou slova vyjádřit.“</p></div>
+  <img src="img/alchemista_vysvetlujici_smejici_2.png" alt="Alchymista" class="avatar">
+  <div class="bubble"><p><strong>Alchymista:</strong> „Áňo… cítím, jak mé pouto k tomuto světu slábne. Tajemství jsme odhalili, a má cesta je nyní volná.“</p><p> „Než odejdu, chci ti říct ještě jednu věc. Mé jméno je <strong> Muradin</strong>.“</p></div>
+  <div class="bubble"><p><strong>Muradin:</strong> „Dlouho jsem to jméno neslyšel… ale teď už vím, kým jsem byl. A jsem rád, že jsem tě poznal – víc, než dovedou slova vyjádřit.“</p></div>
 </div>
 <div class="choices">
   <button class="btn" onclick="choose25(1)">„Děkuji ti za vše, Muradine.“</button>
@@ -54,7 +54,7 @@ function confirm25(n){
   }else{
     hint.textContent = '';
     next.innerHTML = n===1
-      ? `<a class='continue-btn' href='kap_end.html'>👉 Pokračovat (Konec příběhu)</a>`
+      ? `<a class='continue-btn' href='kap27.html'>👉 Pokračovat (Konec příběhu)</a>`
       : `<a class='continue-btn' href='kap26.html'>👉 Pokračovat (Rituál přenesení)</a>`;
   }
 }
