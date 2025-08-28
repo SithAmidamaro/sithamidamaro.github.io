@@ -33,19 +33,19 @@
   const comp = (localStorage.getItem('companionName')||'Lukas').trim() || 'Lukas';
   const letter = `
     <div>
-      <p><strong>Milá ${player},</strong></p>
+      <p><strong>Milá Áňo,</strong></p>
       <p>Dnes je výjimečný den – tvé <strong>32. narozeniny</strong>.</p>
       <p>Tahle cesta zaklínačky, plná kouzel, tajemství a dobrodružství, nebyla jen hrou… byla oslavou tebe samotné.</p>
       <p>Jsi statečná, vtipná, krásná a neuvěřitelně inspirující.</p>
       <p>Děkuji ti, že jsi. Že dokážeš rozdávat radost, světlo a lásku. Jsi výjimečná – a nikdy na to nezapomínej.</p>
       <p>Ať tě provází <em>síla vlků, moudrost lesů</em> a <em>světlo hvězd</em> na všech tvých cestách.</p>
-      <p><strong>Krásné narozeniny, Zabijáku ${player}! 🖤🐺✨</strong></p>
+      <p><strong>Krásné narozeniny, Zabijáku Áňo! 🖤🐺✨</strong></p>
       <p class="signature"><em>Tvůj věrný společník a obdivovatel – ${comp}</em></p>
     </div>`;
   document.getElementById('letter').innerHTML = letter;
 
   // Jemné „konfety“ ze znaků – pád nepřetržitě
-  const sparkleSet = ['✨','💜','⭐','💠','🎇'];
+  const sparkleSet = ['✨','💜','⭐','💠','🌸'];
   const wrap = document.getElementById('sparkles');
   const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let delayBase = prefersReduced ? 600 : 160; // základní frekvence
