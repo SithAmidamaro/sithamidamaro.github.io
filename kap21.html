@@ -9,7 +9,7 @@
   <div class="nav"><a class="btn" href="kap20.html">← Zpět</a></div>
   <h1>Kapitola 21 – Po lovu</h1>
   <div class="panel"><div class="dialogue">
-  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <img src="img/alchemista_premysli.png" alt="Alchymista" class="avatar">
   <div class="bubble"><p><strong>Alchymista:</strong> „Řekni mi, Áňo – jak dopadl lov?“</p></div>
 </div>
 <div class="choices">
@@ -25,9 +25,11 @@ function go(ok){
     else b.classList.remove('selected');
   });
   if(ok){
+    document.querySelector('.avatar').src = 'img/alchemista_stastny.png';
     document.getElementById('out21').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Uhh, jak rád tě slyším!!!“</p></div>`;
     document.getElementById('cont21').innerHTML = `<a class='continue-btn' href='kap21a.html'>👉 Pokračovat (Kapitola 21a – Temné srdce)</a>`;
   }else{
+    document.querySelector('.avatar').src = 'img/alchemista_premysli.png';
     document.getElementById('out21').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „Vy to zvládnete!!“</p></div>`;
     document.getElementById('cont21').innerHTML='';
   }

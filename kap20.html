@@ -9,7 +9,7 @@
   <div class="nav"><a class="btn" href="kap19.html">← Zpět</a></div>
   <h1>Kapitola 20 – Lov Lešije</h1>
   <div class="panel"><div class="dialogue">
-  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <img src="img/alchemista_ustarany.png" alt="Alchymista" class="avatar">
   <div class="bubble"><p><strong>Alchymista:</strong> „Les se chvěje... slyšíš to ticho? To je on. Lešij už ví, že jdeme proti němu. Řekni Lukasovi, že jsi připravena. Teď už není cesty zpět.“</p></div>
 </div>
 <div class="choices">
@@ -35,6 +35,8 @@ function out(t){
     else b.classList.remove('selected');
   });
   document.getElementById('out20').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`;
+  // Skryj tlačítko pokračovat při kliknutí na volbu
+  document.getElementById('cont20').innerHTML = '';
 }
 function ok20(){
   const raw = document.getElementById('prep').value || '';

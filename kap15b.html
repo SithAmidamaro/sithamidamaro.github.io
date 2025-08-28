@@ -9,12 +9,12 @@
   <div class="nav"><a class="btn" href="kap14.html">← Zpět</a></div>
   <h1>Kapitola 15b – Elixír</h1>
   <div class="panel"><div class="dialogue">
-  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <img src="img/alchemista_mavajici_usmev_potion.png" alt="Alchymista" class="avatar">
   <div class="bubble"><p><strong>Alchymista:</strong> „Skvěle, petardu máš. Teď elixír – jaký použiješ?“</p></div>
 </div>
 <div class="bubble">
   <div class="input-row">
-    <input id="elixir" type="text" placeholder="Černá krev">
+    <input id="elixir" type="text" placeholder="Elixír">
     <button onclick="ok15b()">Potvrdit</button>
   </div>
   <p id="hint15b" class="feedback"></p>
@@ -24,9 +24,13 @@
 function ok15b(){
   const v = normalizeInput(document.getElementById('elixir').value);
   // Pokud by byly volby jako tlačítka, zde by se zvýrazňovaly
-  if(!v){document.getElementById('hint15b').textContent='„To nebude stačit…“'; document.getElementById('cont15b').innerHTML=''; return;}
-  if(v==='cerna krev'){ document.getElementById('hint15b').textContent=''; document.getElementById('cont15b').innerHTML = `<a class='continue-btn' href='kap16.html'>👉 Pokračovat (Kapitola 16)</a>`; }
-  else { document.getElementById('hint15b').textContent='„To nebude stačit…“'; document.getElementById('cont15b').innerHTML=''; }
+  if(!v){
+    document.getElementById('hint15b').textContent='„To nebude stačit…“';
+    document.getElementById('cont15b').innerHTML='';
+    return;
+  }
+  document.getElementById('hint15b').textContent='';
+  document.getElementById('cont15b').innerHTML = `<a class='continue-btn' href='kap16.html'>👉 Pokračovat (Kapitola 16)</a>`;
 }
 </script>
 </div>

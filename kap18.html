@@ -8,7 +8,18 @@
 <style>
   .q-grid{ display:flex; gap:.5rem; flex-wrap:wrap; margin:.5rem 0; }
   .q-btn{ cursor:pointer; }
-  .q-btn.selected{ outline:2px solid var(--accent, #444); }
+  .q-btn.selected {
+    outline: 2.5px solid #7c3aed;
+    background: linear-gradient(90deg, #e9d8fd 0%, #c4b5fd 100%);
+    color: #3b0764;
+    box-shadow: 0 0 0 3px rgba(124,58,237,.18) inset;
+  }
+  .rune-card.selected {
+    outline: 2.5px solid #7c3aed !important;
+    background: linear-gradient(90deg, #e9d8fd 0%, #c4b5fd 100%);
+    color: #3b0764;
+    box-shadow: 0 0 0 3px rgba(124,58,237,.18) inset;
+  }
 </style>
 </head><body>
 <div class="container">
@@ -16,9 +27,9 @@
   <h1>Kapitola 18 – Věštění z run (výběr 1–3/4)</h1>
   <div class="panel">
     <div class="dialogue">
-      <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+      <img src="img/alchemista_smejici_orb.png" alt="Alchymista" class="avatar">
       <div class="bubble">
-        <p><strong>Alchymista:</strong> <span id="prompt">„Vyber 1. runu – <em>ZAČÁTEK</em>. Ať jsou tři různé – osud rád mluví třemi hlasy.“</span></p>
+        <p><strong>Alchymista:</strong> <span id="prompt">„Vyber 1. runu – <em></em>. Ať jsou tři různé – osud rád mluví třemi hlasy.“</span></p>
       </div>
     </div>
 

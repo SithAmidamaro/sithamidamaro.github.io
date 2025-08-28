@@ -9,7 +9,7 @@
   <div class="nav"><a class="btn" href="kap13a.html">← Zpět</a></div>
   <h1>Kapitola 14 – Příprava na lov Lešije</h1>
   <div class="panel"><div class="dialogue">
-  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <img src="img/alchemista_stastny.png" alt="Alchymista" class="avatar">
   <div class="bubble"><p><strong>Alchymista:</strong> „Krásné ráno, milá Áňo! Kolikrát ,že dnes zakokrhal ten kohout? Dvanáctkrát? Haha... vypadá to, že jsem spal déle, než jsem měl v úmyslu. Dnes je den příprav. V bestiáři najdeš, co na Lešije platí. Petarda a elixír by nebyly k zahození! A procvič luk – terče, postoj, dech. Lukas ví, je to mistr boje.“</p></div>
 </div>
 <div class="choices">
@@ -21,7 +21,7 @@
 <div class="bubble" style="margin-top:10px;">
   <p><strong>Úkol:</strong> Napiš název připravené petardy.</p>
   <div class="input-row">
-    <input id="petarda" type="text" placeholder="Dwimeritová petarda">
+    <input id="petarda" type="text" placeholder="Petarda">
     <button onclick="ok14()">Potvrdit</button>
   </div>
   <p id="hint14" class="feedback"></p>
@@ -38,9 +38,13 @@ function out(t){
 }
 function ok14(){
   const v = normalizeInput(document.getElementById('petarda').value);
-  if(!v){document.getElementById('hint14').textContent='„To nebude ono…“'; document.getElementById('cont14').innerHTML=''; return;}
-  if(v==='dwimeritova petarda'){ document.getElementById('hint14').textContent=''; document.getElementById('cont14').innerHTML = `<a class='continue-btn' href='kap15b.html'>👉 Pokračovat (Kapitola 15b)</a>`; }
-  else { document.getElementById('hint14').textContent='„To nebude ono…“'; document.getElementById('cont14').innerHTML=''; }
+  if(!v){
+    document.getElementById('hint14').textContent='„To nebude ono…“';
+    document.getElementById('cont14').innerHTML='';
+    return;
+  }
+  document.getElementById('hint14').textContent='';
+  document.getElementById('cont14').innerHTML = `<a class='continue-btn' href='kap15b.html'>👉 Pokračovat (Kapitola 15b)</a>`;
 }
 </script>
 </div>

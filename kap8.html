@@ -13,7 +13,7 @@
     <h1>Kapitola 8 – Krystalová lampa</h1>
     <div class="panel">
       <div class="dialogue">
-        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+        <img src="img/alchemista_vysvetlujici_smejici.png" alt="Alchymista" class="avatar">
         <div class="bubble">
           <p><strong>Alchymista:</strong> "Ano… už to vidím jasně! 'Zesílená Kočka' a moje 'lampa' – dohromady ukážou víc, než by kdy ukázal denní svit. Lampa je v podkroví chaty, v truhlici."</p>
         </div>
@@ -26,7 +26,7 @@
       </div>
       <div id="out" style="margin-top:10px;"></div>
 
-      <div class="bubble" style="margin-top:10px;">
+      <div id="task-bubble" class="bubble" style="margin-top:10px; display:none;">
         <p><strong>Úkol:</strong> Vypij 'Zesílenou kočku' a jdi pod schody chaty – zanechal jsem ti tam znamení (runa ochrany) s rozsvícenou lampou ho uvidíš. Napiš jméno runy abych věděli, že funguje. <em>(Správně: Algiz, příp. „Z“)</em></p>
         <div class="input-row">
           <input id="runa" type="text" placeholder="Jaká je to runa?">
@@ -48,12 +48,16 @@ function say(n){
     else b.classList.remove('selected');
   });
   const o=document.getElementById('out');
+  const taskBubble = document.getElementById('task-bubble');
   if(n===1){
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Lampa odhaluje skryté. Ale pro oči smrtelníku, je to běžná lampička. To pro tebe neplatí."</p></div>`;
+    taskBubble.style.display = 'none';
   }else if(n===2){
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Z křišťálu z hor. Vložil jsem do něj runu ochrany, proto svítí, proto nezhasne."</p></div>`;
+    taskBubble.style.display = 'none';
   }else{
     o.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně! Teď vypij Kočku a pod schody hledej runu. Až ji najdeš, napiš mi její jméno."</p></div>`;
+    taskBubble.style.display = 'block';
   }
 }
 function check(){

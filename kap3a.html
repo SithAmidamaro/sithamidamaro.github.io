@@ -15,7 +15,7 @@
     <h1>Kapitola 3a – Opravdu si Zaklínačka?</h1>
     <div class="panel">
       <div class="dialogue">
-        <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+        <img src="img/alchemista_nechapavy.png" alt="Alchymista" class="avatar">
         <div class="bubble">
           <p><strong>Alchymista:</strong> "Říkáš, že jsi ze Školy Vlka… Ale svět je plný klamů. Musíš mi dokázat, že krev Zaklínače proudí v tvých žilách. Odpověz na mé otázky… něco se mi vybavuje... a já poznám pravdu."</p>
         </div>
@@ -235,7 +235,7 @@ function q9(a){
 function submitName(){
   const name = document.getElementById('playerName').value.trim() || 'Zaklínačko';
   localStorage.setItem('playerName', name);
-  document.getElementById('nameResp').innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Rád tě poznávám, ${name}! Já jsem… já jsem…"</p><p><strong>Alchymista:</strong> "... na své jméno si nevzpomínám. Zvláštní, že? Ale to teď není důležité."</p></div>
+  document.getElementById('nameResp').innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "${name} ... krásné jméno! Rád tě poznávám, já jsem… já jsem…"</p><p><strong>Alchymista:</strong> "... na své jméno si nevzpomínám. Zvláštní, že? Ale to teď není důležité."</p></div>
     <div class='bubble' style='margin-top:10px;'><p><strong>Alchymista:</strong> "A jak se jmenuje tvůj společník na této cestě?"</p></div>
     <div class='input-row'><input type='text' id='companionName' placeholder='Jméno společníka'><button onclick='submitCompanion()'>OK</button></div>
     <div id='companionResp'></div>`;
@@ -243,7 +243,7 @@ function submitName(){
 function submitCompanion(){
   const name2 = document.getElementById('companionName').value.trim() || 'tvůj společník';
   localStorage.setItem('companionName', name2);
-  document.getElementById('companionResp').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> "${name2}, tak ho za mě prosím pozdrav!"</p></div><a class='continue-btn' href='kap4.html'>👉 Pokračovat</a>`;
+  document.getElementById('companionResp').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> "${name2}, hmm, dobré jméno pro zaklínače!"</p></div><a class='continue-btn' href='kap4.html'>👉 Pokračovat</a>`;
 }
 </script>
 </body>

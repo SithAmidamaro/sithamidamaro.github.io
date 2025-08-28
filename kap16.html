@@ -9,7 +9,7 @@
   <div class="nav"><a class="btn" href="kap15b.html">← Zpět</a></div>
   <h1>Kapitola 16 – Skryté runy</h1>
   <div class="panel"><div class="dialogue">
-  <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
+  <img src="img/alchemista_svitek_ukol.png" alt="Alchymista" class="avatar">
   <div class="bubble"><p><strong>Alchymista:</strong> „Možná dokážu pomoci i já – skrze sílu run. Ale musíme najít ty správné... kdysi jsem schoval sadu magických run. Zkusím ti promítnout místo, ale sám si nejsem jistý, kde to je...“</p></div>
 </div>
 <div class="choices">
@@ -18,7 +18,7 @@
   <button onclick="out('Dobře. Jemu možná bude něco povědomé. Popiš mu co nejpřesněji, co na té mapě vidíš.')">„Nevěděl by Lukas?“</button>
 </div>
 <div id="out16"></div>
-<div class="bubble" style="margin-top:10px;">
+<div id="task-bubble" class="bubble" style="margin-top:10px; display:none;">
   <p><strong>Úkol:</strong> Ví Lukas, kde se to místo nachází?</p>
   <div class="input-row">
     <input id="mapa" type="text" placeholder="Jaké místo určil?">
@@ -35,6 +35,12 @@ function out(t){
     else b.classList.remove('selected');
   });
   document.getElementById('out16').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`;
+  const taskBubble = document.getElementById('task-bubble');
+  if(t.startsWith('Dobře. Jemu možná bude něco povědomé.')){
+    taskBubble.style.display = 'block';
+  }else{
+    taskBubble.style.display = 'none';
+  }
 }
 function ok16(){
   const v=(document.getElementById('mapa').value||'').trim();
