@@ -144,7 +144,7 @@ function q1(a){
     else b.classList.remove('selected');
   });
   const f=document.getElementById('f1');
-  if(a==='Vesemir'){ score++; f.innerHTML='✅ <em>„Ano… Vesemir. Starý, moudrý. Zajímalo by mě jak se má...“</em> (+1 důvěra)'; show('q2'); }
+  if(a==='Vesemir'){ score++; f.innerHTML='<span style="color:#1ca63a">✅ <em>„Ano… Vesemir. Starý, moudrý. Zajímalo by mě jak se má...“</em> (+1 důvěra)</span>'; show('q2'); }
   else if(a==='Geralt'){ f.innerHTML='❌ <em>„Geralt… vlk to je, ale nikdy nebyl mistrem. On kráčí vlastní cestou.“</em>'; }
   else { f.innerHTML='❌ <em>„Lambert… ha! Ten by sotva zvládl vést i stádo koz, natož zaklínačskou školu!“</em>'; }
 }
@@ -155,7 +155,7 @@ function q2(a){
     else b.classList.remove('selected');
   });
   const f=document.getElementById('f2');
-  if(a==='Kaer Morhen'){ score++; f.innerHTML='✅ <em>„Kaer Morhen… ano, stará pevnost v horách.“</em> (+1 důvěra)'; show('q3'); }
+  if(a==='Kaer Morhen'){ score++; f.innerHTML='<span style="color:#1ca63a">✅ <em>„Kaer Morhen… ano, stará pevnost v horách.“</em> (+1 důvěra)</span>'; show('q3'); }
   else if(a==='Novigrad'){ f.innerHTML='❌ <em>„Novigrad? Město kupců, né zaklínačů.“</em>'; }
   else { f.innerHTML='❌ <em>„Oxenfurt? Tam učí knihomolové, ne zaklínači.“</em>'; }
 }
@@ -166,7 +166,7 @@ function q3(a){
     else b.classList.remove('selected');
   });
   const f=document.getElementById('f3');
-  if(a==='Kočka'){ score++; f.innerHTML='✅ <em>„Ano… Kočka. Oči ve tmě jako v právem poledne.“</em> (+1 důvěra)'; show('q4'); }
+  if(a==='Kočka'){ score++; f.innerHTML='<span style="color:#1ca63a">✅ <em>„Ano… Kočka. Oči ve tmě jako v právem poledne.“</em> (+1 důvěra)</span>'; show('q4'); }
   else if(a==='Osel'){ f.innerHTML='❌ <em>„Osel? …Tvůj humor je temnější než noc sama.“</em>'; }
   else { f.innerHTML='❌ <em>„Pavián? Cože?! …tohle jsem snad ani já nikdy nemíchal.“</em>'; }
 }
@@ -182,7 +182,7 @@ function q4(a){
   const btns = document.querySelectorAll('#q4 .choices button');
   highlightChoice(btns, a);
   const f=document.getElementById('f4');
-  if(a==='trav'){ score++; f.innerHTML='✅ <em>„Ano! Zkouška trav. Bolest, krev a přežití – jen ti nejsilnější zůstali.“</em> (+1 důvěra)'; show('q5'); }
+  if(a==='trav'){ score++; f.innerHTML='<span style="color:#1ca63a">✅ <em>„Ano! Zkouška trav. Bolest, krev a přežití – jen ti nejsilnější zůstali.“</em> (+1 důvěra)</span>'; show('q5'); }
   else if(a==='pravdy'){ f.innerHTML='❌ <em>„Pravdy? …Pravda v tomto světě nic neznamená.“</em>'; }
   else { f.innerHTML='❌ <em>„Vážně?“</em>'; }
 }
@@ -190,7 +190,7 @@ function q5(a){
   const btns = document.querySelectorAll('#q5 .choices button');
   highlightChoice(btns, a);
   const f=document.getElementById('f5');
-  if(a==='stit'){ score++; f.innerHTML='✅ <em>„Správně! Quen chrání zaklínače před úderem, jako štít světla.“</em> (+1 důvěra)'; show('q6'); }
+  if(a==='stit'){ score++; f.innerHTML='<span style="color:#1ca63a">✅ <em>„Správně! Quen chrání zaklínače před úderem, jako štít světla.“</em> (+1 důvěra)</span>'; show('q6'); }
   else if(a==='ohnivy'){ f.innerHTML='❌ <em>„To je Igni, ne Quen.“</em>'; }
   else { f.innerHTML='❌ <em>„To by byl Axii, ne Quen.“</em>'; }
 }
@@ -198,7 +198,7 @@ function q6(a){
   const btns = document.querySelectorAll('#q6 .choices button');
   highlightChoice(btns, a);
   const f=document.getElementById('f6');
-  if(a==='nestvury'){ score++; f.innerHTML='✅ <em>„Ano. Nestvůry, ať vypadají jakkoliv…“</em> (+1 důvěra)'; show('q7'); }
+  if(a==='nestvury'){ score++; f.innerHTML='<span style="color:#1ca63a">✅ <em>„Ano. Nestvůry, ať vypadají jakkoliv…“</em> (+1 důvěra)</span>'; show('q7'); }
   else if(a==='poklady'){ f.innerHTML='❌ <em>„Poklady? To je práce zlodějů.“</em>'; }
   else { f.innerHTML='❌ <em>„Co vím, tak čarodějky spíš loví zaklínače. Hah!“</em>'; }
 }
@@ -207,9 +207,9 @@ function q7(a){
   highlightChoice(btns, a);
   const f=document.getElementById('f7');
   score++;
-  if(a==='mleko'){ f.innerHTML='✅ <em>„Haha! ‘Dám si mléko, prosím.’“</em> (+1 důvěra)'; }
-  if(a==='nezajmu'){ f.innerHTML='✅ <em>„Haha! ‚Nestvůry? Ty mě nezajímají.‘“</em> (+1 důvěra)'; }
-  if(a==='elixirlasky'){ f.innerHTML='✅ <em>„Haha! ‚Znáte recept na elixír lásky?‘“</em> (+1 důvěra)'; }
+  if(a==='mleko'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha! ‘Dám si mléko, prosím.’“</em> (+1 důvěra)</span>'; }
+  if(a==='nezajmu'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha! ‚Nestvůry? Ty mě nezajímají.‘“</em> (+1 důvěra)</span>'; }
+  if(a==='elixirlasky'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha! ‚Znáte recept na elixír lásky?‘“</em> (+1 důvěra)</span>'; }
   show('q8');
 }
 function q8(a){
@@ -217,9 +217,9 @@ function q8(a){
   highlightChoice(btns, a);
   const f=document.getElementById('f8');
   score++;
-  if(a==='medovina'){ f.innerHTML='✅ <em>„Sladká a silná – kdo by si jí nedopřál!“</em> (+1 důvěra)'; }
-  if(a==='vlastovka'){ f.innerHTML='✅ <em>„Ano, Vlaštovka. Uzdraví, posílí. Můj vynález!“</em> (+1 důvěra)'; }
-  if(a==='cokoliv'){ f.innerHTML='✅ <em>„Ha! Pravda. Zaklínači mají žaludek z oceli, ale i ten má hranice.“</em> (+1 důvěra)'; }
+  if(a==='medovina'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Sladká a silná – kdo by si jí nedopřál!“</em> (+1 důvěra)</span>'; }
+  if(a==='vlastovka'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Ano, Vlaštovka. Uzdraví, posílí. Můj vynález!“</em> (+1 důvěra)</span>'; }
+  if(a==='cokoliv'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Ha! Pravda. Zaklínači mají žaludek z oceli, ale i ten má hranice.“</em> (+1 důvěra)</span>'; }
   show('q9');
 }
 function q9(a){
@@ -227,9 +227,9 @@ function q9(a){
   highlightChoice(btns, a);
   const f=document.getElementById('f9');
   score++;
-  if(a==='mece'){ f.innerHTML='✅ <em>„Krev často řeší víc než slova.“</em> (+1 důvěra)'; }
-  if(a==='pravdy'){ f.innerHTML='✅ <em>„Zajímavé…“</em> (+1 důvěra)'; }
-  if(a==='mlceni'){ f.innerHTML='✅ <em>„Haha. Jste všichni stejní.“</em> (+1 důvěra)'; }
+  if(a==='mece'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Krev často řeší víc než slova.“</em> (+1 důvěra)</span>'; }
+  if(a==='pravdy'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Zajímavé…“</em> (+1 důvěra)</span>'; }
+  if(a==='mlceni'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha. Jste všichni stejní.“</em> (+1 důvěra)</span>'; }
   show('finish');
 }
 function submitName(){
