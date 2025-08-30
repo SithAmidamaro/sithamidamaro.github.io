@@ -57,13 +57,17 @@ h1{
   width: 120px;
   height: auto;
   flex: 0 0 auto;
-  animation: floatyX 3.8s ease-in-out infinite alternate;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,.5)) blur(0.5px);
+  animation: floatyXY 7s ease-in-out infinite alternate;
+  transition: filter .3s, box-shadow .3s;
   margin-left: 16px;
   margin-right: 0;
 }
 .avatar:hover {
   filter: drop-shadow(0 8px 18px rgba(60,220,255,.5)) blur(2px) brightness(1.1);
+}
+.avatar.glow {
+  box-shadow: 0 0 32px 16px #e6baff, 0 0 8px 2px #fff;
+  transition: box-shadow 0.2s;
 }
 .bubble{
   position:relative;
@@ -171,10 +175,13 @@ input[type="text"]{
 @keyframes magicGradient{ 0%{ background-position: 0% 50% } 50%{ background-position: 100% 50% } 100%{ background-position: 0% 50% } }
 @keyframes magicAura{ 0%{ opacity:.45 } 100%{ opacity:.9 } }
 @keyframes magicShine{ 0%,60%{ transform: translateX(-120%) } 72%{ transform: translateX(120%) } 100%{ transform: translateX(120%) } }
-@keyframes floatyX {
-  0%   { transform: translateX(0) scale(1); }
-  50%  { transform: translateX(12px) scale(1.03); }
-  100% { transform: translateX(-12px) scale(1); }
+@keyframes floatyXY {
+  0%   { transform: translate(0,0) scale(1); }
+  20%  { transform: translate(10px,-6px) scale(1.01); }
+  40%  { transform: translate(-12px,8px) scale(1.02); }
+  60%  { transform: translate(8px,12px) scale(1.01); }
+  80%  { transform: translate(-8px,-10px) scale(1.01); }
+  100% { transform: translate(0,0) scale(1); }
 }
 
 /* Uživatelům s omezením animací ztišit efekty */

@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
       }, 120);
+      // Rozsvícení obrázku alchymisty
+      var avatar = document.querySelector('.avatar');
+      if (avatar) {
+        avatar.classList.add('glow');
+        setTimeout(function(){ avatar.classList.remove('glow'); }, 350);
+      }
     }
   }, true);
 });
