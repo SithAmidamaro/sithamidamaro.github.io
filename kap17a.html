@@ -24,6 +24,19 @@
 <div id="out17a"></div>
 <div id="cont17a"></div>
 <script>
+// Avatar efekt: změna obrázku na mávajícího alchymistu na 1 sekundu
+document.addEventListener('DOMContentLoaded', function() {
+  var avatar = document.querySelector('.avatar');
+  if(avatar) {
+    var origSrc = avatar.getAttribute('src');
+    avatar.addEventListener('click', function() {
+      avatar.src = 'img/alchymista_mavajici.png';
+      setTimeout(function() {
+        avatar.src = origSrc;
+      }, 1000);
+    });
+  }
+});
 function pick(n){
   const btns = document.querySelectorAll('.choices button');
   btns.forEach((b,i)=>{

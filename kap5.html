@@ -34,6 +34,19 @@
   </div>
 
 <script>
+// Avatar efekt: změna obrázku na vyděšeného na 1 sekundu (bez rozsvícení)
+document.addEventListener('DOMContentLoaded', function() {
+  var avatar = document.querySelector('.avatar');
+  if(avatar) {
+    var origSrc = avatar.getAttribute('src');
+    avatar.addEventListener('click', function() {
+      avatar.src = 'img/alchemista_vydeseny.png';
+      setTimeout(function() {
+        avatar.src = origSrc;
+      }, 1000);
+    });
+  }
+});
 function check(){
   const raw = document.getElementById('monster').value;
   const norm = normalizeInput(raw);
