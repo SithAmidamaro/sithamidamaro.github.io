@@ -49,13 +49,23 @@ function choose(n){
   }
 }
 
-// Avatar efekt: změna obrázku na vyděšeného na 1 sekundu (bez rozsvícení)
+// Avatar efekt: změna obrázku na vyděšeného na 1 sekundu + přehrání zvuku
 document.addEventListener('DOMContentLoaded', function() {
   var avatar = document.querySelector('.avatar');
   if(avatar) {
     var origSrc = avatar.getAttribute('src');
+    // Připrav audio element
+    var audio = document.getElementById('btn-audio');
+    if(!audio) {
+      audio = document.createElement('audio');
+      audio.id = 'btn-audio';
+      audio.src = 'audio/huh.ogg';
+      audio.style.display = 'none';
+      document.body.appendChild(audio);
+    }
     avatar.addEventListener('click', function() {
       avatar.src = 'img/alchemista_vydeseny.png';
+      try { audio.currentTime = 0; audio.play(); } catch(e) {}
       setTimeout(function() {
         avatar.src = origSrc;
       }, 1000);
