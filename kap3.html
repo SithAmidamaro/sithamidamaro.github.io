@@ -49,17 +49,15 @@ function choose(n){
   }
 }
 
-// Avatar efekt: změna obrázku a rozsvícení na 1 sekundu
+// Avatar efekt: změna obrázku na vyděšeného na 1 sekundu (bez rozsvícení)
 document.addEventListener('DOMContentLoaded', function() {
   var avatar = document.querySelector('.avatar');
   if(avatar) {
     var origSrc = avatar.getAttribute('src');
     avatar.addEventListener('click', function() {
       avatar.src = 'img/alchemista_vydeseny.png';
-      avatar.classList.add('avatar-glow');
       setTimeout(function() {
         avatar.src = origSrc;
-        avatar.classList.remove('avatar-glow');
       }, 1000);
     });
   }
