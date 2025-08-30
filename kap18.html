@@ -98,7 +98,11 @@ function renderGrid(){
   const dis = disabledSet();
   g.innerHTML = runes.map(r=>{
     const isDisabled = dis.has((r.name||'').toLowerCase());
-    const isSelected = (sel[step] && sel[step].toLowerCase() === (r.name||'').toLowerCase());
+    const isSelected = (
+      (sel[1] && sel[1].toLowerCase() === (r.name||'').toLowerCase()) ||
+      (sel[2] && sel[2].toLowerCase() === (r.name||'').toLowerCase()) ||
+      (sel[3] && sel[3].toLowerCase() === (r.name||'').toLowerCase())
+    );
     const classes = 'btn rune-card' + (isSelected ? ' selected' : '');
     const attrDis = isDisabled ? 'disabled' : '';
     return `<button class='${classes}' ${attrDis} onclick='pickRune("${r.name}")'>
