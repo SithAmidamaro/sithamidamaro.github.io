@@ -57,9 +57,13 @@ h1{
   width: 120px;
   height: auto;
   flex: 0 0 auto;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,.5));
+  animation: floatyX 3.8s ease-in-out infinite alternate;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.5)) blur(0.5px);
   margin-left: 16px;
   margin-right: 0;
+}
+.avatar:hover {
+  filter: drop-shadow(0 8px 18px rgba(60,220,255,.5)) blur(2px) brightness(1.1);
 }
 .bubble{
   position:relative;
@@ -167,6 +171,11 @@ input[type="text"]{
 @keyframes magicGradient{ 0%{ background-position: 0% 50% } 50%{ background-position: 100% 50% } 100%{ background-position: 0% 50% } }
 @keyframes magicAura{ 0%{ opacity:.45 } 100%{ opacity:.9 } }
 @keyframes magicShine{ 0%,60%{ transform: translateX(-120%) } 72%{ transform: translateX(120%) } 100%{ transform: translateX(120%) } }
+@keyframes floatyX {
+  0%   { transform: translateX(0) scale(1); }
+  50%  { transform: translateX(12px) scale(1.03); }
+  100% { transform: translateX(-12px) scale(1); }
+}
 
 /* Uživatelům s omezením animací ztišit efekty */
 @media (prefers-reduced-motion: reduce){
