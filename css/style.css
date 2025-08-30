@@ -53,11 +53,12 @@ h1{
   align-items: flex-start;
   flex-direction: row-reverse;
 }
-.avatar{
+
+.avatar {
   width: 120px;
   height: auto;
   flex: 0 0 auto;
-  animation: floatyX 7.6s ease-in-out infinite alternate;
+  animation: floatyXY 7.6s ease-in-out infinite alternate;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,.5)) blur(0.5px);
   margin-left: 16px;
   margin-right: 0;
@@ -70,7 +71,7 @@ h1{
 /* Efekt při kliknutí na avatar - pouze krátké rozsvícení */
 .avatar:active {
   filter: drop-shadow(0 8px 18px rgba(60,220,255,.7)) blur(2.5px) brightness(1.18);
-  transition: filter 0.18s;
+  transition: none;
 }
 .bubble{
   position:relative;
