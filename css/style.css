@@ -57,17 +57,20 @@ h1{
   width: 120px;
   height: auto;
   flex: 0 0 auto;
-  animation: floatyXY 7s ease-in-out infinite alternate;
-  transition: filter .3s, box-shadow .3s;
+  animation: floatyX 7.6s ease-in-out infinite alternate;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.5)) blur(0.5px);
   margin-left: 16px;
   margin-right: 0;
 }
 .avatar:hover {
   filter: drop-shadow(0 8px 18px rgba(60,220,255,.5)) blur(2px) brightness(1.1);
+  transition: filter 0.25s;
 }
-.avatar.glow {
-  box-shadow: 0 0 32px 16px #e6baff, 0 0 8px 2px #fff;
-  transition: box-shadow 0.2s;
+
+/* Efekt při kliknutí na avatar - pouze krátké rozsvícení */
+.avatar:active {
+  filter: drop-shadow(0 8px 18px rgba(60,220,255,.7)) blur(2.5px) brightness(1.18);
+  transition: filter 0.18s;
 }
 .bubble{
   position:relative;
