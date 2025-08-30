@@ -7,16 +7,17 @@ function show(id){ const el=document.getElementById(id); if(el) el.style.display
 function hide(id){ const el=document.getElementById(id); if(el) el.style.display='none'; }
 
 // Globální zvuk na kliknutí tlačítka a automatický scroll dolů
-// Přidá audio element, pokud neexistuje
-if (!document.getElementById('btn-audio')) {
-  var audio = document.createElement('audio');
-  audio.id = 'btn-audio';
-  audio.src = 'audio/select_button.mp3';
-  audio.style.display = 'none';
-  document.body.appendChild(audio);
-}
+// Vše až po načtení DOM
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Přidej audio element, pokud neexistuje
+  if (!document.getElementById('btn-audio')) {
+    var audio = document.createElement('audio');
+    audio.id = 'btn-audio';
+    audio.src = 'audio/select_button.mp3';
+    audio.style.display = 'none';
+    document.body.appendChild(audio);
+  }
   var btnAudio = document.getElementById('btn-audio');
   document.body.addEventListener('click', function(e) {
     if (e.target.matches('button, .btn, .continue-btn')) {
