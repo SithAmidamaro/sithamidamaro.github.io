@@ -1,3 +1,7 @@
+.avatar-glow {
+  filter: drop-shadow(0 8px 18px rgba(60,220,255,.7)) blur(2px) brightness(1.18);
+  transition: filter 0.18s;
+}
 /* Zvýraznění vybrané volby v .choices */
 .choices button.selected {
   outline: 2.5px solid #7c3aed;
@@ -69,10 +73,6 @@ h1{
 }
 
 /* Efekt při kliknutí na avatar - pouze krátké rozsvícení */
-.avatar:active {
-  filter: drop-shadow(0 8px 18px rgba(60,220,255,.7)) blur(2.5px) brightness(1.18);
-  transition: none;
-}
 .bubble{
   position:relative;
   background:var(--bubble);

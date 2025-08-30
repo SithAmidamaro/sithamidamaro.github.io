@@ -48,6 +48,22 @@ function choose(n){
     r.innerHTML = `<div class="bubble"><p><strong>Alchymista:</strong> "Já… kdo jsem já? Jen prach a vzpomínky. Pamatuji si málo. Ale otázka je, kdo jsi ty…?"</p></div>`;
   }
 }
+
+// Avatar efekt: změna obrázku a rozsvícení na 1 sekundu
+document.addEventListener('DOMContentLoaded', function() {
+  var avatar = document.querySelector('.avatar');
+  if(avatar) {
+    var origSrc = avatar.getAttribute('src');
+    avatar.addEventListener('click', function() {
+      avatar.src = 'img/alchemista_vydeseny.png';
+      avatar.classList.add('avatar-glow');
+      setTimeout(function() {
+        avatar.src = origSrc;
+        avatar.classList.remove('avatar-glow');
+      }, 1000);
+    });
+  }
+});
 </script>
 </body>
 </html>
