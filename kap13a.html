@@ -1,18 +1,3 @@
-<script>
-// Avatar efekt: změna obrázku na mávajícího alchymistu na 1 sekundu
-document.addEventListener('DOMContentLoaded', function() {
-  var avatar = document.querySelector('.avatar');
-  if(avatar) {
-    var origSrc = avatar.getAttribute('src');
-    avatar.addEventListener('click', function() {
-      avatar.src = 'img/alchymista_mavajici.png';
-      setTimeout(function() {
-        avatar.src = origSrc;
-      }, 1000);
-    });
-  }
-});
-</script>
 <!DOCTYPE html>
 <html lang="cs"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="nav"><a class="btn" href="kap13.html">← Zpět</a></div>
   <h1>Kapitola 13a – zzzzzZzzZZZZZZ</h1>
   <div class="panel"><div class="dialogue">
-  <img src="img/alchemista_spici_2.png.png" alt="Alchymista" class="avatar">
+  <img src="img/alchemista_spici_2.png" alt="Alchymista" class="avatar">
   <div class="bubble"><p><strong>Alchymista:</strong> „… zzzZZZzzz…“</p></div>
 </div>
 <div class="bubble">

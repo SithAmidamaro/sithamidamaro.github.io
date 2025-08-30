@@ -34,13 +34,22 @@
   </div>
 
 <script>
-// Avatar efekt: změna obrázku na vyděšeného na 1 sekundu (bez rozsvícení)
+// Avatar efekt: změna obrázku na vyděšeného na 1 sekundu + přehrání zvuku
 document.addEventListener('DOMContentLoaded', function() {
   var avatar = document.querySelector('.avatar');
   if(avatar) {
     var origSrc = avatar.getAttribute('src');
+    var avatarAudio = document.getElementById('avatar-audio');
+    if(!avatarAudio) {
+      avatarAudio = document.createElement('audio');
+      avatarAudio.id = 'avatar-audio';
+      avatarAudio.src = 'audio/huh.ogg';
+      avatarAudio.style.display = 'none';
+      document.body.appendChild(avatarAudio);
+    }
     avatar.addEventListener('click', function() {
       avatar.src = 'img/alchemista_vydeseny.png';
+      try { avatarAudio.currentTime = 0; avatarAudio.play(); } catch(e) {}
       setTimeout(function() {
         avatar.src = origSrc;
       }, 1000);

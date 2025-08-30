@@ -19,13 +19,22 @@
 <div id="out19"></div>
 <div id="cont19"></div>
 <script>
-// Avatar efekt: změna obrázku na mávajícího alchymistu na 1 sekundu
+// Avatar efekt: změna obrázku na mávajícího alchymistu na 1 sekundu + přehrání zvuku hi.mp3
 document.addEventListener('DOMContentLoaded', function() {
   var avatar = document.querySelector('.avatar');
   if(avatar) {
     var origSrc = avatar.getAttribute('src');
+    var avatarAudio = document.getElementById('avatar-audio');
+    if(!avatarAudio) {
+      avatarAudio = document.createElement('audio');
+      avatarAudio.id = 'avatar-audio';
+      avatarAudio.src = 'audio/hi.mp3';
+      avatarAudio.style.display = 'none';
+      document.body.appendChild(avatarAudio);
+    }
     avatar.addEventListener('click', function() {
       avatar.src = 'img/alchymista_mavajici.png';
+      try { avatarAudio.currentTime = 0; avatarAudio.play(); } catch(e) {}
       setTimeout(function() {
         avatar.src = origSrc;
       }, 1000);
