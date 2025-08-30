@@ -19,13 +19,15 @@
 </div>
 <div id="out14"></div>
 <div class="bubble" style="margin-top:10px;">
-  <p><strong>Úkol:</strong> Napiš název připravené petardy.</p>
-  <div class="input-row">
-    <input id="petarda" type="text" placeholder="Petarda">
-    <button onclick="ok14()">Potvrdit</button>
+  <div id="task14" style="display:none;">
+    <p><strong>Úkol:</strong> Napiš název připravené petardy.</p>
+    <div class="input-row">
+      <input id="petarda" type="text" placeholder="Petarda">
+      <button onclick="ok14()">Potvrdit</button>
+    </div>
+    <p id="hint14" class="feedback"></p>
+    <div id="cont14"></div>
   </div>
-  <p id="hint14" class="feedback"></p>
-  <div id="cont14"></div>
 </div>
 <script>
 // Avatar efekt: změna obrázku na mávajícího alchymistu na 1 sekundu + přehrání zvuku hi.mp3
@@ -57,6 +59,12 @@ function out(t){
     else b.classList.remove('selected');
   });
   document.getElementById('out14').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`;
+  // Zobraz úkol jen při kliknutí na poslední tlačítko
+  if(t.startsWith('Výborně!')){
+    document.getElementById('task14').style.display = '';
+  }else{
+    document.getElementById('task14').style.display = 'none';
+  }
 }
 function ok14(){
   const v = normalizeInput(document.getElementById('petarda').value);
