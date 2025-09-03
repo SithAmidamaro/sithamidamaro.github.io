@@ -14,9 +14,41 @@
 </div>
 <div class="choices">
   <button onclick="out('Truhličku a v ní bude sáček!')">„Co přesně mám na místě hledat?“</button>
-  <button onclick="out('Pamatuji si strom, hledej strom ve tvaru FEHU? A pak cestu nahoru, myslím, že od stromu doprava... k chatě poblíž. Zakopal jsem to do země u skály a malého stromu. Místo jsem označil runou <strong>-FEHU-</strong>  ')">„Jak poznám správné místo?“</button>
-  <button onclick="out('Dobře. Jemu možná bude něco povědomé. Popiš mu co nejpřesněji, co na té mapě vidíš.')">„Nevěděl by Lukas?“</button>
+  <button onclick="out('Pamatuji si strom... <strong>ANO, hledej strom ve tvaru FEHU!  A pak běž tam, kam ukazají větve stromu/runy, nahoru... k chatě poblíž. Zakopal jsem to do země u skály a malého stromu. Místo jsem označil runou -FEHU-</strong>  ')">„Jak poznám správné místo?“</button>
+  <button onclick="out('Zde, tohle se vybavuji')">„Promítnout místo“</button>
+<div id="projection-images" style="display:none; margin-top:10px;">
+  <div class="img-row">
+    <img src="img/fehu_fix_1.gif" alt="Fehu projekce 1">
+    <img src="img/fehu_fix_2.gif" alt="Fehu projekce 2">
+  </div>
 </div>
+</div>
+</style>
+<style>
+.img-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.img-row img {
+  max-width: 45vw;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+@media (max-width: 600px) {
+  .img-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-row img {
+    max-width: 90vw;
+    margin-bottom: 10px;
+  }
+}
+</style>
 <div id="out16"></div>
 <div id="task-bubble" class="bubble" style="margin-top:10px; display:none;">
   <p><strong>Úkol:</strong> Ví Lukas, kde se to místo nachází?</p>
@@ -58,10 +90,13 @@ function out(t){
   });
   document.getElementById('out16').innerHTML = `<div class='bubble'><p><strong>Alchymista:</strong> „${t}“</p></div>`;
   const taskBubble = document.getElementById('task-bubble');
+  const projImages = document.getElementById('projection-images');
   if(t.startsWith('Dobře. Jemu možná bude něco povědomé.')){
     taskBubble.style.display = 'block';
+    projImages.style.display = 'none';
   }else{
     taskBubble.style.display = 'none';
+    projImages.style.display = (t.includes('Zde, tohle se vybavuji')) ? 'block' : 'none';
   }
 }
 function ok16(){
