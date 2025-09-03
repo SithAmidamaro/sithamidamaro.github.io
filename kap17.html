@@ -10,7 +10,7 @@
   <h1>Kapitola 12 – Očarované runy</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchymista_mavajici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Až runy najdete, řekni, kolik jich je. Budou-li kompletní, můžeme něco vyzkoušet! A to něco... bude <strong>' VĚŠTĚNÍ Z RUN '!!</strong> Jsem teď mezi světy, možná to bude fungovat!“</p></div>
+  <div class="bubble"><p><strong>Alchymista:</strong> „Tak, a teď na runy... řekni prosím, kolik jich je? Budou-li kompletní, můžeme něco vyzkoušet! A to něco... bude <strong>' VĚŠTĚNÍ Z RUN '!!</strong> Jsem teď mezi světy, možná to bude fungovat!“</p></div>
 </div>
 <div class="choices">
   <button onclick="out()">„Jak ses k těmto runám dostal?“</button>
@@ -54,7 +54,7 @@ function out(){
     if(i===0) b.classList.add('selected');
     else b.classList.remove('selected');
   });
-  document.getElementById('out17').innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „To je na dlouhé povídání... kdysi jsem je vyrobil vlastnoručně. Nejsou to obyčejné kameny – do každé runy jsem vtiskl sílu měsíčního svitu. Kameny, do nichž jsem je vyryl, pocházejí z dalekých hor, dotýkajících se nebe. Věřil jsem, že jimi posílím transmutační kruhy a dodám jim efektivitu. Jenže nefungovalo to tak, jak jsem si představoval –nefungovalo to. Pro mě tenkrát neměly využití, ale teď nám konečně mohou posloužit...“</p></div>`;
+  document.getElementById('out17').innerHTML += `<div class='bubble'><p><strong>Alchymista:</strong> „To je na dlouhé povídání... ale zkusím to zkráceně. Kdysi jsem je vyrobil vlastnoručně. Nejsou to obyčejné kameny – do každé runy jsem vtiskl sílu měsíčního svitu. Kameny, do nichž jsem je vyryl, pocházejí z dalekých hor, dotýkajících se nebe. Věřil jsem, že nimi posílím transmutační kruhy a dodám jim efektivitu. Jenže nefungovalo to tak, jak jsem si představoval –nefungovalo to vůbec. Pro mě tenkrát neměly využití, tak jsem je schoval ale teď nám konečně mohou posloužit...“</p></div>`;
 }
 function ok17(){
   const v=(document.getElementById('runes').value||'').trim();
