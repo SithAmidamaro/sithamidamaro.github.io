@@ -94,9 +94,12 @@ function out(t){
   if(t.startsWith('Dobře. Jemu možná bude něco povědomé.')){
     taskBubble.style.display = 'block';
     projImages.style.display = 'none';
-  }else{
+  } else if (t.includes('Zde, tohle se vybavuji')) {
+    projImages.style.display = 'block';
+    taskBubble.style.display = 'block'; // Zajistí, že úkol a input zůstanou viditelné
+  } else {
     taskBubble.style.display = 'none';
-    projImages.style.display = (t.includes('Zde, tohle se vybavuji')) ? 'block' : 'none';
+    projImages.style.display = 'none';
   }
 }
 function ok16(){
