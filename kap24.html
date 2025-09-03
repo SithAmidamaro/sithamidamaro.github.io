@@ -10,11 +10,13 @@
   <h1>Kapitola 19 – Odkrytí tajemství</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchemista_vysvetlujici.png" alt="Alchymista" class="avatar">
-  <div class="bubble"><p><strong>Alchymista:</strong> „Ano… už si vzpomínám. Celou dobu to stálo přímo přede mnou.“</p></div>
-      <div class="bubble"><p><strong>Alchymista:</strong> „To, co jsem stvořil… lidé tomu říkali různě: Lapis Philosophorum. Kámen věků. <strong>Kámen mudrců</strong>. Všechna ta jména znějí jako báje – a přesto jsem ho vyrobil, vlastníma rukama.“</p></div>
-      <div class="bubble"><p><strong>Alchymista:</strong> „Byla to má pýcha, ale i má zhouba. Ten kámen je až příliš mocný, a proto jsem ho včas ukryl… ukryl jsem ho těm nejmocnějším přímo pod nosem, aby ho chránili, aniž by o tom věděli.“</p></div>
-      <div class="bubble"><p><strong>Alchymista:</strong> „<strong>Klíč k němu jsem schoval ve sklepě</strong> – za bariérami, které jsem právě zrušil.Ten klíč najdeš. Bude označený runou <strong>-Fehu– </strong> runou přeměny. <strong>A dveře? </strong> Ty budou nyní zářit ve svitu měsíce. A pokud ne… použij mou lampu. Ta ti ukáže cestu.“</p></div>
-      <div class="bubble"><p><strong>Alchymista:</strong> „Krásná Áňo… zabijáku nestvůr… děkuji ti. Bez tebe bych bloudil dál v mlze zapomnění. Teď je to v tvých rukou. Až ho najdeš, dej mi prosím vědět – a pak se rozloučíme… už mě tu nic nedrží.“</p></div>
+  <div class="bubble">
+    <p><strong>Alchymista:</strong> „Ano… už si vzpomínám. Celou dobu to stálo přímo přede mnou.“</p>
+    <p>To, co jsem stvořil… lidé tomu říkali různě: Lapis Philosophorum. Kámen věků. <strong>Kámen mudrců</strong>. Všechna ta jména znějí jako báje – a přesto jsem ho vyrobil, vlastníma rukama.“</p>
+    <p>Byla to má pýcha, ale i má zhouba. Ten kámen je až příliš mocný, a proto jsem ho včas ukryl… ukryl jsem ho těm nejmocnějším přímo pod nosem, aby ho chránili, aniž by o tom věděli.“</p>
+    <p><strong>Klíč k němu jsem schoval ve sklepě</strong> – za bariérami, které jsem právě zrušil. Ten klíč najdeš. Bude označený runou <strong>-Fehu–</strong>, runou přeměny. <strong>A dveře?</strong> Ty budou nyní zářit ve svitu měsíce. A pokud ne… použij mou lampu. Ta ti ukáže cestu.“</p>
+    <p>Krásná Áňo… zabijáku nestvůr… děkuji ti. Bez tebe bych bloudil dál v mlze zapomnění. Teď je to v tvých rukou. Až ho najdeš, dej mi prosím vědět – a pak se rozloučíme… už mě tu nic nedrží.“</p>
+  </div>
 </div>
 <div class="choices">
   <button onclick="go(false)">„Ještě hledám.“</button>
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function go(ok){
   const btns = document.querySelectorAll('.choices button');
   btns.forEach((b,i)=>{
-    if((ok && i===0) || (!ok && i===1)) b.classList.add('selected');
+    if((ok && i===1) || (!ok && i===0)) b.classList.add('selected');
     else b.classList.remove('selected');
   });
   if(ok){
