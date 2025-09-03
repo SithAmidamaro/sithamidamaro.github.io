@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="cs"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kapitola 13a – zzzzzZzzZZZZZZ</title>
+<title>Kapitola 8a – zzzzzZzzZZZZZZ</title>
 <link rel="stylesheet" href="css/style.css">
 <script defer src="js/helpers.js"></script>
 </head><body>
 <div class="container">
   <div class="nav"><a class="btn" href="kap13.html">← Zpět</a></div>
-  <h1>Kapitola 13a – zzzzzZzzZZZZZZ</h1>
+  <h1>Kapitola 8a – zzzzzZzzZZZZZZ</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchemista_spici_2.png" alt="Alchymista" class="avatar">
   <div class="bubble"><p><strong>Alchymista:</strong> „… zzzZZZzzz…“</p></div>
@@ -26,7 +26,7 @@ function ok13a(){
   const v = normalizeInput(document.getElementById('rooster').value);
   const ok = ['12','dvanactkrat','dvanáctkrát'];
   if(!v){document.getElementById('hint13a').textContent='„… zzz…“'; document.getElementById('cont13a').innerHTML=''; return;}
-  if(ok.includes(v)){ document.getElementById('hint13a').textContent=''; document.getElementById('cont13a').innerHTML = `<a class='continue-btn' href='kap14.html'>👉 Pokračovat (Kapitola 14)</a>`; }
+  if(ok.includes(v)){ document.getElementById('hint13a').textContent=''; document.getElementById('cont13a').innerHTML = `<a class='continue-btn' href='kap14.html'>👉 Pokračovat</a>`; }
   else { document.getElementById('hint13a').textContent='„… zzzZZZzzz…“'; document.getElementById('cont13a').innerHTML=''; }
 }
 </script>

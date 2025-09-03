@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="cs"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kapitola 16 – Skryté runy</title>
+<title>Kapitola 11 – Skryté runy</title>
 <link rel="stylesheet" href="css/style.css">
 <script defer src="js/helpers.js"></script>
 </head><body>
 <div class="container">
   <div class="nav"><a class="btn" href="kap15b.html">← Zpět</a></div>
-  <h1>Kapitola 16 – Skryté runy</h1>
+  <h1>Kapitola 11 – Skryté runy</h1>
   <div class="panel"><div class="dialogue">
   <img src="img/alchemista_svitek_ukol.png" alt="Alchymista" class="avatar">
   <div class="bubble"><p><strong>Alchymista:</strong> „Možná dokážu pomoci i já – skrze sílu run. Ale musíme najít ty správné... kdysi jsem schoval sadu magických run. Zkusím ti promítnout místo, ale sám si nejsem jistý, kde to je...“</p></div>
 </div>
 <div class="choices">
   <button onclick="out('Truhličku a v ní bude sáček!')">„Co přesně mám na místě hledat?“</button>
-  <button onclick="out('Pamatuji si strom, stromy? Zakopal jsem to do země a místo označil runou <strong>-Gebo-</strong>  ')">„Jak poznám správné místo?“</button>
+  <button onclick="out('Pamatuji si strom, hledej strom ve tvaru FEHU? A pak cestu nahoru, myslím, že od stromu doprava... k chatě poblíž. Zakopal jsem to do země u skály a malého stromu. Místo jsem označil runou <strong>-FEHU-</strong>  ')">„Jak poznám správné místo?“</button>
   <button onclick="out('Dobře. Jemu možná bude něco povědomé. Popiš mu co nejpřesněji, co na té mapě vidíš.')">„Nevěděl by Lukas?“</button>
 </div>
 <div id="out16"></div>
@@ -67,7 +67,7 @@ function out(t){
 function ok16(){
   const v=(document.getElementById('mapa').value||'').trim();
   if(!v){document.getElementById('hint16').textContent='„Neví?“'; document.getElementById('cont16').innerHTML=''; return;}
-  document.getElementById('hint16').textContent=''; document.getElementById('cont16').innerHTML = `<a class='continue-btn' href='kap17.html'>👉 Pokračovat (Kapitola 17)</a>`;
+  document.getElementById('hint16').textContent=''; document.getElementById('cont16').innerHTML = `<a class='continue-btn' href='kap17.html'>👉 Pokračovat</a>`;
 }
 </script>
 </div>
