@@ -46,11 +46,12 @@
     <div id="cont26a" style="text-align:center;"></div>
   </div>
   <script>
-    // Po určité době (např. 5s) gif zmizí a objeví se tlačítko
+    // Po 20 sekundách zmizí text rituálu a objeví se tlačítko
     setTimeout(function(){
-      document.getElementById('ritual-gif').style.display = 'none';
+      var ritualText = document.querySelector('.ritual-text');
+      if(ritualText) ritualText.style.display = 'none';
       document.getElementById('cont26a').innerHTML = `<a class='continue-btn magic-btn' href='kap27.html'>PŘENOS DOKONČEN, DOKONČIT PŘÍBĚH</a>`;
-    }, 5000);
+    }, 20000);
   </script>
 </body>
 </html>
