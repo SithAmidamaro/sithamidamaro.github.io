@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-<script>
-// Avatar efekt: změna obrázku na mávajícího alchymistu na 1 sekundu
-document.addEventListener('DOMContentLoaded', function() {
-  var avatar = document.querySelector('.avatar');
-  if(avatar) {
-    var origSrc = avatar.getAttribute('src');
-    avatar.addEventListener('click', function() {
-      avatar.src = 'img/alchymista_mavajici.png';
-      setTimeout(function() {
-        avatar.src = origSrc;
-      }, 1000);
-    });
-  }
-});
-</script>
   <meta charset="utf-8">
+      <style>
+        .magic-btn {
+          background: linear-gradient(90deg,#e6c200 0,#f7e37a 100%);
+          color: #222;
+          font-family: inherit;
+          font-size: 1.1em;
+          border-radius: 8px;
+          padding: 0.6em 1.2em;
+          text-decoration: none;
+          display: inline-block;
+          margin-top: 18px;
+          font-weight: bold;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          border: none;
+          cursor: pointer;
+          transition: background 0.2s;
+        }
+        .magic-btn:hover {
+          background: linear-gradient(90deg,#f7e37a 0,#e6c200 100%);
+        }
+      </style>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Rituál – Přenos</title>
   <link rel="stylesheet" href="css/style.css">
@@ -28,17 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
 </head>
 <body>
   <div id="ritualBg" style="position:fixed; left:0;top:0;width:100vw;height:100vh;z-index:0;pointer-events:none;">
-    <img src="img/ritual_2.gif" alt="Rituál" style="width:100vw;height:100vh;object-fit:cover;">
+    <img src="img/ritual_end-optimize.gif" alt="Rituál" style="width:100vw;height:100vh;object-fit:cover;">
   </div>
   <div class="container" style="text-align:center; position:relative; z-index:1;">
     <h1>Rituál přenosu</h1>
     <audio id="ritual-audio" src="audio/magic.mp3" autoplay loop></audio>
     <p class="ritual-text">Rituál probíhá... vyčkej na dokončení.<br><span style="font-size:1.5em; color:#3af;">⚡</span></p>
+    <div id="ritual-gif" style="text-align:center; margin:30px 0;">
+      <img id="ritualImg" src="img/ritual_end-optimize.gif" alt="Rituál přenosu" style="max-width:90vw; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.12);">
+    </div>
+    <div id="cont26a" style="text-align:center;"></div>
   </div>
   <script>
+    // Po určité době (např. 5s) gif zmizí a objeví se tlačítko
     setTimeout(function(){
-      window.location.href = 'kap27.html';
-    }, 10000); // 20 sekund
+      document.getElementById('ritual-gif').style.display = 'none';
+      document.getElementById('cont26a').innerHTML = `<a class='continue-btn magic-btn' href='kap27.html'>PŘENOS DOKONČEN, DOKONČIT PŘÍBĚH</a>`;
+    }, 5000);
   </script>
 </body>
 </html>
