@@ -43,7 +43,7 @@
     <div id="cont26a" style="text-align:center;"></div>
   </div>
   <script>
-    // Po 20 sekundách zmizí text rituálu a objeví se tlačítko
+    // Po 13 sekundách zmizí text rituálu a objeví se tlačítko
     setTimeout(function(){
       var ritualText = document.querySelector('.ritual-text');
       if(ritualText) ritualText.style.display = 'none';
@@ -55,7 +55,7 @@
         ritualAudio.currentTime = 0;
       }
       document.getElementById('cont26a').innerHTML = `<a class='continue-btn magic-btn' href='kap27.html'>PŘENOS DOKONČEN, DOKONČIT PŘÍBĚH</a>`;
-    }, 20000);
+    }, 13000);
   </script>
 </body>
 </html>
