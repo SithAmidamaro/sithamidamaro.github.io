@@ -27,7 +27,7 @@
       <div id="out" style="margin-top:10px;"></div>
 
       <div id="task-bubble" class="bubble" style="margin-top:10px; display:none;">
-        <p><strong>Úkol:</strong> Vypij 'Zesílenou kočku' a jdi pod schody chaty – zanechal jsem ti tam znamení (runa ochrany) s rozsvícenou lampou ho uvidíš. Napiš jméno runy abych věděli, že funguje. <em>(Správně: Algiz, příp. „Z“)</em></p>
+        <p><strong>Úkol:</strong> Vypij 'Zesílenou kočku' a jdi pod schody chaty – zanechal jsem ti tam znamení (runa ochrany) s rozsvícenou lampou ho uvidíš. Napiš jméno runy abych věděli, že funguje. <em></em></p>
         <div class="input-row">
           <input id="runa" type="text" placeholder="Jaká je to runa?">
           <button onclick="check()">Potvrdit</button>
@@ -92,7 +92,7 @@ function check(){
     cont.innerHTML = `<div class="bubble" style="margin-top:8px;"><p><strong>Alchymista:</strong> "Výborně, Algiz! Ano, to je ona – runa ochrany, štít proti zlu. Věděl jsem, že jsi na správné stopě."</p></div>
     <a class="continue-btn" href="kap9.html">👉 Pokračovat </a>`;
   }else{
-    hint.textContent = '„Ne… vypadala jako strom se zvednutými větvemi - Z -. Symbol ochrany. Hledej v bestiáři run!“';
+    hint.textContent = '„Ne… to není ona. Hledej v bestiáři, jsou tam runy!“';
     cont.innerHTML='';
   }
 }
