@@ -102,9 +102,9 @@
       <div id="q8" class="question" style="display:none;">
         <p><strong>8. Tvůj nejoblíbenější nápoj po těžkém boji? </strong></p>
         <div class="choices">
-          <button onclick="q8('medovina')">Medovina</button>
+          <button onclick="q8('medovina')">Víno</button>
           <button onclick="q8('vlastovka')">Vlaštovka (elixír)</button>
-          <button onclick="q8('cokoliv')">Cokoliv, co ho neotráví</button>
+          <button onclick="q8('cokoliv')">Cokoliv, co mě neotráví</button>
         </div>
         <p id="f8" class="feedback"></p>
       </div>
@@ -229,9 +229,9 @@ function q7(a){
   highlightChoice(btns, a);
   const f=document.getElementById('f7');
   score++;
-  if(a==='mleko'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha! ‘Dám si mléko, prosím.’“</em> (+1 důvěra)</span>'; }
-  if(a==='nezajmu'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha! ‚Nestvůry? Ty mě nezajímají.‘“</em> (+1 důvěra)</span>'; }
-  if(a==='elixirlasky'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha! ‚Znáte recept na elixír lásky?‘“</em> (+1 důvěra)</span>'; }
+  if(a==='mleko'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha!“</em> (+1 důvěra)</span>'; }
+  if(a==='nezajmu'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha!“</em> (+1 důvěra)</span>'; }
+  if(a==='elixirlasky'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Haha!“</em> (+1 důvěra)</span>'; }
   show('q8');
 }
 function q8(a){
@@ -239,7 +239,7 @@ function q8(a){
   highlightChoice(btns, a);
   const f=document.getElementById('f8');
   score++;
-  if(a==='medovina'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Sladká a silná – kdo by si jí nedopřál!“</em> (+1 důvěra)</span>'; }
+  if(a==='medovina'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Čekal bych spíš medovinu, ale kdo jsem abych soudil !“</em> (+1 důvěra)</span>'; }
   if(a==='vlastovka'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Ano, Vlaštovka. Uzdraví, posílí. Můj vynález!“</em> (+1 důvěra)</span>'; }
   if(a==='cokoliv'){ f.innerHTML='<span style="color:#1ca63a">✅ <em>„Ha! Pravda. Zaklínači mají žaludek z oceli, ale i ten má hranice.“</em> (+1 důvěra)</span>'; }
   show('q9');
