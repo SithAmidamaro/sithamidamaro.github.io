@@ -49,6 +49,11 @@
       if(ritualText) ritualText.style.display = 'none';
       var ritualBgImg = document.querySelector('#ritualBg img');
       if(ritualBgImg) ritualBgImg.src = 'img/alchymista_axolot.png';
+      var ritualAudio = document.getElementById('ritual-audio');
+      if(ritualAudio) {
+        ritualAudio.pause();
+        ritualAudio.currentTime = 0;
+      }
       document.getElementById('cont26a').innerHTML = `<a class='continue-btn magic-btn' href='kap27.html'>PŘENOS DOKONČEN, DOKONČIT PŘÍBĚH</a>`;
     }, 20000);
   </script>
