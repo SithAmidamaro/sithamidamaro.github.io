@@ -50,6 +50,8 @@
     setTimeout(function(){
       var ritualText = document.querySelector('.ritual-text');
       if(ritualText) ritualText.style.display = 'none';
+      var ritualBgImg = document.querySelector('#ritualBg img');
+      if(ritualBgImg) ritualBgImg.src = 'img/alchymista_axolot.png';
       document.getElementById('cont26a').innerHTML = `<a class='continue-btn magic-btn' href='kap27.html'>PŘENOS DOKONČEN, DOKONČIT PŘÍBĚH</a>`;
     }, 20000);
   </script>
