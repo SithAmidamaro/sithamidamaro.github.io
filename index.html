@@ -2,6 +2,10 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#111111">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zaklínačský víkend – Duch Alchymisty</title>
   <link rel="stylesheet" href="css/style.css">
@@ -72,6 +76,14 @@
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startRitual(); }
       });
     })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .catch(err => console.error('SW registration failed', err));
+      });
+    }
   </script>
 </body>
 </html>
